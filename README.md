@@ -2,6 +2,11 @@ Abstract - why the name is "Architecture As Code". Nasdanika Architectural Frame
 Application of open source products, including Nasdanika products, to architecture developent.
 Comparison with two alternatives - an informal, and a formal using UML/Sparx Enterprise Architect.
 
+Easy transition from informal Arch practiced in some orgs. See below
+
+
+Requirements 
+
 Java11/Eclipse IDE with support of Ecore model development - J2ee or modeling. metamodel
 For modeling - text editor, Maven to generate
 
@@ -12,6 +17,9 @@ For modeling - text editor, Maven to generate
 Link to the demo, demo docs - how it is done. Short summary here.
 Composite.
 
+
+TODO - definitions of architecture an architecture development. 
+Similarities with code and relationships with code.
 
 ## Architecture practice
 
@@ -29,18 +37,26 @@ Components with descriptions
 
 This section provides an overview of NASDAF architecture practice components. 
 
+Java maven metamodel translates to java classes
+Model file based
+Text artifacts
+
+both metamodel and model can be deployed as Maven jars leveraging maven dependency and repository...
+
 #### Metamodel
 
 NASDAF uses [Eclipse Modeling Framework](https://www.eclipse.org/modeling/emf/) [Ecore](https://download.eclipse.org/modeling/emf/emf/javadoc/2.9.0/org/eclipse/emf/ecore/package-summary.html#details) to define the meta-model.
 This section provides an overview of Ecore concepts.
 
-* **EMF Project** - contains one or more Ecore models and generator models. Generator models are used to generate Java classes from models. Java classes are then compiled and can be deployed to a Maven repository. E.g. [Maven Central](https://mvnrepository.com/repos/central). 
+* **EMF Project** - contains one or more Ecore models and generator models. Generator models are used to generate Java classes from models. 
 * **Ecore model** - contains one or more EPackages.
 * **EPackage** - a grouping construct, contains EClassifiers (EClass, EDataElement, EEnum) and sub-packages.
 * **EClass** - defines a "type of thing", e.g. "Server". Contains structural features - attributes and references, and operations. E.g. "Server".
 * **EStructuralFeature** - an attribute or a reference. Can be single value on multi-value.  
     **EAttribute** - simple value, e.g. a string, number, date. E.g. 
 
+
+Java classes are then compiled and can be deployed to a Maven repository. E.g. [Maven Central](https://mvnrepository.com/repos/central).
 EMF Ecore project - one or more ecore models.
 
 Model - EPackage containing sub-packages and classifiers - classes, enumerations, and data types
@@ -212,6 +228,27 @@ Metamodel elaboration - capture what doesn't fit as docs then migrate to meta-mo
 
 Sweet spot of formalism.
 Orgs, like people, take time to learn.
+
+TODO - model and gen projects. model name "model", but load key 'nasdaf'. Capability, building block, version, domain, work package, responsibility. 
+party, team, person, organization, contact method, ... (gradually).
+
+
+Arch definition of a code component can be in the same repo with the component - keeping in sync, (arch) documentation.
+Maven resource jar
+
+As code - Source control, textual, maven version and dependency
+
+TOGAF inspired, minimalistic, pragmatic, extensible.
+
+
+When to migrate from informal:
+
+* Debates about terminology - capture as metamodel and publish
+* Exorbitant amount of effort on onboarding and KT - document once, have new people to read, ask questions and update.
+* Knowledge concentrated in the heads of a few key people (superchickens). 
+* Engagement problems - people do not speak up.
+
+Variability and reuse - multi-dimensional continuum.
 
 ===
 
