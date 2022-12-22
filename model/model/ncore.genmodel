@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.ncore/src/main/java" creationIcons="false"
+    editorDirectory="" modelPluginID="org.nasdanika.ncore" modelName="Ncore" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="11.0"
+    suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>ncore.ecore</foreignModel>
+  <genPackages prefix="Ncore" basePackage="org.nasdanika" disposableProviderFactory="true"
+      ecorePackage="ncore.ecore#/">
+    <genDataTypes ecoreDataType="ncore.ecore#//Instant"/>
+    <genDataTypes ecoreDataType="ncore.ecore#//Duration"/>
+    <genClasses ecoreClass="ncore.ecore#//Adaptable"/>
+    <genClasses ecoreClass="ncore.ecore#//IMarked"/>
+    <genClasses image="false" ecoreClass="ncore.ecore#//Marked">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Marked/markers"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//IMarker"/>
+    <genClasses ecoreClass="ncore.ecore#//Marker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Marker/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Marker/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Marker/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Temporal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Temporal/instant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//Temporal/base"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Temporal/offset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//Temporal/derivatives"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Temporal/lowerBounds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Temporal/upperBounds"/>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/after">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/after/when"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/before">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/before/when"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/coincides">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/coincides/when"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/normalize"/>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/minus">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/minus/when"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/minus.1">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/minus.1/offset"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/plus">
+        <genParameters ecoreParameter="ncore.ecore#//Temporal/plus/offset"/>
+      </genOperations>
+      <genOperations ecoreOperation="ncore.ecore#//Temporal/copy"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Period">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Period/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Period/end"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Period/duration"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ncore.ecore#//ModelElement">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//ModelElement/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//ModelElement/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//ModelElement/uuid"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//ModelElement/actionPrototype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//ModelElement/representations"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//RepresentationEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//RepresentationEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//RepresentationEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Reference">
+      <genTypeParameters ecoreTypeParameter="ncore.ecore#//Reference/T"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//Reference/target"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//String/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//List">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//List/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Map">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ncore.ecore#//Map/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Integer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Integer/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Boolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Boolean/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ncore.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Property/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//StringProperty"/>
+    <genClasses ecoreClass="ncore.ecore#//IntegerProperty"/>
+    <genClasses ecoreClass="ncore.ecore#//MapProperty"/>
+    <genClasses ecoreClass="ncore.ecore#//ListProperty"/>
+    <genClasses ecoreClass="ncore.ecore#//BooleanProperty"/>
+    <genClasses ecoreClass="ncore.ecore#//EObjectProperty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//EObjectProperty/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//StringEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//StringEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//StringEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//IntegerEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//IntegerEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//IntegerEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//BooleanEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//BooleanEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//BooleanEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//GitMarker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//GitMarker/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//GitMarker/remotes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//GitMarker/branch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//GitMarker/head"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//GitMarker/headRefs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ncore.ecore#//Documented">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Documented/documentation"/>
+    </genClasses>
+    <genClasses ecoreClass="ncore.ecore#//Composite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ncore.ecore#//Composite/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ncore.ecore#//Composite/children"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

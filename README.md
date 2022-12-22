@@ -2,10 +2,22 @@ Abstract - why the name is "Architecture As Code". Nasdanika Architectural Frame
 Application of open source products, including Nasdanika products, to architecture developent.
 Comparison with two alternatives - an informal, and a formal using UML/Sparx Enterprise Architect.
 
+Inspired by [TOGAF](https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework).
+
+Components with descriptions
+
+
 Easy transition from informal Arch practiced in some orgs. See below
 
+[Software architecture](https://en.wikipedia.org/wiki/Software_architecture) is the fundamental structure of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations.
 
-Requirements 
+Architecture development:
+
+* Capturing and sharing software architecture.
+* Architecture evolution is the process of maintaining and adapting an existing software architecture to meet changes in requirements and environment. As software architecture provides a fundamental structure of a software system, its evolution and maintenance would necessarily impact its fundamental structure. As such, architecture evolution is concerned with adding new functionality as well as maintaining existing functionality and system behavior.
+
+
+## Requirements 
 
 Java11/Eclipse IDE with support of Ecore model development - J2ee or modeling. metamodel
 For modeling - text editor, Maven to generate
@@ -21,27 +33,17 @@ Composite.
 TODO - definitions of architecture an architecture development. 
 Similarities with code and relationships with code.
 
-## Architecture practice
-
-Reference [TOGAF](https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework).
-
-Components with descriptions
+## Components of Architecture Practice
 
 * **[Metamodel](https://en.wikipedia.org/wiki/Metamodeling)** - contains specifications of types of "things" a.k.a. "concepts", "entities", "model elements". For example "Server" is a type of thing. Server specification may define that a server has an IP address attribute, a one-to-many containment relationship with "Hard Drive", and many-to-one non-containment "supportTeam" relationship with a "Team". 
-* **Model** - contains descriptions of things (entities, instances, model elements). The descriptions comply with the meta-model specifications. For example, a model may contain multiple server model elements with different IP addresses, but possibly referencing the same support team model element.
-* **Viewpoint** - a specification how model elements shall be represented (shown). For [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language) diagrams it would be a diagram type, e.g. [Component diagram](https://en.wikipedia.org/wiki/Component_diagram). Viewpoint is a meta-view. 
+* **Model** - contains descriptions of things (entities, instances, model elements). The descriptions comply with the meta-model specifications. For example, a model may contain multiple server model elements with different IP addresses, possibly referencing the same support team model element.
+* **Viewpoint** - a specification of how model elements shall be represented (shown). For [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language) diagrams it would be a diagram type, e.g. [Component diagram](https://en.wikipedia.org/wiki/Component_diagram). Viewpoint is a meta-view. 
 * **View** - a representation of model elements, possibly compliant with a viewpoint specification. A view can be graphical (diagram, chart), textual - a list, or a table (matrix), or be built from UI components such as trees and forms.
 * **Repository** - a storage of models.   
 
 ### NASDAF 
 
 This section provides an overview of NASDAF architecture practice components. 
-
-Java maven metamodel translates to java classes
-Model file based
-Text artifacts
-
-both metamodel and model can be deployed as Maven jars leveraging maven dependency and repository...
 
 #### Metamodel
 
@@ -53,40 +55,105 @@ This section provides an overview of Ecore concepts.
 * **EPackage** - a grouping construct, contains EClassifiers (EClass, EDataElement, EEnum) and sub-packages.
 * **EClass** - defines a "type of thing", e.g. "Server". Contains structural features - attributes and references, and operations. E.g. "Server".
 * **EStructuralFeature** - an attribute or a reference. Can be single value on multi-value.  
-    **EAttribute** - simple value, e.g. a string, number, date. E.g. 
+    * **EAttribute** - simple value, e.g. a string, number, date. E.g. server's IP address can be defined as a single value string or as a multi-value string for servers with multiple network interfaces. A single IP address can also be defined as a multi-value integer with lower bound 4 and upper bound 6.
+    * **EReference** - reference to model elements. Single or multi-value. Can be containing. For example, a server contains hard drives - a multi-value containment reference. A server references its support team - a single non-containment reference. References are uni-directional. However, a references may specify another reference as its opposite. Two opposite references act as a bi-directional reference.
+* **EOperation** - class behavior. E.g. server may define ``patch()`` and ``restart()`` operations.
+* **EDataType** - data type definition.
+* **EEnum** - enumeration.
 
+Metamodel elements can be annotated with **EAnnotation**.
+Annotations can be used to associate documentation and constraints/validations with data elements.
+An example of a validation would be ensuring uniqueness of IP addresses across all servers.
 
-Java classes are then compiled and can be deployed to a Maven repository. E.g. [Maven Central](https://mvnrepository.com/repos/central).
-EMF Ecore project - one or more ecore models.
+An Ecore metamodel is used to generate Java classes representing metamodel EClasses. 
+Compiled classes can be packaged as a [Maven](https://en.wikipedia.org/wiki/Apache_Maven) jar and deployed to a Maven repository, e.g. [Maven Central](https://mvnrepository.com/repos/central).
+Model files can also be packaged and published as a Maven jar.
+Example - [Nasdanika Ncore](https://mvnrepository.com/artifact/org.nasdanika.core/ncore).
 
-Model - EPackage containing sub-packages and classifiers - classes, enumerations, and data types
+Ecore metamodel and generator model can be also loaded using Java API.
 
-Eclasses - structural features and operations. Example - server, hard drive, team, person
-structural features - one or many, changeable, computed (derived)
-attributes - examples
-references - example - has hard drives, maintained. Containment, cardinality, opposite
-operations - example - restart, patch
+[Nasdanika HTML Ecore](https://docs.nasdanika.org/modules/html/modules/ecore/index.html) can be used to 
+generate metamodel documentation. 
+Example - [Nasdanika HTML Application Model](https://docs.nasdanika.org/modules/html/modules/models/modules/app/modules/model/index.html).
 
-generation to java, packaging and publishing to Maven jars
+The metamodel defines the architectural [ubiquitous language](https://martinfowler.com/bliki/UbiquitousLanguage.html) and
+generated documentation is a dictionary of that language.
 
-generation of documentation with ecoredoc, cross-referencing. markdown
-Doc elements - doc, diagram (auto-generated), all references, all supertypes, load specification.
-Examples from app.
+Metamodels can reference other metamodels.
+For example, the Application metamodel references Ncore metamodel.
+Application metamodel classes extend and use Ncore metamodel classes.
 
-Publishing - Github pages.
+Metamodel files are XML files and can be diffed and merged which facilitates collaborative development.
 
-Examples - Ncore, Exec, Flow, app, ...
+Ecore code generator uses ``@generated`` Javadoc tags to mark generated code. 
+It does not overwrite code which is not marked as generated or if the generated tag is "dirty" - has some text after it, e.g. ``@generated NOT``. 
+This feature allows generated and hand-crafted code to co-exist. 
+For example:
 
-Ubiquitous language, problem-domain/org specific.
+* The generator creates an default implementation of EOperation which throws UnsupportedOperationException. 
+* Developer adds ``NOT`` after ``@generated`` and provides operation implementation.
+* In subsequent generations the generator would skip generation of this EOperation.  
 
-validations - ip address uniquiness
+See [EMF Tutorial](https://eclipsesource.com/blogs/tutorials/emf-tutorial/).
+
+Another technique is to add ``Gen`` suffix to the generated method and leverage generated code in hand-crafted code:
+
+```java
+/**
+* <!-- begin-user-doc -->
+* <!-- end-user-doc -->
+* @generated
+*/
+public String getNameGen() {
+	return name;
+}
+
+public String getName() {
+	return format(getNameGen());
+}
+```
 
 #### Model
 
+At runtime ecore models are organized as follows:
+
+* ${javadoc/org.eclipse.emf.ecore.resource.ResourceSet} contains a collection of related cross-referencing resources.
+* ${javadoc/org.eclipse.emf.ecore.resource.Resource} contain model elements which are instances of meta-model classes. Resources can be loaded on-demand. For example, a resource can be loaded when a reference to an object within the resource is resolved. Resources are identified by ${javadoc/org.eclipse.emf.common.util.URI}'s.
+* Model elements can contain other elements. Model elements can also be identified by URI's.
+
+One powerful feature of Ecore is object proxies. A proxy object can be created with an URI of the target object. 
+EReferences may be configured to to transparently resolve proxies.
+
+Resources can be loaded from different sources using ${javadoc/org.eclipse.emf.ecore.resource.Resource.Factory resource factories}.
+Resource factories can be associated with extensions or protocols. 
+
+${javadoc/org.eclipse.emf.ecore.resource.URIHandler} can be used to load/save resources as streams. 
+
+Ecore provides ${javadoc/org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl} for loading and saving resources in [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) format.
+
+777
+Nasdanika ....
+
+
+
 XMI, Drawio, YAML, JSON, Excel, databases - CDO, EMF graph4j or whatever neoemf.
-Custom URI schemas for loading from classloader, Maven, ...
+
+
+CDO, ...
+
+Custom URI handlers can be created to load models from sources such as:
+
+* GitHub or GitLab using REST API, [gitlab4j-api](https://github.com/gitlab4j/gitlab4j-api) or [JGit](https://www.eclipse.org/jgit/). E.g. ``git:`` scheme can be used to load resources using JGit, and ``gitlab:`` to load using gitlab4j-api. This approach would allow to reference resources at a specific reference, e.g. a branch or tag, which is more flexible than [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). For REST API cases it would also allow to load resources on-demand instead of full clone.
+* Maven resources can be addressed using ``maven://<group id>/<artifact id>/<version>/<file>[/<path in jar>]`` and loaded using [Maven Artifact Resolver](https://maven.apache.org/resolver/index.html).
+
+Custom factories may load resources from, say:
+
+* Issue tracking systems.
+* Organization directories.
 
 #### Viewpoint
+
+Sirius
 
 #### View
 
