@@ -7,7 +7,7 @@ Inspired by [TOGAF](https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Fr
 Components with descriptions
 
 
-Easy transition from informal Arch practiced in some orgs. See below
+Easy transition from informal Arch practiced in some orgs. See below. "Democratic" - low barrier of entry for contributors.
 
 [Software architecture](https://en.wikipedia.org/wiki/Software_architecture) is the fundamental structure of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations.
 
@@ -113,7 +113,7 @@ public String getName() {
 }
 ```
 
-#### Model
+#### Model & Repository
 
 At runtime ecore models are organized as follows:
 
@@ -136,10 +136,10 @@ Models can be stored in a variety of databases using [CDO](https://www.eclipse.o
 Nasdanika provides the following resource and resource factory classes:
 
 * ${javadoc/org.nasdanika.graph.processor.emf.GraphProcessorResource} - base abstract class for loading resources from graph ${javadoc/org.nasdanika.graph.Element}s.
-* ${org.nasdanika.drawio.emf.DrawioResource} - base abstract class for loading resources from [Drawio](https://www.diagrams.net/) (diagrams.net) diagrams. 
+* ${javadoc/org.nasdanika.drawio.emf.DrawioResource} - base abstract class for loading resources from [Drawio](https://www.diagrams.net/) (diagrams.net) diagrams. 
 * ${javadoc/org.nasdanika.html.model.app.drawio.ResourceFactory} - loads [application model](https://docs.nasdanika.org/modules/html/modules/models/modules/app/modules/model/index.html) from Drawio diagrams. See [App Drawio](https://docs.nasdanika.org/modules/html/modules/models/modules/app/modules/drawio/index.html) for more detais.
 * ${javadoc/org.nasdanika.persistence.ObjectLoaderResourceFactory} and ${javadoc/org.nasdanika.persistence.ObjectLoaderResource} - load models from [YAML](https://en.wikipedia.org/wiki/YAML) & [JSON](https://en.wikipedia.org/wiki/JSON). Also supports loading YAML and JSON from [data](https://en.wikipedia.org/wiki/Data_URI_scheme) URI's.
-* ${javadoc/org.nasdanika.emf.persistence.NcoreDrawioResourceFactory} - resource factory for loading models from Drawio diagrams using "semantic mapping" where diagram element properties are used to specify how to load a model element represented by the diagram element. See [EMF](https://docs.nasdanika.org/modules/core/modules/emf/index.html) for more details.
+* ${javadoc/org.nasdanika.emf.persistence.NcoreDrawioResourceFactory} - resource factory for loading models from Drawio diagrams using "semantic mapping" where diagram element properties are used to specify how to load a model element represented by the diagram element. One diagram element can have multiple semantic mappings using namespaces, i.e. one diagram can be used to load multiple models representing different aspects of what is depicted on the diagram. See [EMF](https://docs.nasdanika.org/modules/core/modules/emf/index.html) for more details.
 * ${javadoc/org.nasdanika.emf.persistence.ExcelResourceFactory} and ${javadoc/org.nasdanika.emf.persistence.ExcelResource} can be used to load resources from MS Excel files.  
 
 Custom URI handlers can be created to load models from sources such as:
@@ -165,34 +165,49 @@ As you can see, EMF allows to load data from multiple sources - databases, diagr
 
 The data loading logic acts as an [anti-corruption layer](https://www.domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf) hiding complexities of data retrieval. 
 
-#### Viewpoint
+#### Viewpoint & View
 
-777
+There is a number of ways to define viewpoints for EMF models:
 
-Sirius (Web), xText, tree, jface data binding - RUP, Web
+* Eclipse IDE:
+    * Tree editors can be generated from metamodels similar to model classes.
+    * [Eclipse Sirius](https://www.eclipse.org/sirius/) allows to define multiple representations (viewpoints) - diagrams, trees, tables.
+    * [Xtext](https://www.eclipse.org/Xtext/) can be used to develop domain-specific text-based languages based on the metamodel. Such a language can be considered to be a "text-based viewpoint"
+    * [JFace Data Binding for EMF](https://www.vogella.com/tutorials/EclipseDataBindingEMF/article.html) can be used to define SWT-based views. Views can be designed in [Eclipse WindowBuilder](https://www.eclipse.org/windowbuilder/).
+* Web
+    * [Eclipse Sirius Web](https://www.eclipse.org/sirius/sirius-web.html) can be used to create and deploy a graphical studio to the web.
+    * [Eclipse RAP](https://www.eclipse.org/rap/) allows to export SWT-based GUI to the Web.
+    * [Nasdanika HTML EMF](TODO) ${javadoc/org.nasdanika.html.emf.EObjectActionBuilder} is a base class for creating adapters to generate [Nasdanika HTML App Model](TODO) [Actions](TODO) from model elements. The action model can then be used to generate a static web site. Example - [Drawio Semantic Mapping](https://docs.nasdanika.org/demo-drawio-semantic-mapping/) is generated from a hierarchy of [Composite](TODO)'s. The generation process validates the site for broken links, including links in diagrams. For model elements loaded from Drawio diagrams, source diagrams can be used in the action content. Action content may also contain additional diagrams (sub-views) - Drawio, [PlantUML](https://plantuml.com/) or [Mermaid](https://mermaid.js.org/#/). Example - [Markdown](TODO). Generated sites feature full-text search which includes text from diagram labels and tooltips.        
 
-Eobject action builder
+## Drawio
 
-#### View
+Drawio diagrams can be used as model resources and as free-form model views (representations) which are not constrained by a viewpoint specification. 
 
-Drawio - In browser, desktop, confluence (bi-dir exchange), integrations.
-Drawio
+This section provides an overview of Drawio.
 
+* ${javadoc/org.nasdanika.drawio.Document} contains one or more pages.
+* ${javadoc/org.nasdanika.drawio.Page} contains ${javadoc/org.nasdanika.drawio.Model}, which in turn contains root. Pages have name and id.
+* ${javadoc/org.nasdanika.drawio.Root} has properties and contains one or more layers.
+* ${javadoc/org.nasdanika.drawio.Layer} contains layer elements - nodes and connections. Layers have a name (label), properties, and can be hidden.
+* ${javadoc/org.nasdanika.drawio.Node} may contain other other nodes and connections. Nodes have a label, tooltip, properties, tags, and incoming and outgoing connections. A node can be linked to a URL or a page. 
+* ${javadoc/${javadoc/org.nasdanika.drawio.Connection} may have source and target nodes. Similar to nodes and layers, connections have a label, tooltip, properties, and tags.
+* Tags are strings associated with nodes and connections. Similar to layers, tags can be used to hide diagram elements. However, layers contain nodes and connections, and tags have many-to-many relationship with nodes and connections.
 
-A section on Drawio model and capabilities, layers - mention that some people who use Drawio are not aware of many of its capabilities. Link to documentation incl. shortcuts.
-Generation is essentially model transformation. Transformation pipeline - drawio -> semantic -> app -> resource -> container.
+See [Nadanika Core Drawio](../core/drawio/index.html) for more details.
 
-Mermaid, PlantUML.
+Drawio diagrams can be created and edited using the following methods:
 
-View to model cardinality
+* Desktop editor which can be downloaded from [diagrams.net](https://www.diagrams.net/) or installed from [Microsoft Store](https://apps.microsoft.com/store/detail/drawio-diagrams/9MVVSZK43QQW?hl=en-us&gl=us).
+* [Online editor](https://app.diagrams.net)
+* Hosted editor - deploy [Drawio webapp](https://github.com/jgraph/drawio/tree/dev/src/main/webapp) to a web server. You can modify ``js/viewer-static.min.js`` to point to the URL of your hosted editor - search and replace ``https://app.diagrams.net`` with the URL of your installation.
+* Drawio plug-ins, e.g. Confluence plug-in. Drawio diagrams can be exported from Confluence as well as imported to Confluence.
 
-Sirius (Web), Xtext, forms, trees. 
-
-#### Repository
-
-Distributed - Filesystem, Git, Maven, database
+Drawio shapes and diagrams can be added to a user library and that library can be used to author new diagrams.
+This feature can be used to create libraries of shapes with pre-configured semantic mapping.
 
 ## Comparison of arch prcts approaches
+
+777
 
 Table - 3 columns, multiple views. Maybe in plain html. View to model cardinality as well.
 
@@ -307,7 +322,7 @@ framework - nasdaf?
 Findable, usable, trustable? DX
 
 
-
+Confluence lift and shift
 
 Metamodel elaboration - capture what doesn't fit as docs then migrate to meta-model. E.g. Server supporting team.
 
