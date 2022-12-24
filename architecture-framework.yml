@@ -1,0 +1,17 @@
+app-action:
+  text: Architecture Framework
+  location: architecture-framework/index.html
+  content:
+    content-markdown:
+      style: true
+      source:
+        content-resource: readme.md
+#  children:
+#     - model/model.yml
+#     - gen/gen.yml
+#     - demo/demo.yml
+  navigation:
+    - app-link:
+        text: Javadoc
+        icon: fab fa-java
+        location: apidocs/index.html

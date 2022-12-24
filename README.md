@@ -131,15 +131,16 @@ ${javadoc/org.eclipse.emf.ecore.resource.URIHandler} can be used to load/save re
 
 Ecore provides ${javadoc/org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl} for loading and saving resources in [XMI](https://en.wikipedia.org/wiki/XML_Metadata_Interchange) format.
 
-777
-Nasdanika ....
+Models can be stored in a variety of databases using [CDO](https://www.eclipse.org/cdo/) and [NeoEMF](https://neoemf.atlanmod.org/).
 
+Nasdanika provides the following resource and resource factory classes:
 
-
-XMI, Drawio, YAML, JSON, Excel, databases - CDO, EMF graph4j or whatever neoemf.
-
-
-CDO, ...
+* ${javadoc/org.nasdanika.graph.processor.emf.GraphProcessorResource} - base abstract class for loading resources from graph ${javadoc/org.nasdanika.graph.Element}s.
+* ${org.nasdanika.drawio.emf.DrawioResource} - base abstract class for loading resources from [Drawio](https://www.diagrams.net/) (diagrams.net) diagrams. 
+* ${javadoc/org.nasdanika.html.model.app.drawio.ResourceFactory} - loads [application model](https://docs.nasdanika.org/modules/html/modules/models/modules/app/modules/model/index.html) from Drawio diagrams. See [App Drawio](https://docs.nasdanika.org/modules/html/modules/models/modules/app/modules/drawio/index.html) for more detais.
+* ${javadoc/org.nasdanika.persistence.ObjectLoaderResourceFactory} and ${javadoc/org.nasdanika.persistence.ObjectLoaderResource} - load models from [YAML](https://en.wikipedia.org/wiki/YAML) & [JSON](https://en.wikipedia.org/wiki/JSON). Also supports loading YAML and JSON from [data](https://en.wikipedia.org/wiki/Data_URI_scheme) URI's.
+* ${javadoc/org.nasdanika.emf.persistence.NcoreDrawioResourceFactory} - resource factory for loading models from Drawio diagrams using "semantic mapping" where diagram element properties are used to specify how to load a model element represented by the diagram element. See [EMF](https://docs.nasdanika.org/modules/core/modules/emf/index.html) for more details.
+* ${javadoc/org.nasdanika.emf.persistence.ExcelResourceFactory} and ${javadoc/org.nasdanika.emf.persistence.ExcelResource} can be used to load resources from MS Excel files.  
 
 Custom URI handlers can be created to load models from sources such as:
 
@@ -151,9 +152,26 @@ Custom factories may load resources from, say:
 * Issue tracking systems.
 * Organization directories.
 
+In some cases adapter services can be created to load models from information systems and serve them over HTTP(S) as XMI, JSON, or YAML. 
+In case of XMI an adapter may leverage classes generated from metamodels to programmatically populate a model and then save it to XMI.
+
+Loading logic may retrieve data from multiple sources.
+For example:
+
+* A person model element can be loaded from the organization's directory and then enriched with information from, say, ``profile.yml`` located in the person's personal Git repository is such repository and file exist.
+* Some information about a software component may be loaded from ``pom.xml``. Information about developers can be loaded as proxies with developer e-mails as proxy URI's. The proxies would be resolved to person objects loaded from the organization's directory. Person objects may have a computed (derived) opposite to "developers" reference of a software component model element. This would allow to list all software components for a given developer. 
+
+As you can see, EMF allows to load data from multiple sources - databases, diagrams, YAML, JSON, Excel, information systems - cross-reference (stitch), validate, and represent as a coherent graph of model elements. 
+
+The data loading logic acts as an [anti-corruption layer](https://www.domainlanguage.com/wp-content/uploads/2016/04/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf) hiding complexities of data retrieval. 
+
 #### Viewpoint
 
-Sirius
+777
+
+Sirius (Web), xText, tree, jface data binding - RUP, Web
+
+Eobject action builder
 
 #### View
 
@@ -316,6 +334,9 @@ When to migrate from informal:
 * Engagement problems - people do not speak up.
 
 Variability and reuse - multi-dimensional continuum.
+
+What - capability
+How - building block
 
 ===
 
