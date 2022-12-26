@@ -205,16 +205,84 @@ Drawio diagrams can be created and edited using the following methods:
 Drawio shapes and diagrams can be added to a user library and that library can be used to author new diagrams.
 This feature can be used to create libraries of shapes with pre-configured semantic mapping.
 
-## Comparison of arch prcts approaches
+## Comparison of Architecture Practice Approaches
 
-777
+This section compares three approaches to architecture practice which can be put on the "formalism continuum" as follows:
 
-Table - 3 columns, multiple views. Maybe in plain html. View to model cardinality as well.
+* Low formalism (informal) - architectural artifacts are stored in Visio and PowerPoint documents and Drawio diagrams in Confluence. Diagram elements are not linked to model elements because there is no backing model and meta-model.
+* Adjustable formalism - NASDAF.
+* High formalism - UML with [Sparx Enterprise Architect](https://en.wikipedia.org/wiki/Enterprise_Architect_(software)) as an example.
 
-Formal/informal
+The below table provides a side-by-side comparison of the approaches for each architecture practice elements. 
+Subsequent sub-sections provide a more detailed explanation of each approach, pros and cons, and when to consider moving from one to another.
 
-Pros and cons, why to migrate to nasdaf
+Component  | Informal | NASDAF | UML
+---------- | -------- | ------ | ---
+Metamodel  | Informal/tacit. May be documented, but the documentation does not constrain the model through automated means - it is up to modelers to create models compliant with the metamodel.  | Formal metamodel with types (classes) specific to the organization. | Formal metamodels with types (classes) specified by a notation being used, e.g. UML.
+Model      | Informal/tacit - tribal knowledge. | Formal model compliante with the metamodel || 
+Viewpoint  | Informal - diagram types used in the organization | Formal - HTML generators | Formal graphical notations (diagram types).
+View       | Informal - PowerPoint, Visio, Drawio diagrams in Confluence pages | Informal - Drawio, formal - HTML pages | Formal - diagrams compliant with diagram types.
+View to model cardinality      | Undefined, as there is no formal model | Many-to-many for Drawio semantic mapping with namespaces. The same diagram file (resource) can be used to load different models. For example, an architecture model to communicate system functionality, implementation model integrated with work tracking system to communicate system development progress, and a runtime model integrated with monitoring solutions do communicate system status, e.g. failed or overloaded components. | Many-to-one
+Repository | Distributed and disconnected - filesystem, OneDrive/Sharepoint, Confluence | Distributed and connected - YAML, JSON, Excel, Drawio, XMI files in version control, integrations | Tool-specific (opaque) repository - MS Acess database file, DBMS, Cloud. [^1]
 
+[^1]: See [Model Repostory](https://sparxsystems.com/enterprise_architect_user_guide/15.2/model_repository/configuration_management.html)
+
+### Informal
+
+In the low formalism scenario there is no formal metamodel and there is no model. 
+Or the metamodel can be formal, but not traceable from architecture artifacts - all architecture stakeholders are expected to know the metamodel and the model by heart.
+There are many architecture artifacts mentioning, but not referencing, the same concepts (model elements). 
+
+```drawio-resource
+./informal-example.drawio
+```
+
+In the diagram above "ABC Microservice" and "XYZ SOR" are mentioned, but not referenced. 
+A person looking at the diagram is expected to possess contextual knowledge to understand what is depiced and where to look for additional information.
+
+An informal practice is a good fit for situation where there the informal metamodel and model are well-understood in the organization and the level of changes is low enough - the organization/team is stable, new people have time and access to resources to learn about how things are done.
+
+Some indicators when this practice becomes a misfit:
+
+* There are many presentations, pages, and diagrams, but it not clear which of them are sources of truth.
+* Multiple version of what architecture is expected to describe, but a single body of architecture knowledge.
+* Knowledge dilution - influx of new people; people who have the tribal knowledge are not sharing their knowledge with the new people because they are too busy.
+* Knowledge fragmentation - people hold bits and pieces of knowledge. Those bits and pieces may contradict each other.
+* Only a handful of people speaks at large meetings. New people don't speak up because the veterans hold the monopoly to truth.
+* Those who speak argue about definitions.
+
+One of situations when such a misfit happens is when a small team develops a solution which is then positioned as a shared/reusable component/asset or a platform on which new solutions should be built. 
+The team grows and what worked well for, say, 10 people doesn't work anymore for 50 core developers and hundreds of developers who are told to use the shared component/platform.
+ 
+### NASDAF
+
+Comparing to the other two approaches, NASDAF requires investment into development of a metamodel and viewpoints.
+
+It is perhaps an overkill if architecture is developed and maintained by a small group of people and architecture consumers either
+possess contextual knowledge to understand diagrams not backed by models, or they are knowledgeable of the underlying metamodel and notation, e.g. UML and its diagrams.
+
+It is a good fit if:
+
+* An organization wants to "shape the tool" and codify organization's "secret sauce". For example, how teams work on efforts, how efforts are financed, who has expertise in a particular product or component.
+* There is an appetite for a holistic view but bits and pieces of information are spread over multiple systems and people. Systems can be integrated and people may own and maintain fragments of the whole distributed architecture model using means familiar to them. E.g. YAML or Excel. Such fragments can be kept close to the code of assets they describe, e.g. in the same version control repository.
+* Multiple version of architecture shall exist at the same time - multiple releases, feature branches or forks (e.g. a POC branch or fork).
+* There is a need to manage variability between, say, regions and business lines. With NASDAF metamodels can be organized into an inheritance hierarchy with common concepts being at the top and variations handled in subclasses.
+
+### UML
+
+With industry standards such as UML you get a metamodel and viewpoints out of the box.
+It is a good fit if people consuming architecture artifacts "speak" UML and be able to access architecture documentation.
+People contributing to architecture development have access 
+to and know how to use the modeling tool.
+
+However, the tool shapes you instead you shaping the tool. 
+You may need to find a way to capture organization-specific concepts. 
+In UML it can be done with, say, stereotypes and tags.
+
+If the above conditions are not met, UML may become a burden:
+
+* Only a small portion of the language would be used
+* The language, being an industry standard, still can't express organization-specific concepts
 
 ## Implementation
 
@@ -352,6 +420,9 @@ Variability and reuse - multi-dimensional continuum.
 
 What - capability
 How - building block
+
+
+
 
 ===
 
