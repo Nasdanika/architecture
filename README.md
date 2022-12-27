@@ -308,7 +308,7 @@ The opposite is also true - initially there might be no model, only a metamodel 
 
 A few ideas regarding metamodel evolution are outlined in the below sections
 
-### Taxonomy
+#### Taxonomy
 
 You can start with a taxonomy of "things" using [Composite](TODO). E.g. 
 
@@ -326,11 +326,11 @@ One important outcome of establishing even a simplest model such as a taxonomy i
 Another outcome is that after establishing a taxonomy it is possible to create a publish Drawio user libraries with pre-configured diagram elements. 
 E.g. a library of organization's SOR's or a library of business capabilities from which offerings can be built.  
 
-### Ontology
+#### Ontology
 
 The next step after building a taxonomy is [ontology](https://en.wikipedia.org/wiki/Ontology_engineering) - start creating classes with attributes (properties) and relationships. 
 
-#### Capabilities and building blocks
+##### Capabilities and building blocks
 
 ```drawio-resource
 capabilities.drawio
@@ -355,7 +355,7 @@ Separation of capabilities (the WHAT) from buidling blocks providing them (the H
 
 E.g. "Drink - Appetizer - Main Course - Dessert" is an offering pattern used by restaurants. And a menu is a catalog of building blocks providing "Drink" and other "capabilities.
 
-#### Work Packages
+##### Work Packages
 
 A concept of a "Work Package" can be introduced to capture what needs to be done. 
 A work package would have relationships with components it impacts - where work needs to be done, and with parties doing the work, e.g. teams, vendors.
@@ -365,7 +365,7 @@ One work package may correspond to multiple work items.
 
 Work packages may be modeled as [flows](https://docs.nasdanika.org/demo-drawio-flow-actions/).
 
-#### Managing variability with inheritance hierarchies
+##### Managing variability with inheritance hierarchies
 
 In organizations which have multiple divisions/business lines and operate in different regions there might be variations between how things are structured. One example would be US and UK mailing addresses.
 They have common parts - Street and City, and different parts - State and Zip code in the US address and postal code in the UK address.
