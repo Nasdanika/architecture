@@ -219,7 +219,7 @@ Subsequent sub-sections provide a more detailed explanation of each approach, pr
 Component  | Informal | NASDAF | UML
 ---------- | -------- | ------ | ---
 Metamodel  | Informal/tacit. May be documented, but the documentation does not constrain the model through automated means - it is up to modelers to create models compliant with the metamodel.  | Formal metamodel with types (classes) specific to the organization. | Formal metamodels with types (classes) specified by a notation being used, e.g. UML.
-Model      | Informal/tacit - tribal knowledge. | Formal model compliante with the metamodel || 
+Model      | Informal - tacit/tribal knowledge. | Formal model compliante with the metamodel || 
 Viewpoint  | Informal - diagram types used in the organization | Formal - HTML generators | Formal graphical notations (diagram types).
 View       | Informal - PowerPoint, Visio, Drawio diagrams in Confluence pages | Informal - Drawio, formal - HTML pages | Formal - diagrams compliant with diagram types.
 View to model cardinality      | Undefined, as there is no formal model | Many-to-many for Drawio semantic mapping with namespaces. The same diagram file (resource) can be used to load different models. For example, an architecture model to communicate system functionality, implementation model integrated with work tracking system to communicate system development progress, and a runtime model integrated with monitoring solutions do communicate system status, e.g. failed or overloaded components. | Many-to-one
@@ -284,7 +284,121 @@ If the above conditions are not met, UML may become a burden:
 * Only a small portion of the language would be used
 * The language, being an industry standard, still can't express organization-specific concepts
 
-## Implementation
+## Adoption
+
+Adoption of NASDAF has 3 dimensions as shown on the diagram below:
+
+```drawio-resource
+adoption.drawio
+```
+
+The value to the organization is proportional to the volume of the 3-D shape reflecting the adoption progress.
+However, adoption just along the practice and metamodel dimensions still brings value.
+On the diagram the shape is a rectangular cuboid, but is doesn't have to be as it will be explained below. 
+
+### Metamodel & Viewpoints
+
+The metamodel describes organization's architecture problem domain. 
+Organization's metamodel can be an extension of an existing metamodel, e.g. [Ncore](TODO) or [NASDAF Model](TODO).
+
+Also, initially there might be no organization's metamodel - you can start with an existing metamodel and then elicit metamodel from the model.
+E.g. if you find that in many cases architecture documentation contains "Contacts" section, then you should probably capture it in the metamodel .
+
+The opposite is also true - initially there might be no model, only a metamodel to drive common understanding of concepts and relationships within the organization.
+
+A few ideas regarding metamodel evolution are outlined in the below sections
+
+### Taxonomy
+
+You can start with a taxonomy of "things" using [Composite](TODO). E.g. 
+
+* Offerings - products and services - what your organization offers to its customers.
+* Business capabilities - building blocks of offerings. 
+* Technical capabilities - building blocks of business capabilities.
+* Tech stack - building blocks of technical capabilities.
+
+You can use block diagrams to define and represent the hierarchy of composites. 
+
+[Drawio Semantic Mapping Demo](https://docs.nasdanika.org/demo-drawio-semantic-mapping/) is an example of such a taxonomy.
+
+One important outcome of establishing even a simplest model such as a taxonomy is that diagram elements now not mention, but reference model elements and these references navigate to the same page. E.g. if two diagrams have "XYZ SOR" diagram element then a mouse click on both of those diagram elements shall navigate to the page describing "XYZ SOR".
+
+Another outcome is that after establishing a taxonomy it is possible to create a publish Drawio user libraries with pre-configured diagram elements. 
+E.g. a library of organization's SOR's or a library of business capabilities from which offerings can be built.  
+
+### Ontology
+
+The next step after building a taxonomy is [ontology](https://en.wikipedia.org/wiki/Ontology_engineering) - start creating classes with attributes (properties) and relationships. 
+
+#### Capabilities and building blocks
+
+```drawio-resource
+capabilities.drawio
+```
+
+* Capability - something that is needed to achieve some goal. The WHAT. E.g. "Ability to make quarter-inch holes"[^2] or "[RDBMS](https://en.wikipedia.org/wiki/Relational_database)".
+* Building block - something that provides capabilities. The HOW. E.g. "A quarter-inch drill bit" or [H2](https://en.wikipedia.org/wiki/H2_(DBMS)). A building block may provide more than one capability and a capability may be provided by multiple building blocks. E.g. there are many RDBMS products. A building block may also consume (require) capabilities. E.g. an RDBMS may consume disk space, RAM, CPU cycles.
+
+[^2]: People don’t want quarter-inch drill bits. They want quarter-inch holes.
+
+Both capabilities and building blocks may have versions. Versions may have temporal properties. They may extend [Period](TODO) or have have lifecycle phases extending period. E.g. "Planned", "Development", "Beta", "GA", "Aging", "Retired".
+
+Capabilities/building blocks metamodel would allow to build "Supply chain" views showing a graph of building blocks and provided and consumed capabilities. 
+
+Using an example from the taxonomy section:
+
+* Offerings consume business capabilities.
+* Business capabilities can be provided by multiple building blocks consuming technical capabilities.
+* Technical capabilities may also be provided by multiple building blocks consuming tech stack capabilities and building blocks.
+
+Separation of capabilities (the WHAT) from buidling blocks providing them (the HOW) allows to define solution patterns in terms of capabilities and then build pattern embodiments by selecting building blocks providing those capabilities.
+
+E.g. "Drink - Appetizer - Main Course - Dessert" is an offering pattern used by restaurants. And a menu is a catalog of building blocks providing "Drink" and other "capabilities.
+
+#### Work Packages
+
+A concept of a "Work Package" can be introduced to capture what needs to be done. 
+A work package would have relationships with components it impacts - where work needs to be done, and with parties doing the work, e.g. teams, vendors.
+Work packages can be nested (WBS), have phases, similar to versions above. E.g. "Backlog", "In Progress", "Completed", "Deployed". Such phases may have temporal properties, e.g. extend Period. Or a work package itself may extend Period. 
+Work packages may also have relationships with organization's units of funding and work items in a work tracking system.
+One work package may correspond to multiple work items. 
+
+Work packages may be modeled as [flows](https://docs.nasdanika.org/demo-drawio-flow-actions/).
+
+#### Managing variability with inheritance hierarchies
+
+In organizations which have multiple divisions/business lines and operate in different regions there might be variations between how things are structured. One example would be US and UK mailing addresses.
+They have common parts - Street and City, and different parts - State and Zip code in the US address and postal code in the UK address.
+
+A way to manage this variability is to have a core metamodel which contains common classes and structural features, and region/business line specific metamodels extending the core metamodel.
+In such a hierarchy metamodel elements can move vertically and horizontally.
+A vertical move is pulling generic things up and pushing specific things down. 
+A horizontal move is "borrowing" or "copy-paste" - one part of organization may leverage things from another part without pulling them up the hierarchy (yet).
+
+Situations where there is more than one hierarchy/dimension of variability (e.g. regional and business line) can be handled as follows:
+
+* One dimension is handled as inheritance.
+* Other dimensions are handled as either:
+    * Mix-in classes and interfaces - variations from the non-primary variability dimensions are inherited using multiple inheritance. This approach is shown on the diagram below.
+    * Facets - variations are contained in nested objects (facets). E.g. a common class Customer may contain either US or UK address.
+    
+```drawio-resource
+mix-ins.drawio
+```    
+
+### Model
+
+
+### Practice
+
+Hosting, OneDrive
+
+GitHub/GitLab pages
+
+Any reference - branch (e.g. feature branch), tag, commit.
+
+Video tutorials
+
 
 |-> graph exploration and exploitation
 
@@ -329,13 +443,9 @@ Capability provided/required model. Supply chains - importance, risks, e.g. expe
 Foundational practices - MBSE, Documentation as Code, Video Tutorials, Eclipse Ecosystem - separate white papers?
 
 
-taxonomy/ontology
-
 Scaling up - Maven package diagrams/models, maven and git URI's, systems integrations via special URI's and resource factories.
 
 faintest pencil
-
-Stage 1 (taxonomy) - consistency across diagrams
 
 Scaling up in the enterprise - .aspx to serve from OneDrive.
 
@@ -417,9 +527,6 @@ When to migrate from informal:
 * Engagement problems - people do not speak up.
 
 Variability and reuse - multi-dimensional continuum.
-
-What - capability
-How - building block
 
 
 
