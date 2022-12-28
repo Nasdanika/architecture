@@ -10,6 +10,7 @@ app-action:
 #     - model/model.yml
 #     - gen/gen.yml
 #     - demo/demo.yml
+#     - maven/maven.yml
   navigation:
     - app-link:
         text: Javadoc

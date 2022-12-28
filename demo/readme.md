@@ -1,0 +1,1 @@
+NASDAF demo model and generator leveraging the Maven plug-in and GitHub Actions Maven build
