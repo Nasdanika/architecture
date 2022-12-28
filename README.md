@@ -15,6 +15,10 @@ Architecture development:
 
 * Capturing and sharing software architecture.
 * Architecture evolution is the process of maintaining and adapting an existing software architecture to meet changes in requirements and environment. As software architecture provides a fundamental structure of a software system, its evolution and maintenance would necessarily impact its fundamental structure. As such, architecture evolution is concerned with adding new functionality as well as maintaining existing functionality and system behavior.
+         
+## Demo
+
+TODO: Before you invest your time into reading, take a look at the demo. Link to the demo, demo docs - how it is done. Short summary here. Composite.
 
 ## Requirements 
 
@@ -45,10 +49,6 @@ Architecture development:
     * [Eclipse IDE package](https://www.eclipse.org/downloads/packages/) with Ecore tools:
         * Eclipse IDE for Enterprise Java and Web Developers 
         * Eclipse Modeling Tools        
-         
-## Demo
-
-TODO: Link to the demo, demo docs - how it is done. Short summary here. Composite.
 
 ## Components of Architecture Practice
 
@@ -615,7 +615,12 @@ The publishing service may also perform rendering. E.g.:
 
 #### Maven plugins 
 
-{ackage documentation generation and solution instantiation logic can be packaged into [Maven plugins](https://maven.apache.org/guides/plugin/guide-java-plugin-development.html).
+Package documentation generation and solution instantiation logic can be packaged into [Maven plugins](https://maven.apache.org/guides/plugin/guide-java-plugin-development.html).
+
+
+#### CLI tools
+
+You may also make generators and instantiators available as CLI tools, e.g. using [picocli](https://picocli.info/).
 
 #### Helper services
 
@@ -631,6 +636,18 @@ documentation.
 #### Eclipse Ecosystem
 
 If you decide to leverage Eclipse technologies like Sirius and Xtext you'd likely to need to establish an [Eclipse Ecosystem](https://cv.pavel.vlasov.us/cover-letter.html#eclipse-ecosystem) if you don't have one in place already.
+
+#### Published Architecture Development Kit (ADK)
+
+An ADK can be used to develop new architectures on top of the existing architecture pretty much as [SDK](https://en.wikipedia.org/wiki/Software_development_kit)'s are used for application development.
+ 
+An ADK may include:
+
+* Metamodels - as published Maven jars or as archived Eclipse projects to imported into a workspace.
+* Model(s) - as published Maven resource jars. Distributed models loaded from multiple sources may be loaded by the build process, saved to XMI, and then published to Maven or packaged with the ADK. Other options include storing to a CDO or NeoEMF repository and making it available over the network. If a CDO repository used H2, the repository may be published in a resource jar/zip.
+* Generated documentation may be published in multiple formats - at a specified URL (say ``https://mycompany.com/adk/<yyyy-mm>/``), as a downloadable archive, or as part of the ADK package.
+* Tools can be published as Maven plug-ins or packaged as CLI tools with the ADK.
+* Eclipse tools can be made available in a P2 repository - published to the network, archived for download, or   packaged with the ADK. You may also create an Eclipse package with all the tools installed and generated documentation available as Eclipse help. Models, metamodels, and reference implementations/starter projects can be made available as plug-ins which can be imported into a workspace.
 
 ### Measuring progress
 
