@@ -309,6 +309,7 @@ If the above conditions are not met, UML may become a burden:
 
 * Only a small portion of the language would be used. The unused portion becomes an "attack surface" - a risk for abuse. It also drains peoples mental capacity and dilutes focus.
 * The language, being an industry standard, still can't express organization-specific concepts.
+* "Ivory tower"/"over the wall" architecture practice may arise if tooling is available only to a small number of people in the organization.  
 
 ## Adoption
 
