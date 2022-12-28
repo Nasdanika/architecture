@@ -48,12 +48,7 @@ Architecture development:
          
 ## Demo
 
-Link to the demo, demo docs - how it is done. Short summary here.
-Composite.
-
-
-TODO - definitions of architecture an architecture development. 
-Similarities with code and relationships with code.
+TODO: Link to the demo, demo docs - how it is done. Short summary here. Composite.
 
 ## Components of Architecture Practice
 
