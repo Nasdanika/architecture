@@ -14,6 +14,7 @@ import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Event;
 import org.nasdanika.architecture.core.Facet;
+import org.nasdanika.architecture.core.Impact;
 import org.nasdanika.architecture.core.Increment;
 import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.ncore.Documented;
@@ -37,6 +38,7 @@ import org.nasdanika.ncore.impl.PeriodImpl;
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getIncrements <em>Increments</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getImpactedBy <em>Impacted By</em>}</li>
  * </ul>
  *
  * @generated
@@ -181,6 +183,20 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 * @generated
 	 */
 	@Override
+	public EList<Impact> getImpactedBy() {
+		// TODO: implement this method to return the 'Impacted By' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION:
@@ -219,6 +235,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return getFacets();
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
 				return getProperties();
+			case CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY:
+				return getImpactedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -317,6 +335,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return !getFacets().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
 				return !getProperties().isEmpty();
+			case CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY:
+				return !getImpactedBy().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

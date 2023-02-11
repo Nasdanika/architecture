@@ -9,12 +9,15 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.nasdanika.architecture.core.Architecture;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CoreFactory;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Event;
 import org.nasdanika.architecture.core.Facet;
+import org.nasdanika.architecture.core.Impact;
+import org.nasdanika.architecture.core.ImpactType;
 import org.nasdanika.architecture.core.Increment;
 import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.ncore.NcorePackage;
@@ -63,6 +66,25 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass incrementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass impactTypeEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass architectureEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass impactEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -223,6 +245,16 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getArchitectureElement_ImpactedBy() {
+		return (EReference)architectureElementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomain() {
 		return domainEClass;
 	}
@@ -245,6 +277,76 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	@Override
 	public EClass getIncrement() {
 		return incrementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getIncrement_Impacts() {
+		return (EReference)incrementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImpactType() {
+		return impactTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArchitecture() {
+		return architectureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArchitecture_ImpactTypes() {
+		return (EReference)architectureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getImpact() {
+		return impactEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImpact_Type() {
+		return (EReference)impactEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImpact_Elements() {
+		return (EReference)impactEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -288,11 +390,22 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__INCREMENTS);
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__FACETS);
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__PROPERTIES);
+		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__IMPACTED_BY);
 
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__ELEMENTS);
 
 		incrementEClass = createEClass(INCREMENT);
+		createEReference(incrementEClass, INCREMENT__IMPACTS);
+
+		impactTypeEClass = createEClass(IMPACT_TYPE);
+
+		architectureEClass = createEClass(ARCHITECTURE);
+		createEReference(architectureEClass, ARCHITECTURE__IMPACT_TYPES);
+
+		impactEClass = createEClass(IMPACT);
+		createEReference(impactEClass, IMPACT__TYPE);
+		createEReference(impactEClass, IMPACT__ELEMENTS);
 	}
 
 	/**
@@ -334,6 +447,9 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		architectureElementEClass.getESuperTypes().add(this.getModelElement());
 		domainEClass.getESuperTypes().add(this.getArchitectureElement());
 		incrementEClass.getESuperTypes().add(this.getArchitectureElement());
+		impactTypeEClass.getESuperTypes().add(this.getModelElement());
+		architectureEClass.getESuperTypes().add(this.getDomain());
+		impactEClass.getESuperTypes().add(this.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -351,12 +467,24 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEReference(getArchitectureElement_Facets(), this.getFacet(), null, "facets", null, 0, -1, ArchitectureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitectureElement_Properties(), theNcorePackage.getProperty(), null, "properties", null, 0, -1, ArchitectureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getArchitectureElement_Properties().getEKeys().add(theNcorePackage.getProperty_Name());
+		initEReference(getArchitectureElement_ImpactedBy(), this.getImpact(), null, "impactedBy", null, 0, -1, ArchitectureElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomain_Elements(), this.getArchitectureElement(), null, "elements", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getDomain_Elements().getEKeys().add(this.getModelElement_Id());
 
 		initEClass(incrementEClass, Increment.class, "Increment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIncrement_Impacts(), this.getImpact(), null, "impacts", null, 0, -1, Increment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(impactTypeEClass, ImpactType.class, "ImpactType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArchitecture_ImpactTypes(), this.getImpactType(), null, "impactTypes", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getArchitecture_ImpactTypes().getEKeys().add(this.getModelElement_Id());
+
+		initEClass(impactEClass, Impact.class, "Impact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImpact_Type(), this.getImpactType(), null, "type", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImpact_Elements(), this.getArchitectureElement(), null, "elements", null, 0, -1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -389,6 +517,31 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "reference-type", "map: \n  ns-uri: urn:org.nasdanika.ncore\n  name: MapProperty\nlist: \n  ns-uri: urn:org.nasdanika.ncore\n  name: ListProperty\nstring: \n  ns-uri: urn:org.nasdanika.ncore\n  name: StringProperty\ninteger: \n  ns-uri: urn:org.nasdanika.ncore\n  name: IntegerProperty",
 			   "value-feature", "value"
 		   });
+		addAnnotation
+		  (getIncrement_Impacts(),
+		   source,
+		   new String[] {
+			   "homogenous", "true"
+		   });
+		addAnnotation
+		  (impactTypeEClass,
+		   source,
+		   new String[] {
+			   "default-feature", "name"
+		   });
+		addAnnotation
+		  (getArchitecture_ImpactTypes(),
+		   source,
+		   new String[] {
+			   "homogenous", "true",
+			   "strict-containment", "true"
+		   });
+		addAnnotation
+		  (getImpact_Elements(),
+		   source,
+		   new String[] {
+			   "opposite", "impactedBy"
+		   });
 	}
 
 	/**
@@ -400,6 +553,12 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
 		addAnnotation
+		  (modelElementEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Named and documented element with an ID."
+		   });
+		addAnnotation
 		  (getModelElement_Id(),
 		   source,
 		   new String[] {
@@ -409,7 +568,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		  (eventEClass,
 		   source,
 		   new String[] {
-			   "documentation", "A named document temporal with ID."
+			   "documentation", "A named document temporal with ID. "
 		   });
 		addAnnotation
 		  (facetEClass,
@@ -448,16 +607,64 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "documentation", "Architecture element properties"
 		   });
 		addAnnotation
+		  (getArchitectureElement_ImpactedBy(),
+		   source,
+		   new String[] {
+			   "documentation", "Increments which impact this element. A computed opposite to Impact.elements"
+		   });
+		addAnnotation
 		  (domainEClass,
 		   source,
 		   new String[] {
 			   "documentation", "Domain is a grouping construct for architecture elements."
 		   });
 		addAnnotation
+		  (getDomain_Elements(),
+		   source,
+		   new String[] {
+			   "documentation", "Domain elements"
+		   });
+		addAnnotation
 		  (incrementEClass,
 		   source,
 		   new String[] {
 			   "documentation", "A transition of the containing architecture element from the baseline state identified by the increment start to the target state identified by the increment end."
+		   });
+		addAnnotation
+		  (getIncrement_Impacts(),
+		   source,
+		   new String[] {
+			   "documentation", "Impacts of this increment on architecture elements. E.g. creation of a new element, modification or retirement (deletion) of an existing."
+		   });
+		addAnnotation
+		  (impactTypeEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Impact type. E.g. add, modify, delete. Impacts may also be quantitative. E.g. an impact might be increase or decrease in capacity - load, storage, ..."
+		   });
+		addAnnotation
+		  (architectureEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Architecture (description) contains architecture elements and reference data such as impact types."
+		   });
+		addAnnotation
+		  (impactEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Impacts of the containing increment on architecture elements. E.g. creation of a new element, modification or retirement (deletion) of an existing."
+		   });
+		addAnnotation
+		  (getImpact_Type(),
+		   source,
+		   new String[] {
+			   "documentation", "Impact type"
+		   });
+		addAnnotation
+		  (getImpact_Elements(),
+		   source,
+		   new String[] {
+			   "documentation", "Impacted element(s)"
 		   });
 	}
 

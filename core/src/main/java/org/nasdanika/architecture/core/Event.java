@@ -10,7 +10,7 @@ import org.nasdanika.ncore.Temporal;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A named document temporal with ID.
+ * A named document temporal with ID. 
  * <!-- end-model-doc -->
  *
  *

@@ -6,6 +6,9 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true" interface="true"
       eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//NamedElement ../../org.nasdanika.ncore/model/ncore.ecore#//Documented">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Named and documented element with an ID."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Element ID to use as EKey - a unique identifier of this element among its siblings in the parent's containment reference. "/>
@@ -14,7 +17,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Temporal #//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A named document temporal with ID."/>
+      <details key="documentation" value="A named document temporal with ID. "/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Facet" abstract="true" interface="true">
@@ -55,17 +58,75 @@
         <details key="documentation" value="Architecture element properties"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impactedBy" upperBound="-1"
+        eType="#//Impact" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Increments which impact this element. A computed opposite to Impact.elements"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Domain is a grouping construct for architecture elements."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//ArchitectureElement" containment="true" eKeys="#//ModelElement/id"/>
+        eType="#//ArchitectureElement" containment="true" eKeys="#//ModelElement/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Domain elements"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Increment" eSuperTypes="#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A transition of the containing architecture element from the baseline state identified by the increment start to the target state identified by the increment end."/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impacts" upperBound="-1"
+        eType="#//Impact" containment="true">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="homogenous" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Impacts of this increment on architecture elements. E.g. creation of a new element, modification or retirement (deletion) of an existing."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImpactType" eSuperTypes="#//ModelElement">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="default-feature" value="name"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Impact type. E.g. add, modify, delete. Impacts may also be quantitative. E.g. an impact might be increase or decrease in capacity - load, storage, ..."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//Domain">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Architecture (description) contains architecture elements and reference data such as impact types."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="impactTypes" eType="#//ImpactType"
+        containment="true" eKeys="#//ModelElement/id">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="homogenous" value="true"/>
+        <details key="strict-containment" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="#//ModelElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Impacts of the containing increment on architecture elements. E.g. creation of a new element, modification or retirement (deletion) of an existing."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ImpactType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Impact type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ArchitectureElement">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="impactedBy"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Impacted element(s)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

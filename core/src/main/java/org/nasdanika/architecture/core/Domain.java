@@ -30,6 +30,9 @@ public interface Domain extends ArchitectureElement {
 	 * The list contents are of type {@link org.nasdanika.architecture.core.ArchitectureElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Domain elements
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elements</em>' containment reference list.
 	 * @see org.nasdanika.architecture.core.CorePackage#getDomain_Elements()
 	 * @model containment="true" keys="id"

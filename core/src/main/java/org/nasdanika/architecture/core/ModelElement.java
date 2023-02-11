@@ -10,6 +10,10 @@ import org.nasdanika.ncore.NamedElement;
  * A representation of the model object '<em><b>Model Element</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * Named and documented element with an ID.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

@@ -1,15 +1,24 @@
 app-action:
-  text: Architecture Framework
-  location: architecture-framework/index.html
+  text: Architecture
+  location: architecture/index.html
   content:
     content-markdown:
       style: true
       source:
         content-resource: readme.md
-#  children:
-#     - model/model.yml
-#     - gen/gen.yml
-#     - demo/demo.yml
+  children:
+    - app-label:
+        text: Core
+        uris: core
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/core.genmodel.xml#/"
+#          - bootstrap.gen/actions.yml
+    - app-label:
+        text: C4 Model
+        uris: c4
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/c4.genmodel.xml#/"
+#          - html.gen/actions.yml
 #     - maven/maven.yml
   navigation:
     - app-link:

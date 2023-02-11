@@ -58,6 +58,33 @@ public interface CoreFactory extends EFactory {
 	Increment createIncrement();
 
 	/**
+	 * Returns a new object of class '<em>Impact Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Impact Type</em>'.
+	 * @generated
+	 */
+	ImpactType createImpactType();
+
+	/**
+	 * Returns a new object of class '<em>Architecture</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Architecture</em>'.
+	 * @generated
+	 */
+	Architecture createArchitecture();
+
+	/**
+	 * Returns a new object of class '<em>Impact</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Impact</em>'.
+	 * @generated
+	 */
+	Impact createImpact();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

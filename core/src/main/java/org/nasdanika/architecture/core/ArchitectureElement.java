@@ -23,6 +23,7 @@ import org.nasdanika.ncore.Property;
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getIncrements <em>Increments</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getProperties <em>Properties</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getImpactedBy <em>Impacted By</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement()
@@ -90,5 +91,20 @@ public interface ArchitectureElement extends Period, ModelElement {
 	 * @generated
 	 */
 	EList<Property> getProperties();
+
+	/**
+	 * Returns the value of the '<em><b>Impacted By</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.Impact}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Increments which impact this element. A computed opposite to Impact.elements
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Impacted By</em>' reference list.
+	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_ImpactedBy()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<Impact> getImpactedBy();
 
 } // ArchitectureElement

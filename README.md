@@ -1,6 +1,6 @@
-Nasdanika Architecture Framework (NASDAF) is an application of open source products, including Nasdanika products, to establish a software architecture practice.
+Nasdanika Architecture provides models and tools for "architecture-as-code" development. 
 
-The framework is inspired by [TOGAF](https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework).
+Nasdanika Architecture is inspired by and borrows from [TOGAF](https://en.wikipedia.org/wiki/The_Open_Group_Architecture_Framework) and [C4 Model](https://c4model.com/).
 
 ----
 

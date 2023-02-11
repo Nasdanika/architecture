@@ -148,6 +148,48 @@ public class CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CorePackage.IMPACT_TYPE: {
+				ImpactType impactType = (ImpactType)theEObject;
+				T result = caseImpactType(impactType);
+				if (result == null) result = caseModelElement(impactType);
+				if (result == null) result = caseNamedElement(impactType);
+				if (result == null) result = caseDocumented(impactType);
+				if (result == null) result = caseNcore_ModelElement(impactType);
+				if (result == null) result = caseMarked(impactType);
+				if (result == null) result = caseAdaptable(impactType);
+				if (result == null) result = caseIMarked(impactType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.ARCHITECTURE: {
+				Architecture architecture = (Architecture)theEObject;
+				T result = caseArchitecture(architecture);
+				if (result == null) result = caseDomain(architecture);
+				if (result == null) result = caseArchitectureElement(architecture);
+				if (result == null) result = casePeriod(architecture);
+				if (result == null) result = caseModelElement(architecture);
+				if (result == null) result = caseNamedElement(architecture);
+				if (result == null) result = caseDocumented(architecture);
+				if (result == null) result = caseNcore_ModelElement(architecture);
+				if (result == null) result = caseMarked(architecture);
+				if (result == null) result = caseAdaptable(architecture);
+				if (result == null) result = caseIMarked(architecture);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.IMPACT: {
+				Impact impact = (Impact)theEObject;
+				T result = caseImpact(impact);
+				if (result == null) result = caseModelElement(impact);
+				if (result == null) result = caseNamedElement(impact);
+				if (result == null) result = caseDocumented(impact);
+				if (result == null) result = caseNcore_ModelElement(impact);
+				if (result == null) result = caseMarked(impact);
+				if (result == null) result = caseAdaptable(impact);
+				if (result == null) result = caseIMarked(impact);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -239,6 +281,51 @@ public class CoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIncrement(Increment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Impact Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Impact Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImpactType(ImpactType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Architecture</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Architecture</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArchitecture(Architecture object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Impact</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Impact</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImpact(Impact object) {
 		return null;
 	}
 
