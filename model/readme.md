@@ -1,1 +1,0 @@
-TODO: Capability, building block, version, domain, work package, responsibility, party, person, team, organization (same as team?), role, contact method.

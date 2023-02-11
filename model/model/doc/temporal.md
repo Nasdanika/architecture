@@ -1,1 +1,0 @@
-Temporal represents a point on the time-line - absolute (instant) or relative to another temporal (base and offset).

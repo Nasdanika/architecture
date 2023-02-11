@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.nasdanika.architecture-framework</groupId>
+	<groupId>org.nasdanika.architecture</groupId>
 	<version>2023.2.0</version>
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
-	<name>Nasdanika Architecture Framework Parent</name>
-	<description>Parent pom.</description>
+	<name>Nasdanika Architecture Parent</name>
+	<description>Parent pom</description>
 
 	<url>https://docs.nasdanika.org/modules/core/index.html</url>
 		
@@ -19,7 +19,7 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/Nasdanika/core</url>
+		<url>https://github.com/Nasdanika/architecture</url>
 	</scm>
 
 	<properties>
@@ -27,6 +27,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 		<linksource>true</linksource>
+		<core.version>2023.1.3</core.version>
+		<html.version>2023.2.1</html.version>
 	</properties>	
 
 	<build>
@@ -193,8 +195,8 @@
 	</developers>
 	
 	<modules>
-		<module>model</module>
-		<module>gen</module>
+		<module>core</module>
+		<module>c4</module>
 	</modules>	
 
 	<distributionManagement>
