@@ -1,0 +1,14 @@
+app-action:
+  text: Architecture Site Generator Maven Plugin
+  location: maven/index.html
+  uris: maven
+  navigation:
+    - app-link:
+        text: Javadoc
+        uris: javadoc
+        icon: fab fa-java
+        location: ../apidocs/org.nasdanika.architecture.maven/module-summary.html
+    - app-link:
+        text: Maven site
+        uris: maven-site
+        location: ../maven-site/site-generator-maven-plugin/index.html

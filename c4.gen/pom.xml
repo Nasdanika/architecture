@@ -7,9 +7,9 @@
 	    <version>2023.2.0</version>
 	    <relativePath>..</relativePath>
 	  </parent>
-	<artifactId>core-gen</artifactId>
+	<artifactId>c4-gen</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture Core Model Generation Adapters</name>
+	<name>Nasdanika Architecture C4 Model Generation Adapters</name>
 	<url>https://docs.nasdanika.org/modules/core/modules/exec/modules/gen/index.html</url>
 	<build>
 	    <plugins>
@@ -39,23 +39,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>core-gen</artifactId>
 			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.nasdanika.html</groupId>
-			<artifactId>emf</artifactId>
-			<version>${html.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.nasdanika.html</groupId>
-			<artifactId>app-model-gen</artifactId>
-			<version>${html.version}</version>
-		</dependency>
-		<dependency>
-		  <groupId>commons-codec</groupId>
-		  <artifactId>commons-codec</artifactId>
-		  <version>1.15</version>
 		</dependency>
 		
 		<dependency>
@@ -64,11 +49,6 @@
 			<version>3.23.1</version>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.nasdanika.architecture</groupId>
-			<artifactId>core</artifactId>
-			<version>2023.2.0</version>
-		</dependency>
+		
 	</dependencies>
 </project>
