@@ -9,12 +9,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.nasdanika.architecture.c4.C4Factory;
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
 import org.nasdanika.architecture.c4.Component;
-import org.nasdanika.architecture.c4.Node;
 import org.nasdanika.architecture.c4.Person;
 import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
@@ -71,7 +69,6 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 			case C4Package.TECHNOLOGY_PRODUCT: return createTechnologyProduct();
 			case C4Package.TECHNOLOGY_VERSION: return createTechnologyVersion();
 			case C4Package.TECHNOLOGY_CONSUMER: return createTechnologyConsumer();
-			case C4Package.NODE: return createNode();
 			case C4Package.RELATIONSHIP: return createRelationship();
 			case C4Package.PERSON: return createPerson();
 			case C4Package.SYSTEM: return createSystem();
@@ -126,17 +123,6 @@ public class C4FactoryImpl extends EFactoryImpl implements C4Factory {
 	public TechnologyConsumer createTechnologyConsumer() {
 		TechnologyConsumerImpl technologyConsumer = new TechnologyConsumerImpl();
 		return technologyConsumer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Node createNode() {
-		NodeImpl node = new NodeImpl();
-		return node;
 	}
 
 	/**

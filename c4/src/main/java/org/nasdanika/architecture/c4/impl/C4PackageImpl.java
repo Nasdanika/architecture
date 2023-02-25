@@ -13,7 +13,6 @@ import org.nasdanika.architecture.c4.C4Factory;
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
 import org.nasdanika.architecture.c4.Component;
-import org.nasdanika.architecture.c4.Node;
 import org.nasdanika.architecture.c4.Person;
 import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
@@ -54,12 +53,6 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 	 * @generated
 	 */
 	private EClass technologyConsumerEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nodeEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -244,48 +237,8 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 	 * @generated
 	 */
 	@Override
-	public EClass getNode() {
-		return nodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_OutgoingRelationships() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getNode_IncomingRelationships() {
-		return (EReference)nodeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getRelationship() {
 		return relationshipEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRelationship_Target() {
-		return (EReference)relationshipEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -468,12 +421,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		technologyConsumerEClass = createEClass(TECHNOLOGY_CONSUMER);
 		createEReference(technologyConsumerEClass, TECHNOLOGY_CONSUMER__TECHNOLOGY);
 
-		nodeEClass = createEClass(NODE);
-		createEReference(nodeEClass, NODE__OUTGOING_RELATIONSHIPS);
-		createEReference(nodeEClass, NODE__INCOMING_RELATIONSHIPS);
-
 		relationshipEClass = createEClass(RELATIONSHIP);
-		createEReference(relationshipEClass, RELATIONSHIP__TARGET);
 
 		personEClass = createEClass(PERSON);
 		createEAttribute(personEClass, PERSON__EXTERNAL);
@@ -530,17 +478,16 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		technologyEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
 		technologyProductEClass.getESuperTypes().add(this.getTechnology());
 		technologyVersionEClass.getESuperTypes().add(this.getTechnology());
-		nodeEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
-		relationshipEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
+		relationshipEClass.getESuperTypes().add(theCorePackage.getRelationship());
 		relationshipEClass.getESuperTypes().add(this.getTechnologyConsumer());
-		personEClass.getESuperTypes().add(this.getNode());
-		systemEClass.getESuperTypes().add(this.getNode());
-		containerEClass.getESuperTypes().add(this.getNode());
+		personEClass.getESuperTypes().add(theCorePackage.getNode());
+		systemEClass.getESuperTypes().add(theCorePackage.getNode());
+		containerEClass.getESuperTypes().add(theCorePackage.getNode());
 		containerEClass.getESuperTypes().add(this.getTechnologyConsumer());
 		componentEClass.getESuperTypes().add(this.getModule());
-		moduleEClass.getESuperTypes().add(this.getNode());
+		moduleEClass.getESuperTypes().add(theCorePackage.getNode());
 		moduleEClass.getESuperTypes().add(this.getTechnologyConsumer());
-		codeElementEClass.getESuperTypes().add(this.getNode());
+		codeElementEClass.getESuperTypes().add(theCorePackage.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(technologyEClass, Technology.class, "Technology", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -554,13 +501,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		initEClass(technologyConsumerEClass, TechnologyConsumer.class, "TechnologyConsumer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTechnologyConsumer_Technology(), this.getTechnology(), null, "technology", null, 0, -1, TechnologyConsumer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getNode_OutgoingRelationships(), this.getRelationship(), null, "outgoingRelationships", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		getNode_OutgoingRelationships().getEKeys().add(theCorePackage.getModelElement_Id());
-		initEReference(getNode_IncomingRelationships(), this.getRelationship(), null, "incomingRelationships", null, 0, -1, Node.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
 		initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRelationship_Target(), this.getNode(), null, "target", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_External(), ecorePackage.getEBoolean(), "external", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -618,20 +559,6 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		   source,
 		   new String[] {
 			   "opposite", "uses"
-		   });
-		addAnnotation
-		  (getNode_OutgoingRelationships(),
-		   source,
-		   new String[] {
-			   "homogenous", "true",
-			   "strict-containment", "true"
-		   });
-		addAnnotation
-		  (getRelationship_Target(),
-		   source,
-		   new String[] {
-			   "opposite", "incomingRelationships",
-			   "default-feature", "true"
 		   });
 		addAnnotation
 		  (containerEClass,
@@ -692,34 +619,10 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 			   "documentation", "Technologies used by this element"
 		   });
 		addAnnotation
-		  (nodeEClass,
-		   source,
-		   new String[] {
-			   "documentation", "Source and target of relationships"
-		   });
-		addAnnotation
-		  (getNode_OutgoingRelationships(),
-		   source,
-		   new String[] {
-			   "documentation", "Outgoing relationships"
-		   });
-		addAnnotation
-		  (getNode_IncomingRelationships(),
-		   source,
-		   new String[] {
-			   "documentation", "Incoming relationships - a computed opposite to Relationship.target"
-		   });
-		addAnnotation
 		  (relationshipEClass,
 		   source,
 		   new String[] {
 			   "documentation", "A relationship between two nodes. Relationships are contained by their source nodes and reference their targets using the target reference."
-		   });
-		addAnnotation
-		  (getRelationship_Target(),
-		   source,
-		   new String[] {
-			   "documentation", "Relationship target."
 		   });
 		addAnnotation
 		  (personEClass,

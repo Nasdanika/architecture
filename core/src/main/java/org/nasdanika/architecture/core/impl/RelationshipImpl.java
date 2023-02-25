@@ -1,43 +1,33 @@
 /**
  */
-package org.nasdanika.architecture.c4.impl;
+package org.nasdanika.architecture.core.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.nasdanika.architecture.c4.C4Package;
-import org.nasdanika.architecture.c4.Person;
-import org.nasdanika.architecture.core.impl.NodeImpl;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.architecture.core.Node;
+import org.nasdanika.architecture.core.Relationship;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Person</b></em>'.
+ * An implementation of the model object '<em><b>Relationship</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.architecture.c4.impl.PersonImpl#isExternal <em>External</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PersonImpl extends NodeImpl implements Person {
-	/**
-	 * The default value of the '{@link #isExternal() <em>External</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isExternal()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean EXTERNAL_EDEFAULT = false;
-
+public class RelationshipImpl extends ArchitectureElementImpl implements Relationship {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PersonImpl() {
+	protected RelationshipImpl() {
 		super();
 	}
 
@@ -48,7 +38,7 @@ public class PersonImpl extends NodeImpl implements Person {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return C4Package.Literals.PERSON;
+		return CorePackage.Literals.RELATIONSHIP;
 	}
 
 	/**
@@ -57,8 +47,17 @@ public class PersonImpl extends NodeImpl implements Person {
 	 * @generated
 	 */
 	@Override
-	public boolean isExternal() {
-		return (Boolean)eDynamicGet(C4Package.PERSON__EXTERNAL, C4Package.Literals.PERSON__EXTERNAL, true, true);
+	public Node getTarget() {
+		return (Node)eDynamicGet(CorePackage.RELATIONSHIP__TARGET, CorePackage.Literals.RELATIONSHIP__TARGET, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node basicGetTarget() {
+		return (Node)eDynamicGet(CorePackage.RELATIONSHIP__TARGET, CorePackage.Literals.RELATIONSHIP__TARGET, false, true);
 	}
 
 	/**
@@ -67,8 +66,8 @@ public class PersonImpl extends NodeImpl implements Person {
 	 * @generated
 	 */
 	@Override
-	public void setExternal(boolean newExternal) {
-		eDynamicSet(C4Package.PERSON__EXTERNAL, C4Package.Literals.PERSON__EXTERNAL, newExternal);
+	public void setTarget(Node newTarget) {
+		eDynamicSet(CorePackage.RELATIONSHIP__TARGET, CorePackage.Literals.RELATIONSHIP__TARGET, newTarget);
 	}
 
 	/**
@@ -79,8 +78,9 @@ public class PersonImpl extends NodeImpl implements Person {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case C4Package.PERSON__EXTERNAL:
-				return isExternal();
+			case CorePackage.RELATIONSHIP__TARGET:
+				if (resolve) return getTarget();
+				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -93,8 +93,8 @@ public class PersonImpl extends NodeImpl implements Person {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case C4Package.PERSON__EXTERNAL:
-				setExternal((Boolean)newValue);
+			case CorePackage.RELATIONSHIP__TARGET:
+				setTarget((Node)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -108,8 +108,8 @@ public class PersonImpl extends NodeImpl implements Person {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case C4Package.PERSON__EXTERNAL:
-				setExternal(EXTERNAL_EDEFAULT);
+			case CorePackage.RELATIONSHIP__TARGET:
+				setTarget((Node)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -123,10 +123,10 @@ public class PersonImpl extends NodeImpl implements Person {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case C4Package.PERSON__EXTERNAL:
-				return isExternal() != EXTERNAL_EDEFAULT;
+			case CorePackage.RELATIONSHIP__TARGET:
+				return basicGetTarget() != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //PersonImpl
+} //RelationshipImpl

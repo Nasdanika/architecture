@@ -105,7 +105,7 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -186,13 +186,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY__EVENTS = CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY__INCREMENTS = CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS;
+	int TECHNOLOGY__STAGES = CorePackage.ARCHITECTURE_ELEMENT__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -295,7 +295,7 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_PRODUCT__UUID = TECHNOLOGY__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -376,13 +376,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_PRODUCT__EVENTS = TECHNOLOGY__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_PRODUCT__INCREMENTS = TECHNOLOGY__INCREMENTS;
+	int TECHNOLOGY_PRODUCT__STAGES = TECHNOLOGY__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -494,7 +494,7 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_VERSION__UUID = TECHNOLOGY__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -575,13 +575,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_VERSION__EVENTS = TECHNOLOGY__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_VERSION__INCREMENTS = TECHNOLOGY__INCREMENTS;
+	int TECHNOLOGY_VERSION__STAGES = TECHNOLOGY__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -675,205 +675,6 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_CONSUMER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.NodeImpl <em>Node</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.architecture.c4.impl.NodeImpl
-	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getNode()
-	 * @generated
-	 */
-	int NODE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__MARKERS = CorePackage.ARCHITECTURE_ELEMENT__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__URIS = CorePackage.ARCHITECTURE_ELEMENT__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__DESCRIPTION = CorePackage.ARCHITECTURE_ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__ACTION_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__REPRESENTATIONS = CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__START = CorePackage.ARCHITECTURE_ELEMENT__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__END = CorePackage.ARCHITECTURE_ELEMENT__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__DURATION = CorePackage.ARCHITECTURE_ELEMENT__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__NAME = CorePackage.ARCHITECTURE_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__DOCUMENTATION = CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__ID = CorePackage.ARCHITECTURE_ELEMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__EVENTS = CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
-
-	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__INCREMENTS = CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__FACETS = CorePackage.ARCHITECTURE_ELEMENT__FACETS;
-
-	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__PROPERTIES = CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__IMPACTED_BY = CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__OUTGOING_RELATIONSHIPS = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__INCOMING_RELATIONSHIPS = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FEATURE_COUNT = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Node</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_OPERATION_COUNT = CorePackage.ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.RelationshipImpl <em>Relationship</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -881,7 +682,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getRelationship()
 	 * @generated
 	 */
-	int RELATIONSHIP = 5;
+	int RELATIONSHIP = 4;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -890,7 +691,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__MARKERS = CorePackage.ARCHITECTURE_ELEMENT__MARKERS;
+	int RELATIONSHIP__MARKERS = CorePackage.RELATIONSHIP__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -899,7 +700,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__URIS = CorePackage.ARCHITECTURE_ELEMENT__URIS;
+	int RELATIONSHIP__URIS = CorePackage.RELATIONSHIP__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -908,7 +709,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__DESCRIPTION = CorePackage.ARCHITECTURE_ELEMENT__DESCRIPTION;
+	int RELATIONSHIP__DESCRIPTION = CorePackage.RELATIONSHIP__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -917,16 +718,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
+	int RELATIONSHIP__UUID = CorePackage.RELATIONSHIP__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__ACTION_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int RELATIONSHIP__ACTION_PROTOTYPE = CorePackage.RELATIONSHIP__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -935,7 +736,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__REPRESENTATIONS = CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+	int RELATIONSHIP__REPRESENTATIONS = CorePackage.RELATIONSHIP__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -944,7 +745,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__START = CorePackage.ARCHITECTURE_ELEMENT__START;
+	int RELATIONSHIP__START = CorePackage.RELATIONSHIP__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -953,7 +754,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__END = CorePackage.ARCHITECTURE_ELEMENT__END;
+	int RELATIONSHIP__END = CorePackage.RELATIONSHIP__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -962,7 +763,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__DURATION = CorePackage.ARCHITECTURE_ELEMENT__DURATION;
+	int RELATIONSHIP__DURATION = CorePackage.RELATIONSHIP__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -971,7 +772,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__NAME = CorePackage.ARCHITECTURE_ELEMENT__NAME;
+	int RELATIONSHIP__NAME = CorePackage.RELATIONSHIP__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -980,7 +781,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__DOCUMENTATION = CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION;
+	int RELATIONSHIP__DOCUMENTATION = CorePackage.RELATIONSHIP__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -989,7 +790,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__ID = CorePackage.ARCHITECTURE_ELEMENT__ID;
+	int RELATIONSHIP__ID = CorePackage.RELATIONSHIP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -998,16 +799,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__EVENTS = CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
+	int RELATIONSHIP__EVENTS = CorePackage.RELATIONSHIP__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__INCREMENTS = CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS;
+	int RELATIONSHIP__STAGES = CorePackage.RELATIONSHIP__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1016,7 +817,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__FACETS = CorePackage.ARCHITECTURE_ELEMENT__FACETS;
+	int RELATIONSHIP__FACETS = CorePackage.RELATIONSHIP__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1025,7 +826,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__PROPERTIES = CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES;
+	int RELATIONSHIP__PROPERTIES = CorePackage.RELATIONSHIP__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1034,16 +835,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__IMPACTED_BY = CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Technology</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RELATIONSHIP__TECHNOLOGY = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+	int RELATIONSHIP__IMPACTED_BY = CorePackage.RELATIONSHIP__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1052,7 +844,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__TARGET = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
+	int RELATIONSHIP__TARGET = CorePackage.RELATIONSHIP__TARGET;
+
+	/**
+	 * The feature id for the '<em><b>Technology</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__TECHNOLOGY = CorePackage.RELATIONSHIP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Relationship</em>' class.
@@ -1061,7 +862,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_FEATURE_COUNT = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 2;
+	int RELATIONSHIP_FEATURE_COUNT = CorePackage.RELATIONSHIP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Relationship</em>' class.
@@ -1070,7 +871,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP_OPERATION_COUNT = CorePackage.ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
+	int RELATIONSHIP_OPERATION_COUNT = CorePackage.RELATIONSHIP_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1081,7 +882,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getPerson()
 	 * @generated
 	 */
-	int PERSON = 6;
+	int PERSON = 5;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1090,7 +891,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__MARKERS = NODE__MARKERS;
+	int PERSON__MARKERS = CorePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1099,7 +900,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__URIS = NODE__URIS;
+	int PERSON__URIS = CorePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1108,7 +909,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DESCRIPTION = NODE__DESCRIPTION;
+	int PERSON__DESCRIPTION = CorePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1117,16 +918,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__UUID = NODE__UUID;
+	int PERSON__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int PERSON__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1135,7 +936,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__REPRESENTATIONS = NODE__REPRESENTATIONS;
+	int PERSON__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1144,7 +945,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__START = NODE__START;
+	int PERSON__START = CorePackage.NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -1153,7 +954,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__END = NODE__END;
+	int PERSON__END = CorePackage.NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1162,7 +963,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DURATION = NODE__DURATION;
+	int PERSON__DURATION = CorePackage.NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1171,7 +972,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NAME = NODE__NAME;
+	int PERSON__NAME = CorePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1180,7 +981,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__DOCUMENTATION = NODE__DOCUMENTATION;
+	int PERSON__DOCUMENTATION = CorePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1189,7 +990,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ID = NODE__ID;
+	int PERSON__ID = CorePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -1198,16 +999,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__EVENTS = NODE__EVENTS;
+	int PERSON__EVENTS = CorePackage.NODE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__INCREMENTS = NODE__INCREMENTS;
+	int PERSON__STAGES = CorePackage.NODE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1216,7 +1017,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__FACETS = NODE__FACETS;
+	int PERSON__FACETS = CorePackage.NODE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1225,7 +1026,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PROPERTIES = NODE__PROPERTIES;
+	int PERSON__PROPERTIES = CorePackage.NODE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1234,7 +1035,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__IMPACTED_BY = NODE__IMPACTED_BY;
+	int PERSON__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1243,7 +1044,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+	int PERSON__OUTGOING_RELATIONSHIPS = CorePackage.NODE__OUTGOING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
@@ -1252,7 +1053,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+	int PERSON__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>External</b></em>' attribute.
@@ -1261,7 +1062,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__EXTERNAL = NODE_FEATURE_COUNT + 0;
+	int PERSON__EXTERNAL = CorePackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Person</em>' class.
@@ -1270,7 +1071,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+	int PERSON_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -1279,7 +1080,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int PERSON_OPERATION_COUNT = CorePackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.SystemImpl <em>System</em>}' class.
@@ -1289,7 +1090,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getSystem()
 	 * @generated
 	 */
-	int SYSTEM = 7;
+	int SYSTEM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1298,7 +1099,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__MARKERS = NODE__MARKERS;
+	int SYSTEM__MARKERS = CorePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1307,7 +1108,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__URIS = NODE__URIS;
+	int SYSTEM__URIS = CorePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1316,7 +1117,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__DESCRIPTION = NODE__DESCRIPTION;
+	int SYSTEM__DESCRIPTION = CorePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1325,16 +1126,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__UUID = NODE__UUID;
+	int SYSTEM__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int SYSTEM__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1343,7 +1144,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__REPRESENTATIONS = NODE__REPRESENTATIONS;
+	int SYSTEM__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1352,7 +1153,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__START = NODE__START;
+	int SYSTEM__START = CorePackage.NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -1361,7 +1162,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__END = NODE__END;
+	int SYSTEM__END = CorePackage.NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1370,7 +1171,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__DURATION = NODE__DURATION;
+	int SYSTEM__DURATION = CorePackage.NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1379,7 +1180,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__NAME = NODE__NAME;
+	int SYSTEM__NAME = CorePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1388,7 +1189,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__DOCUMENTATION = NODE__DOCUMENTATION;
+	int SYSTEM__DOCUMENTATION = CorePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1397,7 +1198,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ID = NODE__ID;
+	int SYSTEM__ID = CorePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -1406,16 +1207,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__EVENTS = NODE__EVENTS;
+	int SYSTEM__EVENTS = CorePackage.NODE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__INCREMENTS = NODE__INCREMENTS;
+	int SYSTEM__STAGES = CorePackage.NODE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1424,7 +1225,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__FACETS = NODE__FACETS;
+	int SYSTEM__FACETS = CorePackage.NODE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1433,7 +1234,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__PROPERTIES = NODE__PROPERTIES;
+	int SYSTEM__PROPERTIES = CorePackage.NODE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1442,7 +1243,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__IMPACTED_BY = NODE__IMPACTED_BY;
+	int SYSTEM__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1451,7 +1252,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+	int SYSTEM__OUTGOING_RELATIONSHIPS = CorePackage.NODE__OUTGOING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
@@ -1460,7 +1261,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+	int SYSTEM__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>External</b></em>' attribute.
@@ -1469,7 +1270,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__EXTERNAL = NODE_FEATURE_COUNT + 0;
+	int SYSTEM__EXTERNAL = CorePackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
@@ -1478,7 +1279,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__CONTAINERS = NODE_FEATURE_COUNT + 1;
+	int SYSTEM__CONTAINERS = CorePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
@@ -1487,7 +1288,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__SUBSYSTEMS = NODE_FEATURE_COUNT + 2;
+	int SYSTEM__SUBSYSTEMS = CorePackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>System</em>' class.
@@ -1496,7 +1297,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+	int SYSTEM_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>System</em>' class.
@@ -1505,7 +1306,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int SYSTEM_OPERATION_COUNT = CorePackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.ContainerImpl <em>Container</em>}' class.
@@ -1515,7 +1316,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getContainer()
 	 * @generated
 	 */
-	int CONTAINER = 8;
+	int CONTAINER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1524,7 +1325,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__MARKERS = NODE__MARKERS;
+	int CONTAINER__MARKERS = CorePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1533,7 +1334,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__URIS = NODE__URIS;
+	int CONTAINER__URIS = CorePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1542,7 +1343,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__DESCRIPTION = NODE__DESCRIPTION;
+	int CONTAINER__DESCRIPTION = CorePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1551,16 +1352,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__UUID = NODE__UUID;
+	int CONTAINER__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int CONTAINER__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1569,7 +1370,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__REPRESENTATIONS = NODE__REPRESENTATIONS;
+	int CONTAINER__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1578,7 +1379,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__START = NODE__START;
+	int CONTAINER__START = CorePackage.NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -1587,7 +1388,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__END = NODE__END;
+	int CONTAINER__END = CorePackage.NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1596,7 +1397,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__DURATION = NODE__DURATION;
+	int CONTAINER__DURATION = CorePackage.NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1605,7 +1406,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__NAME = NODE__NAME;
+	int CONTAINER__NAME = CorePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1614,7 +1415,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__DOCUMENTATION = NODE__DOCUMENTATION;
+	int CONTAINER__DOCUMENTATION = CorePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1623,7 +1424,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__ID = NODE__ID;
+	int CONTAINER__ID = CorePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -1632,16 +1433,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__EVENTS = NODE__EVENTS;
+	int CONTAINER__EVENTS = CorePackage.NODE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__INCREMENTS = NODE__INCREMENTS;
+	int CONTAINER__STAGES = CorePackage.NODE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1650,7 +1451,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__FACETS = NODE__FACETS;
+	int CONTAINER__FACETS = CorePackage.NODE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1659,7 +1460,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__PROPERTIES = NODE__PROPERTIES;
+	int CONTAINER__PROPERTIES = CorePackage.NODE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1668,7 +1469,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__IMPACTED_BY = NODE__IMPACTED_BY;
+	int CONTAINER__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1677,7 +1478,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+	int CONTAINER__OUTGOING_RELATIONSHIPS = CorePackage.NODE__OUTGOING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
@@ -1686,7 +1487,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+	int CONTAINER__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Technology</b></em>' reference list.
@@ -1695,7 +1496,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__TECHNOLOGY = NODE_FEATURE_COUNT + 0;
+	int CONTAINER__TECHNOLOGY = CorePackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -1704,7 +1505,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__COMPONENTS = NODE_FEATURE_COUNT + 1;
+	int CONTAINER__COMPONENTS = CorePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -1713,7 +1514,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__CHILDREN = NODE_FEATURE_COUNT + 2;
+	int CONTAINER__CHILDREN = CorePackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -1722,7 +1523,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+	int CONTAINER_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Container</em>' class.
@@ -1731,7 +1532,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int CONTAINER_OPERATION_COUNT = CorePackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.ModuleImpl <em>Module</em>}' class.
@@ -1741,7 +1542,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 10;
+	int MODULE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1750,7 +1551,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MARKERS = NODE__MARKERS;
+	int MODULE__MARKERS = CorePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1759,7 +1560,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__URIS = NODE__URIS;
+	int MODULE__URIS = CorePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1768,7 +1569,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__DESCRIPTION = NODE__DESCRIPTION;
+	int MODULE__DESCRIPTION = CorePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1777,16 +1578,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UUID = NODE__UUID;
+	int MODULE__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int MODULE__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1795,7 +1596,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__REPRESENTATIONS = NODE__REPRESENTATIONS;
+	int MODULE__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1804,7 +1605,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__START = NODE__START;
+	int MODULE__START = CorePackage.NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -1813,7 +1614,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__END = NODE__END;
+	int MODULE__END = CorePackage.NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1822,7 +1623,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__DURATION = NODE__DURATION;
+	int MODULE__DURATION = CorePackage.NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1831,7 +1632,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__NAME = NODE__NAME;
+	int MODULE__NAME = CorePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1840,7 +1641,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__DOCUMENTATION = NODE__DOCUMENTATION;
+	int MODULE__DOCUMENTATION = CorePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1849,7 +1650,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__ID = NODE__ID;
+	int MODULE__ID = CorePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -1858,16 +1659,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__EVENTS = NODE__EVENTS;
+	int MODULE__EVENTS = CorePackage.NODE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__INCREMENTS = NODE__INCREMENTS;
+	int MODULE__STAGES = CorePackage.NODE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1876,7 +1677,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FACETS = NODE__FACETS;
+	int MODULE__FACETS = CorePackage.NODE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1885,7 +1686,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__PROPERTIES = NODE__PROPERTIES;
+	int MODULE__PROPERTIES = CorePackage.NODE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1894,7 +1695,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IMPACTED_BY = NODE__IMPACTED_BY;
+	int MODULE__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1903,7 +1704,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+	int MODULE__OUTGOING_RELATIONSHIPS = CorePackage.NODE__OUTGOING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
@@ -1912,7 +1713,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+	int MODULE__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Technology</b></em>' reference list.
@@ -1921,7 +1722,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TECHNOLOGY = NODE_FEATURE_COUNT + 0;
+	int MODULE__TECHNOLOGY = CorePackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Code Elements</b></em>' containment reference list.
@@ -1930,7 +1731,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CODE_ELEMENTS = NODE_FEATURE_COUNT + 1;
+	int MODULE__CODE_ELEMENTS = CorePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -1939,7 +1740,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MODULES = NODE_FEATURE_COUNT + 2;
+	int MODULE__MODULES = CorePackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -1948,7 +1749,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+	int MODULE_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -1957,7 +1758,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int MODULE_OPERATION_COUNT = CorePackage.NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.c4.impl.ComponentImpl <em>Component</em>}' class.
@@ -1967,7 +1768,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 9;
+	int COMPONENT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2006,7 +1807,7 @@ public interface C4Package extends EPackage {
 	int COMPONENT__UUID = MODULE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2087,13 +1888,13 @@ public interface C4Package extends EPackage {
 	int COMPONENT__EVENTS = MODULE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__INCREMENTS = MODULE__INCREMENTS;
+	int COMPONENT__STAGES = MODULE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -2193,7 +1994,7 @@ public interface C4Package extends EPackage {
 	 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getCodeElement()
 	 * @generated
 	 */
-	int CODE_ELEMENT = 11;
+	int CODE_ELEMENT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2202,7 +2003,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__MARKERS = NODE__MARKERS;
+	int CODE_ELEMENT__MARKERS = CorePackage.NODE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -2211,7 +2012,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__URIS = NODE__URIS;
+	int CODE_ELEMENT__URIS = CorePackage.NODE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2220,7 +2021,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__DESCRIPTION = NODE__DESCRIPTION;
+	int CODE_ELEMENT__DESCRIPTION = CorePackage.NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -2229,16 +2030,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__UUID = NODE__UUID;
+	int CODE_ELEMENT__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int CODE_ELEMENT__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2247,7 +2048,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__REPRESENTATIONS = NODE__REPRESENTATIONS;
+	int CODE_ELEMENT__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -2256,7 +2057,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__START = NODE__START;
+	int CODE_ELEMENT__START = CorePackage.NODE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -2265,7 +2066,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__END = NODE__END;
+	int CODE_ELEMENT__END = CorePackage.NODE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -2274,7 +2075,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__DURATION = NODE__DURATION;
+	int CODE_ELEMENT__DURATION = CorePackage.NODE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2283,7 +2084,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__NAME = NODE__NAME;
+	int CODE_ELEMENT__NAME = CorePackage.NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -2292,7 +2093,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__DOCUMENTATION = NODE__DOCUMENTATION;
+	int CODE_ELEMENT__DOCUMENTATION = CorePackage.NODE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2301,7 +2102,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__ID = NODE__ID;
+	int CODE_ELEMENT__ID = CorePackage.NODE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -2310,16 +2111,16 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__EVENTS = NODE__EVENTS;
+	int CODE_ELEMENT__EVENTS = CorePackage.NODE__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__INCREMENTS = NODE__INCREMENTS;
+	int CODE_ELEMENT__STAGES = CorePackage.NODE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -2328,7 +2129,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__FACETS = NODE__FACETS;
+	int CODE_ELEMENT__FACETS = CorePackage.NODE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2337,7 +2138,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__PROPERTIES = NODE__PROPERTIES;
+	int CODE_ELEMENT__PROPERTIES = CorePackage.NODE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -2346,7 +2147,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__IMPACTED_BY = NODE__IMPACTED_BY;
+	int CODE_ELEMENT__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -2355,7 +2156,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+	int CODE_ELEMENT__OUTGOING_RELATIONSHIPS = CorePackage.NODE__OUTGOING_RELATIONSHIPS;
 
 	/**
 	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
@@ -2364,7 +2165,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+	int CODE_ELEMENT__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
 	 * The number of structural features of the '<em>Code Element</em>' class.
@@ -2373,7 +2174,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int CODE_ELEMENT_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Code Element</em>' class.
@@ -2382,7 +2183,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int CODE_ELEMENT_OPERATION_COUNT = CorePackage.NODE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -2459,38 +2260,6 @@ public interface C4Package extends EPackage {
 	EReference getTechnologyConsumer_Technology();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.architecture.c4.Node <em>Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Node</em>'.
-	 * @see org.nasdanika.architecture.c4.Node
-	 * @generated
-	 */
-	EClass getNode();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.c4.Node#getOutgoingRelationships <em>Outgoing Relationships</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Outgoing Relationships</em>'.
-	 * @see org.nasdanika.architecture.c4.Node#getOutgoingRelationships()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EReference getNode_OutgoingRelationships();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.c4.Node#getIncomingRelationships <em>Incoming Relationships</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Incoming Relationships</em>'.
-	 * @see org.nasdanika.architecture.c4.Node#getIncomingRelationships()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EReference getNode_IncomingRelationships();
-
-	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.c4.Relationship <em>Relationship</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2499,17 +2268,6 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 */
 	EClass getRelationship();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.nasdanika.architecture.c4.Relationship#getTarget <em>Target</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see org.nasdanika.architecture.c4.Relationship#getTarget()
-	 * @see #getRelationship()
-	 * @generated
-	 */
-	EReference getRelationship_Target();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.c4.Person <em>Person</em>}'.
@@ -2747,32 +2505,6 @@ public interface C4Package extends EPackage {
 		EReference TECHNOLOGY_CONSUMER__TECHNOLOGY = eINSTANCE.getTechnologyConsumer_Technology();
 
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.architecture.c4.impl.NodeImpl <em>Node</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.architecture.c4.impl.NodeImpl
-		 * @see org.nasdanika.architecture.c4.impl.C4PackageImpl#getNode()
-		 * @generated
-		 */
-		EClass NODE = eINSTANCE.getNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Outgoing Relationships</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NODE__OUTGOING_RELATIONSHIPS = eINSTANCE.getNode_OutgoingRelationships();
-
-		/**
-		 * The meta object literal for the '<em><b>Incoming Relationships</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NODE__INCOMING_RELATIONSHIPS = eINSTANCE.getNode_IncomingRelationships();
-
-		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.c4.impl.RelationshipImpl <em>Relationship</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2781,14 +2513,6 @@ public interface C4Package extends EPackage {
 		 * @generated
 		 */
 		EClass RELATIONSHIP = eINSTANCE.getRelationship();
-
-		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RELATIONSHIP__TARGET = eINSTANCE.getRelationship_Target();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.c4.impl.PersonImpl <em>Person</em>}' class.

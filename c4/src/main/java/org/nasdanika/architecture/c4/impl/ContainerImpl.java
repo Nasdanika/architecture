@@ -17,6 +17,7 @@ import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.Component;
 import org.nasdanika.architecture.c4.Technology;
 import org.nasdanika.architecture.c4.TechnologyConsumer;
+import org.nasdanika.architecture.core.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

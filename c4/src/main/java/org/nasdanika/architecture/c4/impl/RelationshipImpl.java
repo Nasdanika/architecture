@@ -6,11 +6,9 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.architecture.c4.C4Package;
-import org.nasdanika.architecture.c4.Node;
 import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
 import org.nasdanika.architecture.c4.TechnologyConsumer;
-import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +19,11 @@ import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.architecture.c4.impl.RelationshipImpl#getTechnology <em>Technology</em>}</li>
- *   <li>{@link org.nasdanika.architecture.c4.impl.RelationshipImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RelationshipImpl extends ArchitectureElementImpl implements Relationship {
+public class RelationshipImpl extends org.nasdanika.architecture.core.impl.RelationshipImpl implements Relationship {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,42 +60,10 @@ public class RelationshipImpl extends ArchitectureElementImpl implements Relatio
 	 * @generated
 	 */
 	@Override
-	public Node getTarget() {
-		return (Node)eDynamicGet(C4Package.RELATIONSHIP__TARGET, C4Package.Literals.RELATIONSHIP__TARGET, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Node basicGetTarget() {
-		return (Node)eDynamicGet(C4Package.RELATIONSHIP__TARGET, C4Package.Literals.RELATIONSHIP__TARGET, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setTarget(Node newTarget) {
-		eDynamicSet(C4Package.RELATIONSHIP__TARGET, C4Package.Literals.RELATIONSHIP__TARGET, newTarget);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case C4Package.RELATIONSHIP__TECHNOLOGY:
 				return getTechnology();
-			case C4Package.RELATIONSHIP__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,9 +81,6 @@ public class RelationshipImpl extends ArchitectureElementImpl implements Relatio
 				getTechnology().clear();
 				getTechnology().addAll((Collection<? extends Technology>)newValue);
 				return;
-			case C4Package.RELATIONSHIP__TARGET:
-				setTarget((Node)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -134,9 +96,6 @@ public class RelationshipImpl extends ArchitectureElementImpl implements Relatio
 			case C4Package.RELATIONSHIP__TECHNOLOGY:
 				getTechnology().clear();
 				return;
-			case C4Package.RELATIONSHIP__TARGET:
-				setTarget((Node)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -151,8 +110,6 @@ public class RelationshipImpl extends ArchitectureElementImpl implements Relatio
 		switch (featureID) {
 			case C4Package.RELATIONSHIP__TECHNOLOGY:
 				return !getTechnology().isEmpty();
-			case C4Package.RELATIONSHIP__TARGET:
-				return basicGetTarget() != null;
 		}
 		return super.eIsSet(featureID);
 	}

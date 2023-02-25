@@ -133,18 +133,18 @@ public class CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CorePackage.INCREMENT: {
-				Increment increment = (Increment)theEObject;
-				T result = caseIncrement(increment);
-				if (result == null) result = caseArchitectureElement(increment);
-				if (result == null) result = casePeriod(increment);
-				if (result == null) result = caseModelElement(increment);
-				if (result == null) result = caseNamedElement(increment);
-				if (result == null) result = caseDocumented(increment);
-				if (result == null) result = caseNcore_ModelElement(increment);
-				if (result == null) result = caseMarked(increment);
-				if (result == null) result = caseAdaptable(increment);
-				if (result == null) result = caseIMarked(increment);
+			case CorePackage.STAGE: {
+				Stage stage = (Stage)theEObject;
+				T result = caseStage(stage);
+				if (result == null) result = caseArchitectureElement(stage);
+				if (result == null) result = casePeriod(stage);
+				if (result == null) result = caseModelElement(stage);
+				if (result == null) result = caseNamedElement(stage);
+				if (result == null) result = caseDocumented(stage);
+				if (result == null) result = caseNcore_ModelElement(stage);
+				if (result == null) result = caseMarked(stage);
+				if (result == null) result = caseAdaptable(stage);
+				if (result == null) result = caseIMarked(stage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,6 +187,52 @@ public class CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = caseMarked(impact);
 				if (result == null) result = caseAdaptable(impact);
 				if (result == null) result = caseIMarked(impact);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.NODE: {
+				Node node = (Node)theEObject;
+				T result = caseNode(node);
+				if (result == null) result = caseArchitectureElement(node);
+				if (result == null) result = casePeriod(node);
+				if (result == null) result = caseModelElement(node);
+				if (result == null) result = caseNamedElement(node);
+				if (result == null) result = caseDocumented(node);
+				if (result == null) result = caseNcore_ModelElement(node);
+				if (result == null) result = caseMarked(node);
+				if (result == null) result = caseAdaptable(node);
+				if (result == null) result = caseIMarked(node);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.RELATIONSHIP: {
+				Relationship relationship = (Relationship)theEObject;
+				T result = caseRelationship(relationship);
+				if (result == null) result = caseArchitectureElement(relationship);
+				if (result == null) result = casePeriod(relationship);
+				if (result == null) result = caseModelElement(relationship);
+				if (result == null) result = caseNamedElement(relationship);
+				if (result == null) result = caseDocumented(relationship);
+				if (result == null) result = caseNcore_ModelElement(relationship);
+				if (result == null) result = caseMarked(relationship);
+				if (result == null) result = caseAdaptable(relationship);
+				if (result == null) result = caseIMarked(relationship);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.COMPOSITE_NODE: {
+				CompositeNode compositeNode = (CompositeNode)theEObject;
+				T result = caseCompositeNode(compositeNode);
+				if (result == null) result = caseNode(compositeNode);
+				if (result == null) result = caseArchitectureElement(compositeNode);
+				if (result == null) result = casePeriod(compositeNode);
+				if (result == null) result = caseModelElement(compositeNode);
+				if (result == null) result = caseNamedElement(compositeNode);
+				if (result == null) result = caseDocumented(compositeNode);
+				if (result == null) result = caseNcore_ModelElement(compositeNode);
+				if (result == null) result = caseMarked(compositeNode);
+				if (result == null) result = caseAdaptable(compositeNode);
+				if (result == null) result = caseIMarked(compositeNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -270,17 +316,17 @@ public class CoreSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Increment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Stage</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Increment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Stage</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIncrement(Increment object) {
+	public T caseStage(Stage object) {
 		return null;
 	}
 
@@ -326,6 +372,51 @@ public class CoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImpact(Impact object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelationship(Relationship object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeNode(CompositeNode object) {
 		return null;
 	}
 

@@ -6,12 +6,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
 import org.nasdanika.architecture.c4.Component;
 import org.nasdanika.architecture.c4.Container;
-import org.nasdanika.architecture.c4.Node;
 import org.nasdanika.architecture.c4.Person;
 import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
@@ -19,6 +17,7 @@ import org.nasdanika.architecture.c4.TechnologyConsumer;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
 import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.Node;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.ModelElement;
@@ -137,26 +136,12 @@ public class C4Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case C4Package.NODE: {
-				Node node = (Node)theEObject;
-				T result = caseNode(node);
-				if (result == null) result = caseArchitectureElement(node);
-				if (result == null) result = casePeriod(node);
-				if (result == null) result = caseCore_ModelElement(node);
-				if (result == null) result = caseNamedElement(node);
-				if (result == null) result = caseDocumented(node);
-				if (result == null) result = caseModelElement(node);
-				if (result == null) result = caseMarked(node);
-				if (result == null) result = caseAdaptable(node);
-				if (result == null) result = caseIMarked(node);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case C4Package.RELATIONSHIP: {
 				Relationship relationship = (Relationship)theEObject;
 				T result = caseRelationship(relationship);
-				if (result == null) result = caseArchitectureElement(relationship);
+				if (result == null) result = caseCore_Relationship(relationship);
 				if (result == null) result = caseTechnologyConsumer(relationship);
+				if (result == null) result = caseArchitectureElement(relationship);
 				if (result == null) result = casePeriod(relationship);
 				if (result == null) result = caseCore_ModelElement(relationship);
 				if (result == null) result = caseNamedElement(relationship);
@@ -329,21 +314,6 @@ public class C4Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTechnologyConsumer(TechnologyConsumer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNode(Node object) {
 		return null;
 	}
 
@@ -584,6 +554,36 @@ public class C4Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseArchitectureElement(ArchitectureElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCore_Relationship(org.nasdanika.architecture.core.Relationship object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNode(Node object) {
 		return null;
 	}
 

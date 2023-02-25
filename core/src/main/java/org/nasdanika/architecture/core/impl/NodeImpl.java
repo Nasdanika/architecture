@@ -1,6 +1,6 @@
 /**
  */
-package org.nasdanika.architecture.c4.impl;
+package org.nasdanika.architecture.core.impl;
 
 import java.util.Collection;
 
@@ -13,11 +13,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.nasdanika.architecture.c4.C4Package;
-import org.nasdanika.architecture.c4.Node;
-import org.nasdanika.architecture.c4.Relationship;
-
-import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.architecture.core.Node;
+import org.nasdanika.architecture.core.Relationship;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,8 +25,8 @@ import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.architecture.c4.impl.NodeImpl#getOutgoingRelationships <em>Outgoing Relationships</em>}</li>
- *   <li>{@link org.nasdanika.architecture.c4.impl.NodeImpl#getIncomingRelationships <em>Incoming Relationships</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.NodeImpl#getOutgoingRelationships <em>Outgoing Relationships</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.NodeImpl#getIncomingRelationships <em>Incoming Relationships</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,7 +48,7 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return C4Package.Literals.NODE;
+		return CorePackage.Literals.NODE;
 	}
 
 	/**
@@ -61,7 +59,7 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Relationship> getOutgoingRelationships() {
-		return (EList<Relationship>)eDynamicGet(C4Package.NODE__OUTGOING_RELATIONSHIPS, C4Package.Literals.NODE__OUTGOING_RELATIONSHIPS, true, true);
+		return (EList<Relationship>)eDynamicGet(CorePackage.NODE__OUTGOING_RELATIONSHIPS, CorePackage.Literals.NODE__OUTGOING_RELATIONSHIPS, true, true);
 	}
 
 	/**
@@ -86,7 +84,7 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case C4Package.NODE__OUTGOING_RELATIONSHIPS:
+			case CorePackage.NODE__OUTGOING_RELATIONSHIPS:
 				return ((InternalEList<?>)getOutgoingRelationships()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -100,9 +98,9 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case C4Package.NODE__OUTGOING_RELATIONSHIPS:
+			case CorePackage.NODE__OUTGOING_RELATIONSHIPS:
 				return getOutgoingRelationships();
-			case C4Package.NODE__INCOMING_RELATIONSHIPS:
+			case CorePackage.NODE__INCOMING_RELATIONSHIPS:
 				return getIncomingRelationships();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -117,11 +115,11 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case C4Package.NODE__OUTGOING_RELATIONSHIPS:
+			case CorePackage.NODE__OUTGOING_RELATIONSHIPS:
 				getOutgoingRelationships().clear();
 				getOutgoingRelationships().addAll((Collection<? extends Relationship>)newValue);
 				return;
-			case C4Package.NODE__INCOMING_RELATIONSHIPS:
+			case CorePackage.NODE__INCOMING_RELATIONSHIPS:
 				getIncomingRelationships().clear();
 				getIncomingRelationships().addAll((Collection<? extends Relationship>)newValue);
 				return;
@@ -137,10 +135,10 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case C4Package.NODE__OUTGOING_RELATIONSHIPS:
+			case CorePackage.NODE__OUTGOING_RELATIONSHIPS:
 				getOutgoingRelationships().clear();
 				return;
-			case C4Package.NODE__INCOMING_RELATIONSHIPS:
+			case CorePackage.NODE__INCOMING_RELATIONSHIPS:
 				getIncomingRelationships().clear();
 				return;
 		}
@@ -155,9 +153,9 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case C4Package.NODE__OUTGOING_RELATIONSHIPS:
+			case CorePackage.NODE__OUTGOING_RELATIONSHIPS:
 				return !getOutgoingRelationships().isEmpty();
-			case C4Package.NODE__INCOMING_RELATIONSHIPS:
+			case CorePackage.NODE__INCOMING_RELATIONSHIPS:
 				return !getIncomingRelationships().isEmpty();
 		}
 		return super.eIsSet(featureID);

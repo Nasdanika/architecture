@@ -46,42 +46,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Source and target of relationships"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingRelationships"
-        upperBound="-1" eType="#//Relationship" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id">
-      <eAnnotations source="urn:org.nasdanika">
-        <details key="homogenous" value="true"/>
-        <details key="strict-containment" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Outgoing relationships"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingRelationships"
-        upperBound="-1" eType="#//Relationship" volatile="true" transient="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Incoming relationships - a computed opposite to Relationship.target"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement #//TechnologyConsumer">
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Relationship #//TechnologyConsumer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A relationship between two nodes. Relationships are contained by their source nodes and reference their targets using the target reference."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Node">
-      <eAnnotations source="urn:org.nasdanika">
-        <details key="opposite" value="incomingRelationships"/>
-        <details key="default-feature" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Relationship target."/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A person represents one of the human users of your software system (e.g. actors, roles, personas, etc)."/>
     </eAnnotations>
@@ -91,7 +61,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). "/>
     </eAnnotations>
@@ -113,7 +83,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//Node #//TechnologyConsumer">
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node #//TechnologyConsumer">
     <eAnnotations source="urn:org.nasdanika">
       <details key="documentation-reference" value="doc/container.md"/>
     </eAnnotations>
@@ -135,7 +105,7 @@
       <details key="documentation-reference" value="doc/component.md"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//Node #//TechnologyConsumer">
+  <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node #//TechnologyConsumer">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Module is an implementation unit. E.g. a Java jar file/module. "/>
     </eAnnotations>
@@ -152,7 +122,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CodeElement" eSuperTypes="#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="CodeElement" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Classes, interfaces, objects, functions, database tables, etc"/>
     </eAnnotations>

@@ -8,12 +8,10 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
-
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
 import org.nasdanika.architecture.c4.Component;
 import org.nasdanika.architecture.c4.Container;
-import org.nasdanika.architecture.c4.Node;
 import org.nasdanika.architecture.c4.Person;
 import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
@@ -21,6 +19,7 @@ import org.nasdanika.architecture.c4.TechnologyConsumer;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
 import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.Node;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.ModelElement;
@@ -102,10 +101,6 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 				return createTechnologyConsumerAdapter();
 			}
 			@Override
-			public Adapter caseNode(Node object) {
-				return createNodeAdapter();
-			}
-			@Override
 			public Adapter caseRelationship(Relationship object) {
 				return createRelationshipAdapter();
 			}
@@ -168,6 +163,14 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseArchitectureElement(ArchitectureElement object) {
 				return createArchitectureElementAdapter();
+			}
+			@Override
+			public Adapter caseCore_Relationship(org.nasdanika.architecture.core.Relationship object) {
+				return createCore_RelationshipAdapter();
+			}
+			@Override
+			public Adapter caseNode(Node object) {
+				return createNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -246,13 +249,13 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.c4.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.architecture.c4.Node
+	 * @see org.nasdanika.architecture.core.Node
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
@@ -480,6 +483,20 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArchitectureElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Relationship <em>Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Relationship
+	 * @generated
+	 */
+	public Adapter createCore_RelationshipAdapter() {
 		return null;
 	}
 

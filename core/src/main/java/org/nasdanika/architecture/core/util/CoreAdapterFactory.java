@@ -94,8 +94,8 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createDomainAdapter();
 			}
 			@Override
-			public Adapter caseIncrement(Increment object) {
-				return createIncrementAdapter();
+			public Adapter caseStage(Stage object) {
+				return createStageAdapter();
 			}
 			@Override
 			public Adapter caseImpactType(ImpactType object) {
@@ -108,6 +108,18 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseImpact(Impact object) {
 				return createImpactAdapter();
+			}
+			@Override
+			public Adapter caseNode(Node object) {
+				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseRelationship(Relationship object) {
+				return createRelationshipAdapter();
+			}
+			@Override
+			public Adapter caseCompositeNode(CompositeNode object) {
+				return createCompositeNodeAdapter();
 			}
 			@Override
 			public Adapter caseIMarked(Marked object) {
@@ -232,16 +244,16 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Increment <em>Increment</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Stage <em>Stage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.architecture.core.Increment
+	 * @see org.nasdanika.architecture.core.Stage
 	 * @generated
 	 */
-	public Adapter createIncrementAdapter() {
+	public Adapter createStageAdapter() {
 		return null;
 	}
 
@@ -284,6 +296,48 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImpactAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Node
+	 * @generated
+	 */
+	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Relationship <em>Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Relationship
+	 * @generated
+	 */
+	public Adapter createRelationshipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.CompositeNode <em>Composite Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.CompositeNode
+	 * @generated
+	 */
+	public Adapter createCompositeNodeAdapter() {
 		return null;
 	}
 

@@ -2,6 +2,8 @@
  */
 package org.nasdanika.architecture.c4;
 
+import org.nasdanika.architecture.core.Node;
+
 
 /**
  * <!-- begin-user-doc -->

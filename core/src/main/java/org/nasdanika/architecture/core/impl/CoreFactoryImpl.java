@@ -59,10 +59,13 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 			case CorePackage.EVENT: return createEvent();
 			case CorePackage.ARCHITECTURE_ELEMENT: return createArchitectureElement();
 			case CorePackage.DOMAIN: return createDomain();
-			case CorePackage.INCREMENT: return createIncrement();
+			case CorePackage.STAGE: return createStage();
 			case CorePackage.IMPACT_TYPE: return createImpactType();
 			case CorePackage.ARCHITECTURE: return createArchitecture();
 			case CorePackage.IMPACT: return createImpact();
+			case CorePackage.NODE: return createNode();
+			case CorePackage.RELATIONSHIP: return createRelationship();
+			case CorePackage.COMPOSITE_NODE: return createCompositeNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -107,9 +110,9 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	 * @generated
 	 */
 	@Override
-	public Increment createIncrement() {
-		IncrementImpl increment = new IncrementImpl();
-		return increment;
+	public Stage createStage() {
+		StageImpl stage = new StageImpl();
+		return stage;
 	}
 
 	/**
@@ -143,6 +146,39 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	public Impact createImpact() {
 		ImpactImpl impact = new ImpactImpl();
 		return impact;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Node createNode() {
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Relationship createRelationship() {
+		RelationshipImpl relationship = new RelationshipImpl();
+		return relationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CompositeNode createCompositeNode() {
+		CompositeNodeImpl compositeNode = new CompositeNodeImpl();
+		return compositeNode;
 	}
 
 	/**

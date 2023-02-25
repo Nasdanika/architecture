@@ -35,10 +35,10 @@
         <details key="documentation" value="Events associated with this architecture element. Events can be used as bases for temporals and periods, e.g. other architecture elements or increments."/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="increments" upperBound="-1"
-        eType="#//Increment" containment="true" eKeys="#//ModelElement/id">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stages" upperBound="-1"
+        eType="#//Stage" containment="true" eKeys="#//ModelElement/id">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Architecture element increments. E.g. releases/versions for a technology product or lifecycle for a technology product release. "/>
+        <details key="documentation" value="Architecture element lifecycle stages. E.g. releases/versions for a technology product or lifecycle for a technology product release. "/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="facets" upperBound="-1"
@@ -76,9 +76,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Increment" eSuperTypes="#//ArchitectureElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Stage" eSuperTypes="#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A transition of the containing architecture element from the baseline state identified by the increment start to the target state identified by the increment end."/>
+      <details key="documentation" value="A transition of the containing architecture element from the baseline state identified by the stage start to the target state identified by the stage end. For example, &quot;Development&quot; stage or &quot;End of Life/Deprecated&quot; stage."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="impacts" upperBound="-1"
         eType="#//Impact" containment="true">
@@ -128,5 +128,44 @@
         <details key="documentation" value="Impacted element(s)"/>
       </eAnnotations>
     </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//ArchitectureElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Source and target of relationships"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingRelationships"
+        upperBound="-1" eType="#//Relationship" containment="true" eKeys="#//ModelElement/id">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="homogenous" value="true"/>
+        <details key="strict-containment" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Outgoing relationships"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingRelationships"
+        upperBound="-1" eType="#//Relationship" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Incoming relationships - a computed opposite to Relationship.target"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//ArchitectureElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A relationship between two nodes. Relationships are contained by their source nodes and reference their targets using the target reference."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Node">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="incomingRelationships"/>
+        <details key="default-feature" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Relationship target."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeNode" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//ArchitectureElement" containment="true" eKeys="#//ModelElement/id"/>
   </eClassifiers>
 </ecore:EPackage>

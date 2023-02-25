@@ -19,13 +19,7 @@
     <genClasses ecoreClass="c4.ecore#//TechnologyConsumer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference c4.ecore#//TechnologyConsumer/technology"/>
     </genClasses>
-    <genClasses ecoreClass="c4.ecore#//Node">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference c4.ecore#//Node/outgoingRelationships"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference c4.ecore#//Node/incomingRelationships"/>
-    </genClasses>
-    <genClasses ecoreClass="c4.ecore#//Relationship">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference c4.ecore#//Relationship/target"/>
-    </genClasses>
+    <genClasses ecoreClass="c4.ecore#//Relationship"/>
     <genClasses ecoreClass="c4.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute c4.ecore#//Person/external"/>
     </genClasses>

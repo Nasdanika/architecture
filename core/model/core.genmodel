@@ -16,7 +16,7 @@
     <genClasses image="false" ecoreClass="core.ecore#//Facet"/>
     <genClasses ecoreClass="core.ecore#//ArchitectureElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/events"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/increments"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/stages"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/facets"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/properties"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference core.ecore#//ArchitectureElement/impactedBy"/>
@@ -24,8 +24,8 @@
     <genClasses ecoreClass="core.ecore#//Domain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//Domain/elements"/>
     </genClasses>
-    <genClasses ecoreClass="core.ecore#//Increment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//Increment/impacts"/>
+    <genClasses ecoreClass="core.ecore#//Stage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//Stage/impacts"/>
     </genClasses>
     <genClasses ecoreClass="core.ecore#//ImpactType"/>
     <genClasses ecoreClass="core.ecore#//Architecture">
@@ -34,6 +34,16 @@
     <genClasses ecoreClass="core.ecore#//Impact">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference core.ecore#//Impact/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference core.ecore#//Impact/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="core.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//Node/outgoingRelationships"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference core.ecore#//Node/incomingRelationships"/>
+    </genClasses>
+    <genClasses ecoreClass="core.ecore#//Relationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference core.ecore#//Relationship/target"/>
+    </genClasses>
+    <genClasses ecoreClass="core.ecore#//CompositeNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference core.ecore#//CompositeNode/children"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

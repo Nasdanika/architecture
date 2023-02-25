@@ -105,7 +105,7 @@ public interface CorePackage extends EPackage {
 	int MODEL_ELEMENT__UUID = NcorePackage.NAMED_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -214,7 +214,7 @@ public interface CorePackage extends EPackage {
 	int EVENT__UUID = NcorePackage.TEMPORAL__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -477,7 +477,7 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE_ELEMENT__UUID = NcorePackage.PERIOD__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -558,13 +558,13 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE_ELEMENT__EVENTS = NcorePackage.PERIOD_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__INCREMENTS = NcorePackage.PERIOD_FEATURE_COUNT + 4;
+	int ARCHITECTURE_ELEMENT__STAGES = NcorePackage.PERIOD_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -659,7 +659,7 @@ public interface CorePackage extends EPackage {
 	int DOMAIN__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -740,13 +740,13 @@ public interface CorePackage extends EPackage {
 	int DOMAIN__EVENTS = ARCHITECTURE_ELEMENT__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__INCREMENTS = ARCHITECTURE_ELEMENT__INCREMENTS;
+	int DOMAIN__STAGES = ARCHITECTURE_ELEMENT__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -803,14 +803,14 @@ public interface CorePackage extends EPackage {
 	int DOMAIN_OPERATION_COUNT = ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.IncrementImpl <em>Increment</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.StageImpl <em>Stage</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.architecture.core.impl.IncrementImpl
-	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getIncrement()
+	 * @see org.nasdanika.architecture.core.impl.StageImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getStage()
 	 * @generated
 	 */
-	int INCREMENT = 5;
+	int STAGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -819,7 +819,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__MARKERS = ARCHITECTURE_ELEMENT__MARKERS;
+	int STAGE__MARKERS = ARCHITECTURE_ELEMENT__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -828,7 +828,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__URIS = ARCHITECTURE_ELEMENT__URIS;
+	int STAGE__URIS = ARCHITECTURE_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -837,7 +837,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__DESCRIPTION = ARCHITECTURE_ELEMENT__DESCRIPTION;
+	int STAGE__DESCRIPTION = ARCHITECTURE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -846,16 +846,16 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__UUID = ARCHITECTURE_ELEMENT__UUID;
+	int STAGE__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int STAGE__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -864,7 +864,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+	int STAGE__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -873,7 +873,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__START = ARCHITECTURE_ELEMENT__START;
+	int STAGE__START = ARCHITECTURE_ELEMENT__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -882,7 +882,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__END = ARCHITECTURE_ELEMENT__END;
+	int STAGE__END = ARCHITECTURE_ELEMENT__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -891,7 +891,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__DURATION = ARCHITECTURE_ELEMENT__DURATION;
+	int STAGE__DURATION = ARCHITECTURE_ELEMENT__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -900,7 +900,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__NAME = ARCHITECTURE_ELEMENT__NAME;
+	int STAGE__NAME = ARCHITECTURE_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -909,7 +909,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__DOCUMENTATION = ARCHITECTURE_ELEMENT__DOCUMENTATION;
+	int STAGE__DOCUMENTATION = ARCHITECTURE_ELEMENT__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -918,7 +918,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__ID = ARCHITECTURE_ELEMENT__ID;
+	int STAGE__ID = ARCHITECTURE_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -927,16 +927,16 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__EVENTS = ARCHITECTURE_ELEMENT__EVENTS;
+	int STAGE__EVENTS = ARCHITECTURE_ELEMENT__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__INCREMENTS = ARCHITECTURE_ELEMENT__INCREMENTS;
+	int STAGE__STAGES = ARCHITECTURE_ELEMENT__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -945,7 +945,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__FACETS = ARCHITECTURE_ELEMENT__FACETS;
+	int STAGE__FACETS = ARCHITECTURE_ELEMENT__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -954,7 +954,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__PROPERTIES = ARCHITECTURE_ELEMENT__PROPERTIES;
+	int STAGE__PROPERTIES = ARCHITECTURE_ELEMENT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -963,7 +963,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+	int STAGE__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Impacts</b></em>' containment reference list.
@@ -972,26 +972,25 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT__IMPACTS = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+	int STAGE__IMPACTS = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Increment</em>' class.
+	 * The number of structural features of the '<em>Stage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT_FEATURE_COUNT = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
+	int STAGE_FEATURE_COUNT = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Increment</em>' class.
+	 * The number of operations of the '<em>Stage</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INCREMENT_OPERATION_COUNT = ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
-
+	int STAGE_OPERATION_COUNT = ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ImpactTypeImpl <em>Impact Type</em>}' class.
@@ -1040,7 +1039,7 @@ public interface CorePackage extends EPackage {
 	int IMPACT_TYPE__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1149,7 +1148,7 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE__UUID = DOMAIN__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1230,13 +1229,13 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE__EVENTS = DOMAIN__EVENTS;
 
 	/**
-	 * The feature id for the '<em><b>Increments</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__INCREMENTS = DOMAIN__INCREMENTS;
+	int ARCHITECTURE__STAGES = DOMAIN__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1348,7 +1347,7 @@ public interface CorePackage extends EPackage {
 	int IMPACT__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' reference.
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1430,6 +1429,604 @@ public interface CorePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.NodeImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__MARKERS = ARCHITECTURE_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__URIS = ARCHITECTURE_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DESCRIPTION = ARCHITECTURE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__UUID = ARCHITECTURE_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__START = ARCHITECTURE_ELEMENT__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__END = ARCHITECTURE_ELEMENT__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DURATION = ARCHITECTURE_ELEMENT__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = ARCHITECTURE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DOCUMENTATION = ARCHITECTURE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ID = ARCHITECTURE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__EVENTS = ARCHITECTURE_ELEMENT__EVENTS;
+
+	/**
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__STAGES = ARCHITECTURE_ELEMENT__STAGES;
+
+	/**
+	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__FACETS = ARCHITECTURE_ELEMENT__FACETS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__PROPERTIES = ARCHITECTURE_ELEMENT__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__OUTGOING_RELATIONSHIPS = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__INCOMING_RELATIONSHIPS = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_OPERATION_COUNT = ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.RelationshipImpl <em>Relationship</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.RelationshipImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getRelationship()
+	 * @generated
+	 */
+	int RELATIONSHIP = 10;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__MARKERS = ARCHITECTURE_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__URIS = ARCHITECTURE_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__DESCRIPTION = ARCHITECTURE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__UUID = ARCHITECTURE_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__START = ARCHITECTURE_ELEMENT__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__END = ARCHITECTURE_ELEMENT__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__DURATION = ARCHITECTURE_ELEMENT__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__NAME = ARCHITECTURE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__DOCUMENTATION = ARCHITECTURE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ID = ARCHITECTURE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__EVENTS = ARCHITECTURE_ELEMENT__EVENTS;
+
+	/**
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__STAGES = ARCHITECTURE_ELEMENT__STAGES;
+
+	/**
+	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__FACETS = ARCHITECTURE_ELEMENT__FACETS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__PROPERTIES = ARCHITECTURE_ELEMENT__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__TARGET = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP_FEATURE_COUNT = ARCHITECTURE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP_OPERATION_COUNT = ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.CompositeNodeImpl <em>Composite Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.CompositeNodeImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getCompositeNode()
+	 * @generated
+	 */
+	int COMPOSITE_NODE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__MARKERS = NODE__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__URIS = NODE__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__DESCRIPTION = NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__UUID = NODE__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__REPRESENTATIONS = NODE__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__START = NODE__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__END = NODE__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__DURATION = NODE__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__DOCUMENTATION = NODE__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__ID = NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__EVENTS = NODE__EVENTS;
+
+	/**
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__STAGES = NODE__STAGES;
+
+	/**
+	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__FACETS = NODE__FACETS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__PROPERTIES = NODE__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__IMPACTED_BY = NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__OUTGOING_RELATIONSHIPS = NODE__OUTGOING_RELATIONSHIPS;
+
+	/**
+	 * The feature id for the '<em><b>Incoming Relationships</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__INCOMING_RELATIONSHIPS = NODE__INCOMING_RELATIONSHIPS;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__CHILDREN = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Composite Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Composite Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.ModelElement <em>Model Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1492,15 +2089,15 @@ public interface CorePackage extends EPackage {
 	EReference getArchitectureElement_Events();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.ArchitectureElement#getIncrements <em>Increments</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.ArchitectureElement#getStages <em>Stages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Increments</em>'.
-	 * @see org.nasdanika.architecture.core.ArchitectureElement#getIncrements()
+	 * @return the meta object for the containment reference list '<em>Stages</em>'.
+	 * @see org.nasdanika.architecture.core.ArchitectureElement#getStages()
 	 * @see #getArchitectureElement()
 	 * @generated
 	 */
-	EReference getArchitectureElement_Increments();
+	EReference getArchitectureElement_Stages();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.ArchitectureElement#getFacets <em>Facets</em>}'.
@@ -1557,25 +2154,25 @@ public interface CorePackage extends EPackage {
 	EReference getDomain_Elements();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Increment <em>Increment</em>}'.
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Stage <em>Stage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Increment</em>'.
-	 * @see org.nasdanika.architecture.core.Increment
+	 * @return the meta object for class '<em>Stage</em>'.
+	 * @see org.nasdanika.architecture.core.Stage
 	 * @generated
 	 */
-	EClass getIncrement();
+	EClass getStage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.Increment#getImpacts <em>Impacts</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.Stage#getImpacts <em>Impacts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Impacts</em>'.
-	 * @see org.nasdanika.architecture.core.Increment#getImpacts()
-	 * @see #getIncrement()
+	 * @see org.nasdanika.architecture.core.Stage#getImpacts()
+	 * @see #getStage()
 	 * @generated
 	 */
-	EReference getIncrement_Impacts();
+	EReference getStage_Impacts();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.ImpactType <em>Impact Type</em>}'.
@@ -1639,6 +2236,80 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getImpact_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see org.nasdanika.architecture.core.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.Node#getOutgoingRelationships <em>Outgoing Relationships</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Outgoing Relationships</em>'.
+	 * @see org.nasdanika.architecture.core.Node#getOutgoingRelationships()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_OutgoingRelationships();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Node#getIncomingRelationships <em>Incoming Relationships</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Incoming Relationships</em>'.
+	 * @see org.nasdanika.architecture.core.Node#getIncomingRelationships()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_IncomingRelationships();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Relationship <em>Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Relationship</em>'.
+	 * @see org.nasdanika.architecture.core.Relationship
+	 * @generated
+	 */
+	EClass getRelationship();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.architecture.core.Relationship#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see org.nasdanika.architecture.core.Relationship#getTarget()
+	 * @see #getRelationship()
+	 * @generated
+	 */
+	EReference getRelationship_Target();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.CompositeNode <em>Composite Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Composite Node</em>'.
+	 * @see org.nasdanika.architecture.core.CompositeNode
+	 * @generated
+	 */
+	EClass getCompositeNode();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.CompositeNode#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.nasdanika.architecture.core.CompositeNode#getChildren()
+	 * @see #getCompositeNode()
+	 * @generated
+	 */
+	EReference getCompositeNode_Children();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1720,12 +2391,12 @@ public interface CorePackage extends EPackage {
 		EReference ARCHITECTURE_ELEMENT__EVENTS = eINSTANCE.getArchitectureElement_Events();
 
 		/**
-		 * The meta object literal for the '<em><b>Increments</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Stages</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ARCHITECTURE_ELEMENT__INCREMENTS = eINSTANCE.getArchitectureElement_Increments();
+		EReference ARCHITECTURE_ELEMENT__STAGES = eINSTANCE.getArchitectureElement_Stages();
 
 		/**
 		 * The meta object literal for the '<em><b>Facets</b></em>' containment reference list feature.
@@ -1770,14 +2441,14 @@ public interface CorePackage extends EPackage {
 		EReference DOMAIN__ELEMENTS = eINSTANCE.getDomain_Elements();
 
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.IncrementImpl <em>Increment</em>}' class.
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.StageImpl <em>Stage</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.architecture.core.impl.IncrementImpl
-		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getIncrement()
+		 * @see org.nasdanika.architecture.core.impl.StageImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getStage()
 		 * @generated
 		 */
-		EClass INCREMENT = eINSTANCE.getIncrement();
+		EClass STAGE = eINSTANCE.getStage();
 
 		/**
 		 * The meta object literal for the '<em><b>Impacts</b></em>' containment reference list feature.
@@ -1785,7 +2456,7 @@ public interface CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INCREMENT__IMPACTS = eINSTANCE.getIncrement_Impacts();
+		EReference STAGE__IMPACTS = eINSTANCE.getStage_Impacts();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ImpactTypeImpl <em>Impact Type</em>}' class.
@@ -1840,6 +2511,68 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference IMPACT__ELEMENTS = eINSTANCE.getImpact_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.NodeImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Outgoing Relationships</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__OUTGOING_RELATIONSHIPS = eINSTANCE.getNode_OutgoingRelationships();
+
+		/**
+		 * The meta object literal for the '<em><b>Incoming Relationships</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__INCOMING_RELATIONSHIPS = eINSTANCE.getNode_IncomingRelationships();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.RelationshipImpl <em>Relationship</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.RelationshipImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getRelationship()
+		 * @generated
+		 */
+		EClass RELATIONSHIP = eINSTANCE.getRelationship();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RELATIONSHIP__TARGET = eINSTANCE.getRelationship_Target();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.CompositeNodeImpl <em>Composite Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.CompositeNodeImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getCompositeNode()
+		 * @generated
+		 */
+		EClass COMPOSITE_NODE = eINSTANCE.getCompositeNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_NODE__CHILDREN = eINSTANCE.getCompositeNode_Children();
 
 	}
 

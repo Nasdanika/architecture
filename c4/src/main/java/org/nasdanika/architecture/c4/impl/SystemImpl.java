@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.architecture.c4.C4Package;
+import org.nasdanika.architecture.core.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

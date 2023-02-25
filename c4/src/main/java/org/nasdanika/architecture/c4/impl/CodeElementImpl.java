@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
+import org.nasdanika.architecture.core.impl.NodeImpl;
 
 /**
  * <!-- begin-user-doc -->

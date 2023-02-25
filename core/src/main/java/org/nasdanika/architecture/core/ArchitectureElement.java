@@ -20,7 +20,7 @@ import org.nasdanika.ncore.Property;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getEvents <em>Events</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getIncrements <em>Increments</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getStages <em>Stages</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getImpactedBy <em>Impacted By</em>}</li>
@@ -47,19 +47,19 @@ public interface ArchitectureElement extends Period, ModelElement {
 	EList<Event> getEvents();
 
 	/**
-	 * Returns the value of the '<em><b>Increments</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.architecture.core.Increment}.
+	 * Returns the value of the '<em><b>Stages</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.Stage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Architecture element increments. E.g. releases/versions for a technology product or lifecycle for a technology product release. 
+	 * Architecture element lifecycle stages. E.g. releases/versions for a technology product or lifecycle for a technology product release. 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Increments</em>' containment reference list.
-	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_Increments()
+	 * @return the value of the '<em>Stages</em>' containment reference list.
+	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_Stages()
 	 * @model containment="true" keys="id"
 	 * @generated
 	 */
-	EList<Increment> getIncrements();
+	EList<Stage> getStages();
 
 	/**
 	 * Returns the value of the '<em><b>Facets</b></em>' containment reference list.

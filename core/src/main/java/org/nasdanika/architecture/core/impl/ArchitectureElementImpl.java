@@ -15,8 +15,8 @@ import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Event;
 import org.nasdanika.architecture.core.Facet;
 import org.nasdanika.architecture.core.Impact;
-import org.nasdanika.architecture.core.Increment;
 import org.nasdanika.architecture.core.ModelElement;
+import org.nasdanika.architecture.core.Stage;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.ncore.NcorePackage;
@@ -35,7 +35,7 @@ import org.nasdanika.ncore.impl.PeriodImpl;
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getEvents <em>Events</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getIncrements <em>Increments</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getStages <em>Stages</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getImpactedBy <em>Impacted By</em>}</li>
@@ -151,8 +151,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<Increment> getIncrements() {
-		return (EList<Increment>)eDynamicGet(CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS, CorePackage.Literals.ARCHITECTURE_ELEMENT__INCREMENTS, true, true);
+	public EList<Stage> getStages() {
+		return (EList<Stage>)eDynamicGet(CorePackage.ARCHITECTURE_ELEMENT__STAGES, CorePackage.Literals.ARCHITECTURE_ELEMENT__STAGES, true, true);
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
-			case CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS:
-				return ((InternalEList<?>)getIncrements()).basicRemove(otherEnd, msgs);
+			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
+				return ((InternalEList<?>)getStages()).basicRemove(otherEnd, msgs);
 			case CorePackage.ARCHITECTURE_ELEMENT__FACETS:
 				return ((InternalEList<?>)getFacets()).basicRemove(otherEnd, msgs);
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
@@ -229,8 +229,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return getId();
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return getEvents();
-			case CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS:
-				return getIncrements();
+			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
+				return getStages();
 			case CorePackage.ARCHITECTURE_ELEMENT__FACETS:
 				return getFacets();
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
@@ -264,9 +264,9 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				getEvents().clear();
 				getEvents().addAll((Collection<? extends Event>)newValue);
 				return;
-			case CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS:
-				getIncrements().clear();
-				getIncrements().addAll((Collection<? extends Increment>)newValue);
+			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
+				getStages().clear();
+				getStages().addAll((Collection<? extends Stage>)newValue);
 				return;
 			case CorePackage.ARCHITECTURE_ELEMENT__FACETS:
 				getFacets().clear();
@@ -300,8 +300,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				getEvents().clear();
 				return;
-			case CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS:
-				getIncrements().clear();
+			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
+				getStages().clear();
 				return;
 			case CorePackage.ARCHITECTURE_ELEMENT__FACETS:
 				getFacets().clear();
@@ -329,8 +329,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return !getEvents().isEmpty();
-			case CorePackage.ARCHITECTURE_ELEMENT__INCREMENTS:
-				return !getIncrements().isEmpty();
+			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
+				return !getStages().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__FACETS:
 				return !getFacets().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:

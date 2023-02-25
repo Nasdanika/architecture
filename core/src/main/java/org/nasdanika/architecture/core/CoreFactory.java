@@ -49,13 +49,13 @@ public interface CoreFactory extends EFactory {
 	Domain createDomain();
 
 	/**
-	 * Returns a new object of class '<em>Increment</em>'.
+	 * Returns a new object of class '<em>Stage</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Increment</em>'.
+	 * @return a new object of class '<em>Stage</em>'.
 	 * @generated
 	 */
-	Increment createIncrement();
+	Stage createStage();
 
 	/**
 	 * Returns a new object of class '<em>Impact Type</em>'.
@@ -83,6 +83,33 @@ public interface CoreFactory extends EFactory {
 	 * @generated
 	 */
 	Impact createImpact();
+
+	/**
+	 * Returns a new object of class '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node</em>'.
+	 * @generated
+	 */
+	Node createNode();
+
+	/**
+	 * Returns a new object of class '<em>Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Relationship</em>'.
+	 * @generated
+	 */
+	Relationship createRelationship();
+
+	/**
+	 * Returns a new object of class '<em>Composite Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Composite Node</em>'.
+	 * @generated
+	 */
+	CompositeNode createCompositeNode();
 
 	/**
 	 * Returns the package supported by this factory.
