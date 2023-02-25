@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.architecture.core.Relationship;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,15 +66,11 @@ public class NodeImpl extends ArchitectureElementImpl implements Node {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public EList<Relationship> getIncomingRelationships() {
-		// TODO: implement this method to return the 'Incoming Relationships' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		return getOppositeReferrers(CorePackage.Literals.NODE__INCOMING_RELATIONSHIPS);		
 	}
 
 	/**

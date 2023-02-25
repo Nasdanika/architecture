@@ -180,15 +180,11 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public EList<Impact> getImpactedBy() {
-		// TODO: implement this method to return the 'Impacted By' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		return getOppositeReferrers(CorePackage.Literals.ARCHITECTURE_ELEMENT__IMPACTED_BY);		
 	}
 
 	/**
