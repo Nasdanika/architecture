@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.architecture.core.Relationship;
-import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->

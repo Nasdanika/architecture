@@ -3,6 +3,7 @@
 package org.nasdanika.architecture.core.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -66,8 +67,44 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 			case CorePackage.NODE: return createNode();
 			case CorePackage.RELATIONSHIP: return createRelationship();
 			case CorePackage.COMPOSITE_NODE: return createCompositeNode();
+			case CorePackage.TAG: return createTag();
+			case CorePackage.STAKEHOLDER: return createStakeholder();
+			case CorePackage.CONCERN: return createConcern();
+			case CorePackage.VIEWPOINT: return createViewpoint();
+			case CorePackage.VIEW: return createView();
+			case CorePackage.VIEW_ELEMENT: return createViewElement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case CorePackage.ACTION_ROLE:
+				return createActionRoleFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case CorePackage.ACTION_ROLE:
+				return convertActionRoleToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -179,6 +216,92 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	public CompositeNode createCompositeNode() {
 		CompositeNodeImpl compositeNode = new CompositeNodeImpl();
 		return compositeNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Tag createTag() {
+		TagImpl tag = new TagImpl();
+		return tag;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Stakeholder createStakeholder() {
+		StakeholderImpl stakeholder = new StakeholderImpl();
+		return stakeholder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Concern createConcern() {
+		ConcernImpl concern = new ConcernImpl();
+		return concern;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Viewpoint createViewpoint() {
+		ViewpointImpl viewpoint = new ViewpointImpl();
+		return viewpoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public View createView() {
+		ViewImpl view = new ViewImpl();
+		return view;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ViewElement createViewElement() {
+		ViewElementImpl viewElement = new ViewElementImpl();
+		return viewElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActionRole createActionRoleFromString(EDataType eDataType, String initialValue) {
+		ActionRole result = ActionRole.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertActionRoleToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

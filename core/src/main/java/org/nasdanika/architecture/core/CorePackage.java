@@ -4,6 +4,7 @@ package org.nasdanika.architecture.core;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.nasdanika.ncore.NcorePackage;
@@ -150,13 +151,31 @@ public interface CorePackage extends EPackage {
 	int MODEL_ELEMENT__ID = NcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT__ACTION_ROLE = NcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT__VIEWS = NcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Model Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_ELEMENT_FEATURE_COUNT = NcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int MODEL_ELEMENT_FEATURE_COUNT = NcorePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Model Element</em>' class.
@@ -313,13 +332,31 @@ public interface CorePackage extends EPackage {
 	int EVENT__ID = NcorePackage.TEMPORAL_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__ACTION_ROLE = NcorePackage.TEMPORAL_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__VIEWS = NcorePackage.TEMPORAL_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_FEATURE_COUNT = NcorePackage.TEMPORAL_FEATURE_COUNT + 3;
+	int EVENT_FEATURE_COUNT = NcorePackage.TEMPORAL_FEATURE_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>After</em>' operation.
@@ -549,13 +586,31 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE_ELEMENT__ID = NcorePackage.PERIOD_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ELEMENT__ACTION_ROLE = NcorePackage.PERIOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ELEMENT__VIEWS = NcorePackage.PERIOD_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__EVENTS = NcorePackage.PERIOD_FEATURE_COUNT + 3;
+	int ARCHITECTURE_ELEMENT__EVENTS = NcorePackage.PERIOD_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
@@ -564,7 +619,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__STAGES = NcorePackage.PERIOD_FEATURE_COUNT + 4;
+	int ARCHITECTURE_ELEMENT__STAGES = NcorePackage.PERIOD_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -573,7 +628,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__FACETS = NcorePackage.PERIOD_FEATURE_COUNT + 5;
+	int ARCHITECTURE_ELEMENT__FACETS = NcorePackage.PERIOD_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -582,7 +637,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__PROPERTIES = NcorePackage.PERIOD_FEATURE_COUNT + 6;
+	int ARCHITECTURE_ELEMENT__PROPERTIES = NcorePackage.PERIOD_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -591,7 +646,25 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__IMPACTED_BY = NcorePackage.PERIOD_FEATURE_COUNT + 7;
+	int ARCHITECTURE_ELEMENT__IMPACTED_BY = NcorePackage.PERIOD_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ELEMENT__TAGS = NcorePackage.PERIOD_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ELEMENT__VIEW_ELEMENTS = NcorePackage.PERIOD_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Architecture Element</em>' class.
@@ -600,7 +673,7 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT_FEATURE_COUNT = NcorePackage.PERIOD_FEATURE_COUNT + 8;
+	int ARCHITECTURE_ELEMENT_FEATURE_COUNT = NcorePackage.PERIOD_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Architecture Element</em>' class.
@@ -731,6 +804,24 @@ public interface CorePackage extends EPackage {
 	int DOMAIN__ID = ARCHITECTURE_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__ACTION_ROLE = ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__VIEWS = ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -774,6 +865,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__TAGS = ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__VIEW_ELEMENTS = ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -921,6 +1030,24 @@ public interface CorePackage extends EPackage {
 	int STAGE__ID = ARCHITECTURE_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAGE__ACTION_ROLE = ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAGE__VIEWS = ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -964,6 +1091,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int STAGE__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAGE__TAGS = ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAGE__VIEW_ELEMENTS = ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Impacts</b></em>' containment reference list.
@@ -1082,6 +1227,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMPACT_TYPE__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT_TYPE__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT_TYPE__VIEWS = MODEL_ELEMENT__VIEWS;
 
 	/**
 	 * The number of structural features of the '<em>Impact Type</em>' class.
@@ -1220,6 +1383,24 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE__ID = DOMAIN__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__ACTION_ROLE = DOMAIN__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__VIEWS = DOMAIN__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1265,6 +1446,24 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE__IMPACTED_BY = DOMAIN__IMPACTED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__TAGS = DOMAIN__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__VIEW_ELEMENTS = DOMAIN__VIEW_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1274,22 +1473,13 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE__ELEMENTS = DOMAIN__ELEMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Impact Types</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__IMPACT_TYPES = DOMAIN_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_FEATURE_COUNT = DOMAIN_FEATURE_COUNT + 1;
+	int ARCHITECTURE_FEATURE_COUNT = DOMAIN_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Architecture</em>' class.
@@ -1390,6 +1580,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMPACT__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT__VIEWS = MODEL_ELEMENT__VIEWS;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1547,6 +1755,24 @@ public interface CorePackage extends EPackage {
 	int NODE__ID = ARCHITECTURE_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ACTION_ROLE = ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__VIEWS = ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1590,6 +1816,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__TAGS = ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__VIEW_ELEMENTS = ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1746,6 +1990,24 @@ public interface CorePackage extends EPackage {
 	int RELATIONSHIP__ID = ARCHITECTURE_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ACTION_ROLE = ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__VIEWS = ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1789,6 +2051,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__IMPACTED_BY = ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__TAGS = ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__VIEW_ELEMENTS = ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1936,6 +2216,24 @@ public interface CorePackage extends EPackage {
 	int COMPOSITE_NODE__ID = NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__ACTION_ROLE = NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__VIEWS = NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1979,6 +2277,24 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_NODE__IMPACTED_BY = NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__TAGS = NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__VIEW_ELEMENTS = NODE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -2027,6 +2343,869 @@ public interface CorePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.TagImpl <em>Tag</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.TagImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getTag()
+	 * @generated
+	 */
+	int TAG = 12;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Tagged</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__TAGGED = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.StakeholderImpl <em>Stakeholder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.StakeholderImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getStakeholder()
+	 * @generated
+	 */
+	int STAKEHOLDER = 13;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__CONCERNS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Stakeholder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Stakeholder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ConcernImpl <em>Concern</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.ConcernImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getConcern()
+	 * @generated
+	 */
+	int CONCERN = 14;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Stakeholders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__STAKEHOLDERS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Viewpoints</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__VIEWPOINTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Concern</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Concern</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ViewpointImpl <em>Viewpoint</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.ViewpointImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewpoint()
+	 * @generated
+	 */
+	int VIEWPOINT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Concerns</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__CONCERNS = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Instances</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__INSTANCES = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Viewpoint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Viewpoint</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ViewImpl <em>View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.ViewImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getView()
+	 * @generated
+	 */
+	int VIEW = 16;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Viewpoint</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__VIEWPOINT = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ELEMENTS = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ViewElementImpl <em>View Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.impl.ViewElementImpl
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewElement()
+	 * @generated
+	 */
+	int VIEW_ELEMENT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__MARKERS = MODEL_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__URIS = MODEL_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__DESCRIPTION = MODEL_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__UUID = MODEL_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__NAME = MODEL_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__DOCUMENTATION = MODEL_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__ID = MODEL_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__ACTION_ROLE = MODEL_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__VIEWS = MODEL_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__CHILDREN = MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Architecture Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__ARCHITECTURE_ELEMENT = MODEL_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>View Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT_FEATURE_COUNT = MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>View Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.core.ActionRole <em>Action Role</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.core.ActionRole
+	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getActionRole()
+	 * @generated
+	 */
+	int ACTION_ROLE = 18;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.ModelElement <em>Model Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2046,6 +3225,28 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModelElement_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.nasdanika.architecture.core.ModelElement#getActionRole <em>Action Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Action Role</em>'.
+	 * @see org.nasdanika.architecture.core.ModelElement#getActionRole()
+	 * @see #getModelElement()
+	 * @generated
+	 */
+	EAttribute getModelElement_ActionRole();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.ModelElement#getViews <em>Views</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Views</em>'.
+	 * @see org.nasdanika.architecture.core.ModelElement#getViews()
+	 * @see #getModelElement()
+	 * @generated
+	 */
+	EReference getModelElement_Views();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Event <em>Event</em>}'.
@@ -2133,6 +3334,28 @@ public interface CorePackage extends EPackage {
 	EReference getArchitectureElement_ImpactedBy();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.ArchitectureElement#getTags <em>Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tags</em>'.
+	 * @see org.nasdanika.architecture.core.ArchitectureElement#getTags()
+	 * @see #getArchitectureElement()
+	 * @generated
+	 */
+	EReference getArchitectureElement_Tags();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.ArchitectureElement#getViewElements <em>View Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>View Elements</em>'.
+	 * @see org.nasdanika.architecture.core.ArchitectureElement#getViewElements()
+	 * @see #getArchitectureElement()
+	 * @generated
+	 */
+	EReference getArchitectureElement_ViewElements();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Domain <em>Domain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2193,17 +3416,6 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getArchitecture();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.nasdanika.architecture.core.Architecture#getImpactTypes <em>Impact Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Impact Types</em>'.
-	 * @see org.nasdanika.architecture.core.Architecture#getImpactTypes()
-	 * @see #getArchitecture()
-	 * @generated
-	 */
-	EReference getArchitecture_ImpactTypes();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Impact <em>Impact</em>}'.
@@ -2312,6 +3524,186 @@ public interface CorePackage extends EPackage {
 	EReference getCompositeNode_Children();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Tag <em>Tag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tag</em>'.
+	 * @see org.nasdanika.architecture.core.Tag
+	 * @generated
+	 */
+	EClass getTag();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Tag#getTagged <em>Tagged</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Tagged</em>'.
+	 * @see org.nasdanika.architecture.core.Tag#getTagged()
+	 * @see #getTag()
+	 * @generated
+	 */
+	EReference getTag_Tagged();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Stakeholder <em>Stakeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stakeholder</em>'.
+	 * @see org.nasdanika.architecture.core.Stakeholder
+	 * @generated
+	 */
+	EClass getStakeholder();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Stakeholder#getConcerns <em>Concerns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Concerns</em>'.
+	 * @see org.nasdanika.architecture.core.Stakeholder#getConcerns()
+	 * @see #getStakeholder()
+	 * @generated
+	 */
+	EReference getStakeholder_Concerns();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Concern <em>Concern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Concern</em>'.
+	 * @see org.nasdanika.architecture.core.Concern
+	 * @generated
+	 */
+	EClass getConcern();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Concern#getStakeholders <em>Stakeholders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Stakeholders</em>'.
+	 * @see org.nasdanika.architecture.core.Concern#getStakeholders()
+	 * @see #getConcern()
+	 * @generated
+	 */
+	EReference getConcern_Stakeholders();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Concern#getViewpoints <em>Viewpoints</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Viewpoints</em>'.
+	 * @see org.nasdanika.architecture.core.Concern#getViewpoints()
+	 * @see #getConcern()
+	 * @generated
+	 */
+	EReference getConcern_Viewpoints();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Viewpoint <em>Viewpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Viewpoint</em>'.
+	 * @see org.nasdanika.architecture.core.Viewpoint
+	 * @generated
+	 */
+	EClass getViewpoint();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Viewpoint#getConcerns <em>Concerns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Concerns</em>'.
+	 * @see org.nasdanika.architecture.core.Viewpoint#getConcerns()
+	 * @see #getViewpoint()
+	 * @generated
+	 */
+	EReference getViewpoint_Concerns();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.nasdanika.architecture.core.Viewpoint#getInstances <em>Instances</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Instances</em>'.
+	 * @see org.nasdanika.architecture.core.Viewpoint#getInstances()
+	 * @see #getViewpoint()
+	 * @generated
+	 */
+	EReference getViewpoint_Instances();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.View <em>View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>View</em>'.
+	 * @see org.nasdanika.architecture.core.View
+	 * @generated
+	 */
+	EClass getView();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.architecture.core.View#getViewpoint <em>Viewpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Viewpoint</em>'.
+	 * @see org.nasdanika.architecture.core.View#getViewpoint()
+	 * @see #getView()
+	 * @generated
+	 */
+	EReference getView_Viewpoint();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.View#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see org.nasdanika.architecture.core.View#getElements()
+	 * @see #getView()
+	 * @generated
+	 */
+	EReference getView_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.ViewElement <em>View Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>View Element</em>'.
+	 * @see org.nasdanika.architecture.core.ViewElement
+	 * @generated
+	 */
+	EClass getViewElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.core.ViewElement#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see org.nasdanika.architecture.core.ViewElement#getChildren()
+	 * @see #getViewElement()
+	 * @generated
+	 */
+	EReference getViewElement_Children();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.nasdanika.architecture.core.ViewElement#getArchitectureElement <em>Architecture Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Architecture Element</em>'.
+	 * @see org.nasdanika.architecture.core.ViewElement#getArchitectureElement()
+	 * @see #getViewElement()
+	 * @generated
+	 */
+	EReference getViewElement_ArchitectureElement();
+
+	/**
+	 * Returns the meta object for enum '{@link org.nasdanika.architecture.core.ActionRole <em>Action Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Action Role</em>'.
+	 * @see org.nasdanika.architecture.core.ActionRole
+	 * @generated
+	 */
+	EEnum getActionRole();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2351,6 +3743,22 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODEL_ELEMENT__ID = eINSTANCE.getModelElement_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Role</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_ELEMENT__ACTION_ROLE = eINSTANCE.getModelElement_ActionRole();
+
+		/**
+		 * The meta object literal for the '<em><b>Views</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_ELEMENT__VIEWS = eINSTANCE.getModelElement_Views();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.EventImpl <em>Event</em>}' class.
@@ -2423,6 +3831,22 @@ public interface CorePackage extends EPackage {
 		EReference ARCHITECTURE_ELEMENT__IMPACTED_BY = eINSTANCE.getArchitectureElement_ImpactedBy();
 
 		/**
+		 * The meta object literal for the '<em><b>Tags</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARCHITECTURE_ELEMENT__TAGS = eINSTANCE.getArchitectureElement_Tags();
+
+		/**
+		 * The meta object literal for the '<em><b>View Elements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARCHITECTURE_ELEMENT__VIEW_ELEMENTS = eINSTANCE.getArchitectureElement_ViewElements();
+
+		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.DomainImpl <em>Domain</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2477,14 +3901,6 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARCHITECTURE = eINSTANCE.getArchitecture();
-
-		/**
-		 * The meta object literal for the '<em><b>Impact Types</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARCHITECTURE__IMPACT_TYPES = eINSTANCE.getArchitecture_ImpactTypes();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ImpactImpl <em>Impact</em>}' class.
@@ -2573,6 +3989,156 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPOSITE_NODE__CHILDREN = eINSTANCE.getCompositeNode_Children();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.TagImpl <em>Tag</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.TagImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getTag()
+		 * @generated
+		 */
+		EClass TAG = eINSTANCE.getTag();
+
+		/**
+		 * The meta object literal for the '<em><b>Tagged</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TAG__TAGGED = eINSTANCE.getTag_Tagged();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.StakeholderImpl <em>Stakeholder</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.StakeholderImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getStakeholder()
+		 * @generated
+		 */
+		EClass STAKEHOLDER = eINSTANCE.getStakeholder();
+
+		/**
+		 * The meta object literal for the '<em><b>Concerns</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STAKEHOLDER__CONCERNS = eINSTANCE.getStakeholder_Concerns();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ConcernImpl <em>Concern</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.ConcernImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getConcern()
+		 * @generated
+		 */
+		EClass CONCERN = eINSTANCE.getConcern();
+
+		/**
+		 * The meta object literal for the '<em><b>Stakeholders</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCERN__STAKEHOLDERS = eINSTANCE.getConcern_Stakeholders();
+
+		/**
+		 * The meta object literal for the '<em><b>Viewpoints</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCERN__VIEWPOINTS = eINSTANCE.getConcern_Viewpoints();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ViewpointImpl <em>Viewpoint</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.ViewpointImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewpoint()
+		 * @generated
+		 */
+		EClass VIEWPOINT = eINSTANCE.getViewpoint();
+
+		/**
+		 * The meta object literal for the '<em><b>Concerns</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEWPOINT__CONCERNS = eINSTANCE.getViewpoint_Concerns();
+
+		/**
+		 * The meta object literal for the '<em><b>Instances</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEWPOINT__INSTANCES = eINSTANCE.getViewpoint_Instances();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ViewImpl <em>View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.ViewImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getView()
+		 * @generated
+		 */
+		EClass VIEW = eINSTANCE.getView();
+
+		/**
+		 * The meta object literal for the '<em><b>Viewpoint</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW__VIEWPOINT = eINSTANCE.getView_Viewpoint();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW__ELEMENTS = eINSTANCE.getView_Elements();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ViewElementImpl <em>View Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.impl.ViewElementImpl
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewElement()
+		 * @generated
+		 */
+		EClass VIEW_ELEMENT = eINSTANCE.getViewElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW_ELEMENT__CHILDREN = eINSTANCE.getViewElement_Children();
+
+		/**
+		 * The meta object literal for the '<em><b>Architecture Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VIEW_ELEMENT__ARCHITECTURE_ELEMENT = eINSTANCE.getViewElement_ArchitectureElement();
+
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.core.ActionRole <em>Action Role</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.core.ActionRole
+		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getActionRole()
+		 * @generated
+		 */
+		EEnum ACTION_ROLE = eINSTANCE.getActionRole();
 
 	}
 

@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.nasdanika.architecture.core.ActionRole;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Event;
@@ -17,6 +18,8 @@ import org.nasdanika.architecture.core.Facet;
 import org.nasdanika.architecture.core.Impact;
 import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.architecture.core.Stage;
+import org.nasdanika.architecture.core.Tag;
+import org.nasdanika.architecture.core.View;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.ncore.NcorePackage;
@@ -34,11 +37,15 @@ import org.nasdanika.ncore.impl.PeriodImpl;
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getActionRole <em>Action Role</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getViews <em>Views</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getEvents <em>Events</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getStages <em>Stages</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getImpactedBy <em>Impacted By</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ArchitectureElementImpl#getViewElements <em>View Elements</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +69,16 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getActionRole() <em>Action Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ActionRole ACTION_ROLE_EDEFAULT = ActionRole.CHILD;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -138,6 +155,37 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public ActionRole getActionRole() {
+		return (ActionRole)eDynamicGet(CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setActionRole(ActionRole newActionRole) {
+		eDynamicSet(CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, newActionRole);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<View> getViews() {
+		return (EList<View>)eDynamicGet(CorePackage.ARCHITECTURE_ELEMENT__VIEWS, CorePackage.Literals.MODEL_ELEMENT__VIEWS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<Event> getEvents() {
@@ -192,11 +240,34 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Tag> getTags() {
+		return (EList<Tag>)eDynamicGet(CorePackage.ARCHITECTURE_ELEMENT__TAGS, CorePackage.Literals.ARCHITECTURE_ELEMENT__TAGS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<View> getViewElements() {
+		return getOppositeReferrers(CorePackage.Literals.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS);		
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION:
 				return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEWS:
+				return ((InternalEList<?>)getViews()).basicRemove(otherEnd, msgs);
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return ((InternalEList<?>)getEvents()).basicRemove(otherEnd, msgs);
 			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
@@ -223,6 +294,10 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return getDocumentation();
 			case CorePackage.ARCHITECTURE_ELEMENT__ID:
 				return getId();
+			case CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE:
+				return getActionRole();
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEWS:
+				return getViews();
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return getEvents();
 			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
@@ -233,6 +308,10 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return getProperties();
 			case CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY:
 				return getImpactedBy();
+			case CorePackage.ARCHITECTURE_ELEMENT__TAGS:
+				return getTags();
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS:
+				return getViewElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -256,6 +335,13 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 			case CorePackage.ARCHITECTURE_ELEMENT__ID:
 				setId((String)newValue);
 				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE:
+				setActionRole((ActionRole)newValue);
+				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEWS:
+				getViews().clear();
+				getViews().addAll((Collection<? extends View>)newValue);
+				return;
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				getEvents().clear();
 				getEvents().addAll((Collection<? extends Event>)newValue);
@@ -271,6 +357,10 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
 				getProperties().clear();
 				getProperties().addAll((Collection<? extends Property>)newValue);
+				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends Tag>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,6 +383,12 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 			case CorePackage.ARCHITECTURE_ELEMENT__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE:
+				setActionRole(ACTION_ROLE_EDEFAULT);
+				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEWS:
+				getViews().clear();
+				return;
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				getEvents().clear();
 				return;
@@ -304,6 +400,9 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return;
 			case CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES:
 				getProperties().clear();
+				return;
+			case CorePackage.ARCHITECTURE_ELEMENT__TAGS:
+				getTags().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -323,6 +422,10 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return !getDocumentation().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__ID:
 				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
+			case CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE:
+				return getActionRole() != ACTION_ROLE_EDEFAULT;
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEWS:
+				return !getViews().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__EVENTS:
 				return !getEvents().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__STAGES:
@@ -333,6 +436,10 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 				return !getProperties().isEmpty();
 			case CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY:
 				return !getImpactedBy().isEmpty();
+			case CorePackage.ARCHITECTURE_ELEMENT__TAGS:
+				return !getTags().isEmpty();
+			case CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS:
+				return !getViewElements().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -359,6 +466,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 		if (baseClass == ModelElement.class) {
 			switch (derivedFeatureID) {
 				case CorePackage.ARCHITECTURE_ELEMENT__ID: return CorePackage.MODEL_ELEMENT__ID;
+				case CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE: return CorePackage.MODEL_ELEMENT__ACTION_ROLE;
+				case CorePackage.ARCHITECTURE_ELEMENT__VIEWS: return CorePackage.MODEL_ELEMENT__VIEWS;
 				default: return -1;
 			}
 		}
@@ -387,6 +496,8 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 		if (baseClass == ModelElement.class) {
 			switch (baseFeatureID) {
 				case CorePackage.MODEL_ELEMENT__ID: return CorePackage.ARCHITECTURE_ELEMENT__ID;
+				case CorePackage.MODEL_ELEMENT__ACTION_ROLE: return CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE;
+				case CorePackage.MODEL_ELEMENT__VIEWS: return CorePackage.ARCHITECTURE_ELEMENT__VIEWS;
 				default: return -1;
 			}
 		}

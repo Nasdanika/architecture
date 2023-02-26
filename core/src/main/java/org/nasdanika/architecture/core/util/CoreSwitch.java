@@ -236,6 +236,84 @@ public class CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CorePackage.TAG: {
+				Tag tag = (Tag)theEObject;
+				T result = caseTag(tag);
+				if (result == null) result = caseModelElement(tag);
+				if (result == null) result = caseNamedElement(tag);
+				if (result == null) result = caseDocumented(tag);
+				if (result == null) result = caseNcore_ModelElement(tag);
+				if (result == null) result = caseMarked(tag);
+				if (result == null) result = caseAdaptable(tag);
+				if (result == null) result = caseIMarked(tag);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.STAKEHOLDER: {
+				Stakeholder stakeholder = (Stakeholder)theEObject;
+				T result = caseStakeholder(stakeholder);
+				if (result == null) result = caseModelElement(stakeholder);
+				if (result == null) result = caseNamedElement(stakeholder);
+				if (result == null) result = caseDocumented(stakeholder);
+				if (result == null) result = caseNcore_ModelElement(stakeholder);
+				if (result == null) result = caseMarked(stakeholder);
+				if (result == null) result = caseAdaptable(stakeholder);
+				if (result == null) result = caseIMarked(stakeholder);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.CONCERN: {
+				Concern concern = (Concern)theEObject;
+				T result = caseConcern(concern);
+				if (result == null) result = caseModelElement(concern);
+				if (result == null) result = caseNamedElement(concern);
+				if (result == null) result = caseDocumented(concern);
+				if (result == null) result = caseNcore_ModelElement(concern);
+				if (result == null) result = caseMarked(concern);
+				if (result == null) result = caseAdaptable(concern);
+				if (result == null) result = caseIMarked(concern);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.VIEWPOINT: {
+				Viewpoint viewpoint = (Viewpoint)theEObject;
+				T result = caseViewpoint(viewpoint);
+				if (result == null) result = caseModelElement(viewpoint);
+				if (result == null) result = caseNamedElement(viewpoint);
+				if (result == null) result = caseDocumented(viewpoint);
+				if (result == null) result = caseNcore_ModelElement(viewpoint);
+				if (result == null) result = caseMarked(viewpoint);
+				if (result == null) result = caseAdaptable(viewpoint);
+				if (result == null) result = caseIMarked(viewpoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.VIEW: {
+				View view = (View)theEObject;
+				T result = caseView(view);
+				if (result == null) result = caseModelElement(view);
+				if (result == null) result = caseNamedElement(view);
+				if (result == null) result = caseDocumented(view);
+				if (result == null) result = caseNcore_ModelElement(view);
+				if (result == null) result = caseMarked(view);
+				if (result == null) result = caseAdaptable(view);
+				if (result == null) result = caseIMarked(view);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CorePackage.VIEW_ELEMENT: {
+				ViewElement viewElement = (ViewElement)theEObject;
+				T result = caseViewElement(viewElement);
+				if (result == null) result = caseModelElement(viewElement);
+				if (result == null) result = caseNamedElement(viewElement);
+				if (result == null) result = caseDocumented(viewElement);
+				if (result == null) result = caseNcore_ModelElement(viewElement);
+				if (result == null) result = caseMarked(viewElement);
+				if (result == null) result = caseAdaptable(viewElement);
+				if (result == null) result = caseIMarked(viewElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -417,6 +495,96 @@ public class CoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCompositeNode(CompositeNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tag</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tag</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTag(Tag object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Stakeholder</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Stakeholder</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStakeholder(Stakeholder object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Concern</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConcern(Concern object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Viewpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Viewpoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseViewpoint(Viewpoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseView(View object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>View Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>View Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseViewElement(ViewElement object) {
 		return null;
 	}
 

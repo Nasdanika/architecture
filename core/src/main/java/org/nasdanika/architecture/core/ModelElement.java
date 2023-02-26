@@ -2,6 +2,7 @@
  */
 package org.nasdanika.architecture.core;
 
+import org.eclipse.emf.common.util.EList;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NamedElement;
 
@@ -19,6 +20,8 @@ import org.nasdanika.ncore.NamedElement;
  * </p>
  * <ul>
  *   <li>{@link org.nasdanika.architecture.core.ModelElement#getId <em>Id</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ModelElement#getActionRole <em>Action Role</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ModelElement#getViews <em>Views</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.architecture.core.CorePackage#getModelElement()
@@ -50,5 +53,43 @@ public interface ModelElement extends NamedElement, Documented {
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Action Role</b></em>' attribute.
+	 * The default value is <code>"CHILD"</code>.
+	 * The literals are from the enumeration {@link org.nasdanika.architecture.core.ActionRole}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Action Role</em>' attribute.
+	 * @see org.nasdanika.architecture.core.ActionRole
+	 * @see #setActionRole(ActionRole)
+	 * @see org.nasdanika.architecture.core.CorePackage#getModelElement_ActionRole()
+	 * @model default="CHILD"
+	 * @generated
+	 */
+	ActionRole getActionRole();
+
+	/**
+	 * Sets the value of the '{@link org.nasdanika.architecture.core.ModelElement#getActionRole <em>Action Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Action Role</em>' attribute.
+	 * @see org.nasdanika.architecture.core.ActionRole
+	 * @see #getActionRole()
+	 * @generated
+	 */
+	void setActionRole(ActionRole value);
+
+	/**
+	 * Returns the value of the '<em><b>Views</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.View}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Views</em>' containment reference list.
+	 * @see org.nasdanika.architecture.core.CorePackage#getModelElement_Views()
+	 * @model containment="true" keys="id"
+	 * @generated
+	 */
+	EList<View> getViews();
 
 } // ModelElement

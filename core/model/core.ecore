@@ -4,6 +4,15 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EEnum" name="ActionRole">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Action role defines parent's action reference to which to put element's action. In other words, it defines where this element action will be displayed in the generated HTML UI."/>
+    </eAnnotations>
+    <eLiterals name="CHILD" literal="CHILD"/>
+    <eLiterals name="NAVIGATION" value="1" literal="NAVIGATION"/>
+    <eLiterals name="SECTION" value="2" literal="SECTION"/>
+    <eLiterals name="ANONYMOUS" value="3" literal="ANONYMOUS"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true" interface="true"
       eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//NamedElement ../../org.nasdanika.ncore/model/ncore.ecore#//Documented">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -14,6 +23,10 @@
         <details key="documentation" value="Element ID to use as EKey - a unique identifier of this element among its siblings in the parent's containment reference. "/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actionRole" eType="#//ActionRole"
+        defaultValueLiteral="CHILD"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
+        eType="#//View" containment="true" eKeys="#//ModelElement/id"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="../../org.nasdanika.ncore/model/ncore.ecore#//Temporal #//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -64,13 +77,27 @@
         <details key="documentation" value="Stages which impact this element. A computed opposite to Impact.elements"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tags" upperBound="-1" eType="#//Tag">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="This element's tags"/>
+      </eAnnotations>
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="tagged"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewElements" upperBound="-1"
+        eType="#//View" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="View elements representing this architecture element. A computed opposite to ViewElement.architectureElement."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Domain is a grouping construct for architecture elements."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//ArchitectureElement" containment="true" eKeys="#//ModelElement/id">
+        eType="#//ModelElement" containment="true" eKeys="#//ModelElement/id">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Domain elements"/>
       </eAnnotations>
@@ -102,13 +129,6 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Architecture (description) contains architecture elements and reference data such as impact types."/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="impactTypes" eType="#//ImpactType"
-        containment="true" eKeys="#//ModelElement/id">
-      <eAnnotations source="urn:org.nasdanika">
-        <details key="homogenous" value="true"/>
-        <details key="strict-containment" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="#//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -167,5 +187,98 @@
   <eClassifiers xsi:type="ecore:EClass" name="CompositeNode" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//ArchitectureElement" containment="true" eKeys="#//ModelElement/id"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tag" eSuperTypes="#//ModelElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Tags allow to categorize architecture elements."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tagged" upperBound="-1"
+        eType="#//ArchitectureElement" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Architecture elements tagged with this tag. A computed opposite to ArchitectureElement.tags"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stakeholder" eSuperTypes="#//ModelElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A party (individual, team, organization, or class thereof) having an interest in a system"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+        eType="#//Concern" eKeys="#//ModelElement/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Stakeholder's concerns"/>
+      </eAnnotations>
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="stakeholders"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Concern" eSuperTypes="#//ModelElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An interest in a system relevant to one or more of its stakeholders."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stakeholders" upperBound="-1"
+        eType="#//Stakeholder" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Stakeholders to whom this concerns is relevant. A computed opposite to Stakeholder.concerns"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoints" upperBound="-1"
+        eType="#//Viewpoint" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Viewpoints framing this concern. A computed opposite to Viewpoint.concerns"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Viewpoint" eSuperTypes="#//ModelElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A type of view - a specification of the conventions for a particular kind of view, a meta-view."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" upperBound="-1"
+        eType="#//Concern" eKeys="#//ModelElement/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Concerns framed by this viewpoint"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//View" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Views of this type. A computed opposite to View.viewpoint"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoint" eType="#//Viewpoint">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="instances"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="View type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ViewElement" containment="true" eKeys="#//ModelElement/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="View elements"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewElement" eSuperTypes="#//ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//ViewElement" containment="true" eKeys="#//ModelElement/id">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Element children"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architectureElement" eType="#//ArchitectureElement">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Architecture element represented by this view element"/>
+      </eAnnotations>
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="viewElements"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

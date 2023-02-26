@@ -4,14 +4,17 @@ package org.nasdanika.architecture.core.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.nasdanika.architecture.core.ActionRole;
 import org.nasdanika.architecture.core.Architecture;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
+import org.nasdanika.architecture.core.Concern;
 import org.nasdanika.architecture.core.CoreFactory;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Domain;
@@ -23,6 +26,11 @@ import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.architecture.core.Relationship;
 import org.nasdanika.architecture.core.Stage;
+import org.nasdanika.architecture.core.Stakeholder;
+import org.nasdanika.architecture.core.Tag;
+import org.nasdanika.architecture.core.View;
+import org.nasdanika.architecture.core.ViewElement;
+import org.nasdanika.architecture.core.Viewpoint;
 import org.nasdanika.ncore.NcorePackage;
 
 /**
@@ -106,6 +114,49 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass compositeNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tagEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stakeholderEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass concernEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass viewpointEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass viewEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass viewElementEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum actionRoleEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -196,6 +247,26 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getModelElement_ActionRole() {
+		return (EAttribute)modelElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getModelElement_Views() {
+		return (EReference)modelElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getEvent() {
 		return eventEClass;
 	}
@@ -276,6 +347,26 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getArchitectureElement_Tags() {
+		return (EReference)architectureElementEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArchitectureElement_ViewElements() {
+		return (EReference)architectureElementEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDomain() {
 		return domainEClass;
 	}
@@ -328,16 +419,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	@Override
 	public EClass getArchitecture() {
 		return architectureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getArchitecture_ImpactTypes() {
-		return (EReference)architectureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -446,6 +527,176 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getTag() {
+		return tagEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTag_Tagged() {
+		return (EReference)tagEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getStakeholder() {
+		return stakeholderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStakeholder_Concerns() {
+		return (EReference)stakeholderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConcern() {
+		return concernEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConcern_Stakeholders() {
+		return (EReference)concernEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConcern_Viewpoints() {
+		return (EReference)concernEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getViewpoint() {
+		return viewpointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getViewpoint_Concerns() {
+		return (EReference)viewpointEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getViewpoint_Instances() {
+		return (EReference)viewpointEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getView() {
+		return viewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getView_Viewpoint() {
+		return (EReference)viewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getView_Elements() {
+		return (EReference)viewEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getViewElement() {
+		return viewElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getViewElement_Children() {
+		return (EReference)viewElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getViewElement_ArchitectureElement() {
+		return (EReference)viewElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EEnum getActionRole() {
+		return actionRoleEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CoreFactory getCoreFactory() {
 		return (CoreFactory)getEFactoryInstance();
 	}
@@ -471,6 +722,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		// Create classes and their features
 		modelElementEClass = createEClass(MODEL_ELEMENT);
 		createEAttribute(modelElementEClass, MODEL_ELEMENT__ID);
+		createEAttribute(modelElementEClass, MODEL_ELEMENT__ACTION_ROLE);
+		createEReference(modelElementEClass, MODEL_ELEMENT__VIEWS);
 
 		eventEClass = createEClass(EVENT);
 
@@ -482,6 +735,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__FACETS);
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__PROPERTIES);
 		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__IMPACTED_BY);
+		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__TAGS);
+		createEReference(architectureElementEClass, ARCHITECTURE_ELEMENT__VIEW_ELEMENTS);
 
 		domainEClass = createEClass(DOMAIN);
 		createEReference(domainEClass, DOMAIN__ELEMENTS);
@@ -492,7 +747,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		impactTypeEClass = createEClass(IMPACT_TYPE);
 
 		architectureEClass = createEClass(ARCHITECTURE);
-		createEReference(architectureEClass, ARCHITECTURE__IMPACT_TYPES);
 
 		impactEClass = createEClass(IMPACT);
 		createEReference(impactEClass, IMPACT__TYPE);
@@ -507,6 +761,31 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		compositeNodeEClass = createEClass(COMPOSITE_NODE);
 		createEReference(compositeNodeEClass, COMPOSITE_NODE__CHILDREN);
+
+		tagEClass = createEClass(TAG);
+		createEReference(tagEClass, TAG__TAGGED);
+
+		stakeholderEClass = createEClass(STAKEHOLDER);
+		createEReference(stakeholderEClass, STAKEHOLDER__CONCERNS);
+
+		concernEClass = createEClass(CONCERN);
+		createEReference(concernEClass, CONCERN__STAKEHOLDERS);
+		createEReference(concernEClass, CONCERN__VIEWPOINTS);
+
+		viewpointEClass = createEClass(VIEWPOINT);
+		createEReference(viewpointEClass, VIEWPOINT__CONCERNS);
+		createEReference(viewpointEClass, VIEWPOINT__INSTANCES);
+
+		viewEClass = createEClass(VIEW);
+		createEReference(viewEClass, VIEW__VIEWPOINT);
+		createEReference(viewEClass, VIEW__ELEMENTS);
+
+		viewElementEClass = createEClass(VIEW_ELEMENT);
+		createEReference(viewElementEClass, VIEW_ELEMENT__CHILDREN);
+		createEReference(viewElementEClass, VIEW_ELEMENT__ARCHITECTURE_ELEMENT);
+
+		// Create enums
+		actionRoleEEnum = createEEnum(ACTION_ROLE);
 	}
 
 	/**
@@ -554,10 +833,19 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		nodeEClass.getESuperTypes().add(this.getArchitectureElement());
 		relationshipEClass.getESuperTypes().add(this.getArchitectureElement());
 		compositeNodeEClass.getESuperTypes().add(this.getNode());
+		tagEClass.getESuperTypes().add(this.getModelElement());
+		stakeholderEClass.getESuperTypes().add(this.getModelElement());
+		concernEClass.getESuperTypes().add(this.getModelElement());
+		viewpointEClass.getESuperTypes().add(this.getModelElement());
+		viewEClass.getESuperTypes().add(this.getModelElement());
+		viewElementEClass.getESuperTypes().add(this.getModelElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModelElement_Id(), ecorePackage.getEString(), "id", null, 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModelElement_ActionRole(), this.getActionRole(), "actionRole", "CHILD", 0, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModelElement_Views(), this.getView(), null, "views", null, 0, -1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getModelElement_Views().getEKeys().add(this.getModelElement_Id());
 
 		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -572,9 +860,11 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEReference(getArchitectureElement_Properties(), theNcorePackage.getProperty(), null, "properties", null, 0, -1, ArchitectureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getArchitectureElement_Properties().getEKeys().add(theNcorePackage.getProperty_Name());
 		initEReference(getArchitectureElement_ImpactedBy(), this.getImpact(), null, "impactedBy", null, 0, -1, ArchitectureElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getArchitectureElement_Tags(), this.getTag(), null, "tags", null, 0, -1, ArchitectureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArchitectureElement_ViewElements(), this.getView(), null, "viewElements", null, 0, -1, ArchitectureElement.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDomain_Elements(), this.getArchitectureElement(), null, "elements", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomain_Elements(), this.getModelElement(), null, "elements", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getDomain_Elements().getEKeys().add(this.getModelElement_Id());
 
 		initEClass(stageEClass, Stage.class, "Stage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -583,8 +873,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEClass(impactTypeEClass, ImpactType.class, "ImpactType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArchitecture_ImpactTypes(), this.getImpactType(), null, "impactTypes", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		getArchitecture_ImpactTypes().getEKeys().add(this.getModelElement_Id());
 
 		initEClass(impactEClass, Impact.class, "Impact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImpact_Type(), this.getImpactType(), null, "type", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -601,6 +889,39 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEClass(compositeNodeEClass, CompositeNode.class, "CompositeNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeNode_Children(), this.getArchitectureElement(), null, "children", null, 0, -1, CompositeNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getCompositeNode_Children().getEKeys().add(this.getModelElement_Id());
+
+		initEClass(tagEClass, Tag.class, "Tag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTag_Tagged(), this.getArchitectureElement(), null, "tagged", null, 0, -1, Tag.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(stakeholderEClass, Stakeholder.class, "Stakeholder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStakeholder_Concerns(), this.getConcern(), null, "concerns", null, 0, -1, Stakeholder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getStakeholder_Concerns().getEKeys().add(this.getModelElement_Id());
+
+		initEClass(concernEClass, Concern.class, "Concern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConcern_Stakeholders(), this.getStakeholder(), null, "stakeholders", null, 0, -1, Concern.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getConcern_Viewpoints(), this.getViewpoint(), null, "viewpoints", null, 0, -1, Concern.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(viewpointEClass, Viewpoint.class, "Viewpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getViewpoint_Concerns(), this.getConcern(), null, "concerns", null, 0, -1, Viewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getViewpoint_Concerns().getEKeys().add(this.getModelElement_Id());
+		initEReference(getViewpoint_Instances(), this.getView(), null, "instances", null, 0, -1, Viewpoint.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(viewEClass, View.class, "View", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getView_Viewpoint(), this.getViewpoint(), null, "viewpoint", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getView_Elements(), this.getViewElement(), null, "elements", null, 0, -1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getView_Elements().getEKeys().add(this.getModelElement_Id());
+
+		initEClass(viewElementEClass, ViewElement.class, "ViewElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getViewElement_Children(), this.getViewElement(), null, "children", null, 0, -1, ViewElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getViewElement_Children().getEKeys().add(this.getModelElement_Id());
+		initEReference(getViewElement_ArchitectureElement(), this.getArchitectureElement(), null, "architectureElement", null, 0, 1, ViewElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(actionRoleEEnum, ActionRole.class, "ActionRole");
+		addEEnumLiteral(actionRoleEEnum, ActionRole.CHILD);
+		addEEnumLiteral(actionRoleEEnum, ActionRole.NAVIGATION);
+		addEEnumLiteral(actionRoleEEnum, ActionRole.SECTION);
+		addEEnumLiteral(actionRoleEEnum, ActionRole.ANONYMOUS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -634,6 +955,12 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "value-feature", "value"
 		   });
 		addAnnotation
+		  (getArchitectureElement_Tags(),
+		   source,
+		   new String[] {
+			   "opposite", "tagged"
+		   });
+		addAnnotation
 		  (getStage_Impacts(),
 		   source,
 		   new String[] {
@@ -644,13 +971,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   source,
 		   new String[] {
 			   "default-feature", "name"
-		   });
-		addAnnotation
-		  (getArchitecture_ImpactTypes(),
-		   source,
-		   new String[] {
-			   "homogenous", "true",
-			   "strict-containment", "true"
 		   });
 		addAnnotation
 		  (getImpact_Elements(),
@@ -672,6 +992,24 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "opposite", "incomingRelationships",
 			   "default-feature", "true"
 		   });
+		addAnnotation
+		  (getStakeholder_Concerns(),
+		   source,
+		   new String[] {
+			   "opposite", "stakeholders"
+		   });
+		addAnnotation
+		  (getView_Viewpoint(),
+		   source,
+		   new String[] {
+			   "opposite", "instances"
+		   });
+		addAnnotation
+		  (getViewElement_ArchitectureElement(),
+		   source,
+		   new String[] {
+			   "opposite", "viewElements"
+		   });
 	}
 
 	/**
@@ -682,6 +1020,12 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 */
 	protected void createGenModelAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (actionRoleEEnum,
+		   source,
+		   new String[] {
+			   "documentation", "Action role defines parent\'s action reference to which to put element\'s action. In other words, it defines where this element action will be displayed in the generated HTML UI."
+		   });
 		addAnnotation
 		  (modelElementEClass,
 		   source,
@@ -740,7 +1084,19 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		  (getArchitectureElement_ImpactedBy(),
 		   source,
 		   new String[] {
-			   "documentation", "Increments which impact this element. A computed opposite to Impact.elements"
+			   "documentation", "Stages which impact this element. A computed opposite to Impact.elements"
+		   });
+		addAnnotation
+		  (getArchitectureElement_Tags(),
+		   source,
+		   new String[] {
+			   "documentation", "This element\'s tags"
+		   });
+		addAnnotation
+		  (getArchitectureElement_ViewElements(),
+		   source,
+		   new String[] {
+			   "documentation", "View elements representing this architecture element. A computed opposite to ViewElement.architectureElement."
 		   });
 		addAnnotation
 		  (domainEClass,
@@ -825,6 +1181,90 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   source,
 		   new String[] {
 			   "documentation", "Relationship target."
+		   });
+		addAnnotation
+		  (tagEClass,
+		   source,
+		   new String[] {
+			   "documentation", "Tags allow to categorize architecture elements."
+		   });
+		addAnnotation
+		  (getTag_Tagged(),
+		   source,
+		   new String[] {
+			   "documentation", "Architecture elements tagged with this tag. A computed opposite to ArchitectureElement.tags"
+		   });
+		addAnnotation
+		  (stakeholderEClass,
+		   source,
+		   new String[] {
+			   "documentation", "A party (individual, team, organization, or class thereof) having an interest in a system"
+		   });
+		addAnnotation
+		  (getStakeholder_Concerns(),
+		   source,
+		   new String[] {
+			   "documentation", "Stakeholder\'s concerns"
+		   });
+		addAnnotation
+		  (concernEClass,
+		   source,
+		   new String[] {
+			   "documentation", "An interest in a system relevant to one or more of its stakeholders."
+		   });
+		addAnnotation
+		  (getConcern_Stakeholders(),
+		   source,
+		   new String[] {
+			   "documentation", "Stakeholders to whom this concerns is relevant. A computed opposite to Stakeholder.concerns"
+		   });
+		addAnnotation
+		  (getConcern_Viewpoints(),
+		   source,
+		   new String[] {
+			   "documentation", "Viewpoints framing this concern. A computed opposite to Viewpoint.concerns"
+		   });
+		addAnnotation
+		  (viewpointEClass,
+		   source,
+		   new String[] {
+			   "documentation", "A type of view - a specification of the conventions for a particular kind of view, a meta-view."
+		   });
+		addAnnotation
+		  (getViewpoint_Concerns(),
+		   source,
+		   new String[] {
+			   "documentation", "Concerns framed by this viewpoint"
+		   });
+		addAnnotation
+		  (getViewpoint_Instances(),
+		   source,
+		   new String[] {
+			   "documentation", "Views of this type. A computed opposite to View.viewpoint"
+		   });
+		addAnnotation
+		  (getView_Viewpoint(),
+		   source,
+		   new String[] {
+			   "documentation", "View type"
+		   });
+		addAnnotation
+		  (getView_Elements(),
+		   source,
+		   new String[] {
+			   "documentation", "View elements"
+		   });
+		addAnnotation
+		  (getViewElement_Children(),
+		   source,
+		   new String[] {
+			   "documentation", "Element children"
+		   });
+		addAnnotation
+		  (getViewElement_ArchitectureElement(),
+		   source,
+		   new String[] {
+			   "documentation", "Architecture element represented by this view element"
 		   });
 	}
 

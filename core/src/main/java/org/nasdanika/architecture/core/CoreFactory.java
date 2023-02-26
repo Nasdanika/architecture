@@ -112,6 +112,60 @@ public interface CoreFactory extends EFactory {
 	CompositeNode createCompositeNode();
 
 	/**
+	 * Returns a new object of class '<em>Tag</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tag</em>'.
+	 * @generated
+	 */
+	Tag createTag();
+
+	/**
+	 * Returns a new object of class '<em>Stakeholder</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stakeholder</em>'.
+	 * @generated
+	 */
+	Stakeholder createStakeholder();
+
+	/**
+	 * Returns a new object of class '<em>Concern</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Concern</em>'.
+	 * @generated
+	 */
+	Concern createConcern();
+
+	/**
+	 * Returns a new object of class '<em>Viewpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Viewpoint</em>'.
+	 * @generated
+	 */
+	Viewpoint createViewpoint();
+
+	/**
+	 * Returns a new object of class '<em>View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>View</em>'.
+	 * @generated
+	 */
+	View createView();
+
+	/**
+	 * Returns a new object of class '<em>View Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>View Element</em>'.
+	 * @generated
+	 */
+	ViewElement createViewElement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

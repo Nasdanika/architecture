@@ -24,6 +24,8 @@ import org.nasdanika.ncore.Property;
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getFacets <em>Facets</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getImpactedBy <em>Impacted By</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.ArchitectureElement#getViewElements <em>View Elements</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement()
@@ -98,7 +100,7 @@ public interface ArchitectureElement extends Period, ModelElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Increments which impact this element. A computed opposite to Impact.elements
+	 * Stages which impact this element. A computed opposite to Impact.elements
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Impacted By</em>' reference list.
 	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_ImpactedBy()
@@ -106,5 +108,35 @@ public interface ArchitectureElement extends Period, ModelElement {
 	 * @generated
 	 */
 	EList<Impact> getImpactedBy();
+
+	/**
+	 * Returns the value of the '<em><b>Tags</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.Tag}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This element's tags
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Tags</em>' reference list.
+	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_Tags()
+	 * @model annotation="urn:org.nasdanika opposite='tagged'"
+	 * @generated
+	 */
+	EList<Tag> getTags();
+
+	/**
+	 * Returns the value of the '<em><b>View Elements</b></em>' reference list.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.View}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * View elements representing this architecture element. A computed opposite to ViewElement.architectureElement.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>View Elements</em>' reference list.
+	 * @see org.nasdanika.architecture.core.CorePackage#getArchitectureElement_ViewElements()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<View> getViewElements();
 
 } // ArchitectureElement

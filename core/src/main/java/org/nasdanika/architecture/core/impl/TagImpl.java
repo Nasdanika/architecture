@@ -15,45 +15,34 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.architecture.core.ActionRole;
+import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CorePackage;
-import org.nasdanika.architecture.core.Event;
-import org.nasdanika.architecture.core.ModelElement;
+import org.nasdanika.architecture.core.Tag;
 
 import org.nasdanika.architecture.core.View;
 import org.nasdanika.ncore.Documented;
-import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.ncore.NcorePackage;
 
-import org.nasdanika.ncore.impl.TemporalImpl;
+import org.nasdanika.ncore.impl.NamedElementImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Event</b></em>'.
+ * An implementation of the model object '<em><b>Tag</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.architecture.core.impl.EventImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.impl.EventImpl#getDocumentation <em>Documentation</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.impl.EventImpl#getId <em>Id</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.impl.EventImpl#getActionRole <em>Action Role</em>}</li>
- *   <li>{@link org.nasdanika.architecture.core.impl.EventImpl#getViews <em>Views</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.TagImpl#getDocumentation <em>Documentation</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.TagImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.TagImpl#getActionRole <em>Action Role</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.TagImpl#getViews <em>Views</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.TagImpl#getTagged <em>Tagged</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EventImpl extends TemporalImpl implements Event {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
+public class TagImpl extends NamedElementImpl implements Tag {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,7 +68,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EventImpl() {
+	protected TagImpl() {
 		super();
 	}
 
@@ -90,27 +79,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CorePackage.Literals.EVENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getName() {
-		return (String)eDynamicGet(CorePackage.EVENT__NAME, NcorePackage.Literals.NAMED_ELEMENT__NAME, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setName(String newName) {
-		eDynamicSet(CorePackage.EVENT__NAME, NcorePackage.Literals.NAMED_ELEMENT__NAME, newName);
+		return CorePackage.Literals.TAG;
 	}
 
 	/**
@@ -121,7 +90,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<EObject> getDocumentation() {
-		return (EList<EObject>)eDynamicGet(CorePackage.EVENT__DOCUMENTATION, NcorePackage.Literals.DOCUMENTED__DOCUMENTATION, true, true);
+		return (EList<EObject>)eDynamicGet(CorePackage.TAG__DOCUMENTATION, NcorePackage.Literals.DOCUMENTED__DOCUMENTATION, true, true);
 	}
 
 	/**
@@ -131,7 +100,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public String getId() {
-		return (String)eDynamicGet(CorePackage.EVENT__ID, CorePackage.Literals.MODEL_ELEMENT__ID, true, true);
+		return (String)eDynamicGet(CorePackage.TAG__ID, CorePackage.Literals.MODEL_ELEMENT__ID, true, true);
 	}
 
 	/**
@@ -141,7 +110,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public void setId(String newId) {
-		eDynamicSet(CorePackage.EVENT__ID, CorePackage.Literals.MODEL_ELEMENT__ID, newId);
+		eDynamicSet(CorePackage.TAG__ID, CorePackage.Literals.MODEL_ELEMENT__ID, newId);
 	}
 
 	/**
@@ -151,7 +120,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public ActionRole getActionRole() {
-		return (ActionRole)eDynamicGet(CorePackage.EVENT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, true, true);
+		return (ActionRole)eDynamicGet(CorePackage.TAG__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, true, true);
 	}
 
 	/**
@@ -161,7 +130,7 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public void setActionRole(ActionRole newActionRole) {
-		eDynamicSet(CorePackage.EVENT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, newActionRole);
+		eDynamicSet(CorePackage.TAG__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, newActionRole);
 	}
 
 	/**
@@ -172,7 +141,17 @@ public class EventImpl extends TemporalImpl implements Event {
 	@SuppressWarnings("unchecked")
 	@Override
 	public EList<View> getViews() {
-		return (EList<View>)eDynamicGet(CorePackage.EVENT__VIEWS, CorePackage.Literals.MODEL_ELEMENT__VIEWS, true, true);
+		return (EList<View>)eDynamicGet(CorePackage.TAG__VIEWS, CorePackage.Literals.MODEL_ELEMENT__VIEWS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public EList<ArchitectureElement> getTagged() {
+		return getOppositeReferrers(CorePackage.Literals.TAG__TAGGED);		
 	}
 
 	/**
@@ -183,9 +162,9 @@ public class EventImpl extends TemporalImpl implements Event {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CorePackage.EVENT__DOCUMENTATION:
+			case CorePackage.TAG__DOCUMENTATION:
 				return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
-			case CorePackage.EVENT__VIEWS:
+			case CorePackage.TAG__VIEWS:
 				return ((InternalEList<?>)getViews()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -199,16 +178,16 @@ public class EventImpl extends TemporalImpl implements Event {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.EVENT__NAME:
-				return getName();
-			case CorePackage.EVENT__DOCUMENTATION:
+			case CorePackage.TAG__DOCUMENTATION:
 				return getDocumentation();
-			case CorePackage.EVENT__ID:
+			case CorePackage.TAG__ID:
 				return getId();
-			case CorePackage.EVENT__ACTION_ROLE:
+			case CorePackage.TAG__ACTION_ROLE:
 				return getActionRole();
-			case CorePackage.EVENT__VIEWS:
+			case CorePackage.TAG__VIEWS:
 				return getViews();
+			case CorePackage.TAG__TAGGED:
+				return getTagged();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,20 +201,17 @@ public class EventImpl extends TemporalImpl implements Event {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.EVENT__NAME:
-				setName((String)newValue);
-				return;
-			case CorePackage.EVENT__DOCUMENTATION:
+			case CorePackage.TAG__DOCUMENTATION:
 				getDocumentation().clear();
 				getDocumentation().addAll((Collection<? extends EObject>)newValue);
 				return;
-			case CorePackage.EVENT__ID:
+			case CorePackage.TAG__ID:
 				setId((String)newValue);
 				return;
-			case CorePackage.EVENT__ACTION_ROLE:
+			case CorePackage.TAG__ACTION_ROLE:
 				setActionRole((ActionRole)newValue);
 				return;
-			case CorePackage.EVENT__VIEWS:
+			case CorePackage.TAG__VIEWS:
 				getViews().clear();
 				getViews().addAll((Collection<? extends View>)newValue);
 				return;
@@ -251,19 +227,16 @@ public class EventImpl extends TemporalImpl implements Event {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.EVENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case CorePackage.EVENT__DOCUMENTATION:
+			case CorePackage.TAG__DOCUMENTATION:
 				getDocumentation().clear();
 				return;
-			case CorePackage.EVENT__ID:
+			case CorePackage.TAG__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case CorePackage.EVENT__ACTION_ROLE:
+			case CorePackage.TAG__ACTION_ROLE:
 				setActionRole(ACTION_ROLE_EDEFAULT);
 				return;
-			case CorePackage.EVENT__VIEWS:
+			case CorePackage.TAG__VIEWS:
 				getViews().clear();
 				return;
 		}
@@ -278,16 +251,16 @@ public class EventImpl extends TemporalImpl implements Event {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.EVENT__NAME:
-				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case CorePackage.EVENT__DOCUMENTATION:
+			case CorePackage.TAG__DOCUMENTATION:
 				return !getDocumentation().isEmpty();
-			case CorePackage.EVENT__ID:
+			case CorePackage.TAG__ID:
 				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
-			case CorePackage.EVENT__ACTION_ROLE:
+			case CorePackage.TAG__ACTION_ROLE:
 				return getActionRole() != ACTION_ROLE_EDEFAULT;
-			case CorePackage.EVENT__VIEWS:
+			case CorePackage.TAG__VIEWS:
 				return !getViews().isEmpty();
+			case CorePackage.TAG__TAGGED:
+				return !getTagged().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -299,23 +272,9 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-				case CorePackage.EVENT__NAME: return NcorePackage.NAMED_ELEMENT__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == Documented.class) {
 			switch (derivedFeatureID) {
-				case CorePackage.EVENT__DOCUMENTATION: return NcorePackage.DOCUMENTED__DOCUMENTATION;
-				default: return -1;
-			}
-		}
-		if (baseClass == ModelElement.class) {
-			switch (derivedFeatureID) {
-				case CorePackage.EVENT__ID: return CorePackage.MODEL_ELEMENT__ID;
-				case CorePackage.EVENT__ACTION_ROLE: return CorePackage.MODEL_ELEMENT__ACTION_ROLE;
-				case CorePackage.EVENT__VIEWS: return CorePackage.MODEL_ELEMENT__VIEWS;
+				case CorePackage.TAG__DOCUMENTATION: return NcorePackage.DOCUMENTED__DOCUMENTATION;
 				default: return -1;
 			}
 		}
@@ -329,27 +288,13 @@ public class EventImpl extends TemporalImpl implements Event {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-				case NcorePackage.NAMED_ELEMENT__NAME: return CorePackage.EVENT__NAME;
-				default: return -1;
-			}
-		}
 		if (baseClass == Documented.class) {
 			switch (baseFeatureID) {
-				case NcorePackage.DOCUMENTED__DOCUMENTATION: return CorePackage.EVENT__DOCUMENTATION;
-				default: return -1;
-			}
-		}
-		if (baseClass == ModelElement.class) {
-			switch (baseFeatureID) {
-				case CorePackage.MODEL_ELEMENT__ID: return CorePackage.EVENT__ID;
-				case CorePackage.MODEL_ELEMENT__ACTION_ROLE: return CorePackage.EVENT__ACTION_ROLE;
-				case CorePackage.MODEL_ELEMENT__VIEWS: return CorePackage.EVENT__VIEWS;
+				case NcorePackage.DOCUMENTED__DOCUMENTATION: return CorePackage.TAG__DOCUMENTATION;
 				default: return -1;
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-} //EventImpl
+} //TagImpl

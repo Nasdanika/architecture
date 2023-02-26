@@ -12,10 +12,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Domain;
+import org.nasdanika.architecture.core.ModelElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,8 +56,8 @@ public class DomainImpl extends ArchitectureElementImpl implements Domain {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<ArchitectureElement> getElements() {
-		return (EList<ArchitectureElement>)eDynamicGet(CorePackage.DOMAIN__ELEMENTS, CorePackage.Literals.DOMAIN__ELEMENTS, true, true);
+	public EList<ModelElement> getElements() {
+		return (EList<ModelElement>)eDynamicGet(CorePackage.DOMAIN__ELEMENTS, CorePackage.Literals.DOMAIN__ELEMENTS, true, true);
 	}
 
 	/**
@@ -100,7 +99,7 @@ public class DomainImpl extends ArchitectureElementImpl implements Domain {
 		switch (featureID) {
 			case CorePackage.DOMAIN__ELEMENTS:
 				getElements().clear();
-				getElements().addAll((Collection<? extends ArchitectureElement>)newValue);
+				getElements().addAll((Collection<? extends ModelElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

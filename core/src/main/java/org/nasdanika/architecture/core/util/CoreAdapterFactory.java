@@ -122,6 +122,30 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createCompositeNodeAdapter();
 			}
 			@Override
+			public Adapter caseTag(Tag object) {
+				return createTagAdapter();
+			}
+			@Override
+			public Adapter caseStakeholder(Stakeholder object) {
+				return createStakeholderAdapter();
+			}
+			@Override
+			public Adapter caseConcern(Concern object) {
+				return createConcernAdapter();
+			}
+			@Override
+			public Adapter caseViewpoint(Viewpoint object) {
+				return createViewpointAdapter();
+			}
+			@Override
+			public Adapter caseView(View object) {
+				return createViewAdapter();
+			}
+			@Override
+			public Adapter caseViewElement(ViewElement object) {
+				return createViewElementAdapter();
+			}
+			@Override
 			public Adapter caseIMarked(Marked object) {
 				return createIMarkedAdapter();
 			}
@@ -338,6 +362,90 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompositeNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Tag <em>Tag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Tag
+	 * @generated
+	 */
+	public Adapter createTagAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Stakeholder <em>Stakeholder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Stakeholder
+	 * @generated
+	 */
+	public Adapter createStakeholderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Concern <em>Concern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Concern
+	 * @generated
+	 */
+	public Adapter createConcernAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Viewpoint <em>Viewpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Viewpoint
+	 * @generated
+	 */
+	public Adapter createViewpointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.View <em>View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.View
+	 * @generated
+	 */
+	public Adapter createViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.ViewElement <em>View Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.ViewElement
+	 * @generated
+	 */
+	public Adapter createViewElementAdapter() {
 		return null;
 	}
 

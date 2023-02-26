@@ -14,11 +14,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.nasdanika.architecture.core.ActionRole;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Impact;
 import org.nasdanika.architecture.core.ImpactType;
 
+import org.nasdanika.architecture.core.View;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NcorePackage;
 
@@ -34,6 +36,8 @@ import org.nasdanika.ncore.impl.NamedElementImpl;
  * <ul>
  *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getDocumentation <em>Documentation</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getActionRole <em>Action Role</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getViews <em>Views</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.nasdanika.architecture.core.impl.ImpactImpl#getElements <em>Elements</em>}</li>
  * </ul>
@@ -50,6 +54,16 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getActionRole() <em>Action Role</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionRole()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final ActionRole ACTION_ROLE_EDEFAULT = ActionRole.CHILD;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,6 +121,37 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 	 * @generated
 	 */
 	@Override
+	public ActionRole getActionRole() {
+		return (ActionRole)eDynamicGet(CorePackage.IMPACT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setActionRole(ActionRole newActionRole) {
+		eDynamicSet(CorePackage.IMPACT__ACTION_ROLE, CorePackage.Literals.MODEL_ELEMENT__ACTION_ROLE, newActionRole);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<View> getViews() {
+		return (EList<View>)eDynamicGet(CorePackage.IMPACT__VIEWS, CorePackage.Literals.MODEL_ELEMENT__VIEWS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ImpactType getType() {
 		return (ImpactType)eDynamicGet(CorePackage.IMPACT__TYPE, CorePackage.Literals.IMPACT__TYPE, true, true);
 	}
@@ -151,6 +196,8 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 		switch (featureID) {
 			case CorePackage.IMPACT__DOCUMENTATION:
 				return ((InternalEList<?>)getDocumentation()).basicRemove(otherEnd, msgs);
+			case CorePackage.IMPACT__VIEWS:
+				return ((InternalEList<?>)getViews()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -167,6 +214,10 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 				return getDocumentation();
 			case CorePackage.IMPACT__ID:
 				return getId();
+			case CorePackage.IMPACT__ACTION_ROLE:
+				return getActionRole();
+			case CorePackage.IMPACT__VIEWS:
+				return getViews();
 			case CorePackage.IMPACT__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -191,6 +242,13 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 				return;
 			case CorePackage.IMPACT__ID:
 				setId((String)newValue);
+				return;
+			case CorePackage.IMPACT__ACTION_ROLE:
+				setActionRole((ActionRole)newValue);
+				return;
+			case CorePackage.IMPACT__VIEWS:
+				getViews().clear();
+				getViews().addAll((Collection<? extends View>)newValue);
 				return;
 			case CorePackage.IMPACT__TYPE:
 				setType((ImpactType)newValue);
@@ -217,6 +275,12 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 			case CorePackage.IMPACT__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case CorePackage.IMPACT__ACTION_ROLE:
+				setActionRole(ACTION_ROLE_EDEFAULT);
+				return;
+			case CorePackage.IMPACT__VIEWS:
+				getViews().clear();
+				return;
 			case CorePackage.IMPACT__TYPE:
 				setType((ImpactType)null);
 				return;
@@ -239,6 +303,10 @@ public class ImpactImpl extends NamedElementImpl implements Impact {
 				return !getDocumentation().isEmpty();
 			case CorePackage.IMPACT__ID:
 				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
+			case CorePackage.IMPACT__ACTION_ROLE:
+				return getActionRole() != ACTION_ROLE_EDEFAULT;
+			case CorePackage.IMPACT__VIEWS:
+				return !getViews().isEmpty();
 			case CorePackage.IMPACT__TYPE:
 				return basicGetType() != null;
 			case CorePackage.IMPACT__ELEMENTS:

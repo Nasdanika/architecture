@@ -9,12 +9,17 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.nasdanika.architecture.core.Architecture;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
+import org.nasdanika.architecture.core.Concern;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Event;
 import org.nasdanika.architecture.core.Impact;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.architecture.core.Stage;
+import org.nasdanika.architecture.core.Stakeholder;
+import org.nasdanika.architecture.core.Tag;
+import org.nasdanika.architecture.core.View;
+import org.nasdanika.architecture.core.Viewpoint;
 import org.nasdanika.common.Context;
 import org.nasdanika.emf.DiagnosticProvider;
 import org.nasdanika.emf.DiagnosticProviderAdapter;
@@ -136,6 +141,76 @@ public class CoreActionProviderAdapterFactory extends ActionProviderAdapterFacto
 					ActionProvider.class, 
 					this.getClass().getClassLoader(), 
 					e -> new StageActionBuilder<Stage>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Tag>(
+					CorePackage.Literals.TAG, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new TagActionBuilder<Tag>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Stakeholder>(
+					CorePackage.Literals.STAKEHOLDER, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new StakeholderActionBuilder<Stakeholder>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Concern>(
+					CorePackage.Literals.CONCERN, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new ConcernActionBuilder<Concern>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Viewpoint>(
+					CorePackage.Literals.VIEWPOINT, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new ViewpointActionBuilder<Viewpoint>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, View>(
+					CorePackage.Literals.VIEW, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new ViewActionBuilder<View>(e, context) {
 						
 						@Override
 						protected String getHtmlExtension() {

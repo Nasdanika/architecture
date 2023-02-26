@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Domain extends ArchitectureElement {
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.nasdanika.architecture.core.ArchitectureElement}.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.ModelElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -38,6 +38,6 @@ public interface Domain extends ArchitectureElement {
 	 * @model containment="true" keys="id"
 	 * @generated
 	 */
-	EList<ArchitectureElement> getElements();
+	EList<ModelElement> getElements();
 
 } // Domain
