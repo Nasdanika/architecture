@@ -126,7 +126,7 @@ public interface ArchitectureElement extends Period, ModelElement {
 
 	/**
 	 * Returns the value of the '<em><b>View Elements</b></em>' reference list.
-	 * The list contents are of type {@link org.nasdanika.architecture.core.View}.
+	 * The list contents are of type {@link org.nasdanika.architecture.core.ViewElement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -137,6 +137,6 @@ public interface ArchitectureElement extends Period, ModelElement {
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<View> getViewElements();
+	EList<ViewElement> getViewElements();
 
 } // ArchitectureElement

@@ -3,10 +3,10 @@
 package org.nasdanika.architecture.core.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -20,6 +20,7 @@ import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.architecture.core.Stage;
 import org.nasdanika.architecture.core.Tag;
 import org.nasdanika.architecture.core.View;
+import org.nasdanika.architecture.core.ViewElement;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.ncore.NcorePackage;
@@ -252,7 +253,7 @@ public class ArchitectureElementImpl extends PeriodImpl implements ArchitectureE
 	 * @generated NOT
 	 */
 	@Override
-	public EList<View> getViewElements() {
+	public EList<ViewElement> getViewElements() {
 		return getOppositeReferrers(CorePackage.Literals.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS);		
 	}
 
