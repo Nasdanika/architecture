@@ -180,6 +180,7 @@
 		<module>core.gen</module>
 		<module>c4.gen</module>
 		<module>maven</module>
+		<module>archetype</module>
 	</modules>	
 
 	<distributionManagement>

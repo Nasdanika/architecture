@@ -1,0 +1,5 @@
+app-action:
+  text: Site Generator Maven Plugin Archetype
+  location: archetype/index.html
+  uris: archetype
+
