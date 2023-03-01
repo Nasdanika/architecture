@@ -102,10 +102,6 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createImpactTypeAdapter();
 			}
 			@Override
-			public Adapter caseArchitecture(Architecture object) {
-				return createArchitectureAdapter();
-			}
-			@Override
 			public Adapter caseImpact(Impact object) {
 				return createImpactAdapter();
 			}
@@ -292,20 +288,6 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImpactTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Architecture <em>Architecture</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.nasdanika.architecture.core.Architecture
-	 * @generated
-	 */
-	public Adapter createArchitectureAdapter() {
 		return null;
 	}
 

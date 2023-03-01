@@ -14,6 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.architecture.c4.C4Package;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.architecture.core.Domain;
+import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.architecture.core.impl.NodeImpl;
 
 /**
@@ -24,6 +27,7 @@ import org.nasdanika.architecture.core.impl.NodeImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.architecture.c4.impl.SystemImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link org.nasdanika.architecture.c4.impl.SystemImpl#isExternal <em>External</em>}</li>
  *   <li>{@link org.nasdanika.architecture.c4.impl.SystemImpl#getContainers <em>Containers</em>}</li>
  *   <li>{@link org.nasdanika.architecture.c4.impl.SystemImpl#getSubsystems <em>Subsystems</em>}</li>
@@ -59,6 +63,17 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	protected EClass eStaticClass() {
 		return C4Package.Literals.SYSTEM;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<ModelElement> getElements() {
+		return (EList<ModelElement>)eDynamicGet(C4Package.SYSTEM__ELEMENTS, CorePackage.Literals.DOMAIN__ELEMENTS, true, true);
 	}
 
 	/**
@@ -111,6 +126,8 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case C4Package.SYSTEM__ELEMENTS:
+				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
 			case C4Package.SYSTEM__CONTAINERS:
 				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
 			case C4Package.SYSTEM__SUBSYSTEMS:
@@ -127,6 +144,8 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case C4Package.SYSTEM__ELEMENTS:
+				return getElements();
 			case C4Package.SYSTEM__EXTERNAL:
 				return isExternal();
 			case C4Package.SYSTEM__CONTAINERS:
@@ -146,6 +165,10 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case C4Package.SYSTEM__ELEMENTS:
+				getElements().clear();
+				getElements().addAll((Collection<? extends ModelElement>)newValue);
+				return;
 			case C4Package.SYSTEM__EXTERNAL:
 				setExternal((Boolean)newValue);
 				return;
@@ -169,6 +192,9 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case C4Package.SYSTEM__ELEMENTS:
+				getElements().clear();
+				return;
 			case C4Package.SYSTEM__EXTERNAL:
 				setExternal(EXTERNAL_EDEFAULT);
 				return;
@@ -190,6 +216,8 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case C4Package.SYSTEM__ELEMENTS:
+				return !getElements().isEmpty();
 			case C4Package.SYSTEM__EXTERNAL:
 				return isExternal() != EXTERNAL_EDEFAULT;
 			case C4Package.SYSTEM__CONTAINERS:
@@ -198,6 +226,38 @@ public class SystemImpl extends NodeImpl implements org.nasdanika.architecture.c
 				return !getSubsystems().isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Domain.class) {
+			switch (derivedFeatureID) {
+				case C4Package.SYSTEM__ELEMENTS: return CorePackage.DOMAIN__ELEMENTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Domain.class) {
+			switch (baseFeatureID) {
+				case CorePackage.DOMAIN__ELEMENTS: return C4Package.SYSTEM__ELEMENTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //SystemImpl

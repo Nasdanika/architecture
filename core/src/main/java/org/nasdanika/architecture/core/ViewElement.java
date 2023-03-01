@@ -47,7 +47,7 @@ public interface ViewElement extends ModelElement {
 	 * @return the value of the '<em>Architecture Element</em>' reference.
 	 * @see #setArchitectureElement(ArchitectureElement)
 	 * @see org.nasdanika.architecture.core.CorePackage#getViewElement_ArchitectureElement()
-	 * @model annotation="urn:org.nasdanika opposite='viewElements'"
+	 * @model annotation="urn:org.nasdanika opposite='viewElements' default-feature='true'"
 	 * @generated
 	 */
 	ArchitectureElement getArchitectureElement();

@@ -1,9 +1,12 @@
 package org.nasdanika.architecture.core.gen;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.architecture.core.ModelElement;
 import org.nasdanika.common.Context;
@@ -31,7 +34,14 @@ public class ModelElementActionBuilder<T extends ModelElement> extends NcoreActi
 			if (!uri.isRelative()) {
 				ret.getUris().add(uri.toString());
 			}
-		}		
+		}	
+		
+		Map<String,String> typeSpec = new LinkedHashMap<>();
+		EClass targetEClass = getTarget().eClass();
+		typeSpec.put("ns-uri", targetEClass.getEPackage().getNsURI());
+		typeSpec.put("name", targetEClass.getName());		
+		
+		ret.setAnnotation("semantic-type", typeSpec);
 		
 		return ret;
 	}

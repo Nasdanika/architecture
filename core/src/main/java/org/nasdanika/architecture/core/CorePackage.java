@@ -124,6 +124,15 @@ public interface CorePackage extends EPackage {
 	int MODEL_ELEMENT__REPRESENTATIONS = NcorePackage.NAMED_ELEMENT__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_ELEMENT__ANNOTATIONS = NcorePackage.NAMED_ELEMENT__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,6 +258,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int EVENT__REPRESENTATIONS = NcorePackage.TEMPORAL__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__ANNOTATIONS = NcorePackage.TEMPORAL__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Instant</b></em>' attribute.
@@ -532,6 +550,15 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE_ELEMENT__REPRESENTATIONS = NcorePackage.PERIOD__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE_ELEMENT__ANNOTATIONS = NcorePackage.PERIOD__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -748,6 +775,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN__ANNOTATIONS = ARCHITECTURE_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -976,6 +1012,15 @@ public interface CorePackage extends EPackage {
 	int STAGE__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAGE__ANNOTATIONS = ARCHITECTURE_ELEMENT__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1202,6 +1247,15 @@ public interface CorePackage extends EPackage {
 	int IMPACT_TYPE__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT_TYPE__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1265,232 +1319,6 @@ public interface CorePackage extends EPackage {
 	int IMPACT_TYPE_OPERATION_COUNT = MODEL_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ArchitectureImpl <em>Architecture</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.architecture.core.impl.ArchitectureImpl
-	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getArchitecture()
-	 * @generated
-	 */
-	int ARCHITECTURE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__MARKERS = DOMAIN__MARKERS;
-
-	/**
-	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__URIS = DOMAIN__URIS;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__DESCRIPTION = DOMAIN__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__UUID = DOMAIN__UUID;
-
-	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__ACTION_PROTOTYPE = DOMAIN__ACTION_PROTOTYPE;
-
-	/**
-	 * The feature id for the '<em><b>Representations</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__REPRESENTATIONS = DOMAIN__REPRESENTATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__START = DOMAIN__START;
-
-	/**
-	 * The feature id for the '<em><b>End</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__END = DOMAIN__END;
-
-	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__DURATION = DOMAIN__DURATION;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__NAME = DOMAIN__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__DOCUMENTATION = DOMAIN__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__ID = DOMAIN__ID;
-
-	/**
-	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__ACTION_ROLE = DOMAIN__ACTION_ROLE;
-
-	/**
-	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__VIEWS = DOMAIN__VIEWS;
-
-	/**
-	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__EVENTS = DOMAIN__EVENTS;
-
-	/**
-	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__STAGES = DOMAIN__STAGES;
-
-	/**
-	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__FACETS = DOMAIN__FACETS;
-
-	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__PROPERTIES = DOMAIN__PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__IMPACTED_BY = DOMAIN__IMPACTED_BY;
-
-	/**
-	 * The feature id for the '<em><b>Tags</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__TAGS = DOMAIN__TAGS;
-
-	/**
-	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__VIEW_ELEMENTS = DOMAIN__VIEW_ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE__ELEMENTS = DOMAIN__ELEMENTS;
-
-	/**
-	 * The number of structural features of the '<em>Architecture</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE_FEATURE_COUNT = DOMAIN_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Architecture</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARCHITECTURE_OPERATION_COUNT = DOMAIN_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.core.impl.ImpactImpl <em>Impact</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1498,7 +1326,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getImpact()
 	 * @generated
 	 */
-	int IMPACT = 8;
+	int IMPACT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1553,6 +1381,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int IMPACT__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPACT__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1644,7 +1481,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 9;
+	int NODE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1699,6 +1536,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ANNOTATIONS = ARCHITECTURE_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1879,7 +1725,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getRelationship()
 	 * @generated
 	 */
-	int RELATIONSHIP = 10;
+	int RELATIONSHIP = 9;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1934,6 +1780,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__REPRESENTATIONS = ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ANNOTATIONS = ARCHITECTURE_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -2105,7 +1960,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getCompositeNode()
 	 * @generated
 	 */
-	int COMPOSITE_NODE = 11;
+	int COMPOSITE_NODE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2160,6 +2015,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_NODE__REPRESENTATIONS = NODE__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_NODE__ANNOTATIONS = NODE__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -2350,7 +2214,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getTag()
 	 * @generated
 	 */
-	int TAG = 12;
+	int TAG = 11;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2405,6 +2269,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int TAG__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2486,7 +2359,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getStakeholder()
 	 * @generated
 	 */
-	int STAKEHOLDER = 13;
+	int STAKEHOLDER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2541,6 +2414,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int STAKEHOLDER__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAKEHOLDER__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2622,7 +2504,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getConcern()
 	 * @generated
 	 */
-	int CONCERN = 14;
+	int CONCERN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2677,6 +2559,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int CONCERN__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCERN__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2767,7 +2658,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewpoint()
 	 * @generated
 	 */
-	int VIEWPOINT = 15;
+	int VIEWPOINT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2822,6 +2713,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int VIEWPOINT__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEWPOINT__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2912,7 +2812,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getView()
 	 * @generated
 	 */
-	int VIEW = 16;
+	int VIEW = 15;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -2967,6 +2867,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int VIEW__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3057,7 +2966,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getViewElement()
 	 * @generated
 	 */
-	int VIEW_ELEMENT = 17;
+	int VIEW_ELEMENT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -3112,6 +3021,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int VIEW_ELEMENT__REPRESENTATIONS = MODEL_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW_ELEMENT__ANNOTATIONS = MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3202,7 +3120,7 @@ public interface CorePackage extends EPackage {
 	 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getActionRole()
 	 * @generated
 	 */
-	int ACTION_ROLE = 18;
+	int ACTION_ROLE = 17;
 
 
 	/**
@@ -3406,16 +3324,6 @@ public interface CorePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getImpactType();
-
-	/**
-	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Architecture <em>Architecture</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Architecture</em>'.
-	 * @see org.nasdanika.architecture.core.Architecture
-	 * @generated
-	 */
-	EClass getArchitecture();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.core.Impact <em>Impact</em>}'.
@@ -3891,16 +3799,6 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EClass IMPACT_TYPE = eINSTANCE.getImpactType();
-
-		/**
-		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ArchitectureImpl <em>Architecture</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.architecture.core.impl.ArchitectureImpl
-		 * @see org.nasdanika.architecture.core.impl.CorePackageImpl#getArchitecture()
-		 * @generated
-		 */
-		EClass ARCHITECTURE = eINSTANCE.getArchitecture();
 
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.core.impl.ImpactImpl <em>Impact</em>}' class.

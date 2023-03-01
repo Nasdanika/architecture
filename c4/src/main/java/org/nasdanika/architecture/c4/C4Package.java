@@ -123,6 +123,15 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY__REPRESENTATIONS = CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY__ANNOTATIONS = CorePackage.ARCHITECTURE_ELEMENT__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,6 +186,24 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY__ID = CorePackage.ARCHITECTURE_ELEMENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY__ACTION_ROLE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY__VIEWS = CorePackage.ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -220,6 +247,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int TECHNOLOGY__IMPACTED_BY = CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY__TAGS = CorePackage.ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY__VIEW_ELEMENTS = CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Uses</b></em>' reference list.
@@ -313,6 +358,15 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_PRODUCT__REPRESENTATIONS = TECHNOLOGY__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_PRODUCT__ANNOTATIONS = TECHNOLOGY__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,6 +421,24 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_PRODUCT__ID = TECHNOLOGY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_PRODUCT__ACTION_ROLE = TECHNOLOGY__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_PRODUCT__VIEWS = TECHNOLOGY__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,6 +482,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int TECHNOLOGY_PRODUCT__IMPACTED_BY = TECHNOLOGY__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_PRODUCT__TAGS = TECHNOLOGY__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_PRODUCT__VIEW_ELEMENTS = TECHNOLOGY__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Uses</b></em>' reference list.
@@ -512,6 +602,15 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_VERSION__REPRESENTATIONS = TECHNOLOGY__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_VERSION__ANNOTATIONS = TECHNOLOGY__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -566,6 +665,24 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_VERSION__ID = TECHNOLOGY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_VERSION__ACTION_ROLE = TECHNOLOGY__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_VERSION__VIEWS = TECHNOLOGY__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -609,6 +726,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int TECHNOLOGY_VERSION__IMPACTED_BY = TECHNOLOGY__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_VERSION__TAGS = TECHNOLOGY__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_VERSION__VIEW_ELEMENTS = TECHNOLOGY__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Uses</b></em>' reference list.
@@ -739,6 +874,15 @@ public interface C4Package extends EPackage {
 	int RELATIONSHIP__REPRESENTATIONS = CorePackage.RELATIONSHIP__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ANNOTATIONS = CorePackage.RELATIONSHIP__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -793,6 +937,24 @@ public interface C4Package extends EPackage {
 	int RELATIONSHIP__ID = CorePackage.RELATIONSHIP__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__ACTION_ROLE = CorePackage.RELATIONSHIP__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__VIEWS = CorePackage.RELATIONSHIP__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -836,6 +998,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int RELATIONSHIP__IMPACTED_BY = CorePackage.RELATIONSHIP__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__TAGS = CorePackage.RELATIONSHIP__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RELATIONSHIP__VIEW_ELEMENTS = CorePackage.RELATIONSHIP__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -939,6 +1119,15 @@ public interface C4Package extends EPackage {
 	int PERSON__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__ANNOTATIONS = CorePackage.NODE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -993,6 +1182,24 @@ public interface C4Package extends EPackage {
 	int PERSON__ID = CorePackage.NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__ACTION_ROLE = CorePackage.NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__VIEWS = CorePackage.NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1036,6 +1243,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int PERSON__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__TAGS = CorePackage.NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__VIEW_ELEMENTS = CorePackage.NODE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1147,6 +1372,15 @@ public interface C4Package extends EPackage {
 	int SYSTEM__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__ANNOTATIONS = CorePackage.NODE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1201,6 +1435,24 @@ public interface C4Package extends EPackage {
 	int SYSTEM__ID = CorePackage.NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__ACTION_ROLE = CorePackage.NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__VIEWS = CorePackage.NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1246,6 +1498,24 @@ public interface C4Package extends EPackage {
 	int SYSTEM__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
 
 	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__TAGS = CorePackage.NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__VIEW_ELEMENTS = CorePackage.NODE__VIEW_ELEMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1264,13 +1534,22 @@ public interface C4Package extends EPackage {
 	int SYSTEM__INCOMING_RELATIONSHIPS = CorePackage.NODE__INCOMING_RELATIONSHIPS;
 
 	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__ELEMENTS = CorePackage.NODE_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>External</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__EXTERNAL = CorePackage.NODE_FEATURE_COUNT + 0;
+	int SYSTEM__EXTERNAL = CorePackage.NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
@@ -1279,7 +1558,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__CONTAINERS = CorePackage.NODE_FEATURE_COUNT + 1;
+	int SYSTEM__CONTAINERS = CorePackage.NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
@@ -1288,7 +1567,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__SUBSYSTEMS = CorePackage.NODE_FEATURE_COUNT + 2;
+	int SYSTEM__SUBSYSTEMS = CorePackage.NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>System</em>' class.
@@ -1297,7 +1576,7 @@ public interface C4Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 3;
+	int SYSTEM_FEATURE_COUNT = CorePackage.NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>System</em>' class.
@@ -1373,6 +1652,15 @@ public interface C4Package extends EPackage {
 	int CONTAINER__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__ANNOTATIONS = CorePackage.NODE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1427,6 +1715,24 @@ public interface C4Package extends EPackage {
 	int CONTAINER__ID = CorePackage.NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__ACTION_ROLE = CorePackage.NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__VIEWS = CorePackage.NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1470,6 +1776,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int CONTAINER__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__TAGS = CorePackage.NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__VIEW_ELEMENTS = CorePackage.NODE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1599,6 +1923,15 @@ public interface C4Package extends EPackage {
 	int MODULE__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__ANNOTATIONS = CorePackage.NODE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1653,6 +1986,24 @@ public interface C4Package extends EPackage {
 	int MODULE__ID = CorePackage.NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__ACTION_ROLE = CorePackage.NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__VIEWS = CorePackage.NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1696,6 +2047,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int MODULE__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__TAGS = CorePackage.NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__VIEW_ELEMENTS = CorePackage.NODE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -1825,6 +2194,15 @@ public interface C4Package extends EPackage {
 	int COMPONENT__REPRESENTATIONS = MODULE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__ANNOTATIONS = MODULE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1879,6 +2257,24 @@ public interface C4Package extends EPackage {
 	int COMPONENT__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__ACTION_ROLE = MODULE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__VIEWS = MODULE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1922,6 +2318,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int COMPONENT__IMPACTED_BY = MODULE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__TAGS = MODULE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__VIEW_ELEMENTS = MODULE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.
@@ -2051,6 +2465,15 @@ public interface C4Package extends EPackage {
 	int CODE_ELEMENT__REPRESENTATIONS = CorePackage.NODE__REPRESENTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_ELEMENT__ANNOTATIONS = CorePackage.NODE__ANNOTATIONS;
+
+	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2105,6 +2528,24 @@ public interface C4Package extends EPackage {
 	int CODE_ELEMENT__ID = CorePackage.NODE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_ELEMENT__ACTION_ROLE = CorePackage.NODE__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_ELEMENT__VIEWS = CorePackage.NODE__VIEWS;
+
+	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2148,6 +2589,24 @@ public interface C4Package extends EPackage {
 	 * @ordered
 	 */
 	int CODE_ELEMENT__IMPACTED_BY = CorePackage.NODE__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_ELEMENT__TAGS = CorePackage.NODE__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_ELEMENT__VIEW_ELEMENTS = CorePackage.NODE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Outgoing Relationships</b></em>' containment reference list.

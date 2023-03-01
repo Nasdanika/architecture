@@ -67,15 +67,6 @@ public interface CoreFactory extends EFactory {
 	ImpactType createImpactType();
 
 	/**
-	 * Returns a new object of class '<em>Architecture</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Architecture</em>'.
-	 * @generated
-	 */
-	Architecture createArchitecture();
-
-	/**
 	 * Returns a new object of class '<em>Impact</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

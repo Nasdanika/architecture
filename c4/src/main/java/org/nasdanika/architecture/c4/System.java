@@ -3,6 +3,7 @@
 package org.nasdanika.architecture.c4;
 
 import org.eclipse.emf.common.util.EList;
+import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Node;
 
 /**
@@ -11,7 +12,7 @@ import org.nasdanika.architecture.core.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). 
+ * A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). Systems extends Domain to support adding reference data, e.g. technology stack.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -27,7 +28,7 @@ import org.nasdanika.architecture.core.Node;
  * @model
  * @generated
  */
-public interface System extends Node {
+public interface System extends Node, Domain {
 	/**
 	 * Returns the value of the '<em><b>External</b></em>' attribute.
 	 * <!-- begin-user-doc -->

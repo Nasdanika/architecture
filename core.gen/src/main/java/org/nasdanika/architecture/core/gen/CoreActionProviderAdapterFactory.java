@@ -6,7 +6,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.nasdanika.architecture.core.Architecture;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
 import org.nasdanika.architecture.core.Concern;
@@ -36,20 +35,6 @@ public class CoreActionProviderAdapterFactory extends ActionProviderAdapterFacto
 	
 	public CoreActionProviderAdapterFactory(Context context) {
 		super(context);
-
-		registerAdapterFactory(
-				new FunctionAdapterFactory<ActionProvider, Architecture>(
-					CorePackage.Literals.ARCHITECTURE, 
-					ActionProvider.class, 
-					this.getClass().getClassLoader(), 
-					e -> new ArchitectureActionBuilder<Architecture>(e, context) {
-						
-						@Override
-						protected String getHtmlExtension() {
-							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
-						}
-						
-					}.asActionProvider()));
 
 		registerAdapterFactory(
 				new FunctionAdapterFactory<ActionProvider, ArchitectureElement>(

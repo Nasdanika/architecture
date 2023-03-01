@@ -126,11 +126,6 @@
       <details key="documentation" value="Impact type. E.g. add, modify, delete. Impacts may also be quantitative. E.g. an impact might be increase or decrease in capacity - load, storage, ..."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//Domain">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Architecture (description) contains architecture elements and reference data such as impact types."/>
-    </eAnnotations>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Impact" eSuperTypes="#//ModelElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Impacts of the containing increment on architecture elements. E.g. creation of a new element, modification or retirement (deletion) of an existing."/>
@@ -279,6 +274,7 @@
       </eAnnotations>
       <eAnnotations source="urn:org.nasdanika">
         <details key="opposite" value="viewElements"/>
+        <details key="default-feature" value="true"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

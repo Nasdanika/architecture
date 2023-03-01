@@ -61,9 +61,9 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node">
+  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//Node ../../org.nasdanika.architecture.core/model/core.ecore#//Domain">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). "/>
+      <details key="documentation" value="A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). Systems extends Domain to support adding reference data, e.g. technology stack."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="external" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

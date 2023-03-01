@@ -482,6 +482,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		relationshipEClass.getESuperTypes().add(this.getTechnologyConsumer());
 		personEClass.getESuperTypes().add(theCorePackage.getNode());
 		systemEClass.getESuperTypes().add(theCorePackage.getNode());
+		systemEClass.getESuperTypes().add(theCorePackage.getDomain());
 		containerEClass.getESuperTypes().add(theCorePackage.getNode());
 		containerEClass.getESuperTypes().add(this.getTechnologyConsumer());
 		componentEClass.getESuperTypes().add(this.getModule());
@@ -640,7 +641,7 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		  (systemEClass,
 		   source,
 		   new String[] {
-			   "documentation", "A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). "
+			   "documentation", "A software system is the highest level of abstraction and describes something that delivers value to its users, whether they are human or not. This includes the software system you are modelling, and the other software systems upon which your software system depends (or vice versa). Systems extends Domain to support adding reference data, e.g. technology stack."
 		   });
 		addAnnotation
 		  (getSystem_External(),

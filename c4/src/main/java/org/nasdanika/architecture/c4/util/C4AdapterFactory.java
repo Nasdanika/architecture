@@ -19,6 +19,7 @@ import org.nasdanika.architecture.c4.TechnologyConsumer;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
 import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.ncore.Documented;
@@ -173,6 +174,10 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 				return createNodeAdapter();
 			}
 			@Override
+			public Adapter caseDomain(Domain object) {
+				return createDomainAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -259,6 +264,20 @@ public class C4AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.Domain <em>Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.Domain
+	 * @generated
+	 */
+	public Adapter createDomainAdapter() {
 		return null;
 	}
 

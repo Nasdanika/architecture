@@ -62,7 +62,6 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 			case CorePackage.DOMAIN: return createDomain();
 			case CorePackage.STAGE: return createStage();
 			case CorePackage.IMPACT_TYPE: return createImpactType();
-			case CorePackage.ARCHITECTURE: return createArchitecture();
 			case CorePackage.IMPACT: return createImpact();
 			case CorePackage.NODE: return createNode();
 			case CorePackage.RELATIONSHIP: return createRelationship();
@@ -161,17 +160,6 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	public ImpactType createImpactType() {
 		ImpactTypeImpl impactType = new ImpactTypeImpl();
 		return impactType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Architecture createArchitecture() {
-		ArchitectureImpl architecture = new ArchitectureImpl();
-		return architecture;
 	}
 
 	/**

@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.architecture.core.ActionRole;
-import org.nasdanika.architecture.core.Architecture;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
 import org.nasdanika.architecture.core.Concern;
@@ -83,12 +82,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass impactTypeEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass architectureEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -417,16 +410,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getArchitecture() {
-		return architectureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getImpact() {
 		return impactEClass;
 	}
@@ -746,8 +729,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		impactTypeEClass = createEClass(IMPACT_TYPE);
 
-		architectureEClass = createEClass(ARCHITECTURE);
-
 		impactEClass = createEClass(IMPACT);
 		createEReference(impactEClass, IMPACT__TYPE);
 		createEReference(impactEClass, IMPACT__ELEMENTS);
@@ -828,7 +809,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		domainEClass.getESuperTypes().add(this.getArchitectureElement());
 		stageEClass.getESuperTypes().add(this.getArchitectureElement());
 		impactTypeEClass.getESuperTypes().add(this.getModelElement());
-		architectureEClass.getESuperTypes().add(this.getDomain());
 		impactEClass.getESuperTypes().add(this.getModelElement());
 		nodeEClass.getESuperTypes().add(this.getArchitectureElement());
 		relationshipEClass.getESuperTypes().add(this.getArchitectureElement());
@@ -871,8 +851,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		initEReference(getStage_Impacts(), this.getImpact(), null, "impacts", null, 0, -1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(impactTypeEClass, ImpactType.class, "ImpactType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(impactEClass, Impact.class, "Impact", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImpact_Type(), this.getImpactType(), null, "type", null, 0, 1, Impact.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1008,7 +986,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		  (getViewElement_ArchitectureElement(),
 		   source,
 		   new String[] {
-			   "opposite", "viewElements"
+			   "opposite", "viewElements",
+			   "default-feature", "true"
 		   });
 	}
 
@@ -1127,12 +1106,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   source,
 		   new String[] {
 			   "documentation", "Impact type. E.g. add, modify, delete. Impacts may also be quantitative. E.g. an impact might be increase or decrease in capacity - load, storage, ..."
-		   });
-		addAnnotation
-		  (architectureEClass,
-		   source,
-		   new String[] {
-			   "documentation", "Architecture (description) contains architecture elements and reference data such as impact types."
 		   });
 		addAnnotation
 		  (impactEClass,

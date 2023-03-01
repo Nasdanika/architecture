@@ -17,6 +17,7 @@ import org.nasdanika.architecture.c4.TechnologyConsumer;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
 import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.ncore.Documented;
@@ -173,6 +174,7 @@ public class C4Switch<T> extends Switch<T> {
 				org.nasdanika.architecture.c4.System system = (org.nasdanika.architecture.c4.System)theEObject;
 				T result = caseSystem(system);
 				if (result == null) result = caseNode(system);
+				if (result == null) result = caseDomain(system);
 				if (result == null) result = caseArchitectureElement(system);
 				if (result == null) result = casePeriod(system);
 				if (result == null) result = caseCore_ModelElement(system);
@@ -584,6 +586,21 @@ public class C4Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDomain(Domain object) {
 		return null;
 	}
 
