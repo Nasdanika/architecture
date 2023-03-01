@@ -14,6 +14,7 @@ import org.nasdanika.architecture.core.Domain;
 import org.nasdanika.architecture.core.Event;
 import org.nasdanika.architecture.core.Impact;
 import org.nasdanika.architecture.core.Node;
+import org.nasdanika.architecture.core.Relationship;
 import org.nasdanika.architecture.core.Stage;
 import org.nasdanika.architecture.core.Stakeholder;
 import org.nasdanika.architecture.core.Tag;
@@ -112,6 +113,20 @@ public class CoreActionProviderAdapterFactory extends ActionProviderAdapterFacto
 					ActionProvider.class, 
 					this.getClass().getClassLoader(), 
 					e -> new NodeActionBuilder<Node>(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Relationship>(
+					CorePackage.Literals.RELATIONSHIP, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new RelationshipActionBuilder<Relationship>(e, context) {
 						
 						@Override
 						protected String getHtmlExtension() {
