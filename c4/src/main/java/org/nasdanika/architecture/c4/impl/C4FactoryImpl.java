@@ -5,9 +5,7 @@ package org.nasdanika.architecture.c4.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.nasdanika.architecture.c4.C4Factory;
 import org.nasdanika.architecture.c4.C4Package;
@@ -19,7 +17,6 @@ import org.nasdanika.architecture.c4.Technology;
 import org.nasdanika.architecture.c4.TechnologyConsumer;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
-import org.nasdanika.architecture.c4.*;
 
 /**
  * <!-- begin-user-doc -->

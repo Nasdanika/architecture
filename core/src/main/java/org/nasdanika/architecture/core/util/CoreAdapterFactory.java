@@ -4,12 +4,26 @@ package org.nasdanika.architecture.core.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
-import org.nasdanika.architecture.core.*;
+import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.CompositeNode;
+import org.nasdanika.architecture.core.Concern;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.architecture.core.Domain;
+import org.nasdanika.architecture.core.Event;
+import org.nasdanika.architecture.core.Facet;
+import org.nasdanika.architecture.core.Impact;
+import org.nasdanika.architecture.core.ImpactType;
+import org.nasdanika.architecture.core.ModelElement;
+import org.nasdanika.architecture.core.Node;
+import org.nasdanika.architecture.core.Relationship;
+import org.nasdanika.architecture.core.Stage;
+import org.nasdanika.architecture.core.Stakeholder;
+import org.nasdanika.architecture.core.Tag;
+import org.nasdanika.architecture.core.View;
+import org.nasdanika.architecture.core.ViewElement;
+import org.nasdanika.architecture.core.Viewpoint;
 import org.nasdanika.common.Adaptable;
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NamedElement;

@@ -3,6 +3,7 @@
 package org.nasdanika.architecture.c4.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.architecture.c4.C4Package;

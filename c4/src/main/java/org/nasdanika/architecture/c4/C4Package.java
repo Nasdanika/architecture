@@ -22,7 +22,7 @@ import org.nasdanika.architecture.core.CorePackage;
  * <!-- end-user-doc -->
  * @see org.nasdanika.architecture.c4.C4Factory
  * @model kind="package"
- *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md'"
+ *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='c4'"
  * @generated
  */
 public interface C4Package extends EPackage {

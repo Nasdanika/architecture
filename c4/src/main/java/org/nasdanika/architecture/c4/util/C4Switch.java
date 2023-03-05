@@ -4,7 +4,6 @@ package org.nasdanika.architecture.c4.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
@@ -25,7 +24,6 @@ import org.nasdanika.ncore.ModelElement;
 import org.nasdanika.ncore.NamedElement;
 import org.nasdanika.ncore.Period;
 import org.nasdanika.persistence.Marked;
-import org.nasdanika.architecture.c4.*;
 
 /**
  * <!-- begin-user-doc -->

@@ -5,14 +5,10 @@ package org.nasdanika.architecture.c4.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;

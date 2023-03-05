@@ -3,7 +3,6 @@
 package org.nasdanika.architecture.c4.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.Component;
 

@@ -5,25 +5,19 @@ package org.nasdanika.architecture.core.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.nasdanika.architecture.core.ActionRole;
 import org.nasdanika.architecture.core.Concern;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Stakeholder;
 import org.nasdanika.architecture.core.View;
 import org.nasdanika.architecture.core.Viewpoint;
-
 import org.nasdanika.ncore.Documented;
 import org.nasdanika.ncore.NcorePackage;
-
 import org.nasdanika.ncore.impl.NamedElementImpl;
 
 /**

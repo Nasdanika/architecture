@@ -29,20 +29,6 @@ public class ModelElementActionBuilder<T extends ModelElement> extends NcoreActi
 			ProgressMonitor progressMonitor) {
 		Action ret = super.buildAction(action, registry, resolveConsumer, progressMonitor);
 		
-		// Carrying over URI's for semantic mapping, discarding relative
-		for (URI uri: NcoreUtil.getUris(getTarget())) {
-			if (!uri.isRelative()) {
-				ret.getUris().add(uri.toString());
-			}
-		}	
-		
-		Map<String,String> typeSpec = new LinkedHashMap<>();
-		EClass targetEClass = getTarget().eClass();
-		typeSpec.put("ns-uri", targetEClass.getEPackage().getNsURI());
-		typeSpec.put("name", targetEClass.getName());		
-		
-		ret.setAnnotation("semantic-type", typeSpec);
-		
 		return ret;
 	}
 	

@@ -6,13 +6,11 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
@@ -21,10 +19,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.json.JSONObject;
-import org.nasdanika.common.BiSupplier;
 import org.nasdanika.common.Context;
-import org.nasdanika.common.DefaultConverter;
 import org.nasdanika.common.DiagramGenerator;
 import org.nasdanika.common.DiagramGeneratorImpl;
 import org.nasdanika.common.NasdanikaException;
@@ -154,7 +149,7 @@ public class SiteGeneratorMojo extends AbstractCommandMojo {
 			}
 			
 			@Override
-			protected boolean isSemanticMapLink(Link link) {
+			protected boolean isSemanticInfoLink(Link link) {
 				return semanticMap.values().contains(link);
 			}			
 			

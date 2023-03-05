@@ -3,6 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="c4" nsURI="urn:org.nasdanika.architecture.c4" nsPrefix="org.nasdanika.architecture.c4">
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
+    <details key="load-key" value="c4"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Technology" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

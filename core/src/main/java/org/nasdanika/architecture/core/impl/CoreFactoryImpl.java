@@ -6,12 +6,26 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import org.nasdanika.architecture.core.*;
+import org.nasdanika.architecture.core.ActionRole;
+import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.architecture.core.CompositeNode;
+import org.nasdanika.architecture.core.Concern;
+import org.nasdanika.architecture.core.CoreFactory;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.architecture.core.Domain;
+import org.nasdanika.architecture.core.Event;
+import org.nasdanika.architecture.core.Impact;
+import org.nasdanika.architecture.core.ImpactType;
+import org.nasdanika.architecture.core.Node;
+import org.nasdanika.architecture.core.Relationship;
+import org.nasdanika.architecture.core.Stage;
+import org.nasdanika.architecture.core.Stakeholder;
+import org.nasdanika.architecture.core.Tag;
+import org.nasdanika.architecture.core.View;
+import org.nasdanika.architecture.core.ViewElement;
+import org.nasdanika.architecture.core.Viewpoint;
 
 /**
  * <!-- begin-user-doc -->

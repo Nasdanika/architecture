@@ -1,5 +1,6 @@
 package org.nasdanika.architecture.c4.gen;
 
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -167,8 +168,12 @@ public class C4ActionProviderAdapterFactory extends CoreActionProviderAdapterFac
 						}
 						
 					}.asActionProvider()));
-		
-		
 	}
+	
+	public C4ActionProviderAdapterFactory(Context context, Diagnostic diagnostic) {
+		this(context);
+		this.diagnostic = diagnostic;
+	}
+	
 				
 }

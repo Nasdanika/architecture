@@ -1,7 +1,6 @@
 package org.nasdanika.architecture.core.gen;
 
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notifier;
+import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -21,8 +20,6 @@ import org.nasdanika.architecture.core.Tag;
 import org.nasdanika.architecture.core.View;
 import org.nasdanika.architecture.core.Viewpoint;
 import org.nasdanika.common.Context;
-import org.nasdanika.emf.DiagnosticProvider;
-import org.nasdanika.emf.DiagnosticProviderAdapter;
 import org.nasdanika.emf.FunctionAdapterFactory;
 import org.nasdanika.html.emf.ActionProviderAdapterFactory;
 import org.nasdanika.html.model.app.util.ActionProvider;
@@ -220,13 +217,10 @@ public class CoreActionProviderAdapterFactory extends ActionProviderAdapterFacto
 					}.asActionProvider()));
 		
 	}
-			
-	@Override
-	public Adapter adaptNew(Notifier target, Object type) {
-		if (type == DiagnosticProvider.class) {
-			return new DiagnosticProviderAdapter(target, this::getDiagnostic, this::getFeatureDiagnostic);
-		}
-		return super.adaptNew(target, type);
+		
+	public CoreActionProviderAdapterFactory(Context context, Diagnostic diagnostic) {
+		this(context);
+		this.diagnostic = diagnostic;
 	}
 	
 }

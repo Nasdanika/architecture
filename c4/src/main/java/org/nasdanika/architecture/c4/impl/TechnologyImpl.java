@@ -3,13 +3,10 @@
 package org.nasdanika.architecture.c4.impl;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.Technology;
 import org.nasdanika.architecture.c4.TechnologyConsumer;
-
 import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
 
 /**

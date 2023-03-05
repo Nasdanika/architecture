@@ -3,7 +3,6 @@
 package org.nasdanika.architecture.c4;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.nasdanika.architecture.core.ArchitectureElement;
 
 /**

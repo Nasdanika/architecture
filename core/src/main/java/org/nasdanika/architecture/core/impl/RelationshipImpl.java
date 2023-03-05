@@ -3,7 +3,6 @@
 package org.nasdanika.architecture.core.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.architecture.core.Node;
 import org.nasdanika.architecture.core.Relationship;

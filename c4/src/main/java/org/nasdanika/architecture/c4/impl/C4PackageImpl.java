@@ -2,13 +2,13 @@
  */
 package org.nasdanika.architecture.c4.impl;
 
+import static org.nasdanika.architecture.c4.C4Package.CONTAINER;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.nasdanika.architecture.c4.C4Factory;
 import org.nasdanika.architecture.c4.C4Package;
 import org.nasdanika.architecture.c4.CodeElement;
@@ -546,7 +546,8 @@ public class C4PackageImpl extends EPackageImpl implements C4Package {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation-reference", "doc/package-summary.md"
+			   "documentation-reference", "doc/package-summary.md",
+			   "load-key", "c4"
 		   });
 		addAnnotation
 		  (getTechnologyProduct_Versions(),
