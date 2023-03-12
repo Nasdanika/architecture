@@ -56,9 +56,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.nasdanika.core</groupId>
-			<artifactId>maven</artifactId>
-			<version>${core.version}</version>
+			<groupId>org.nasdanika.html</groupId>
+			<artifactId>site-generator-maven-plugin</artifactId>
+			<version>${html.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
