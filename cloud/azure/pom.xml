@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>org.nasdanika.architecture.cloud</groupId>
+		<version>2023.4.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>org.nasdanika.architecture.cloud.azure</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Nasdanika Architecture Azure Models</name>
+	<description>Grouping POM</description>
+	
+	<modules>
+		<module>core</module>
+		<module>compute</module>
+		<module>networking</module>
+		<module>storage</module>
+
+		<module>core.gen</module>
+		<module>compute.gen</module>
+		<module>networking.gen</module>
+		<module>storage.gen</module>
+	</modules>	
+</project>

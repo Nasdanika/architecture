@@ -1,0 +1,28 @@
+app-label:
+  text: Containers
+  location: continers/index.html
+  uris: containers
+  # content:
+  #   content-markdown:
+  #     style: true
+  #     source:
+  #       content-resource: readme.md
+  children:
+    - app-label:
+        text: Docker
+        uris: docker
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/dockercore.genmodel.xml#/"
+          - docker.gen/actions.yml
+    - app-label:
+        text: Kubernetes
+        uris: kubernetes
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/kubernetes.genmodel.xml#/"
+          - kubarnetes.gen/actions.yml
+    - app-label:
+        text: Helm
+        uris: helm
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/helm.genmodel.xml#/"
+          - helm.gen/actions.yml

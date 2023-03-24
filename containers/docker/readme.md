@@ -1,0 +1,1 @@
+TODO: DomainElement, Domain, ArchitectureElement (events), Architecture.

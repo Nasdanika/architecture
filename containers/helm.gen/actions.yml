@@ -1,0 +1,10 @@
+app-action:
+  text: Gen
+  location: c4/gen/index.html
+  uris: gen
+  navigation:
+    - app-link:
+        text: Javadoc
+        uris: javadoc
+        icon: fab fa-java
+        location: ../maven-site/apidocs/org.nasdanika.architecture.c4.gen/module-summary.html

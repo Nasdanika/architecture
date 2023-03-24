@@ -19,7 +19,9 @@ app-action:
         children:
           - "../nasdanika.github.io/target/model-doc/actions/c4.genmodel.xml#/"
           - c4.gen/actions.yml
-    - maven/maven.yml
+    - cloud/actions.yml
+    - containers/actions.yml
+    - maven/actions.yml
   navigation:
     - app-link:
         text: Javadoc

@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>org.nasdanika.architecture</groupId>
+		<version>2023.4.0</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<groupId>org.nasdanika.architecture.containers</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Nasdanika Architecture Container Models</name>
+	<description>Grouping POM</description>
+	
+	<modules>
+		<module>docker</module>
+		<module>kubernetes</module>
+		<module>helm</module>
+
+		<module>docker.gen</module>
+		<module>kubernetes.gen</module>
+		<module>helm.gen</module>
+	</modules>	
+</project>

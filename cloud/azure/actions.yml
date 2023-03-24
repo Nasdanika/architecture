@@ -1,0 +1,34 @@
+app-label:
+  text: Azure
+  location: azure/index.html
+  uris: azure
+#  content:
+#    content-markdown:
+#      style: true
+#      source:
+#        content-resource: readme.md
+  children:
+    - app-label:
+        text: Core
+        uris: core
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/azure-core.genmodel.xml#/"
+          - core.gen/actions.yml
+    - app-label:
+        text: Compute
+        uris: compute
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/azure-compute.genmodel.xml#/"
+          - compute.gen/actions.yml
+    - app-label:
+        text: Networking
+        uris: networking
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/azure-networking.genmodel.xml#/"
+          - networking.gen/actions.yml
+    - app-label:
+        text: Storage
+        uris: storage
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/azure-storage.genmodel.xml#/"
+          - storage.gen/actions.yml

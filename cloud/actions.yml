@@ -1,0 +1,7 @@
+app-label:
+  text: Cloud
+  location: cloud/index.html
+  icon: fas fa-cloud
+  uris: cloud
+  children:
+    - azure/actions.yml
