@@ -1,7 +1,8 @@
 # Azure icons
 
 * ``svg`` - SVG icons downloaded from https://learn.microsoft.com/en-us/azure/architecture/icons/. 
-* ``font`` - the above icons converted to a font with https://icomoon.io
+* ``font`` - the above icons converted to a font with https://icomoon.io. Please note that the font is multi-color it requires multiple spans.
+* ``png`` - SVG icons converted to PNG
 
 Please reference icons using jsDelivr URL:
 
@@ -10,7 +11,7 @@ Please reference icons using jsDelivr URL:
 
 Terms - by using these icons you are agreeing these [terms](svg/icons/Microsoft_Terms_of_Use.pdf)
 
-## Font generation
+## Font and PNG generation
 
 * Upload SVG's to icomoon
 * Download a set as JSON and add to this repo
@@ -21,7 +22,8 @@ Terms - by using these icons you are agreeing these [terms](svg/icons/Microsoft_
 * Download project and save it here
 * In font generation settings remove class prefix, set font class to ``nsd-azure``
 * Generate font, download, extract, delete ``fonts`` folder in this repository and then copy the extracted ``fonts`` folder here as well as ``style.css``
+* Generate PNG/SVG, download, extract, copy PNG's to the ``png`` folder
 
-## Conversion to PNG
 
-https://pixelied.com/convert/svg-converter/svg-to-png
+## Font use
+
