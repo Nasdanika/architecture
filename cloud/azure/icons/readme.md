@@ -6,7 +6,8 @@
 
 Please reference icons using jsDelivr URL:
 
-* SVG - use this page to get jsDelivr URL: https://www.jsdelivr.com/github
+* SVG - https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/
+* PNG - https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/png/
 * Font - Add ``https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/style.css`` stylesheet to pages using the font
 
 Terms - by using these icons you are agreeing these [terms](svg/icons/Microsoft_Terms_of_Use.pdf)
@@ -24,6 +25,6 @@ Terms - by using these icons you are agreeing these [terms](svg/icons/Microsoft_
 * Generate font, download, extract, delete ``fonts`` folder in this repository and then copy the extracted ``fonts`` folder here as well as ``style.css``
 * Generate PNG/SVG, download, extract, copy PNG's to the ``png`` folder
 
-
 ## Font use
 
+See ``demo.html``

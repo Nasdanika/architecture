@@ -13623,14 +13623,16 @@
       "metadata": {
         "fontFamily": "nsd-azure",
         "majorVersion": 1,
-        "minorVersion": 0
+        "minorVersion": 0,
+        "fontURL": "https://github.com/Nasdanika/architecture/tree/main/cloud/azure/icons",
+        "description": "Azure architecture icons generated from SVG's provided by Microsoft"
       },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
       },
-      "embed": false,
+      "embed": true,
       "showSelector": true,
       "selector": "class",
       "classSelector": ".nsd-azure",
@@ -13642,19 +13644,27 @@
       "ie7": false
     },
     "imagePref": {
-      "prefix": "icon-",
+      "prefix": "",
       "png": true,
       "useClassSelector": true,
       "color": 0,
       "bgColor": 16777215,
-      "classSelector": ".icon"
+      "classSelector": ".icon",
+      "name": "nsd-azure",
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "sprite": false
     },
     "historySize": 50,
     "showCodes": true,
     "gridSize": 16,
     "quickUsageToken": {
-      "AzureIcons": "ZmUyYjE4ZWZjMjE1NjA2ZDAxNjMyZjRkMGRmM2RmZjMjMSMxNjc5NzYxMzMyIyMjOThlZjJkMWEwMDg5"
+      "AzureIcons": false
     }
   },
-  "uid": -1
+  "uid": 275156,
+  "premium": true,
+  "time": 1679764834564,
+  "projects": []
 }
