@@ -10,8 +10,8 @@
 	</parent>
 	<artifactId>c4</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture C4 Model</name>
-	<url>https://docs.nasdanika.org/architecture/core/index.html</url>
+	<name>Nasdanika Architecture Azure Compute Model</name>
+	<url>https://docs.nasdanika.org/architecture/cloud/azure/compute/index.html</url>
 	<build>
 		<plugins>
 			<plugin>
@@ -59,7 +59,7 @@
 
 	<dependencies>	
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>org.nasdanika.architecture</groupId>
 			<artifactId>core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
