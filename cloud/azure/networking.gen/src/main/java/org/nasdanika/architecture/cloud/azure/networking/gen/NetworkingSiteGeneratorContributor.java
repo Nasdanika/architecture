@@ -1,4 +1,4 @@
-package org.nasdanika.architecture.cloud.azure.compute.gen;
+package org.nasdanika.architecture.cloud.azure.networking.gen;
 
 import java.util.Collections;
 import java.util.List;
@@ -6,16 +6,16 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.nasdanika.architecture.cloud.azure.compute.ComputePackage;
+import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.html.model.app.gen.SiteGeneratorContributor;
 
-public class ComputeSiteGeneratorContributor implements SiteGeneratorContributor {
+public class NetworkingSiteGeneratorContributor implements SiteGeneratorContributor {
 
 	@Override
 	public void configureSemanticModelResourceSet(ResourceSet resourceSet, Context context, ProgressMonitor progressMonitor) {
-		resourceSet.getPackageRegistry().put(ComputePackage.eNS_URI, ComputePackage.eINSTANCE);
+		resourceSet.getPackageRegistry().put(NetworkingPackage.eNS_URI, NetworkingPackage.eINSTANCE);
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class ComputeSiteGeneratorContributor implements SiteGeneratorContributor
 			Diagnostic instanceDiagnostic,
 			ProgressMonitor progressMonitor) {
 		
-		return Collections.singletonList(new ComputeActionProviderAdapterFactory(context, instanceDiagnostic));
+		return Collections.singletonList(new NetworkingActionProviderAdapterFactory(context, instanceDiagnostic));
 	}
 		
 }

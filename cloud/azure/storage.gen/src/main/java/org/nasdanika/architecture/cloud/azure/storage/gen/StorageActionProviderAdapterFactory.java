@@ -1,4 +1,4 @@
-package org.nasdanika.architecture.cloud.azure.compute.gen;
+package org.nasdanika.architecture.cloud.azure.storage.gen;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.EClass;
@@ -15,9 +15,9 @@ import org.nasdanika.html.model.app.util.ActionProvider;
  * @author Pavel
  *
  */
-public class ComputeActionProviderAdapterFactory extends CoreActionProviderAdapterFactory {
+public class StorageActionProviderAdapterFactory extends CoreActionProviderAdapterFactory {
 	
-	public ComputeActionProviderAdapterFactory(Context context) {
+	public StorageActionProviderAdapterFactory(Context context) {
 		super(context);
 	
 //		registerAdapterFactory(
@@ -161,7 +161,7 @@ public class ComputeActionProviderAdapterFactory extends CoreActionProviderAdapt
 //					}.asActionProvider()));
 	}
 	
-	public ComputeActionProviderAdapterFactory(Context context, Diagnostic diagnostic) {
+	public StorageActionProviderAdapterFactory(Context context, Diagnostic diagnostic) {
 		this(context);
 		this.diagnostic = diagnostic;
 	}

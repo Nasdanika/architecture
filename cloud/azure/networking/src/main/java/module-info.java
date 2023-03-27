@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.c4 {
+module org.nasdanika.architecture.cloud.azure.networking {
 	
-	requires transitive org.nasdanika.architecture.core;
+	requires transitive org.nasdanika.architecture.cloud.azure.core;
 	
-	exports org.nasdanika.architecture.c4;
-	exports org.nasdanika.architecture.c4.impl;
-	exports org.nasdanika.architecture.c4.util;	
+	exports org.nasdanika.architecture.cloud.azure.networking;
+	exports org.nasdanika.architecture.cloud.azure.networking.impl;
+	exports org.nasdanika.architecture.cloud.azure.networking.util;	
 }

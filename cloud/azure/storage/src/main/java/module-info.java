@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.c4 {
+module org.nasdanika.architecture.cloud.azure.storage {
 	
-	requires transitive org.nasdanika.architecture.core;
+	requires transitive org.nasdanika.architecture.cloud.azure.core;
 	
-	exports org.nasdanika.architecture.c4;
-	exports org.nasdanika.architecture.c4.impl;
-	exports org.nasdanika.architecture.c4.util;	
+	exports org.nasdanika.architecture.cloud.azure.storage;
+	exports org.nasdanika.architecture.cloud.azure.storage.impl;
+	exports org.nasdanika.architecture.cloud.azure.storage.util;	
 }

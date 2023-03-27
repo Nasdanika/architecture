@@ -70,5 +70,15 @@
 			<artifactId>compute-gen</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>${project.groupId}.cloud.azure</groupId>
+			<artifactId>networking-gen</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}.cloud.azure</groupId>
+			<artifactId>storage-gen</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

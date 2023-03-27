@@ -9,6 +9,6 @@
   <foreignModel>storage.ecore</foreignModel>
   <genPackages prefix="Storage" basePackage="org.nasdanika.architecture.cloud.azure"
       disposableProviderFactory="true" ecorePackage="storage.ecore#/">
-    <genClasses ecoreClass="storage.ecore#//VirtualMachine"/>
+    <genClasses ecoreClass="storage.ecore#//StorageAccount"/>
   </genPackages>
 </genmodel:GenModel>

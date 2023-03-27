@@ -5,6 +5,7 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
     <details key="load-key" value="azure-storage"/>
+    <details key="exports" value="StorageAccount: azure-storage-account"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageAccount"/>
 </ecore:EPackage>

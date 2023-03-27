@@ -59,7 +59,7 @@
 
 	<dependencies>	
 		<dependency>
-			<groupId>org.nasdanika.architecture</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>core</artifactId>
 			<version>${project.version}</version>
 		</dependency>

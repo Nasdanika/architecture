@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.nasdanika.architecture.cloud.azure.storage;singleton:=true
+Automatic-Module-Name: org.nasdanika.architecture.cloud.azure.storage
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.nasdanika.architecture.cloud.azure.storage,
+ org.nasdanika.architecture.cloud.azure.storage.impl,
+ org.nasdanika.architecture.cloud.azure.storage.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy
