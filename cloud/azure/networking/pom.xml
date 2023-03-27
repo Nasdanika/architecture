@@ -8,10 +8,10 @@
 		<version>2023.4.0</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>c4</artifactId>
+	<artifactId>networking</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture C4 Model</name>
-	<url>https://docs.nasdanika.org/architecture/core/index.html</url>
+	<name>Nasdanika Architecture Azure Networking Model</name>
+	<url>https://docs.nasdanika.org/architecture/cloud/azure/networking/model/package-summary.html</url>
 	<build>
 		<plugins>
 			<plugin>

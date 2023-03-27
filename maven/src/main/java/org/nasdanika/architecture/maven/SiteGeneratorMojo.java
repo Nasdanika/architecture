@@ -19,6 +19,9 @@ public class SiteGeneratorMojo extends SemanticSiteGeneratorMojo {
 	protected List<SiteGeneratorContributor> getContributors() {
 		List<SiteGeneratorContributor> contributors = new ArrayList<>(super.getContributors());
 		contributors.add(new C4SiteGeneratorContributor());
+		
+		TODO - other contributors
+		
 		return contributors;
 	}
 	

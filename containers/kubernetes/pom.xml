@@ -8,10 +8,10 @@
 		<version>2023.4.0</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<artifactId>c4</artifactId>
+	<artifactId>kubernetes</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture C4 Model</name>
-	<url>https://docs.nasdanika.org/architecture/core/index.html</url>
+	<name>Nasdanika Architecture Kubernetes Model</name>
+	<url>https://docs.nasdanika.org/architecture/containers/kubernetes/model/package-summary.html</url>
 	<build>
 		<plugins>
 			<plugin>
@@ -60,7 +60,7 @@
 	<dependencies>	
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>docker</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

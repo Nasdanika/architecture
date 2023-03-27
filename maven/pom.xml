@@ -65,5 +65,10 @@
 			<artifactId>c4-gen</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>${project.groupId}.cloud.azure</groupId>
+			<artifactId>compute-gen</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>

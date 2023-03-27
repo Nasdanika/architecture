@@ -1,0 +1,17 @@
+app-label:
+  text: Service Mesh
+  location: service-mesh/index.html
+  uris: service-mesh
+#  content:
+#    content-markdown:
+#      style: true
+#      source:
+#        content-resource: readme.md
+  children:
+    - app-label:
+        text: Istio
+        uris: istio
+# TODO - icon from jsDelivr
+        children:
+          - "../nasdanika.github.io/target/model-doc/actions/istio.genmodel.xml#/"
+          - istio.gen/actions.yml

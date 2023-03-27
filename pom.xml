@@ -182,11 +182,9 @@
 		<module>maven</module>
 		<module>archetype</module>
 
-		<module>docker</module>
-		<module>kubernetes</module>
-		<module>helm</module>
-
-		<module>azure/core</module>
+		<module>containers</module>
+		<module>service-mesh</module>
+		<module>cloud</module>
 	</modules>	
 
 	<distributionManagement>

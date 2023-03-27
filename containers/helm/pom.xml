@@ -10,8 +10,8 @@
 	</parent>
 	<artifactId>c4</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture C4 Model</name>
-	<url>https://docs.nasdanika.org/architecture/core/index.html</url>
+	<name>Nasdanika Architecture Helm Model</name>
+	<url>https://docs.nasdanika.org/architecture/containers/helm/model/package-summary.html</url>
 	<build>
 		<plugins>
 			<plugin>
@@ -60,7 +60,7 @@
 	<dependencies>	
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>kubernetes</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

@@ -7,10 +7,10 @@
 	    <version>2023.4.0</version>
 	    <relativePath>..</relativePath>
 	  </parent>
-	<artifactId>c4-gen</artifactId>
+	<artifactId>core-gen</artifactId>
 	<packaging>jar</packaging>
-	<name>Nasdanika Architecture C4 Model Generation Adapters</name>
-	<url>https://docs.nasdanika.org/modules/core/modules/exec/modules/gen/index.html</url>
+	<name>Nasdanika Architecture Azure Core Model Generation Adapters</name>
+	<url>https://docs.nasdanika.org/architecture/cloud/azure/core/gen/index.html</url>
 	<build>
 	    <plugins>
 			<plugin>
@@ -38,13 +38,13 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>org.nasdanika.architecture</groupId>
 			<artifactId>core-gen</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>c4</artifactId>
+			<artifactId>core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

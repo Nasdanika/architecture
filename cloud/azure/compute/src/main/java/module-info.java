@@ -1,6 +1,6 @@
 module org.nasdanika.architecture.cloud.azure.compute {
 	
-	requires transitive org.nasdanika.architecture.core;
+	requires transitive org.nasdanika.architecture.cloud.azure.core;
 	
 	exports org.nasdanika.architecture.cloud.azure.compute;
 	exports org.nasdanika.architecture.cloud.azure.compute.impl;

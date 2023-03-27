@@ -1,0 +1,1 @@
+Istio icon is a resized version of https://raw.githubusercontent.com/cncf/artwork/master/projects/istio/icon/color/istio-icon-color.png
