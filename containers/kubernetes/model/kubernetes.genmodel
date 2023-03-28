@@ -9,6 +9,6 @@
   <foreignModel>kubernetes.ecore</foreignModel>
   <genPackages prefix="Kubernetes" basePackage="org.nasdanika.architecture.containers"
       disposableProviderFactory="true" ecorePackage="kubernetes.ecore#/">
-    <genClasses ecoreClass="kubernetes.ecore#//VirtualMachine"/>
+    <genClasses ecoreClass="kubernetes.ecore#//Workload"/>
   </genPackages>
 </genmodel:GenModel>

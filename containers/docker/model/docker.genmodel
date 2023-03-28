@@ -9,6 +9,6 @@
   <foreignModel>docker.ecore</foreignModel>
   <genPackages prefix="Docker" basePackage="org.nasdanika.architecture.containers"
       disposableProviderFactory="true" ecorePackage="docker.ecore#/">
-    <genClasses ecoreClass="docker.ecore#//VirtualMachine"/>
+    <genClasses ecoreClass="docker.ecore#//Image"/>
   </genPackages>
 </genmodel:GenModel>

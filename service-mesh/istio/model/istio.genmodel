@@ -9,6 +9,6 @@
   <foreignModel>istio.ecore</foreignModel>
   <genPackages prefix="Istio" basePackage="org.nasdanika.architecture.servicemesh"
       disposableProviderFactory="true" ecorePackage="istio.ecore#/">
-    <genClasses ecoreClass="istio.ecore#//VirtualMachine"/>
+    <genClasses ecoreClass="istio.ecore#//Proxy"/>
   </genPackages>
 </genmodel:GenModel>

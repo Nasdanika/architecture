@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.cloud.azure.core.gen {
+module org.nasdanika.architecture.servicemesh.istio.gen {
 	
-	exports org.nasdanika.architecture.cloud.azure.core.gen;
+	exports org.nasdanika.architecture.servicemesh.istio.gen;
 	
-	requires transitive org.nasdanika.architecture.core.gen;
-	requires transitive org.nasdanika.architecture.cloud.azure.core;
+	requires transitive org.nasdanika.architecture.containers.kubernetes.gen;
+	requires transitive org.nasdanika.architecture.servicemesh.istio;
 	
 }

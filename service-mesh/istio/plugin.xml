@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated istio -->
+      <package
+            uri="urn:org.nasdanika.architecture.service-mesh.istio"
+            class="org.nasdanika.architecture.servicemesh.istio.IstioPackage"
+            genModel="model/istio.genmodel"/>
+   </extension>
+
+</plugin>

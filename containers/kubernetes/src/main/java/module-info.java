@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.c4 {
+module org.nasdanika.architecture.containers.kubernetes {
 	
-	requires transitive org.nasdanika.architecture.core;
+	requires transitive org.nasdanika.architecture.containers.docker;
 	
-	exports org.nasdanika.architecture.c4;
-	exports org.nasdanika.architecture.c4.impl;
-	exports org.nasdanika.architecture.c4.util;	
+	exports org.nasdanika.architecture.containers.kubernetes;
+	exports org.nasdanika.architecture.containers.kubernetes.impl;
+	exports org.nasdanika.architecture.containers.kubernetes.util;	
 }

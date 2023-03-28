@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.c4.gen{
+module org.nasdanika.architecture.containers.docker.gen {
 	
-	exports org.nasdanika.architecture.c4.gen;
+	exports org.nasdanika.architecture.containers.docker.gen;
 	
 	requires transitive org.nasdanika.architecture.core.gen;
-	requires transitive org.nasdanika.architecture.c4;
+	requires transitive org.nasdanika.architecture.containers.docker;
 	
 }

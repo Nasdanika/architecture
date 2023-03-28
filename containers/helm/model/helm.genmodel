@@ -7,8 +7,8 @@
     suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
     importOrganizing="true">
   <foreignModel>helm.ecore</foreignModel>
-  <genPackages prefix="Helm" basePackage="org.nasdanika.architecture.containers"
-      disposableProviderFactory="true" ecorePackage="helm.ecore#/">
-    <genClasses ecoreClass="helm.ecore#//VirtualMachine"/>
+  <genPackages prefix="Helm" basePackage="org.nasdanika.architecture.containers" disposableProviderFactory="true"
+      ecorePackage="helm.ecore#/">
+    <genClasses ecoreClass="helm.ecore#//Chart"/>
   </genPackages>
 </genmodel:GenModel>

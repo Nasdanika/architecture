@@ -1,8 +1,8 @@
-module org.nasdanika.architecture.c4 {
+module org.nasdanika.architecture.containers.helm {
 	
-	requires transitive org.nasdanika.architecture.core;
+	requires transitive org.nasdanika.architecture.containers.kubernetes;
 	
-	exports org.nasdanika.architecture.c4;
-	exports org.nasdanika.architecture.c4.impl;
-	exports org.nasdanika.architecture.c4.util;	
+	exports org.nasdanika.architecture.containers.helm;
+	exports org.nasdanika.architecture.containers.helm.impl;
+	exports org.nasdanika.architecture.containers.helm.util;	
 }
