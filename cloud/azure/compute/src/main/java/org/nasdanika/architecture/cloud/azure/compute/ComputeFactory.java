@@ -31,6 +31,78 @@ public interface ComputeFactory extends EFactory {
 	VirtualMachine createVirtualMachine();
 
 	/**
+	 * Returns a new object of class '<em>Disk</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Disk</em>'.
+	 * @generated
+	 */
+	Disk createDisk();
+
+	/**
+	 * Returns a new object of class '<em>Disk Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Disk Type</em>'.
+	 * @generated
+	 */
+	DiskType createDiskType();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Machine Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Machine Size</em>'.
+	 * @generated
+	 */
+	VirtualMachineSize createVirtualMachineSize();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Machine Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Machine Image</em>'.
+	 * @generated
+	 */
+	VirtualMachineImage createVirtualMachineImage();
+
+	/**
+	 * Returns a new object of class '<em>Virtual Machine Scale Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Virtual Machine Scale Set</em>'.
+	 * @generated
+	 */
+	VirtualMachineScaleSet createVirtualMachineScaleSet();
+
+	/**
+	 * Returns a new object of class '<em>Web App</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Web App</em>'.
+	 * @generated
+	 */
+	WebApp createWebApp();
+
+	/**
+	 * Returns a new object of class '<em>Container Instance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Container Instance</em>'.
+	 * @generated
+	 */
+	ContainerInstance createContainerInstance();
+
+	/**
+	 * Returns a new object of class '<em>Kubernetes Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kubernetes Service</em>'.
+	 * @generated
+	 */
+	KubernetesService createKubernetesService();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

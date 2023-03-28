@@ -85,6 +85,233 @@ public interface KubernetesPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.containers.kubernetes.impl.ClusterImpl <em>Cluster</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.containers.kubernetes.impl.ClusterImpl
+	 * @see org.nasdanika.architecture.containers.kubernetes.impl.KubernetesPackageImpl#getCluster()
+	 * @generated
+	 */
+	int CLUSTER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__MARKERS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__MARKERS;
+
+	/**
+	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__URIS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__URIS;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__DESCRIPTION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__UUID = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__UUID;
+
+	/**
+	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__ACTION_PROTOTYPE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+
+	/**
+	 * The feature id for the '<em><b>Representations</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__REPRESENTATIONS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__ANNOTATIONS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ANNOTATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__START = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__START;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__END = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__END;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__DURATION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DURATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__NAME = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__DOCUMENTATION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__ID = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__ACTION_ROLE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__VIEWS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__VIEWS;
+
+	/**
+	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__EVENTS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
+
+	/**
+	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__STAGES = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__STAGES;
+
+	/**
+	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__FACETS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__FACETS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__PROPERTIES = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__IMPACTED_BY = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Tags</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__TAGS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER__VIEW_ELEMENTS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Cluster</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER_FEATURE_COUNT = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cluster</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLUSTER_OPERATION_COUNT = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.containers.kubernetes.Workload <em>Workload</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,6 +320,16 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getWorkload();
+
+	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.containers.kubernetes.Cluster <em>Cluster</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cluster</em>'.
+	 * @see org.nasdanika.architecture.containers.kubernetes.Cluster
+	 * @generated
+	 */
+	EClass getCluster();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -126,6 +363,15 @@ public interface KubernetesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass WORKLOAD = eINSTANCE.getWorkload();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.containers.kubernetes.impl.ClusterImpl <em>Cluster</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.containers.kubernetes.impl.ClusterImpl
+		 * @see org.nasdanika.architecture.containers.kubernetes.impl.KubernetesPackageImpl#getCluster()
+		 * @generated
+		 */
+		EClass CLUSTER = eINSTANCE.getCluster();
 
 	}
 

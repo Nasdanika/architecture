@@ -5,11 +5,14 @@ package org.nasdanika.architecture.containers.docker.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.architecture.containers.docker.DockerFactory;
 import org.nasdanika.architecture.containers.docker.DockerPackage;
 import org.nasdanika.architecture.containers.docker.Image;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +27,19 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 	 * @generated
 	 */
 	private EClass imageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass containerEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass registryEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -71,6 +87,10 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		CorePackage.eINSTANCE.eClass();
+		NcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theDockerPackage.createPackageContents();
 
@@ -93,6 +113,86 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 	@Override
 	public EClass getImage() {
 		return imageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImage_From() {
+		return (EReference)imageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImage_Children() {
+		return (EReference)imageEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImage_Containers() {
+		return (EReference)imageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getImage_Registries() {
+		return (EReference)imageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getContainer() {
+		return containerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getContainer_Image() {
+		return (EReference)containerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRegistry() {
+		return registryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRegistry_Images() {
+		return (EReference)registryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -125,6 +225,16 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 
 		// Create classes and their features
 		imageEClass = createEClass(IMAGE);
+		createEReference(imageEClass, IMAGE__FROM);
+		createEReference(imageEClass, IMAGE__CHILDREN);
+		createEReference(imageEClass, IMAGE__CONTAINERS);
+		createEReference(imageEClass, IMAGE__REGISTRIES);
+
+		containerEClass = createEClass(CONTAINER);
+		createEReference(containerEClass, CONTAINER__IMAGE);
+
+		registryEClass = createEClass(REGISTRY);
+		createEReference(registryEClass, REGISTRY__IMAGES);
 	}
 
 	/**
@@ -150,14 +260,30 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		imageEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
+		containerEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
+		registryEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImage_From(), this.getImage(), null, "from", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImage_Children(), this.getImage(), null, "children", null, 0, -1, Image.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getImage_Containers(), this.getContainer(), null, "containers", null, 0, -1, Image.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getImage_Registries(), this.getRegistry(), null, "registries", null, 0, -1, Image.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(containerEClass, org.nasdanika.architecture.containers.docker.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContainer_Image(), this.getImage(), null, "image", null, 0, 1, org.nasdanika.architecture.containers.docker.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(registryEClass, org.nasdanika.architecture.containers.docker.Registry.class, "Registry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRegistry_Images(), this.getImage(), null, "images", null, 0, -1, org.nasdanika.architecture.containers.docker.Registry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -165,6 +291,8 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 		// Create annotations
 		// urn:org.nasdanika
 		createUrnorgAnnotations();
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
 	}
 
 	/**
@@ -180,6 +308,52 @@ public class DockerPackageImpl extends EPackageImpl implements DockerPackage {
 		   source,
 		   new String[] {
 			   "documentation-reference", "doc/package-summary.md"
+		   });
+		addAnnotation
+		  (getImage_From(),
+		   source,
+		   new String[] {
+			   "opposite", "children"
+		   });
+		addAnnotation
+		  (getContainer_Image(),
+		   source,
+		   new String[] {
+			   "opposite", "containers"
+		   });
+		addAnnotation
+		  (getRegistry_Images(),
+		   source,
+		   new String[] {
+			   "opposite", "registries"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (getImage_Children(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to from - images for which this image is the parent, i.e. it is referenced in the FROM clause."
+		   });
+		addAnnotation
+		  (getImage_Containers(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to Container.image"
+		   });
+		addAnnotation
+		  (getImage_Registries(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to Registry.images - registries to which this image is published"
 		   });
 	}
 

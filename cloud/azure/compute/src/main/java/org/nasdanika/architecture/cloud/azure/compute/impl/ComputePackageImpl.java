@@ -2,14 +2,29 @@
  */
 package org.nasdanika.architecture.cloud.azure.compute.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.nasdanika.architecture.cloud.azure.compute.ComputeFactory;
 import org.nasdanika.architecture.cloud.azure.compute.ComputePackage;
+import org.nasdanika.architecture.cloud.azure.compute.ContainerInstance;
+import org.nasdanika.architecture.cloud.azure.compute.Disk;
+import org.nasdanika.architecture.cloud.azure.compute.DiskType;
+import org.nasdanika.architecture.cloud.azure.compute.KubernetesService;
 import org.nasdanika.architecture.cloud.azure.compute.VirtualMachine;
+import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineImage;
+import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineScaleSet;
+import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineSize;
+import org.nasdanika.architecture.cloud.azure.compute.WebApp;
+import org.nasdanika.architecture.cloud.azure.core.CorePackage;
+import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
+import org.nasdanika.architecture.containers.docker.DockerPackage;
+import org.nasdanika.architecture.containers.kubernetes.KubernetesPackage;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +39,59 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 	 * @generated
 	 */
 	private EClass virtualMachineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass diskEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass diskTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMachineSizeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMachineImageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass virtualMachineScaleSetEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass webAppEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass containerInstanceEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass kubernetesServiceEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -71,6 +139,14 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		CorePackage.eINSTANCE.eClass();
+		org.nasdanika.architecture.core.CorePackage.eINSTANCE.eClass();
+		DockerPackage.eINSTANCE.eClass();
+		KubernetesPackage.eINSTANCE.eClass();
+		NcorePackage.eINSTANCE.eClass();
+		NetworkingPackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theComputePackage.createPackageContents();
 
@@ -93,6 +169,176 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 	@Override
 	public EClass getVirtualMachine() {
 		return virtualMachineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachine_Disks() {
+		return (EReference)virtualMachineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachine_NetworkInterfaces() {
+		return (EReference)virtualMachineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachine_Image() {
+		return (EReference)virtualMachineEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachine_Size() {
+		return (EReference)virtualMachineEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDisk() {
+		return diskEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDisk_Type() {
+		return (EReference)diskEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDisk_Size() {
+		return (EAttribute)diskEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDiskType() {
+		return diskTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDiskType_Disks() {
+		return (EReference)diskTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMachineSize() {
+		return virtualMachineSizeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachineSize_VirtualMachines() {
+		return (EReference)virtualMachineSizeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMachineImage() {
+		return virtualMachineImageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVirtualMachineImage_VirtualMachines() {
+		return (EReference)virtualMachineImageEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVirtualMachineScaleSet() {
+		return virtualMachineScaleSetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getWebApp() {
+		return webAppEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getContainerInstance() {
+		return containerInstanceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getKubernetesService() {
+		return kubernetesServiceEClass;
 	}
 
 	/**
@@ -125,6 +371,31 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 
 		// Create classes and their features
 		virtualMachineEClass = createEClass(VIRTUAL_MACHINE);
+		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__DISKS);
+		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__NETWORK_INTERFACES);
+		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__IMAGE);
+		createEReference(virtualMachineEClass, VIRTUAL_MACHINE__SIZE);
+
+		diskEClass = createEClass(DISK);
+		createEReference(diskEClass, DISK__TYPE);
+		createEAttribute(diskEClass, DISK__SIZE);
+
+		diskTypeEClass = createEClass(DISK_TYPE);
+		createEReference(diskTypeEClass, DISK_TYPE__DISKS);
+
+		virtualMachineSizeEClass = createEClass(VIRTUAL_MACHINE_SIZE);
+		createEReference(virtualMachineSizeEClass, VIRTUAL_MACHINE_SIZE__VIRTUAL_MACHINES);
+
+		virtualMachineImageEClass = createEClass(VIRTUAL_MACHINE_IMAGE);
+		createEReference(virtualMachineImageEClass, VIRTUAL_MACHINE_IMAGE__VIRTUAL_MACHINES);
+
+		virtualMachineScaleSetEClass = createEClass(VIRTUAL_MACHINE_SCALE_SET);
+
+		webAppEClass = createEClass(WEB_APP);
+
+		containerInstanceEClass = createEClass(CONTAINER_INSTANCE);
+
+		kubernetesServiceEClass = createEClass(KUBERNETES_SERVICE);
 	}
 
 	/**
@@ -150,14 +421,56 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+		NetworkingPackage theNetworkingPackage = (NetworkingPackage)EPackage.Registry.INSTANCE.getEPackage(NetworkingPackage.eNS_URI);
+		DockerPackage theDockerPackage = (DockerPackage)EPackage.Registry.INSTANCE.getEPackage(DockerPackage.eNS_URI);
+		KubernetesPackage theKubernetesPackage = (KubernetesPackage)EPackage.Registry.INSTANCE.getEPackage(KubernetesPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		virtualMachineEClass.getESuperTypes().add(theCorePackage.getResource());
+		diskEClass.getESuperTypes().add(theCorePackage.getResource());
+		diskTypeEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		virtualMachineSizeEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		virtualMachineImageEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		virtualMachineScaleSetEClass.getESuperTypes().add(this.getVirtualMachine());
+		webAppEClass.getESuperTypes().add(theCorePackage.getResource());
+		containerInstanceEClass.getESuperTypes().add(theNetworkingPackage.getSubnetResource());
+		containerInstanceEClass.getESuperTypes().add(theDockerPackage.getContainer());
+		kubernetesServiceEClass.getESuperTypes().add(theNetworkingPackage.getVirtualNetworkResource());
+		kubernetesServiceEClass.getESuperTypes().add(theKubernetesPackage.getCluster());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(virtualMachineEClass, VirtualMachine.class, "VirtualMachine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMachine_Disks(), this.getDisk(), null, "disks", null, 0, -1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVirtualMachine_NetworkInterfaces(), theNetworkingPackage.getNetworkInterface(), null, "networkInterfaces", null, 0, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVirtualMachine_Image(), this.getVirtualMachineImage(), null, "image", null, 0, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVirtualMachine_Size(), this.getVirtualMachineSize(), null, "size", null, 0, 1, VirtualMachine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(diskEClass, Disk.class, "Disk", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDisk_Type(), this.getDiskType(), null, "type", null, 0, 1, Disk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDisk_Size(), ecorePackage.getEInt(), "size", null, 0, 1, Disk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(diskTypeEClass, DiskType.class, "DiskType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDiskType_Disks(), this.getDisk(), null, "disks", null, 0, -1, DiskType.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(virtualMachineSizeEClass, VirtualMachineSize.class, "VirtualMachineSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMachineSize_VirtualMachines(), this.getVirtualMachine(), null, "virtualMachines", null, 0, -1, VirtualMachineSize.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(virtualMachineImageEClass, VirtualMachineImage.class, "VirtualMachineImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVirtualMachineImage_VirtualMachines(), this.getVirtualMachine(), null, "virtualMachines", null, 0, -1, VirtualMachineImage.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(virtualMachineScaleSetEClass, VirtualMachineScaleSet.class, "VirtualMachineScaleSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(webAppEClass, WebApp.class, "WebApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(containerInstanceEClass, ContainerInstance.class, "ContainerInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(kubernetesServiceEClass, KubernetesService.class, "KubernetesService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -165,6 +478,8 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 		// Create annotations
 		// urn:org.nasdanika
 		createUrnorgAnnotations();
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
 	}
 
 	/**
@@ -182,6 +497,136 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 			   "documentation-reference", "doc/package-summary.md",
 			   "load-key", "azure-compute",
 			   "exports", "VirtualMachine:\n  - azure-vm\n  - azure-virtual-machine"
+		   });
+		addAnnotation
+		  (virtualMachineEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10021-icon-service-Virtual-Machine.svg",
+			   "label", "Virtual Machine",
+			   "documentation-reference", "doc/virtual-machine.md",
+			   "description", "An image service instance that provides on-demand and scalable computing resources with usage-based pricing"
+		   });
+		addAnnotation
+		  (getVirtualMachine_Image(),
+		   source,
+		   new String[] {
+			   "opposite", "virtualMachines"
+		   });
+		addAnnotation
+		  (getVirtualMachine_Size(),
+		   source,
+		   new String[] {
+			   "opposite", "virtualMachines"
+		   });
+		addAnnotation
+		  (diskEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10032-icon-service-Disks.svg",
+			   "documentation-reference", "doc/disk.md",
+			   "description", "A block-level storage volume managed by Azure and used with Azure Virtual Machines"
+		   });
+		addAnnotation
+		  (getDisk_Type(),
+		   source,
+		   new String[] {
+			   "opposite", "virtualMachines"
+		   });
+		addAnnotation
+		  (diskTypeEClass,
+		   source,
+		   new String[] {
+			   "label", "Disk Type",
+			   "documentation-reference", "doc/disk-type.md",
+			   "description", "Azure managed disks currently offers five disk types, each intended to address a specific customer scenario"
+		   });
+		addAnnotation
+		  (virtualMachineSizeEClass,
+		   source,
+		   new String[] {
+			   "label", "Virtual Machine Size",
+			   "documentation-reference", "doc/virtual-machine-size.md",
+			   "description", "Size of a virtual machine in terms of CPU and RAM"
+		   });
+		addAnnotation
+		  (virtualMachineImageEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10040-icon-service-VM-Images-(Classic).svg",
+			   "label", "Virtual Machine Image",
+			   "documentation-reference", "doc/virtual-machine-image.md",
+			   "description", "Initial contents of a VM disk used to initialize a VM"
+		   });
+		addAnnotation
+		  (virtualMachineScaleSetEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10034-icon-service-VM-Scale-Sets.svg",
+			   "label", "Virtual Machine Scale Set",
+			   "documentation-reference", "doc/virtual-machine-scale-set.md",
+			   "description", "Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs."
+		   });
+		addAnnotation
+		  (webAppEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10035-icon-service-App-Services.svg",
+			   "label", "Web App",
+			   "documentation-reference", "doc/web-app.md",
+			   "description", "App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform"
+		   });
+		addAnnotation
+		  (containerInstanceEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10104-icon-service-Container-Instances.svg",
+			   "label", "Container Instance",
+			   "documentation-reference", "doc/container-instance.md",
+			   "description", "Azure Container Instances (ACI) allows you to quickly and easily run containers on Azure without managing servers or having to learn new tools"
+		   });
+		addAnnotation
+		  (kubernetesServiceEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10023-icon-service-Kubernetes-Services.svg",
+			   "label", "Kubernetes Service",
+			   "documentation-reference", "doc/kubernetes-service.md",
+			   "description", "Azure Kubernetes Service (AKS) offers the quickest way to start developing and deploying cloud-native apps in Azure, datacenters, or at the edge with built-in code-to-cloud pipelines and guardrails"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation
+		  (getDisk_Size(),
+		   source,
+		   new String[] {
+			   "documentation", "Disk size in gigabytes"
+		   });
+		addAnnotation
+		  (getDiskType_Disks(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to Disk.type"
+		   });
+		addAnnotation
+		  (getVirtualMachineSize_VirtualMachines(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to VirtualMachine.size"
+		   });
+		addAnnotation
+		  (getVirtualMachineImage_VirtualMachines(),
+		   source,
+		   new String[] {
+			   "documentation", "Computed opposite to VirtualMachine.image"
 		   });
 	}
 

@@ -57,6 +57,7 @@ public class KubernetesFactoryImpl extends EFactoryImpl implements KubernetesFac
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case KubernetesPackage.WORKLOAD: return createWorkload();
+			case KubernetesPackage.CLUSTER: return createCluster();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +72,17 @@ public class KubernetesFactoryImpl extends EFactoryImpl implements KubernetesFac
 	public Workload createWorkload() {
 		WorkloadImpl workload = new WorkloadImpl();
 		return workload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Cluster createCluster() {
+		ClusterImpl cluster = new ClusterImpl();
+		return cluster;
 	}
 
 	/**

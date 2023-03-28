@@ -57,6 +57,8 @@ public class DockerFactoryImpl extends EFactoryImpl implements DockerFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case DockerPackage.IMAGE: return createImage();
+			case DockerPackage.CONTAINER: return createContainer();
+			case DockerPackage.REGISTRY: return createRegistry();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +73,28 @@ public class DockerFactoryImpl extends EFactoryImpl implements DockerFactory {
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public org.nasdanika.architecture.containers.docker.Container createContainer() {
+		ContainerImpl container = new ContainerImpl();
+		return container;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Registry createRegistry() {
+		RegistryImpl registry = new RegistryImpl();
+		return registry;
 	}
 
 	/**

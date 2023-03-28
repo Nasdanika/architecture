@@ -57,6 +57,8 @@ public class NetworkingFactoryImpl extends EFactoryImpl implements NetworkingFac
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case NetworkingPackage.VIRTUAL_NETWORK: return createVirtualNetwork();
+			case NetworkingPackage.SUBNET: return createSubnet();
+			case NetworkingPackage.NETWORK_INTERFACE: return createNetworkInterface();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +73,28 @@ public class NetworkingFactoryImpl extends EFactoryImpl implements NetworkingFac
 	public VirtualNetwork createVirtualNetwork() {
 		VirtualNetworkImpl virtualNetwork = new VirtualNetworkImpl();
 		return virtualNetwork;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Subnet createSubnet() {
+		SubnetImpl subnet = new SubnetImpl();
+		return subnet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NetworkInterface createNetworkInterface() {
+		NetworkInterfaceImpl networkInterface = new NetworkInterfaceImpl();
+		return networkInterface;
 	}
 
 	/**

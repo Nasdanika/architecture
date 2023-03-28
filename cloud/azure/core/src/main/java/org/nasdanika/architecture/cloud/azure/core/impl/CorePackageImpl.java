@@ -269,6 +269,16 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getResource_ResourceTags() {
+		return (EReference)resourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getGenericResource() {
 		return genericResourceEClass;
 	}
@@ -377,6 +387,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		resourceEClass = createEClass(RESOURCE);
 		createEReference(resourceEClass, RESOURCE__LOCATIONS);
+		createEReference(resourceEClass, RESOURCE__RESOURCE_TAGS);
 
 		genericResourceEClass = createEClass(GENERIC_RESOURCE);
 		createEAttribute(genericResourceEClass, GENERIC_RESOURCE__KIND);
@@ -416,6 +427,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		// Obtain other dependent packages
 		org.nasdanika.architecture.core.CorePackage theCorePackage_1 = (org.nasdanika.architecture.core.CorePackage)EPackage.Registry.INSTANCE.getEPackage(org.nasdanika.architecture.core.CorePackage.eNS_URI);
+		NcorePackage theNcorePackage = (NcorePackage)EPackage.Registry.INSTANCE.getEPackage(NcorePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -453,6 +465,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(resourceEClass, Resource.class, "Resource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResource_Locations(), this.getLocation(), null, "locations", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_ResourceTags(), theNcorePackage.getStringProperty(), null, "resourceTags", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		getResource_ResourceTags().getEKeys().add(theNcorePackage.getProperty_Name());
 
 		initEClass(genericResourceEClass, GenericResource.class, "GenericResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGenericResource_Kind(), ecorePackage.getEString(), "kind", null, 0, 1, GenericResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -508,7 +522,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   new String[] {
 			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10002-icon-service-Subscriptions.svg",
 			   "documentation-reference", "doc/subscription.md",
-			   "description", "An Azure subscription is a logical container used to provision related resources"
+			   "description", "A logical container used to provision related resources"
 		   });
 		addAnnotation
 		  (resourceGroupEClass,
@@ -517,13 +531,13 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10007-icon-service-Resource-Groups.svg",
 			   "label", "Resource Group",
 			   "documentation-reference", "doc/resource-group.md",
-			   "description", "A resource group is a container that holds related resources for an Azure solution"
+			   "description", "A container that holds related resources for an Azure solution"
 		   });
 		addAnnotation
 		  (resourceEClass,
 		   source,
 		   new String[] {
-			   "description", "A resource is an entity managed by Azure"
+			   "description", "An entity managed by Azure"
 		   });
 		addAnnotation
 		  (genericResourceEClass,
@@ -567,7 +581,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		  (resourceEClass,
 		   source,
 		   new String[] {
-			   "documentation", "A resource is an entity managed by Azure."
+			   "documentation", "A resource is an entity managed by Azure"
 		   });
 		addAnnotation
 		  (getResource_Locations(),

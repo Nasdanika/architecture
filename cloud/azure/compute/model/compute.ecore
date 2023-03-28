@@ -7,5 +7,117 @@
     <details key="load-key" value="azure-compute"/>
     <details key="exports" value="VirtualMachine:&#xA;  - azure-vm&#xA;  - azure-virtual-machine"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachine"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachine" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10021-icon-service-Virtual-Machine.svg"/>
+      <details key="label" value="Virtual Machine"/>
+      <details key="documentation-reference" value="doc/virtual-machine.md"/>
+      <details key="description" value="An image service instance that provides on-demand and scalable computing resources with usage-based pricing"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disks" upperBound="-1"
+        eType="#//Disk" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networkInterfaces" eType="ecore:EClass ../../org.nasdanika.architecture.cloud.azure.networking/model/networking.ecore#//NetworkInterface"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//VirtualMachineImage">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="virtualMachines"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="size" eType="#//VirtualMachineSize">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="virtualMachines"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Disk" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10032-icon-service-Disks.svg"/>
+      <details key="documentation-reference" value="doc/disk.md"/>
+      <details key="description" value="A block-level storage volume managed by Azure and used with Azure Virtual Machines"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//DiskType">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="virtualMachines"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Disk size in gigabytes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiskType" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="label" value="Disk Type"/>
+      <details key="documentation-reference" value="doc/disk-type.md"/>
+      <details key="description" value="Azure managed disks currently offers five disk types, each intended to address a specific customer scenario"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="disks" upperBound="-1"
+        eType="#//Disk" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to Disk.type"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachineSize" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="label" value="Virtual Machine Size"/>
+      <details key="documentation-reference" value="doc/virtual-machine-size.md"/>
+      <details key="description" value="Size of a virtual machine in terms of CPU and RAM"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualMachines" upperBound="-1"
+        eType="#//VirtualMachine" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to VirtualMachine.size"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachineImage" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10040-icon-service-VM-Images-(Classic).svg"/>
+      <details key="label" value="Virtual Machine Image"/>
+      <details key="documentation-reference" value="doc/virtual-machine-image.md"/>
+      <details key="description" value="Initial contents of a VM disk used to initialize a VM"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualMachines" upperBound="-1"
+        eType="#//VirtualMachine" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to VirtualMachine.image"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualMachineScaleSet" eSuperTypes="#//VirtualMachine">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10034-icon-service-VM-Scale-Sets.svg"/>
+      <details key="label" value="Virtual Machine Scale Set"/>
+      <details key="documentation-reference" value="doc/virtual-machine-scale-set.md"/>
+      <details key="description" value="Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebApp" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10035-icon-service-App-Services.svg"/>
+      <details key="label" value="Web App"/>
+      <details key="documentation-reference" value="doc/web-app.md"/>
+      <details key="description" value="App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerInstance" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.networking/model/networking.ecore#//SubnetResource ../../org.nasdanika.architecture.containers.docker/model/docker.ecore#//Container">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10104-icon-service-Container-Instances.svg"/>
+      <details key="label" value="Container Instance"/>
+      <details key="documentation-reference" value="doc/container-instance.md"/>
+      <details key="description" value="Azure Container Instances (ACI) allows you to quickly and easily run containers on Azure without managing servers or having to learn new tools"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KubernetesService" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.networking/model/networking.ecore#//VirtualNetworkResource ../../org.nasdanika.architecture.containers.kubernetes/model/kubernetes.ecore#//Cluster">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10023-icon-service-Kubernetes-Services.svg"/>
+      <details key="label" value="Kubernetes Service"/>
+      <details key="documentation-reference" value="doc/kubernetes-service.md"/>
+      <details key="description" value="Azure Kubernetes Service (AKS) offers the quickest way to start developing and deploying cloud-native apps in Azure, datacenters, or at the edge with built-in code-to-cloud pipelines and guardrails"/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>

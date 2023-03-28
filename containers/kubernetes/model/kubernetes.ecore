@@ -6,4 +6,5 @@
     <details key="documentation-reference" value="doc/package-summary.md"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Workload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement"/>
 </ecore:EPackage>

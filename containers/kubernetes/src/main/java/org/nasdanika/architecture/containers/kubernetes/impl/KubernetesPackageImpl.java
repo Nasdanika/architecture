@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.nasdanika.architecture.containers.kubernetes.Cluster;
 import org.nasdanika.architecture.containers.kubernetes.KubernetesFactory;
 import org.nasdanika.architecture.containers.kubernetes.KubernetesPackage;
 import org.nasdanika.architecture.containers.kubernetes.Workload;
@@ -24,6 +25,13 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 	 * @generated
 	 */
 	private EClass workloadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass clusterEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -71,6 +79,10 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		org.nasdanika.architecture.core.CorePackage.eINSTANCE.eClass();
+		org.nasdanika.ncore.NcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theKubernetesPackage.createPackageContents();
 
@@ -93,6 +105,16 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 	@Override
 	public EClass getWorkload() {
 		return workloadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCluster() {
+		return clusterEClass;
 	}
 
 	/**
@@ -125,6 +147,8 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 
 		// Create classes and their features
 		workloadEClass = createEClass(WORKLOAD);
+
+		clusterEClass = createEClass(CLUSTER);
 	}
 
 	/**
@@ -150,14 +174,20 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		org.nasdanika.architecture.core.CorePackage theCorePackage = (org.nasdanika.architecture.core.CorePackage)EPackage.Registry.INSTANCE.getEPackage(org.nasdanika.architecture.core.CorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		clusterEClass.getESuperTypes().add(theCorePackage.getArchitectureElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(workloadEClass, Workload.class, "Workload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(clusterEClass, Cluster.class, "Cluster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -6,5 +6,46 @@
     <details key="documentation-reference" value="doc/package-summary.md"/>
     <details key="load-key" value="azure-networking"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="VirtualNetwork"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualNetwork" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subnets" upperBound="-1"
+        eType="#//Subnet" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+        eType="#//VirtualNetworkResource" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resources connected to this Virtual Network. Computed opposite to VirtualNetworkResource.virtualNetwork"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VirtualNetworkResource" abstract="true"
+      eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class for resources connected to a Virtual Network"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="virtualNetwork" eType="#//VirtualNetworkResource">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="resources"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subnet" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+        eType="#//SubnetResource" changeable="false" volatile="true" transient="true"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resources connected to this subnet. Computed opposite to SubnetResource.subnet."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubnetResource" abstract="true" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Base class for resources connected to a Subnet"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subnet" eType="#//Subnet">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="resources"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkInterface" eSuperTypes="#//SubnetResource"/>
 </ecore:EPackage>

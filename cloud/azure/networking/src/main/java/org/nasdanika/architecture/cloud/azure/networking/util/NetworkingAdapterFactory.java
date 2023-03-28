@@ -9,7 +9,16 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.nasdanika.architecture.cloud.azure.core.AzureElement;
+import org.nasdanika.architecture.cloud.azure.core.Resource;
 import org.nasdanika.architecture.cloud.azure.networking.*;
+import org.nasdanika.architecture.core.ArchitectureElement;
+import org.nasdanika.common.Adaptable;
+import org.nasdanika.ncore.Documented;
+import org.nasdanika.ncore.ModelElement;
+import org.nasdanika.ncore.NamedElement;
+import org.nasdanika.ncore.Period;
+import org.nasdanika.persistence.Marked;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,6 +81,66 @@ public class NetworkingAdapterFactory extends AdapterFactoryImpl {
 				return createVirtualNetworkAdapter();
 			}
 			@Override
+			public Adapter caseVirtualNetworkResource(VirtualNetworkResource object) {
+				return createVirtualNetworkResourceAdapter();
+			}
+			@Override
+			public Adapter caseSubnet(Subnet object) {
+				return createSubnetAdapter();
+			}
+			@Override
+			public Adapter caseSubnetResource(SubnetResource object) {
+				return createSubnetResourceAdapter();
+			}
+			@Override
+			public Adapter caseNetworkInterface(NetworkInterface object) {
+				return createNetworkInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseIMarked(Marked object) {
+				return createIMarkedAdapter();
+			}
+			@Override
+			public Adapter caseMarked(org.nasdanika.ncore.Marked object) {
+				return createMarkedAdapter();
+			}
+			@Override
+			public Adapter caseAdaptable(Adaptable object) {
+				return createAdaptableAdapter();
+			}
+			@Override
+			public Adapter caseModelElement(ModelElement object) {
+				return createModelElementAdapter();
+			}
+			@Override
+			public Adapter casePeriod(Period object) {
+				return createPeriodAdapter();
+			}
+			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseDocumented(Documented object) {
+				return createDocumentedAdapter();
+			}
+			@Override
+			public Adapter caseCore_ModelElement(org.nasdanika.architecture.core.ModelElement object) {
+				return createCore_ModelElementAdapter();
+			}
+			@Override
+			public Adapter caseArchitectureElement(ArchitectureElement object) {
+				return createArchitectureElementAdapter();
+			}
+			@Override
+			public Adapter caseAzureElement(AzureElement object) {
+				return createAzureElementAdapter();
+			}
+			@Override
+			public Adapter caseResource(Resource object) {
+				return createResourceAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -102,6 +171,216 @@ public class NetworkingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVirtualNetworkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.VirtualNetworkResource <em>Virtual Network Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.VirtualNetworkResource
+	 * @generated
+	 */
+	public Adapter createVirtualNetworkResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.Subnet <em>Subnet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.Subnet
+	 * @generated
+	 */
+	public Adapter createSubnetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.SubnetResource <em>Subnet Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.SubnetResource
+	 * @generated
+	 */
+	public Adapter createSubnetResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.NetworkInterface <em>Network Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.NetworkInterface
+	 * @generated
+	 */
+	public Adapter createNetworkInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.persistence.Marked <em>IMarked</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.persistence.Marked
+	 * @generated
+	 */
+	public Adapter createIMarkedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.Marked <em>Marked</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.Marked
+	 * @generated
+	 */
+	public Adapter createMarkedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.common.Adaptable <em>Adaptable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.common.Adaptable
+	 * @generated
+	 */
+	public Adapter createAdaptableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.ModelElement <em>Model Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.ModelElement
+	 * @generated
+	 */
+	public Adapter createModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.Period <em>Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.Period
+	 * @generated
+	 */
+	public Adapter createPeriodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.NamedElement
+	 * @generated
+	 */
+	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.ncore.Documented <em>Documented</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.ncore.Documented
+	 * @generated
+	 */
+	public Adapter createDocumentedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.ModelElement <em>Model Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.ModelElement
+	 * @generated
+	 */
+	public Adapter createCore_ModelElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.core.ArchitectureElement <em>Architecture Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.core.ArchitectureElement
+	 * @generated
+	 */
+	public Adapter createArchitectureElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.core.AzureElement <em>Azure Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.core.AzureElement
+	 * @generated
+	 */
+	public Adapter createAzureElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.core.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.core.Resource
+	 * @generated
+	 */
+	public Adapter createResourceAdapter() {
 		return null;
 	}
 

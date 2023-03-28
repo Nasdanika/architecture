@@ -1433,13 +1433,22 @@ public interface CorePackage extends EPackage {
 	int RESOURCE__LOCATIONS = AZURE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Resource Tags</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__RESOURCE_TAGS = AZURE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = AZURE_ELEMENT_FEATURE_COUNT + 1;
+	int RESOURCE_FEATURE_COUNT = AZURE_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -1666,6 +1675,15 @@ public interface CorePackage extends EPackage {
 	 * @ordered
 	 */
 	int GENERIC_RESOURCE__LOCATIONS = RESOURCE__LOCATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Tags</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_RESOURCE__RESOURCE_TAGS = RESOURCE__RESOURCE_TAGS;
 
 	/**
 	 * The feature id for the '<em><b>Kind</b></em>' attribute.
@@ -2713,6 +2731,17 @@ public interface CorePackage extends EPackage {
 	EReference getResource_Locations();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.architecture.cloud.azure.core.Resource#getResourceTags <em>Resource Tags</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Resource Tags</em>'.
+	 * @see org.nasdanika.architecture.cloud.azure.core.Resource#getResourceTags()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_ResourceTags();
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.core.GenericResource <em>Generic Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2889,6 +2918,13 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESOURCE__LOCATIONS = eINSTANCE.getResource_Locations();
+		/**
+		 * The meta object literal for the '<em><b>Resource Tags</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__RESOURCE_TAGS = eINSTANCE.getResource_ResourceTags();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.cloud.azure.core.impl.GenericResourceImpl <em>Generic Resource</em>}' class.
 		 * <!-- begin-user-doc -->

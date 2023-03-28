@@ -31,6 +31,24 @@ public interface DockerFactory extends EFactory {
 	Image createImage();
 
 	/**
+	 * Returns a new object of class '<em>Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Container</em>'.
+	 * @generated
+	 */
+	Container createContainer();
+
+	/**
+	 * Returns a new object of class '<em>Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Registry</em>'.
+	 * @generated
+	 */
+	Registry createRegistry();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

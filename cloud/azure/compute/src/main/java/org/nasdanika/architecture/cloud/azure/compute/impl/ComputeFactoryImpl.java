@@ -57,6 +57,14 @@ public class ComputeFactoryImpl extends EFactoryImpl implements ComputeFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ComputePackage.VIRTUAL_MACHINE: return createVirtualMachine();
+			case ComputePackage.DISK: return createDisk();
+			case ComputePackage.DISK_TYPE: return createDiskType();
+			case ComputePackage.VIRTUAL_MACHINE_SIZE: return createVirtualMachineSize();
+			case ComputePackage.VIRTUAL_MACHINE_IMAGE: return createVirtualMachineImage();
+			case ComputePackage.VIRTUAL_MACHINE_SCALE_SET: return createVirtualMachineScaleSet();
+			case ComputePackage.WEB_APP: return createWebApp();
+			case ComputePackage.CONTAINER_INSTANCE: return createContainerInstance();
+			case ComputePackage.KUBERNETES_SERVICE: return createKubernetesService();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,6 +79,94 @@ public class ComputeFactoryImpl extends EFactoryImpl implements ComputeFactory {
 	public VirtualMachine createVirtualMachine() {
 		VirtualMachineImpl virtualMachine = new VirtualMachineImpl();
 		return virtualMachine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Disk createDisk() {
+		DiskImpl disk = new DiskImpl();
+		return disk;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DiskType createDiskType() {
+		DiskTypeImpl diskType = new DiskTypeImpl();
+		return diskType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMachineSize createVirtualMachineSize() {
+		VirtualMachineSizeImpl virtualMachineSize = new VirtualMachineSizeImpl();
+		return virtualMachineSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMachineImage createVirtualMachineImage() {
+		VirtualMachineImageImpl virtualMachineImage = new VirtualMachineImageImpl();
+		return virtualMachineImage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public VirtualMachineScaleSet createVirtualMachineScaleSet() {
+		VirtualMachineScaleSetImpl virtualMachineScaleSet = new VirtualMachineScaleSetImpl();
+		return virtualMachineScaleSet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public WebApp createWebApp() {
+		WebAppImpl webApp = new WebAppImpl();
+		return webApp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ContainerInstance createContainerInstance() {
+		ContainerInstanceImpl containerInstance = new ContainerInstanceImpl();
+		return containerInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public KubernetesService createKubernetesService() {
+		KubernetesServiceImpl kubernetesService = new KubernetesServiceImpl();
+		return kubernetesService;
 	}
 
 	/**

@@ -31,6 +31,24 @@ public interface NetworkingFactory extends EFactory {
 	VirtualNetwork createVirtualNetwork();
 
 	/**
+	 * Returns a new object of class '<em>Subnet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subnet</em>'.
+	 * @generated
+	 */
+	Subnet createSubnet();
+
+	/**
+	 * Returns a new object of class '<em>Network Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Network Interface</em>'.
+	 * @generated
+	 */
+	NetworkInterface createNetworkInterface();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

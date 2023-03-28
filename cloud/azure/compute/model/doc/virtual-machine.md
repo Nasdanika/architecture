@@ -1,0 +1,5 @@
+[Azure Virtual Machines](https://azure.microsoft.com/en-us/products/virtual-machines) are image service instances that provide on-demand and scalable computing resources with usage-based pricing.
+
+More broadly, a virtual machine behaves like a server: It's a computer within a computer that provides the user the same experience they would have on the host operating system itself. In general, virtual machines are sandboxed from the rest of the system, meaning that the software inside a virtual machine can’t escape or tamper with the underlying server itself.
+
+Each virtual machine provides its own virtual hardware including CPUs, memory, [hard drives](VirtualMachineDisk.html), [network interfaces](${classifier/NetworkInterface@urn:org.nasdanika.architecture.cloud.azure.networking}), and other devices.

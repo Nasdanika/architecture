@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see org.nasdanika.architecture.cloud.azure.core.CorePackage#getResourceGroup()
- * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10007-icon-service-Resource-Groups.svg' label='Resource Group' documentation-reference='doc/resource-group.md' description='A resource group is a container that holds related resources for an Azure solution'"
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10007-icon-service-Resource-Groups.svg' label='Resource Group' documentation-reference='doc/resource-group.md' description='A container that holds related resources for an Azure solution'"
  * @generated
  */
 public interface ResourceGroup extends AzureElement {

@@ -1,0 +1,1 @@
+See [VM Sizes](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes).

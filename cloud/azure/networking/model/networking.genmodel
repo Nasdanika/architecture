@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/org.nasdanika.architecture.cloud.azure.networking/src/main/java"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.architecture.cloud.azure.networking/src/main/java"
     creationIcons="false" editorDirectory="" modelPluginID="org.nasdanika.architecture.cloud.azure.networking"
     modelName="Networking" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="11.0"
-    suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
-    importOrganizing="true">
+    suppressGenModelAnnotations="false" copyrightFields="false" usedGenPackages="../../org.nasdanika.architecture.cloud.azure.core/model/core.genmodel#//core ../../org.nasdanika.architecture.core/model/core.genmodel#//core ../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>networking.ecore</foreignModel>
   <genPackages prefix="Networking" basePackage="org.nasdanika.architecture.cloud.azure"
       disposableProviderFactory="true" ecorePackage="networking.ecore#/">
-    <genClasses ecoreClass="networking.ecore#//VirtualNetwork"/>
+    <genClasses ecoreClass="networking.ecore#//VirtualNetwork">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference networking.ecore#//VirtualNetwork/subnets"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference networking.ecore#//VirtualNetwork/resources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="networking.ecore#//VirtualNetworkResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference networking.ecore#//VirtualNetworkResource/virtualNetwork"/>
+    </genClasses>
+    <genClasses ecoreClass="networking.ecore#//Subnet">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference networking.ecore#//Subnet/resources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="networking.ecore#//SubnetResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference networking.ecore#//SubnetResource/subnet"/>
+    </genClasses>
+    <genClasses ecoreClass="networking.ecore#//NetworkInterface"/>
   </genPackages>
 </genmodel:GenModel>

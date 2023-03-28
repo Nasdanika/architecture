@@ -1,0 +1,2 @@
+[Azure Container Instances](https://azure.microsoft.com/en-us/products/container-instances) is a solution for any scenario that can operate in isolated [containers](${classifier/Container@urn:org.nasdanika.architecture.containers.docker}), without orchestration.
+Run event-driven applications, quickly deploy from your container development pipelines, and run data processing and build jobs.

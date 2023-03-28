@@ -5,5 +5,44 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Image"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Image">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="children"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Image" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to from - images for which this image is the parent, i.e. it is referenced in the FROM clause."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
+        eType="#//Container" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to Container.image"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="registries" upperBound="-1"
+        eType="#//Registry" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Computed opposite to Registry.images - registries to which this image is published"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="image" eType="#//Image">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="containers"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Registry" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1"
+        eType="#//Image">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="opposite" value="registries"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
 </ecore:EPackage>

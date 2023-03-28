@@ -60,7 +60,12 @@
 	<dependencies>	
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>networking</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nasdanika.architecture.containers</groupId>
+			<artifactId>kubernetes</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

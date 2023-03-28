@@ -28,7 +28,7 @@
     <eAnnotations source="urn:org.nasdanika">
       <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10002-icon-service-Subscriptions.svg"/>
       <details key="documentation-reference" value="doc/subscription.md"/>
-      <details key="description" value="An Azure subscription is a logical container used to provision related resources"/>
+      <details key="description" value="A logical container used to provision related resources"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroups" upperBound="-1"
         eType="#//ResourceGroup" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id"/>
@@ -38,17 +38,17 @@
       <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10007-icon-service-Resource-Groups.svg"/>
       <details key="label" value="Resource Group"/>
       <details key="documentation-reference" value="doc/resource-group.md"/>
-      <details key="description" value="A resource group is a container that holds related resources for an Azure solution"/>
+      <details key="description" value="A container that holds related resources for an Azure solution"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
         eType="#//Resource" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true" eSuperTypes="#//AzureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A resource is an entity managed by Azure."/>
+      <details key="documentation" value="A resource is an entity managed by Azure"/>
     </eAnnotations>
     <eAnnotations source="urn:org.nasdanika">
-      <details key="description" value="A resource is an entity managed by Azure"/>
+      <details key="description" value="An entity managed by Azure"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
         eType="#//Location">
@@ -56,6 +56,9 @@
         <details key="documentation" value="A resource can be associated with zero or more locations. E.g. a VM can be deployed to a region or a specific availability zone in a region. A kubernetes cluster can be deployed to several availability zones."/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceTags" upperBound="-1"
+        eType="ecore:EClass ../../org.nasdanika.ncore/model/ncore.ecore#//StringProperty"
+        containment="true" eKeys="../../org.nasdanika.ncore/model/ncore.ecore#//Property/name"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenericResource" abstract="true" eSuperTypes="#//Resource">
     <eAnnotations source="urn:org.nasdanika">

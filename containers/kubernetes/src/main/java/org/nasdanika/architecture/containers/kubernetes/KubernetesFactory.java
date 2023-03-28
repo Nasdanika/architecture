@@ -31,6 +31,15 @@ public interface KubernetesFactory extends EFactory {
 	Workload createWorkload();
 
 	/**
+	 * Returns a new object of class '<em>Cluster</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cluster</em>'.
+	 * @generated
+	 */
+	Cluster createCluster();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

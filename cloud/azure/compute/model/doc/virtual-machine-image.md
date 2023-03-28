@@ -1,0 +1,1 @@
+A VM image is an executable image file for a [Virtual Machine](VirtualMachine.html).

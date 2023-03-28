@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/org.nasdanika.architecture.cloud.azure.compute/src/main/java"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.architecture.cloud.azure.compute/src/main/java"
     creationIcons="false" editorDirectory="" modelPluginID="org.nasdanika.architecture.cloud.azure.compute"
     modelName="Compute" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="11.0"
-    suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
-    importOrganizing="true">
+    suppressGenModelAnnotations="false" copyrightFields="false" usedGenPackages="../../org.nasdanika.architecture.cloud.azure.core/model/core.genmodel#//core ../../org.nasdanika.architecture.core/model/core.genmodel#//core ../../org.nasdanika.architecture.containers.docker/model/docker.genmodel#//docker ../../org.nasdanika.architecture.containers.kubernetes/model/kubernetes.genmodel#//kubernetes ../../org.nasdanika.ncore/model/ncore.genmodel#//ncore ../../org.nasdanika.architecture.cloud.azure.networking/model/networking.genmodel#//networking"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>compute.ecore</foreignModel>
   <genPackages prefix="Compute" basePackage="org.nasdanika.architecture.cloud.azure"
       disposableProviderFactory="true" ecorePackage="compute.ecore#/">
-    <genClasses ecoreClass="compute.ecore#//VirtualMachine"/>
+    <genClasses ecoreClass="compute.ecore#//VirtualMachine">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachine/disks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachine/networkInterfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachine/image"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachine/size"/>
+    </genClasses>
+    <genClasses ecoreClass="compute.ecore#//Disk">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compute.ecore#//Disk/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compute.ecore#//Disk/size"/>
+    </genClasses>
+    <genClasses ecoreClass="compute.ecore#//DiskType">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference compute.ecore#//DiskType/disks"/>
+    </genClasses>
+    <genClasses ecoreClass="compute.ecore#//VirtualMachineSize">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachineSize/virtualMachines"/>
+    </genClasses>
+    <genClasses ecoreClass="compute.ecore#//VirtualMachineImage">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachineImage/virtualMachines"/>
+    </genClasses>
+    <genClasses ecoreClass="compute.ecore#//VirtualMachineScaleSet"/>
+    <genClasses ecoreClass="compute.ecore#//WebApp"/>
+    <genClasses ecoreClass="compute.ecore#//ContainerInstance"/>
+    <genClasses ecoreClass="compute.ecore#//KubernetesService"/>
   </genPackages>
 </genmodel:GenModel>

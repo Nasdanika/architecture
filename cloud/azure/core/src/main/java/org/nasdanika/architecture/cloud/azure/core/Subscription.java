@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see org.nasdanika.architecture.cloud.azure.core.CorePackage#getSubscription()
- * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10002-icon-service-Subscriptions.svg' documentation-reference='doc/subscription.md' description='An Azure subscription is a logical container used to provision related resources'"
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10002-icon-service-Subscriptions.svg' documentation-reference='doc/subscription.md' description='A logical container used to provision related resources'"
  * @generated
  */
 public interface Subscription extends ManagementGroupElement {

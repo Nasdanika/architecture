@@ -4,11 +4,12 @@
     creationIcons="false" editorDirectory="" modelPluginID="org.nasdanika.architecture.containers.kubernetes"
     modelName="Kubernetes" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="11.0"
-    suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
-    importOrganizing="true">
+    suppressGenModelAnnotations="false" copyrightFields="false" usedGenPackages="../../org.nasdanika.architecture.core/model/core.genmodel#//core ../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>kubernetes.ecore</foreignModel>
   <genPackages prefix="Kubernetes" basePackage="org.nasdanika.architecture.containers"
       disposableProviderFactory="true" ecorePackage="kubernetes.ecore#/">
     <genClasses ecoreClass="kubernetes.ecore#//Workload"/>
+    <genClasses ecoreClass="kubernetes.ecore#//Cluster"/>
   </genPackages>
 </genmodel:GenModel>
