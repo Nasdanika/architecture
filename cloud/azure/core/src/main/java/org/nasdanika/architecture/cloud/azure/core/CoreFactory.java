@@ -22,6 +22,24 @@ public interface CoreFactory extends EFactory {
 	CoreFactory eINSTANCE = org.nasdanika.architecture.cloud.azure.core.impl.CoreFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Azure Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Azure Element</em>'.
+	 * @generated
+	 */
+	AzureElement createAzureElement();
+
+	/**
+	 * Returns a new object of class '<em>Management Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Management Group</em>'.
+	 * @generated
+	 */
+	ManagementGroup createManagementGroup();
+
+	/**
 	 * Returns a new object of class '<em>Subscription</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -29,6 +47,42 @@ public interface CoreFactory extends EFactory {
 	 * @generated
 	 */
 	Subscription createSubscription();
+
+	/**
+	 * Returns a new object of class '<em>Resource Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource Group</em>'.
+	 * @generated
+	 */
+	ResourceGroup createResourceGroup();
+
+	/**
+	 * Returns a new object of class '<em>Region</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Region</em>'.
+	 * @generated
+	 */
+	Region createRegion();
+
+	/**
+	 * Returns a new object of class '<em>Availability Zone</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Availability Zone</em>'.
+	 * @generated
+	 */
+	AvailabilityZone createAvailabilityZone();
+
+	/**
+	 * Returns a new object of class '<em>Region Pair</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Region Pair</em>'.
+	 * @generated
+	 */
+	RegionPair createRegionPair();
 
 	/**
 	 * Returns the package supported by this factory.

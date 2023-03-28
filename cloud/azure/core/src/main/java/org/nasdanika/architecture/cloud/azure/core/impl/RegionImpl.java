@@ -3,36 +3,40 @@
 package org.nasdanika.architecture.cloud.azure.core.impl;
 
 import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.nasdanika.architecture.cloud.azure.core.AvailabilityZone;
 import org.nasdanika.architecture.cloud.azure.core.CorePackage;
-import org.nasdanika.architecture.cloud.azure.core.ResourceGroup;
-import org.nasdanika.architecture.cloud.azure.core.Subscription;
+import org.nasdanika.architecture.cloud.azure.core.Region;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Subscription</b></em>'.
+ * An implementation of the model object '<em><b>Region</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.nasdanika.architecture.cloud.azure.core.impl.SubscriptionImpl#getResourceGroups <em>Resource Groups</em>}</li>
+ *   <li>{@link org.nasdanika.architecture.cloud.azure.core.impl.RegionImpl#getAvailabilityZones <em>Availability Zones</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SubscriptionImpl extends ManagementGroupElementImpl implements Subscription {
+public class RegionImpl extends LocationImpl implements Region {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubscriptionImpl() {
+	protected RegionImpl() {
 		super();
 	}
 
@@ -43,7 +47,7 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CorePackage.Literals.SUBSCRIPTION;
+		return CorePackage.Literals.REGION;
 	}
 
 	/**
@@ -53,8 +57,8 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public EList<ResourceGroup> getResourceGroups() {
-		return (EList<ResourceGroup>)eDynamicGet(CorePackage.SUBSCRIPTION__RESOURCE_GROUPS, CorePackage.Literals.SUBSCRIPTION__RESOURCE_GROUPS, true, true);
+	public EList<AvailabilityZone> getAvailabilityZones() {
+		return (EList<AvailabilityZone>)eDynamicGet(CorePackage.REGION__AVAILABILITY_ZONES, CorePackage.Literals.REGION__AVAILABILITY_ZONES, true, true);
 	}
 
 	/**
@@ -65,8 +69,8 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CorePackage.SUBSCRIPTION__RESOURCE_GROUPS:
-				return ((InternalEList<?>)getResourceGroups()).basicRemove(otherEnd, msgs);
+			case CorePackage.REGION__AVAILABILITY_ZONES:
+				return ((InternalEList<?>)getAvailabilityZones()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -79,8 +83,8 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CorePackage.SUBSCRIPTION__RESOURCE_GROUPS:
-				return getResourceGroups();
+			case CorePackage.REGION__AVAILABILITY_ZONES:
+				return getAvailabilityZones();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -94,9 +98,9 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CorePackage.SUBSCRIPTION__RESOURCE_GROUPS:
-				getResourceGroups().clear();
-				getResourceGroups().addAll((Collection<? extends ResourceGroup>)newValue);
+			case CorePackage.REGION__AVAILABILITY_ZONES:
+				getAvailabilityZones().clear();
+				getAvailabilityZones().addAll((Collection<? extends AvailabilityZone>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -110,8 +114,8 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CorePackage.SUBSCRIPTION__RESOURCE_GROUPS:
-				getResourceGroups().clear();
+			case CorePackage.REGION__AVAILABILITY_ZONES:
+				getAvailabilityZones().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -125,10 +129,10 @@ public class SubscriptionImpl extends ManagementGroupElementImpl implements Subs
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CorePackage.SUBSCRIPTION__RESOURCE_GROUPS:
-				return !getResourceGroups().isEmpty();
+			case CorePackage.REGION__AVAILABILITY_ZONES:
+				return !getAvailabilityZones().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //SubscriptionImpl
+} //RegionImpl
