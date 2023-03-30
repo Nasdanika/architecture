@@ -4,25 +4,25 @@ package org.nasdanika.architecture.cloud.azure.compute.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.nasdanika.architecture.cloud.azure.compute.AppService;
 import org.nasdanika.architecture.cloud.azure.compute.ComputePackage;
-import org.nasdanika.architecture.cloud.azure.compute.WebApp;
 
 import org.nasdanika.architecture.cloud.azure.core.impl.ResourceImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Web App</b></em>'.
+ * An implementation of the model object '<em><b>App Service</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class WebAppImpl extends ResourceImpl implements WebApp {
+public class AppServiceImpl extends ResourceImpl implements AppService {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WebAppImpl() {
+	protected AppServiceImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class WebAppImpl extends ResourceImpl implements WebApp {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComputePackage.Literals.WEB_APP;
+		return ComputePackage.Literals.APP_SERVICE;
 	}
 
-} //WebAppImpl
+} //AppServiceImpl

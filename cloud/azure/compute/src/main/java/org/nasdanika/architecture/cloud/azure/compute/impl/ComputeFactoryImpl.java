@@ -62,7 +62,7 @@ public class ComputeFactoryImpl extends EFactoryImpl implements ComputeFactory {
 			case ComputePackage.VIRTUAL_MACHINE_SIZE: return createVirtualMachineSize();
 			case ComputePackage.VIRTUAL_MACHINE_IMAGE: return createVirtualMachineImage();
 			case ComputePackage.VIRTUAL_MACHINE_SCALE_SET: return createVirtualMachineScaleSet();
-			case ComputePackage.WEB_APP: return createWebApp();
+			case ComputePackage.APP_SERVICE: return createAppService();
 			case ComputePackage.CONTAINER_INSTANCE: return createContainerInstance();
 			case ComputePackage.KUBERNETES_SERVICE: return createKubernetesService();
 			default:
@@ -142,9 +142,9 @@ public class ComputeFactoryImpl extends EFactoryImpl implements ComputeFactory {
 	 * @generated
 	 */
 	@Override
-	public WebApp createWebApp() {
-		WebAppImpl webApp = new WebAppImpl();
-		return webApp;
+	public AppService createAppService() {
+		AppServiceImpl appService = new AppServiceImpl();
+		return appService;
 	}
 
 	/**

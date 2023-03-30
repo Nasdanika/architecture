@@ -105,8 +105,8 @@ public class ComputeAdapterFactory extends AdapterFactoryImpl {
 				return createVirtualMachineScaleSetAdapter();
 			}
 			@Override
-			public Adapter caseWebApp(WebApp object) {
-				return createWebAppAdapter();
+			public Adapter caseAppService(AppService object) {
+				return createAppServiceAdapter();
 			}
 			@Override
 			public Adapter caseContainerInstance(ContainerInstance object) {
@@ -281,16 +281,16 @@ public class ComputeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.compute.WebApp <em>Web App</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.compute.AppService <em>App Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.nasdanika.architecture.cloud.azure.compute.WebApp
+	 * @see org.nasdanika.architecture.cloud.azure.compute.AppService
 	 * @generated
 	 */
-	public Adapter createWebAppAdapter() {
+	public Adapter createAppServiceAdapter() {
 		return null;
 	}
 

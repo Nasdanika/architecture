@@ -76,13 +76,13 @@ public interface ComputeFactory extends EFactory {
 	VirtualMachineScaleSet createVirtualMachineScaleSet();
 
 	/**
-	 * Returns a new object of class '<em>Web App</em>'.
+	 * Returns a new object of class '<em>App Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Web App</em>'.
+	 * @return a new object of class '<em>App Service</em>'.
 	 * @generated
 	 */
-	WebApp createWebApp();
+	AppService createAppService();
 
 	/**
 	 * Returns a new object of class '<em>Container Instance</em>'.

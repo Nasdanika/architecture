@@ -29,7 +29,7 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference compute.ecore#//VirtualMachineImage/virtualMachines"/>
     </genClasses>
     <genClasses ecoreClass="compute.ecore#//VirtualMachineScaleSet"/>
-    <genClasses ecoreClass="compute.ecore#//WebApp"/>
+    <genClasses ecoreClass="compute.ecore#//AppService"/>
     <genClasses ecoreClass="compute.ecore#//ContainerInstance"/>
     <genClasses ecoreClass="compute.ecore#//KubernetesService"/>
   </genPackages>

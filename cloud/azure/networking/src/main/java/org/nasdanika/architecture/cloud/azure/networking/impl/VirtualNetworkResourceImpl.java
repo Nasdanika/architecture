@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.nasdanika.architecture.cloud.azure.core.impl.ResourceImpl;
 
 import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
+import org.nasdanika.architecture.cloud.azure.networking.VirtualNetwork;
 import org.nasdanika.architecture.cloud.azure.networking.VirtualNetworkResource;
 
 /**
@@ -48,8 +49,8 @@ public abstract class VirtualNetworkResourceImpl extends ResourceImpl implements
 	 * @generated
 	 */
 	@Override
-	public VirtualNetworkResource getVirtualNetwork() {
-		return (VirtualNetworkResource)eDynamicGet(NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, NetworkingPackage.Literals.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, true, true);
+	public VirtualNetwork getVirtualNetwork() {
+		return (VirtualNetwork)eDynamicGet(NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, NetworkingPackage.Literals.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, true, true);
 	}
 
 	/**
@@ -57,8 +58,8 @@ public abstract class VirtualNetworkResourceImpl extends ResourceImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VirtualNetworkResource basicGetVirtualNetwork() {
-		return (VirtualNetworkResource)eDynamicGet(NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, NetworkingPackage.Literals.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, false, true);
+	public VirtualNetwork basicGetVirtualNetwork() {
+		return (VirtualNetwork)eDynamicGet(NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, NetworkingPackage.Literals.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, false, true);
 	}
 
 	/**
@@ -67,7 +68,7 @@ public abstract class VirtualNetworkResourceImpl extends ResourceImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setVirtualNetwork(VirtualNetworkResource newVirtualNetwork) {
+	public void setVirtualNetwork(VirtualNetwork newVirtualNetwork) {
 		eDynamicSet(NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, NetworkingPackage.Literals.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK, newVirtualNetwork);
 	}
 
@@ -95,7 +96,7 @@ public abstract class VirtualNetworkResourceImpl extends ResourceImpl implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK:
-				setVirtualNetwork((VirtualNetworkResource)newValue);
+				setVirtualNetwork((VirtualNetwork)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -110,7 +111,7 @@ public abstract class VirtualNetworkResourceImpl extends ResourceImpl implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__VIRTUAL_NETWORK:
-				setVirtualNetwork((VirtualNetworkResource)null);
+				setVirtualNetwork((VirtualNetwork)null);
 				return;
 		}
 		super.eUnset(featureID);

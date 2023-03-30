@@ -96,12 +96,12 @@
       <details key="description" value="Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs."/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WebApp" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+  <eClassifiers xsi:type="ecore:EClass" name="AppService" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
     <eAnnotations source="urn:org.nasdanika">
       <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10035-icon-service-App-Services.svg"/>
-      <details key="label" value="Web App"/>
-      <details key="documentation-reference" value="doc/web-app.md"/>
-      <details key="description" value="App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform"/>
+      <details key="label" value="App Service"/>
+      <details key="documentation-reference" value="doc/app-service.md"/>
+      <details key="description" value="An HTTP-based service for hosting web applications, REST APIs, and mobile back ends."/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerInstance" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.networking/model/networking.ecore#//SubnetResource ../../org.nasdanika.architecture.containers.docker/model/docker.ecore#//Container">

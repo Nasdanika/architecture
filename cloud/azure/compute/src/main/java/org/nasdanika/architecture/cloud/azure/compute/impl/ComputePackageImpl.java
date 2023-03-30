@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.nasdanika.architecture.cloud.azure.compute.AppService;
 import org.nasdanika.architecture.cloud.azure.compute.ComputeFactory;
 import org.nasdanika.architecture.cloud.azure.compute.ComputePackage;
 import org.nasdanika.architecture.cloud.azure.compute.ContainerInstance;
@@ -19,7 +20,6 @@ import org.nasdanika.architecture.cloud.azure.compute.VirtualMachine;
 import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineImage;
 import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineScaleSet;
 import org.nasdanika.architecture.cloud.azure.compute.VirtualMachineSize;
-import org.nasdanika.architecture.cloud.azure.compute.WebApp;
 import org.nasdanika.architecture.cloud.azure.core.CorePackage;
 import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
 import org.nasdanika.architecture.containers.docker.DockerPackage;
@@ -79,7 +79,8 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass webAppEClass = null;
+	private EClass appServiceEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -317,8 +318,8 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getWebApp() {
-		return webAppEClass;
+	public EClass getAppService() {
+		return appServiceEClass;
 	}
 
 	/**
@@ -391,7 +392,7 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 
 		virtualMachineScaleSetEClass = createEClass(VIRTUAL_MACHINE_SCALE_SET);
 
-		webAppEClass = createEClass(WEB_APP);
+		appServiceEClass = createEClass(APP_SERVICE);
 
 		containerInstanceEClass = createEClass(CONTAINER_INSTANCE);
 
@@ -438,7 +439,7 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 		virtualMachineSizeEClass.getESuperTypes().add(theCorePackage.getAzureElement());
 		virtualMachineImageEClass.getESuperTypes().add(theCorePackage.getAzureElement());
 		virtualMachineScaleSetEClass.getESuperTypes().add(this.getVirtualMachine());
-		webAppEClass.getESuperTypes().add(theCorePackage.getResource());
+		appServiceEClass.getESuperTypes().add(theCorePackage.getResource());
 		containerInstanceEClass.getESuperTypes().add(theNetworkingPackage.getSubnetResource());
 		containerInstanceEClass.getESuperTypes().add(theDockerPackage.getContainer());
 		kubernetesServiceEClass.getESuperTypes().add(theNetworkingPackage.getVirtualNetworkResource());
@@ -466,7 +467,7 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 
 		initEClass(virtualMachineScaleSetEClass, VirtualMachineScaleSet.class, "VirtualMachineScaleSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(webAppEClass, WebApp.class, "WebApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(appServiceEClass, AppService.class, "AppService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(containerInstanceEClass, ContainerInstance.class, "ContainerInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -568,13 +569,13 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 			   "description", "Azure virtual machine scale sets let you create and manage a group of identical, load balanced VMs."
 		   });
 		addAnnotation
-		  (webAppEClass,
+		  (appServiceEClass,
 		   source,
 		   new String[] {
 			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/compute/10035-icon-service-App-Services.svg",
-			   "label", "Web App",
-			   "documentation-reference", "doc/web-app.md",
-			   "description", "App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform"
+			   "label", "App Service",
+			   "documentation-reference", "doc/app-service.md",
+			   "description", "An HTTP-based service for hosting web applications, REST APIs, and mobile back ends."
 		   });
 		addAnnotation
 		  (containerInstanceEClass,

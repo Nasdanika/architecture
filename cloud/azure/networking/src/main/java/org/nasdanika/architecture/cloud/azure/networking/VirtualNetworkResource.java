@@ -30,12 +30,12 @@ public interface VirtualNetworkResource extends Resource {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Virtual Network</em>' reference.
-	 * @see #setVirtualNetwork(VirtualNetworkResource)
+	 * @see #setVirtualNetwork(VirtualNetwork)
 	 * @see org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage#getVirtualNetworkResource_VirtualNetwork()
 	 * @model annotation="urn:org.nasdanika opposite='resources'"
 	 * @generated
 	 */
-	VirtualNetworkResource getVirtualNetwork();
+	VirtualNetwork getVirtualNetwork();
 
 	/**
 	 * Sets the value of the '{@link org.nasdanika.architecture.cloud.azure.networking.VirtualNetworkResource#getVirtualNetwork <em>Virtual Network</em>}' reference.
@@ -45,6 +45,6 @@ public interface VirtualNetworkResource extends Resource {
 	 * @see #getVirtualNetwork()
 	 * @generated
 	 */
-	void setVirtualNetwork(VirtualNetworkResource value);
+	void setVirtualNetwork(VirtualNetwork value);
 
 } // VirtualNetworkResource

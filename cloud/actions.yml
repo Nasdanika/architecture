@@ -1,4 +1,4 @@
-app-label:
+app-action:
   text: Cloud
   location: cloud/index.html
   icon: fas fa-cloud

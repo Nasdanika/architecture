@@ -11,13 +11,13 @@ app-action:
         text: Core
         uris: core
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/core.genmodel.xml#/"
+          - "../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.core.core.genmodel.xml#/"
           - core.gen/actions.yml
     - app-label:
         text: C4 Model
         uris: c4
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/c4.genmodel.xml#/"
+          - "../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.c4.c4.genmodel.xml#/"
           - c4.gen/actions.yml
     - cloud/actions.yml
     - containers/actions.yml

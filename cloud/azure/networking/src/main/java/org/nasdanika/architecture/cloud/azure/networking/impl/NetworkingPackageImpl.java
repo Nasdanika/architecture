@@ -314,7 +314,7 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 		initEReference(getVirtualNetwork_Resources(), this.getVirtualNetworkResource(), null, "resources", null, 0, -1, VirtualNetwork.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(virtualNetworkResourceEClass, VirtualNetworkResource.class, "VirtualNetworkResource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVirtualNetworkResource_VirtualNetwork(), this.getVirtualNetworkResource(), null, "virtualNetwork", null, 0, 1, VirtualNetworkResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVirtualNetworkResource_VirtualNetwork(), this.getVirtualNetwork(), null, "virtualNetwork", null, 0, 1, VirtualNetworkResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subnetEClass, Subnet.class, "Subnet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubnet_Resources(), this.getSubnetResource(), null, "resources", null, 0, -1, Subnet.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);

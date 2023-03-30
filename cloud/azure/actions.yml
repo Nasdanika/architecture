@@ -1,4 +1,4 @@
-app-label:
+app-action:
   text: Azure
   location: azure/index.html
   uris: azure
@@ -12,23 +12,23 @@ app-label:
         text: Core
         uris: core
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/azure-core.genmodel.xml#/"
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.core.core.genmodel.xml#/"
           - core.gen/actions.yml
     - app-label:
         text: Compute
         uris: compute
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/azure-compute.genmodel.xml#/"
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.compute.compute.genmodel.xml#/"
           - compute.gen/actions.yml
     - app-label:
         text: Networking
         uris: networking
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/azure-networking.genmodel.xml#/"
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.networking.networking.genmodel.xml#/"
           - networking.gen/actions.yml
     - app-label:
         text: Storage
         uris: storage
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/azure-storage.genmodel.xml#/"
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.storage.storage.genmodel.xml#/"
           - storage.gen/actions.yml

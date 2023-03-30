@@ -1588,14 +1588,14 @@ public interface ComputePackage extends EPackage {
 	int VIRTUAL_MACHINE_SCALE_SET_OPERATION_COUNT = VIRTUAL_MACHINE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.WebAppImpl <em>Web App</em>}' class.
+	 * The meta object id for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.AppServiceImpl <em>App Service</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.nasdanika.architecture.cloud.azure.compute.impl.WebAppImpl
-	 * @see org.nasdanika.architecture.cloud.azure.compute.impl.ComputePackageImpl#getWebApp()
+	 * @see org.nasdanika.architecture.cloud.azure.compute.impl.AppServiceImpl
+	 * @see org.nasdanika.architecture.cloud.azure.compute.impl.ComputePackageImpl#getAppService()
 	 * @generated
 	 */
-	int WEB_APP = 6;
+	int APP_SERVICE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Markers</b></em>' containment reference list.
@@ -1604,7 +1604,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__MARKERS = CorePackage.RESOURCE__MARKERS;
+	int APP_SERVICE__MARKERS = CorePackage.RESOURCE__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -1613,7 +1613,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__URIS = CorePackage.RESOURCE__URIS;
+	int APP_SERVICE__URIS = CorePackage.RESOURCE__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1622,7 +1622,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__DESCRIPTION = CorePackage.RESOURCE__DESCRIPTION;
+	int APP_SERVICE__DESCRIPTION = CorePackage.RESOURCE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -1631,7 +1631,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__UUID = CorePackage.RESOURCE__UUID;
+	int APP_SERVICE__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
@@ -1640,7 +1640,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int APP_SERVICE__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1649,7 +1649,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__REPRESENTATIONS = CorePackage.RESOURCE__REPRESENTATIONS;
+	int APP_SERVICE__REPRESENTATIONS = CorePackage.RESOURCE__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -1658,7 +1658,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ANNOTATIONS = CorePackage.RESOURCE__ANNOTATIONS;
+	int APP_SERVICE__ANNOTATIONS = CorePackage.RESOURCE__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -1667,7 +1667,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__START = CorePackage.RESOURCE__START;
+	int APP_SERVICE__START = CorePackage.RESOURCE__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -1676,7 +1676,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__END = CorePackage.RESOURCE__END;
+	int APP_SERVICE__END = CorePackage.RESOURCE__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1685,7 +1685,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__DURATION = CorePackage.RESOURCE__DURATION;
+	int APP_SERVICE__DURATION = CorePackage.RESOURCE__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1694,7 +1694,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__NAME = CorePackage.RESOURCE__NAME;
+	int APP_SERVICE__NAME = CorePackage.RESOURCE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -1703,7 +1703,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__DOCUMENTATION = CorePackage.RESOURCE__DOCUMENTATION;
+	int APP_SERVICE__DOCUMENTATION = CorePackage.RESOURCE__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1712,7 +1712,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ID = CorePackage.RESOURCE__ID;
+	int APP_SERVICE__ID = CorePackage.RESOURCE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
@@ -1721,7 +1721,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ACTION_ROLE = CorePackage.RESOURCE__ACTION_ROLE;
+	int APP_SERVICE__ACTION_ROLE = CorePackage.RESOURCE__ACTION_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
@@ -1730,7 +1730,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__VIEWS = CorePackage.RESOURCE__VIEWS;
+	int APP_SERVICE__VIEWS = CorePackage.RESOURCE__VIEWS;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -1739,7 +1739,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__EVENTS = CorePackage.RESOURCE__EVENTS;
+	int APP_SERVICE__EVENTS = CorePackage.RESOURCE__EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
@@ -1748,7 +1748,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__STAGES = CorePackage.RESOURCE__STAGES;
+	int APP_SERVICE__STAGES = CorePackage.RESOURCE__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -1757,7 +1757,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__FACETS = CorePackage.RESOURCE__FACETS;
+	int APP_SERVICE__FACETS = CorePackage.RESOURCE__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -1766,7 +1766,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__PROPERTIES = CorePackage.RESOURCE__PROPERTIES;
+	int APP_SERVICE__PROPERTIES = CorePackage.RESOURCE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -1775,7 +1775,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__IMPACTED_BY = CorePackage.RESOURCE__IMPACTED_BY;
+	int APP_SERVICE__IMPACTED_BY = CorePackage.RESOURCE__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Tags</b></em>' reference list.
@@ -1784,7 +1784,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__TAGS = CorePackage.RESOURCE__TAGS;
+	int APP_SERVICE__TAGS = CorePackage.RESOURCE__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
@@ -1793,7 +1793,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__VIEW_ELEMENTS = CorePackage.RESOURCE__VIEW_ELEMENTS;
+	int APP_SERVICE__VIEW_ELEMENTS = CorePackage.RESOURCE__VIEW_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' reference list.
@@ -1802,7 +1802,7 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__LOCATIONS = CorePackage.RESOURCE__LOCATIONS;
+	int APP_SERVICE__LOCATIONS = CorePackage.RESOURCE__LOCATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Resource Tags</b></em>' containment reference list.
@@ -1811,25 +1811,25 @@ public interface ComputePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__RESOURCE_TAGS = CorePackage.RESOURCE__RESOURCE_TAGS;
+	int APP_SERVICE__RESOURCE_TAGS = CorePackage.RESOURCE__RESOURCE_TAGS;
 
 	/**
-	 * The number of structural features of the '<em>Web App</em>' class.
+	 * The number of structural features of the '<em>App Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP_FEATURE_COUNT = CorePackage.RESOURCE_FEATURE_COUNT + 0;
+	int APP_SERVICE_FEATURE_COUNT = CorePackage.RESOURCE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Web App</em>' class.
+	 * The number of operations of the '<em>App Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP_OPERATION_COUNT = CorePackage.RESOURCE_OPERATION_COUNT + 0;
+	int APP_SERVICE_OPERATION_COUNT = CorePackage.RESOURCE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.ContainerInstanceImpl <em>Container Instance</em>}' class.
@@ -2507,14 +2507,14 @@ public interface ComputePackage extends EPackage {
 	EClass getVirtualMachineScaleSet();
 
 	/**
-	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.compute.WebApp <em>Web App</em>}'.
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.compute.AppService <em>App Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Web App</em>'.
-	 * @see org.nasdanika.architecture.cloud.azure.compute.WebApp
+	 * @return the meta object for class '<em>App Service</em>'.
+	 * @see org.nasdanika.architecture.cloud.azure.compute.AppService
 	 * @generated
 	 */
-	EClass getWebApp();
+	EClass getAppService();
 
 	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.compute.ContainerInstance <em>Container Instance</em>}'.
@@ -2677,14 +2677,14 @@ public interface ComputePackage extends EPackage {
 		 */
 		EClass VIRTUAL_MACHINE_SCALE_SET = eINSTANCE.getVirtualMachineScaleSet();
 		/**
-		 * The meta object literal for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.WebAppImpl <em>Web App</em>}' class.
+		 * The meta object literal for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.AppServiceImpl <em>App Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.nasdanika.architecture.cloud.azure.compute.impl.WebAppImpl
-		 * @see org.nasdanika.architecture.cloud.azure.compute.impl.ComputePackageImpl#getWebApp()
+		 * @see org.nasdanika.architecture.cloud.azure.compute.impl.AppServiceImpl
+		 * @see org.nasdanika.architecture.cloud.azure.compute.impl.ComputePackageImpl#getAppService()
 		 * @generated
 		 */
-		EClass WEB_APP = eINSTANCE.getWebApp();
+		EClass APP_SERVICE = eINSTANCE.getAppService();
 		/**
 		 * The meta object literal for the '{@link org.nasdanika.architecture.cloud.azure.compute.impl.ContainerInstanceImpl <em>Container Instance</em>}' class.
 		 * <!-- begin-user-doc -->

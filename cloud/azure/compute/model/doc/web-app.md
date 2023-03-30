@@ -1,2 +1,0 @@
-[Web App Service](https://azure.microsoft.com/en-in/products/app-service/web) lets you quickly build, deploy, and scale enterprise-grade web, mobile, and API apps running on any platform.
-Meet rigorous performance, scalability, security and compliance requirements while using a fully managed platform to perform infrastructure maintenance. Leverage existing tools to deploy and automatically scale your apps without the hassle of managing infrastructure.

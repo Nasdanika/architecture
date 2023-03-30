@@ -1,4 +1,4 @@
-app-label:
+app-action:
   text: Containers
   location: continers/index.html
   uris: containers
@@ -12,17 +12,17 @@ app-label:
         text: Docker
         uris: docker
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/dockercore.genmodel.xml#/"
+          - "../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.containers.docker.docker.genmodel.xml#/"
           - docker.gen/actions.yml
     - app-label:
         text: Kubernetes
         uris: kubernetes
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/kubernetes.genmodel.xml#/"
-          - kubarnetes.gen/actions.yml
+          - "../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.containers.kubernetes.kubernetes.genmodel.xml#/"
+          - kubernetes.gen/actions.yml
     - app-label:
         text: Helm
         uris: helm
         children:
-          - "../nasdanika.github.io/target/model-doc/actions/helm.genmodel.xml#/"
+          - "../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.containers.helm.helm.genmodel.xml#/"
           - helm.gen/actions.yml

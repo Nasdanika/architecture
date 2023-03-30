@@ -179,20 +179,20 @@ public class ComputeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ComputePackage.WEB_APP: {
-				WebApp webApp = (WebApp)theEObject;
-				T result = caseWebApp(webApp);
-				if (result == null) result = caseResource(webApp);
-				if (result == null) result = caseAzureElement(webApp);
-				if (result == null) result = caseArchitectureElement(webApp);
-				if (result == null) result = casePeriod(webApp);
-				if (result == null) result = caseCore_ModelElement(webApp);
-				if (result == null) result = caseNamedElement(webApp);
-				if (result == null) result = caseDocumented(webApp);
-				if (result == null) result = caseModelElement(webApp);
-				if (result == null) result = caseMarked(webApp);
-				if (result == null) result = caseAdaptable(webApp);
-				if (result == null) result = caseIMarked(webApp);
+			case ComputePackage.APP_SERVICE: {
+				AppService appService = (AppService)theEObject;
+				T result = caseAppService(appService);
+				if (result == null) result = caseResource(appService);
+				if (result == null) result = caseAzureElement(appService);
+				if (result == null) result = caseArchitectureElement(appService);
+				if (result == null) result = casePeriod(appService);
+				if (result == null) result = caseCore_ModelElement(appService);
+				if (result == null) result = caseNamedElement(appService);
+				if (result == null) result = caseDocumented(appService);
+				if (result == null) result = caseModelElement(appService);
+				if (result == null) result = caseMarked(appService);
+				if (result == null) result = caseAdaptable(appService);
+				if (result == null) result = caseIMarked(appService);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -329,17 +329,17 @@ public class ComputeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Web App</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>App Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Web App</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>App Service</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWebApp(WebApp object) {
+	public T caseAppService(AppService object) {
 		return null;
 	}
 
