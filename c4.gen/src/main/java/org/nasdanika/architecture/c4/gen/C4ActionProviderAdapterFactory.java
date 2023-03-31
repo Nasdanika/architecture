@@ -14,9 +14,9 @@ import org.nasdanika.architecture.c4.Relationship;
 import org.nasdanika.architecture.c4.Technology;
 import org.nasdanika.architecture.c4.TechnologyProduct;
 import org.nasdanika.architecture.c4.TechnologyVersion;
-import org.nasdanika.architecture.core.gen.CoreActionProviderAdapterFactory;
 import org.nasdanika.common.Context;
 import org.nasdanika.emf.FunctionAdapterFactory;
+import org.nasdanika.html.emf.ActionProviderAdapterFactory;
 import org.nasdanika.html.model.app.util.ActionProvider;
 
 /**
@@ -24,7 +24,7 @@ import org.nasdanika.html.model.app.util.ActionProvider;
  * @author Pavel
  *
  */
-public class C4ActionProviderAdapterFactory extends CoreActionProviderAdapterFactory {
+public class C4ActionProviderAdapterFactory extends ActionProviderAdapterFactory {
 	
 	public C4ActionProviderAdapterFactory(Context context) {
 		super(context);

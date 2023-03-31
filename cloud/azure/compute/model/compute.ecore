@@ -5,7 +5,7 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
     <details key="load-key" value="azure-compute"/>
-    <details key="exports" value="VirtualMachine:&#xA;  - azure-vm&#xA;  - azure-virtual-machine"/>
+    <details key="exports" value="VirtualMachine:&#xA;  - azure-vm&#xA;  - azure-virtual-machine&#xA;KubernetesService: azure-kubernetes-service"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="VirtualMachine" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
     <eAnnotations source="urn:org.nasdanika">

@@ -80,5 +80,12 @@
 			<artifactId>storage-gen</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>${project.groupId}.containers</groupId>
+			<artifactId>helm-gen</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 	</dependencies>
 </project>

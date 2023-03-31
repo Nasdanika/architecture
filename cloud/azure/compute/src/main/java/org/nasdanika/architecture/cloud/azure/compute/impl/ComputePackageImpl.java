@@ -497,7 +497,7 @@ public class ComputePackageImpl extends EPackageImpl implements ComputePackage {
 		   new String[] {
 			   "documentation-reference", "doc/package-summary.md",
 			   "load-key", "azure-compute",
-			   "exports", "VirtualMachine:\n  - azure-vm\n  - azure-virtual-machine"
+			   "exports", "VirtualMachine:\n  - azure-vm\n  - azure-virtual-machine\nKubernetesService: azure-kubernetes-service"
 		   });
 		addAnnotation
 		  (virtualMachineEClass,

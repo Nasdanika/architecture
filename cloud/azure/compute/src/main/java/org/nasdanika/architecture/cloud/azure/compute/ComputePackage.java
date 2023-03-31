@@ -23,7 +23,7 @@ import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
  * <!-- end-user-doc -->
  * @see org.nasdanika.architecture.cloud.azure.compute.ComputeFactory
  * @model kind="package"
- *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='azure-compute' exports='VirtualMachine:\n  - azure-vm\n  - azure-virtual-machine'"
+ *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='azure-compute' exports='VirtualMachine:\n  - azure-vm\n  - azure-virtual-machine\nKubernetesService: azure-kubernetes-service'"
  * @generated
  */
 public interface ComputePackage extends EPackage {

@@ -22,15 +22,6 @@ public interface CoreFactory extends EFactory {
 	CoreFactory eINSTANCE = org.nasdanika.architecture.cloud.azure.core.impl.CoreFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Azure Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Azure Element</em>'.
-	 * @generated
-	 */
-	AzureElement createAzureElement();
-
-	/**
 	 * Returns a new object of class '<em>Management Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

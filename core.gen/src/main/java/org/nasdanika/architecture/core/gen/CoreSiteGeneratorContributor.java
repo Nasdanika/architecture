@@ -9,7 +9,6 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.nasdanika.architecture.core.CorePackage;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.html.model.app.gen.AppAdapterFactory;
 import org.nasdanika.html.model.app.gen.SiteGeneratorContributor;
 
 public class CoreSiteGeneratorContributor implements SiteGeneratorContributor {
@@ -27,5 +26,7 @@ public class CoreSiteGeneratorContributor implements SiteGeneratorContributor {
 		
 		return Collections.singletonList(new CoreActionProviderAdapterFactory(context, instanceDiagnostic));
 	}
+	
+	
 
 }

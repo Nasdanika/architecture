@@ -9,6 +9,10 @@ import org.nasdanika.architecture.c4.gen.C4SiteGeneratorContributor;
 import org.nasdanika.architecture.cloud.azure.compute.gen.ComputeSiteGeneratorContributor;
 import org.nasdanika.architecture.cloud.azure.networking.gen.NetworkingSiteGeneratorContributor;
 import org.nasdanika.architecture.cloud.azure.storage.gen.StorageSiteGeneratorContributor;
+import org.nasdanika.architecture.containers.docker.gen.DockerSiteGeneratorContributor;
+import org.nasdanika.architecture.containers.helm.gen.HelmSiteGeneratorContributor;
+import org.nasdanika.architecture.containers.kubernetes.gen.KubernetesSiteGeneratorContributor;
+import org.nasdanika.architecture.core.gen.CoreSiteGeneratorContributor;
 import org.nasdanika.html.model.app.gen.SiteGeneratorContributor;
 import org.nasdanika.html.model.app.gen.maven.SemanticSiteGeneratorMojo;
 
@@ -21,15 +25,17 @@ public class SiteGeneratorMojo extends SemanticSiteGeneratorMojo {
 	@Override
 	protected List<SiteGeneratorContributor> getContributors() {
 		List<SiteGeneratorContributor> contributors = new ArrayList<>(super.getContributors());
+		contributors.add(new CoreSiteGeneratorContributor());
 		contributors.add(new C4SiteGeneratorContributor());
 
+		contributors.add(new org.nasdanika.architecture.cloud.azure.core.gen.CoreSiteGeneratorContributor());
 		contributors.add(new ComputeSiteGeneratorContributor());
 		contributors.add(new NetworkingSiteGeneratorContributor());
 		contributors.add(new StorageSiteGeneratorContributor());
 		
-//		contributors.add(new DockerSiteGeneratorContributor());
-//		contributors.add(new KubernetesSiteGeneratorContributor());
-//		contributors.add(new HelmSiteGeneratorContributor());
+		contributors.add(new DockerSiteGeneratorContributor());
+		contributors.add(new KubernetesSiteGeneratorContributor());
+		contributors.add(new HelmSiteGeneratorContributor());
 //		contributors.add(new IstioSiteGeneratorContributor());
 		
 		return contributors;

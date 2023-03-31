@@ -5,9 +5,9 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
     <details key="load-key" value="azure-core"/>
-    <details key="exports" value="TODO!"/>
+    <details key="exports" value="Subscription: azure-subscription&#xA;ResourceGroup: azure-resource-group"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="AzureElement" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
+  <eClassifiers xsi:type="ecore:EClass" name="AzureElement" abstract="true" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Base class for Azure architecture elements"/>
     </eAnnotations>
@@ -31,7 +31,11 @@
       <details key="description" value="A logical container used to provision related resources"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resourceGroups" upperBound="-1"
-        eType="#//ResourceGroup" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id"/>
+        eType="#//ResourceGroup" containment="true" eKeys="../../org.nasdanika.architecture.core/model/core.ecore#//ModelElement/id">
+      <eAnnotations source="urn:org.nasdanika">
+        <details key="homogenous" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResourceGroup" eSuperTypes="#//AzureElement">
     <eAnnotations source="urn:org.nasdanika">

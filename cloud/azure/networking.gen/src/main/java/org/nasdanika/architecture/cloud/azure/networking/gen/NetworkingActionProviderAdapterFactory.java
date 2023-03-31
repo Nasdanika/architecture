@@ -5,17 +5,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.nasdanika.architecture.core.gen.CoreActionProviderAdapterFactory;
 import org.nasdanika.common.Context;
-import org.nasdanika.emf.FunctionAdapterFactory;
-import org.nasdanika.html.model.app.util.ActionProvider;
+import org.nasdanika.html.emf.ActionProviderAdapterFactory;
 
 /**
  * Provides adapters for the Ecore types - {@link EPackage}, {@link EClass}, {@link EStructuralFeature}, {@link EOperation}, ...
  * @author Pavel
  *
  */
-public class NetworkingActionProviderAdapterFactory extends CoreActionProviderAdapterFactory {
+public class NetworkingActionProviderAdapterFactory extends ActionProviderAdapterFactory {
 	
 	public NetworkingActionProviderAdapterFactory(Context context) {
 		super(context);

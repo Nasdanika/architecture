@@ -56,7 +56,6 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case CorePackage.AZURE_ELEMENT: return createAzureElement();
 			case CorePackage.MANAGEMENT_GROUP: return createManagementGroup();
 			case CorePackage.SUBSCRIPTION: return createSubscription();
 			case CorePackage.RESOURCE_GROUP: return createResourceGroup();
@@ -66,17 +65,6 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public AzureElement createAzureElement() {
-		AzureElementImpl azureElement = new AzureElementImpl();
-		return azureElement;
 	}
 
 	/**

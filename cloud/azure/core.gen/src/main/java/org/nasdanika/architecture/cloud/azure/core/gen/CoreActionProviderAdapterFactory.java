@@ -5,8 +5,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.nasdanika.architecture.cloud.azure.core.CorePackage;
+import org.nasdanika.architecture.cloud.azure.core.ResourceGroup;
+import org.nasdanika.architecture.cloud.azure.core.Subscription;
 import org.nasdanika.common.Context;
 import org.nasdanika.emf.FunctionAdapterFactory;
+import org.nasdanika.html.emf.ActionProviderAdapterFactory;
 import org.nasdanika.html.model.app.util.ActionProvider;
 
 /**
@@ -14,39 +18,39 @@ import org.nasdanika.html.model.app.util.ActionProvider;
  * @author Pavel
  *
  */
-public class CoreActionProviderAdapterFactory extends org.nasdanika.architecture.core.gen.CoreActionProviderAdapterFactory {
+public class CoreActionProviderAdapterFactory extends ActionProviderAdapterFactory {
 	
 	public CoreActionProviderAdapterFactory(Context context) {
 		super(context);
 	
-//		registerAdapterFactory(
-//				new FunctionAdapterFactory<ActionProvider, Technology>(
-//					C4Package.Literals.TECHNOLOGY, 
-//					ActionProvider.class, 
-//					this.getClass().getClassLoader(), 
-//					e -> new TechnologyActionBuilder<Technology>(e, context) {
-//						
-//						@Override
-//						protected String getHtmlExtension() {
-//							return C4ActionProviderAdapterFactory.this.getHtmlExtension();
-//						}
-//						
-//					}.asActionProvider()));
-//		
-//		registerAdapterFactory(
-//				new FunctionAdapterFactory<ActionProvider, TechnologyProduct>(
-//					C4Package.Literals.TECHNOLOGY_PRODUCT, 
-//					ActionProvider.class, 
-//					this.getClass().getClassLoader(), 
-//					e -> new TechnologyProductActionBuilder<TechnologyProduct>(e, context) {
-//						
-//						@Override
-//						protected String getHtmlExtension() {
-//							return C4ActionProviderAdapterFactory.this.getHtmlExtension();
-//						}
-//						
-//					}.asActionProvider()));
-//		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, Subscription>(
+					CorePackage.Literals.SUBSCRIPTION, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new SubscriptionActionBuilder(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+		
+		registerAdapterFactory(
+				new FunctionAdapterFactory<ActionProvider, ResourceGroup>(
+					CorePackage.Literals.RESOURCE_GROUP, 
+					ActionProvider.class, 
+					this.getClass().getClassLoader(), 
+					e -> new ResourceGroupActionBuilder(e, context) {
+						
+						@Override
+						protected String getHtmlExtension() {
+							return CoreActionProviderAdapterFactory.this.getHtmlExtension();
+						}
+						
+					}.asActionProvider()));
+
 //		registerAdapterFactory(
 //				new FunctionAdapterFactory<ActionProvider, TechnologyVersion>(
 //					C4Package.Literals.TECHNOLOGY_VERSION, 

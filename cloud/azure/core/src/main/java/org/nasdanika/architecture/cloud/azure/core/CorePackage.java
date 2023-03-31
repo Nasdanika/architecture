@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.nasdanika.architecture.cloud.azure.core.CoreFactory
  * @model kind="package"
- *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='azure-core' exports='TODO!'"
+ *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='azure-core' exports='Subscription: azure-subscription\nResourceGroup: azure-resource-group'"
  * @generated
  */
 public interface CorePackage extends EPackage {

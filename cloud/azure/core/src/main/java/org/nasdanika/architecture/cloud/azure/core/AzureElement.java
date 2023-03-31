@@ -15,7 +15,7 @@ import org.nasdanika.architecture.core.ArchitectureElement;
  *
  *
  * @see org.nasdanika.architecture.cloud.azure.core.CorePackage#getAzureElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AzureElement extends ArchitectureElement {

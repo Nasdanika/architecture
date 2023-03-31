@@ -5,15 +5,15 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.nasdanika.architecture.containers.docker.gen.DockerActionProviderAdapterFactory;
 import org.nasdanika.common.Context;
+import org.nasdanika.html.emf.ActionProviderAdapterFactory;
 
 /**
  * Provides adapters for the Ecore types - {@link EPackage}, {@link EClass}, {@link EStructuralFeature}, {@link EOperation}, ...
  * @author Pavel
  *
  */
-public class KubernetesActionProviderAdapterFactory extends DockerActionProviderAdapterFactory {
+public class KubernetesActionProviderAdapterFactory extends ActionProviderAdapterFactory {
 	
 	public KubernetesActionProviderAdapterFactory(Context context) {
 		super(context);

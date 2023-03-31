@@ -16,7 +16,7 @@ import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
  *
  * @generated
  */
-public class AzureElementImpl extends ArchitectureElementImpl implements AzureElement {
+public abstract class AzureElementImpl extends ArchitectureElementImpl implements AzureElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

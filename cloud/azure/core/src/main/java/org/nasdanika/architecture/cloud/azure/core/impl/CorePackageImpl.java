@@ -447,7 +447,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		regionPairEClass.getESuperTypes().add(this.getAzureElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(azureElementEClass, AzureElement.class, "AzureElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(azureElementEClass, AzureElement.class, "AzureElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(managementGroupElementEClass, ManagementGroupElement.class, "ManagementGroupElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -505,7 +505,7 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   new String[] {
 			   "documentation-reference", "doc/package-summary.md",
 			   "load-key", "azure-core",
-			   "exports", "TODO!"
+			   "exports", "Subscription: azure-subscription\nResourceGroup: azure-resource-group"
 		   });
 		addAnnotation
 		  (managementGroupEClass,
@@ -523,6 +523,12 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10002-icon-service-Subscriptions.svg",
 			   "documentation-reference", "doc/subscription.md",
 			   "description", "A logical container used to provision related resources"
+		   });
+		addAnnotation
+		  (getSubscription_ResourceGroups(),
+		   source,
+		   new String[] {
+			   "homogenous", "true"
 		   });
 		addAnnotation
 		  (resourceGroupEClass,

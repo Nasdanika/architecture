@@ -30,6 +30,7 @@ public interface Subscription extends ManagementGroupElement {
 	 * @return the value of the '<em>Resource Groups</em>' containment reference list.
 	 * @see org.nasdanika.architecture.cloud.azure.core.CorePackage#getSubscription_ResourceGroups()
 	 * @model containment="true" keys="id"
+	 *        annotation="urn:org.nasdanika homogenous='true'"
 	 * @generated
 	 */
 	EList<ResourceGroup> getResourceGroups();
