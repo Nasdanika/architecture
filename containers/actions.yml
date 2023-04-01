@@ -2,6 +2,7 @@ app-action:
   text: Containers
   location: continers/index.html
   uris: containers
+  icon: https://img.icons8.com/external-smashingstocks-isometric-smashing-stocks/16/null/external-container-logistic-smashingstocks-isometric-smashing-stocks.svg
   # content:
   #   content-markdown:
   #     style: true
@@ -11,12 +12,14 @@ app-action:
     - app-label:
         text: Docker
         uris: docker
+        icon: https://img.icons8.com/external-those-icons-flat-those-icons/16/null/external-Docker-Logo-social-media-those-icons-flat-those-icons.svg
         children:
           - "../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.containers.docker.docker.genmodel.xml#/"
           - docker.gen/actions.yml
     - app-label:
         text: Kubernetes
         uris: kubernetes
+        icon: https://img.icons8.com/color/16/null/kubernetes.svg
         children:
           - "../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.containers.kubernetes.kubernetes.genmodel.xml#/"
           - kubernetes.gen/actions.yml

@@ -1,6 +1,7 @@
 app-action:
   text: Azure
   location: azure/index.html
+  icon: https://img.icons8.com/fluency/16/null/azure-1.svg
   uris: azure
 #  content:
 #    content-markdown:
@@ -17,18 +18,21 @@ app-action:
     - app-label:
         text: Compute
         uris: compute
+        icon: fas fa-microchip
         children:
           - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.compute.compute.genmodel.xml#/"
           - compute.gen/actions.yml
     - app-label:
         text: Networking
         uris: networking
+        icon: fas fa-network-wired
         children:
           - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.networking.networking.genmodel.xml#/"
           - networking.gen/actions.yml
     - app-label:
         text: Storage
         uris: storage
+        icon: fas fa-hdd
         children:
           - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.storage.storage.genmodel.xml#/"
           - storage.gen/actions.yml
