@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.nasdanika.architecture.core.*;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
 import org.nasdanika.architecture.core.Concern;

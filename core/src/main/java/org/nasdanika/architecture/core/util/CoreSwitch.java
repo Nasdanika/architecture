@@ -5,6 +5,7 @@ package org.nasdanika.architecture.core.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
+import org.nasdanika.architecture.core.*;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;
 import org.nasdanika.architecture.core.Concern;

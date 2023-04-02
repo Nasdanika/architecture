@@ -10,7 +10,12 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import org.nasdanika.architecture.containers.kubernetes.*;
+import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.common.Adaptable;
+import org.nasdanika.ncore.Documented;
+import org.nasdanika.ncore.ModelElement;
+import org.nasdanika.ncore.NamedElement;
+import org.nasdanika.ncore.Period;
 import org.nasdanika.persistence.Marked;
 
 /**
@@ -90,19 +95,19 @@ public class KubernetesAdapterFactory extends AdapterFactoryImpl {
 				return createAdaptableAdapter();
 			}
 			@Override
-			public Adapter caseModelElement(org.nasdanika.ncore.ModelElement object) {
+			public Adapter caseModelElement(ModelElement object) {
 				return createModelElementAdapter();
 			}
 			@Override
-			public Adapter casePeriod(org.nasdanika.ncore.Period object) {
+			public Adapter casePeriod(Period object) {
 				return createPeriodAdapter();
 			}
 			@Override
-			public Adapter caseNamedElement(org.nasdanika.ncore.NamedElement object) {
+			public Adapter caseNamedElement(NamedElement object) {
 				return createNamedElementAdapter();
 			}
 			@Override
-			public Adapter caseDocumented(org.nasdanika.ncore.Documented object) {
+			public Adapter caseDocumented(Documented object) {
 				return createDocumentedAdapter();
 			}
 			@Override
@@ -110,7 +115,7 @@ public class KubernetesAdapterFactory extends AdapterFactoryImpl {
 				return createCore_ModelElementAdapter();
 			}
 			@Override
-			public Adapter caseArchitectureElement(org.nasdanika.architecture.core.ArchitectureElement object) {
+			public Adapter caseArchitectureElement(ArchitectureElement object) {
 				return createArchitectureElementAdapter();
 			}
 			@Override

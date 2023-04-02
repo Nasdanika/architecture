@@ -39,7 +39,7 @@ public interface CorePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.cloud.azure.core";
+	String eNS_URI = "ecore://nasdanika.org/architecture/cloud/azure/core";
 
 	/**
 	 * The package namespace name.

@@ -41,7 +41,7 @@ public interface CorePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.core";
+	String eNS_URI = "ecore://nasdanika.org/architecture/core";
 
 	/**
 	 * The package namespace name.

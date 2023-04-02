@@ -11,6 +11,8 @@ import org.nasdanika.architecture.containers.kubernetes.Cluster;
 import org.nasdanika.architecture.containers.kubernetes.KubernetesFactory;
 import org.nasdanika.architecture.containers.kubernetes.KubernetesPackage;
 import org.nasdanika.architecture.containers.kubernetes.Workload;
+import org.nasdanika.architecture.core.CorePackage;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -80,8 +82,8 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 		isInited = true;
 
 		// Initialize simple dependencies
-		org.nasdanika.architecture.core.CorePackage.eINSTANCE.eClass();
-		org.nasdanika.ncore.NcorePackage.eINSTANCE.eClass();
+		CorePackage.eINSTANCE.eClass();
+		NcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theKubernetesPackage.createPackageContents();
@@ -175,7 +177,7 @@ public class KubernetesPackageImpl extends EPackageImpl implements KubernetesPac
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		org.nasdanika.architecture.core.CorePackage theCorePackage = (org.nasdanika.architecture.core.CorePackage)EPackage.Registry.INSTANCE.getEPackage(org.nasdanika.architecture.core.CorePackage.eNS_URI);
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
 
 		// Create type parameters
 

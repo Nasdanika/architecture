@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated docker -->
       <package
-            uri="urn:org.nasdanika.architecture.containers.docker"
+            uri="ecore://nasdanika.org/architecture/containers/docker"
             class="org.nasdanika.architecture.containers.docker.DockerPackage"
             genModel="model/docker.genmodel"/>
    </extension>

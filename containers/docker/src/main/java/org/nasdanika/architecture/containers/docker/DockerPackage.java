@@ -39,7 +39,7 @@ public interface DockerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.containers.docker";
+	String eNS_URI = "ecore://nasdanika.org/architecture/containers/docker";
 
 	/**
 	 * The package namespace name.

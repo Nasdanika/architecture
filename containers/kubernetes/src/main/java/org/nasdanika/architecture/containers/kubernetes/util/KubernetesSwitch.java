@@ -8,7 +8,12 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import org.nasdanika.architecture.containers.kubernetes.*;
+import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.common.Adaptable;
+import org.nasdanika.ncore.Documented;
+import org.nasdanika.ncore.ModelElement;
+import org.nasdanika.ncore.NamedElement;
+import org.nasdanika.ncore.Period;
 import org.nasdanika.persistence.Marked;
 
 /**
@@ -179,7 +184,7 @@ public class KubernetesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModelElement(org.nasdanika.ncore.ModelElement object) {
+	public T caseModelElement(ModelElement object) {
 		return null;
 	}
 
@@ -194,7 +199,7 @@ public class KubernetesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePeriod(org.nasdanika.ncore.Period object) {
+	public T casePeriod(Period object) {
 		return null;
 	}
 
@@ -209,7 +214,7 @@ public class KubernetesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(org.nasdanika.ncore.NamedElement object) {
+	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 
@@ -224,7 +229,7 @@ public class KubernetesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDocumented(org.nasdanika.ncore.Documented object) {
+	public T caseDocumented(Documented object) {
 		return null;
 	}
 
@@ -254,7 +259,7 @@ public class KubernetesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArchitectureElement(org.nasdanika.architecture.core.ArchitectureElement object) {
+	public T caseArchitectureElement(ArchitectureElement object) {
 		return null;
 	}
 

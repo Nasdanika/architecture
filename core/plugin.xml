@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated core -->
       <package
-            uri="urn:org.nasdanika.architecture.core"
+            uri="ecore://nasdanika.org/architecture/core"
             class="org.nasdanika.architecture.core.CorePackage"
             genModel="model/core.genmodel"/>
    </extension>

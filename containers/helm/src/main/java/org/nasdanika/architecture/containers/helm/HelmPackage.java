@@ -37,7 +37,7 @@ public interface HelmPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.containers.helm";
+	String eNS_URI = "ecore://nasdanika.org/architecture/containers/helm";
 
 	/**
 	 * The package namespace name.

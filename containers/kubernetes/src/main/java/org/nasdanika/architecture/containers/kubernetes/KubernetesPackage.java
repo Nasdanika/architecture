@@ -4,6 +4,7 @@ package org.nasdanika.architecture.containers.kubernetes;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.nasdanika.architecture.core.CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +38,7 @@ public interface KubernetesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.containers.kubernetes";
+	String eNS_URI = "ecore://nasdanika.org/architecture/containers/kubernetes";
 
 	/**
 	 * The package namespace name.
@@ -101,7 +102,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__MARKERS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__MARKERS;
+	int CLUSTER__MARKERS = CorePackage.ARCHITECTURE_ELEMENT__MARKERS;
 
 	/**
 	 * The feature id for the '<em><b>Uris</b></em>' attribute list.
@@ -110,7 +111,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__URIS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__URIS;
+	int CLUSTER__URIS = CorePackage.ARCHITECTURE_ELEMENT__URIS;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -119,7 +120,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__DESCRIPTION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DESCRIPTION;
+	int CLUSTER__DESCRIPTION = CorePackage.ARCHITECTURE_ELEMENT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -128,7 +129,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__UUID = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__UUID;
+	int CLUSTER__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
 
 	/**
 	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
@@ -137,7 +138,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__ACTION_PROTOTYPE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int CLUSTER__ACTION_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -146,7 +147,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__REPRESENTATIONS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
+	int CLUSTER__REPRESENTATIONS = CorePackage.ARCHITECTURE_ELEMENT__REPRESENTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -155,7 +156,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__ANNOTATIONS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ANNOTATIONS;
+	int CLUSTER__ANNOTATIONS = CorePackage.ARCHITECTURE_ELEMENT__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Start</b></em>' containment reference.
@@ -164,7 +165,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__START = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__START;
+	int CLUSTER__START = CorePackage.ARCHITECTURE_ELEMENT__START;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' containment reference.
@@ -173,7 +174,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__END = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__END;
+	int CLUSTER__END = CorePackage.ARCHITECTURE_ELEMENT__END;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -182,7 +183,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__DURATION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DURATION;
+	int CLUSTER__DURATION = CorePackage.ARCHITECTURE_ELEMENT__DURATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -191,7 +192,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__NAME = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__NAME;
+	int CLUSTER__NAME = CorePackage.ARCHITECTURE_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' containment reference list.
@@ -200,7 +201,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__DOCUMENTATION = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION;
+	int CLUSTER__DOCUMENTATION = CorePackage.ARCHITECTURE_ELEMENT__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -209,7 +210,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__ID = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ID;
+	int CLUSTER__ID = CorePackage.ARCHITECTURE_ELEMENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Action Role</b></em>' attribute.
@@ -218,7 +219,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__ACTION_ROLE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE;
+	int CLUSTER__ACTION_ROLE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_ROLE;
 
 	/**
 	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
@@ -227,7 +228,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__VIEWS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__VIEWS;
+	int CLUSTER__VIEWS = CorePackage.ARCHITECTURE_ELEMENT__VIEWS;
 
 	/**
 	 * The feature id for the '<em><b>Events</b></em>' containment reference list.
@@ -236,7 +237,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__EVENTS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
+	int CLUSTER__EVENTS = CorePackage.ARCHITECTURE_ELEMENT__EVENTS;
 
 	/**
 	 * The feature id for the '<em><b>Stages</b></em>' containment reference list.
@@ -245,7 +246,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__STAGES = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__STAGES;
+	int CLUSTER__STAGES = CorePackage.ARCHITECTURE_ELEMENT__STAGES;
 
 	/**
 	 * The feature id for the '<em><b>Facets</b></em>' containment reference list.
@@ -254,7 +255,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__FACETS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__FACETS;
+	int CLUSTER__FACETS = CorePackage.ARCHITECTURE_ELEMENT__FACETS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -263,7 +264,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__PROPERTIES = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES;
+	int CLUSTER__PROPERTIES = CorePackage.ARCHITECTURE_ELEMENT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Impacted By</b></em>' reference list.
@@ -272,7 +273,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__IMPACTED_BY = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
+	int CLUSTER__IMPACTED_BY = CorePackage.ARCHITECTURE_ELEMENT__IMPACTED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Tags</b></em>' reference list.
@@ -281,7 +282,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__TAGS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__TAGS;
+	int CLUSTER__TAGS = CorePackage.ARCHITECTURE_ELEMENT__TAGS;
 
 	/**
 	 * The feature id for the '<em><b>View Elements</b></em>' reference list.
@@ -290,7 +291,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__VIEW_ELEMENTS = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
+	int CLUSTER__VIEW_ELEMENTS = CorePackage.ARCHITECTURE_ELEMENT__VIEW_ELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Cluster</em>' class.
@@ -299,7 +300,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER_FEATURE_COUNT = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
+	int CLUSTER_FEATURE_COUNT = CorePackage.ARCHITECTURE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Cluster</em>' class.
@@ -308,7 +309,7 @@ public interface KubernetesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER_OPERATION_COUNT = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
+	int CLUSTER_OPERATION_COUNT = CorePackage.ARCHITECTURE_ELEMENT_OPERATION_COUNT + 0;
 
 
 	/**

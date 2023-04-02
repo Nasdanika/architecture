@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.nasdanika.architecture.containers.kubernetes.Cluster;
 import org.nasdanika.architecture.containers.kubernetes.KubernetesPackage;
+import org.nasdanika.architecture.core.impl.ArchitectureElementImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +15,7 @@ import org.nasdanika.architecture.containers.kubernetes.KubernetesPackage;
  *
  * @generated
  */
-public class ClusterImpl extends org.nasdanika.architecture.core.impl.ArchitectureElementImpl implements Cluster {
+public class ClusterImpl extends ArchitectureElementImpl implements Cluster {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

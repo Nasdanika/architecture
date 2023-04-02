@@ -7,6 +7,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.nasdanika.architecture.core,
  org.nasdanika.architecture.core.impl,
  org.nasdanika.architecture.core.util

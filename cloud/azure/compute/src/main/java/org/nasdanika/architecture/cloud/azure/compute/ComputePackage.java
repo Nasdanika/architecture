@@ -41,7 +41,7 @@ public interface ComputePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.cloud.azure.compute";
+	String eNS_URI = "ecore://nasdanika.org/architecture/cloud/azure/compute";
 
 	/**
 	 * The package namespace name.

@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated networking -->
       <package
-            uri="urn:org.nasdanika.architecture.cloud.azure.networking"
+            uri="ecore://nasdanika.org/architecture/cloud/azure/networking"
             class="org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage"
             genModel="model/networking.genmodel"/>
    </extension>

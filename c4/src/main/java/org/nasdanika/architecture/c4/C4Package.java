@@ -40,7 +40,7 @@ public interface C4Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.c4";
+	String eNS_URI = "ecore://nasdanika.org/architecture/c4";
 
 	/**
 	 * The package namespace name.

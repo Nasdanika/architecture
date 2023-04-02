@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.nasdanika.architecture.core.*;
 import org.nasdanika.architecture.core.ActionRole;
 import org.nasdanika.architecture.core.ArchitectureElement;
 import org.nasdanika.architecture.core.CompositeNode;

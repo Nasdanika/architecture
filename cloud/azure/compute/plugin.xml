@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated compute -->
       <package
-            uri="urn:org.nasdanika.architecture.cloud.azure.compute"
+            uri="ecore://nasdanika.org/architecture/cloud/azure/compute"
             class="org.nasdanika.architecture.cloud.azure.compute.ComputePackage"
             genModel="model/compute.genmodel"/>
    </extension>

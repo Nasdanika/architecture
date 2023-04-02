@@ -37,7 +37,7 @@ public interface StoragePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.cloud.azure.storage";
+	String eNS_URI = "ecore://nasdanika.org/architecture/cloud/azure/storage";
 
 	/**
 	 * The package namespace name.

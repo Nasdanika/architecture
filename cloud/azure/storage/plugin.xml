@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated storage -->
       <package
-            uri="urn:org.nasdanika.architecture.cloud.azure.storage"
+            uri="ecore://nasdanika.org/architecture/cloud/azure/storage"
             class="org.nasdanika.architecture.cloud.azure.storage.StoragePackage"
             genModel="model/storage.genmodel"/>
    </extension>

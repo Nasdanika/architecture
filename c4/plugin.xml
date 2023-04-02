@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated c4 -->
       <package
-            uri="urn:org.nasdanika.architecture.c4"
+            uri="ecore://nasdanika.org/architecture/c4"
             class="org.nasdanika.architecture.c4.C4Package"
             genModel="model/c4.genmodel"/>
    </extension>

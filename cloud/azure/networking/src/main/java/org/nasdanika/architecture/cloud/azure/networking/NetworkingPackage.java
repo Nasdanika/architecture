@@ -39,7 +39,7 @@ public interface NetworkingPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.cloud.azure.networking";
+	String eNS_URI = "ecore://nasdanika.org/architecture/cloud/azure/networking";
 
 	/**
 	 * The package namespace name.

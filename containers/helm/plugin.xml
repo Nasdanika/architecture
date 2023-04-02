@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated helm -->
       <package
-            uri="urn:org.nasdanika.architecture.containers.helm"
+            uri="ecore://nasdanika.org/architecture/containers/helm"
             class="org.nasdanika.architecture.containers.helm.HelmPackage"
             genModel="model/helm.genmodel"/>
    </extension>

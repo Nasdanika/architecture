@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated kubernetes -->
       <package
-            uri="urn:org.nasdanika.architecture.containers.kubernetes"
+            uri="ecore://nasdanika.org/architecture/containers/kubernetes"
             class="org.nasdanika.architecture.containers.kubernetes.KubernetesPackage"
             genModel="model/kubernetes.genmodel"/>
    </extension>
