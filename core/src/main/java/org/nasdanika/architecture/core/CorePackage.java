@@ -106,13 +106,13 @@ public interface CorePackage extends EPackage {
 	int MODEL_ELEMENT__UUID = NcorePackage.NAMED_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_ELEMENT__ACTION_PROTOTYPE = NcorePackage.NAMED_ELEMENT__ACTION_PROTOTYPE;
+	int MODEL_ELEMENT__LABEL_PROTOTYPE = NcorePackage.NAMED_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -242,13 +242,13 @@ public interface CorePackage extends EPackage {
 	int EVENT__UUID = NcorePackage.TEMPORAL__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__ACTION_PROTOTYPE = NcorePackage.TEMPORAL__ACTION_PROTOTYPE;
+	int EVENT__LABEL_PROTOTYPE = NcorePackage.TEMPORAL__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -532,13 +532,13 @@ public interface CorePackage extends EPackage {
 	int ARCHITECTURE_ELEMENT__UUID = NcorePackage.PERIOD__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE = NcorePackage.PERIOD__ACTION_PROTOTYPE;
+	int ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE = NcorePackage.PERIOD__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -759,13 +759,13 @@ public interface CorePackage extends EPackage {
 	int DOMAIN__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int DOMAIN__LABEL_PROTOTYPE = ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -994,13 +994,13 @@ public interface CorePackage extends EPackage {
 	int STAGE__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAGE__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int STAGE__LABEL_PROTOTYPE = ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1229,13 +1229,13 @@ public interface CorePackage extends EPackage {
 	int IMPACT_TYPE__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACT_TYPE__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int IMPACT_TYPE__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1365,13 +1365,13 @@ public interface CorePackage extends EPackage {
 	int IMPACT__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMPACT__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int IMPACT__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1520,13 +1520,13 @@ public interface CorePackage extends EPackage {
 	int NODE__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int NODE__LABEL_PROTOTYPE = ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1764,13 +1764,13 @@ public interface CorePackage extends EPackage {
 	int RELATIONSHIP__UUID = ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__ACTION_PROTOTYPE = ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int RELATIONSHIP__LABEL_PROTOTYPE = ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1999,13 +1999,13 @@ public interface CorePackage extends EPackage {
 	int COMPOSITE_NODE__UUID = NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_NODE__ACTION_PROTOTYPE = NODE__ACTION_PROTOTYPE;
+	int COMPOSITE_NODE__LABEL_PROTOTYPE = NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2253,13 +2253,13 @@ public interface CorePackage extends EPackage {
 	int TAG__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TAG__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int TAG__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2398,13 +2398,13 @@ public interface CorePackage extends EPackage {
 	int STAKEHOLDER__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAKEHOLDER__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int STAKEHOLDER__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2543,13 +2543,13 @@ public interface CorePackage extends EPackage {
 	int CONCERN__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCERN__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int CONCERN__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2697,13 +2697,13 @@ public interface CorePackage extends EPackage {
 	int VIEWPOINT__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEWPOINT__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int VIEWPOINT__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2851,13 +2851,13 @@ public interface CorePackage extends EPackage {
 	int VIEW__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int VIEW__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -3005,13 +3005,13 @@ public interface CorePackage extends EPackage {
 	int VIEW_ELEMENT__UUID = MODEL_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_ELEMENT__ACTION_PROTOTYPE = MODEL_ELEMENT__ACTION_PROTOTYPE;
+	int VIEW_ELEMENT__LABEL_PROTOTYPE = MODEL_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

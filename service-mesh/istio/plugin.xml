@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated istio -->
       <package
-            uri="urn:org.nasdanika.architecture.service-mesh.istio"
+            uri="ecore://nasdanika.org/architecture/service-mesh/istio"
             class="org.nasdanika.architecture.servicemesh.istio.IstioPackage"
             genModel="model/istio.genmodel"/>
    </extension>

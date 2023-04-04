@@ -105,13 +105,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY__ACTION_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int TECHNOLOGY__LABEL_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -340,13 +340,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_PRODUCT__UUID = TECHNOLOGY__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_PRODUCT__ACTION_PROTOTYPE = TECHNOLOGY__ACTION_PROTOTYPE;
+	int TECHNOLOGY_PRODUCT__LABEL_PROTOTYPE = TECHNOLOGY__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -584,13 +584,13 @@ public interface C4Package extends EPackage {
 	int TECHNOLOGY_VERSION__UUID = TECHNOLOGY__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_VERSION__ACTION_PROTOTYPE = TECHNOLOGY__ACTION_PROTOTYPE;
+	int TECHNOLOGY_VERSION__LABEL_PROTOTYPE = TECHNOLOGY__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -856,13 +856,13 @@ public interface C4Package extends EPackage {
 	int RELATIONSHIP__UUID = CorePackage.RELATIONSHIP__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RELATIONSHIP__ACTION_PROTOTYPE = CorePackage.RELATIONSHIP__ACTION_PROTOTYPE;
+	int RELATIONSHIP__LABEL_PROTOTYPE = CorePackage.RELATIONSHIP__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1101,13 +1101,13 @@ public interface C4Package extends EPackage {
 	int PERSON__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
+	int PERSON__LABEL_PROTOTYPE = CorePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1354,13 +1354,13 @@ public interface C4Package extends EPackage {
 	int SYSTEM__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
+	int SYSTEM__LABEL_PROTOTYPE = CorePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1634,13 +1634,13 @@ public interface C4Package extends EPackage {
 	int CONTAINER__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
+	int CONTAINER__LABEL_PROTOTYPE = CorePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1905,13 +1905,13 @@ public interface C4Package extends EPackage {
 	int MODULE__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
+	int MODULE__LABEL_PROTOTYPE = CorePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2176,13 +2176,13 @@ public interface C4Package extends EPackage {
 	int COMPONENT__UUID = MODULE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__ACTION_PROTOTYPE = MODULE__ACTION_PROTOTYPE;
+	int COMPONENT__LABEL_PROTOTYPE = MODULE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2447,13 +2447,13 @@ public interface C4Package extends EPackage {
 	int CODE_ELEMENT__UUID = CorePackage.NODE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_ELEMENT__ACTION_PROTOTYPE = CorePackage.NODE__ACTION_PROTOTYPE;
+	int CODE_ELEMENT__LABEL_PROTOTYPE = CorePackage.NODE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

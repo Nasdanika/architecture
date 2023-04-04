@@ -104,13 +104,13 @@ public interface NetworkingPackage extends EPackage {
 	int VIRTUAL_NETWORK__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_NETWORK__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int VIRTUAL_NETWORK__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -367,13 +367,13 @@ public interface NetworkingPackage extends EPackage {
 	int VIRTUAL_NETWORK_RESOURCE__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_NETWORK_RESOURCE__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int VIRTUAL_NETWORK_RESOURCE__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -620,13 +620,13 @@ public interface NetworkingPackage extends EPackage {
 	int SUBNET__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBNET__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int SUBNET__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -873,13 +873,13 @@ public interface NetworkingPackage extends EPackage {
 	int SUBNET_RESOURCE__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBNET_RESOURCE__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int SUBNET_RESOURCE__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1126,13 +1126,13 @@ public interface NetworkingPackage extends EPackage {
 	int NETWORK_INTERFACE__UUID = SUBNET_RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NETWORK_INTERFACE__ACTION_PROTOTYPE = SUBNET_RESOURCE__ACTION_PROTOTYPE;
+	int NETWORK_INTERFACE__LABEL_PROTOTYPE = SUBNET_RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

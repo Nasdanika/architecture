@@ -106,13 +106,13 @@ public interface ComputePackage extends EPackage {
 	int VIRTUAL_MACHINE__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int VIRTUAL_MACHINE__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -387,13 +387,13 @@ public interface ComputePackage extends EPackage {
 	int DISK__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int DISK__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -649,13 +649,13 @@ public interface ComputePackage extends EPackage {
 	int DISK_TYPE__UUID = CorePackage.AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISK_TYPE__ACTION_PROTOTYPE = CorePackage.AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int DISK_TYPE__LABEL_PROTOTYPE = CorePackage.AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -884,13 +884,13 @@ public interface ComputePackage extends EPackage {
 	int VIRTUAL_MACHINE_SIZE__UUID = CorePackage.AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE_SIZE__ACTION_PROTOTYPE = CorePackage.AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int VIRTUAL_MACHINE_SIZE__LABEL_PROTOTYPE = CorePackage.AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1119,13 +1119,13 @@ public interface ComputePackage extends EPackage {
 	int VIRTUAL_MACHINE_IMAGE__UUID = CorePackage.AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE_IMAGE__ACTION_PROTOTYPE = CorePackage.AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int VIRTUAL_MACHINE_IMAGE__LABEL_PROTOTYPE = CorePackage.AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1354,13 +1354,13 @@ public interface ComputePackage extends EPackage {
 	int VIRTUAL_MACHINE_SCALE_SET__UUID = VIRTUAL_MACHINE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIRTUAL_MACHINE_SCALE_SET__ACTION_PROTOTYPE = VIRTUAL_MACHINE__ACTION_PROTOTYPE;
+	int VIRTUAL_MACHINE_SCALE_SET__LABEL_PROTOTYPE = VIRTUAL_MACHINE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1634,13 +1634,13 @@ public interface ComputePackage extends EPackage {
 	int APP_SERVICE__UUID = CorePackage.RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APP_SERVICE__ACTION_PROTOTYPE = CorePackage.RESOURCE__ACTION_PROTOTYPE;
+	int APP_SERVICE__LABEL_PROTOTYPE = CorePackage.RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1878,13 +1878,13 @@ public interface ComputePackage extends EPackage {
 	int CONTAINER_INSTANCE__UUID = NetworkingPackage.SUBNET_RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_INSTANCE__ACTION_PROTOTYPE = NetworkingPackage.SUBNET_RESOURCE__ACTION_PROTOTYPE;
+	int CONTAINER_INSTANCE__LABEL_PROTOTYPE = NetworkingPackage.SUBNET_RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2140,13 +2140,13 @@ public interface ComputePackage extends EPackage {
 	int KUBERNETES_SERVICE__UUID = NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int KUBERNETES_SERVICE__ACTION_PROTOTYPE = NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__ACTION_PROTOTYPE;
+	int KUBERNETES_SERVICE__LABEL_PROTOTYPE = NetworkingPackage.VIRTUAL_NETWORK_RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

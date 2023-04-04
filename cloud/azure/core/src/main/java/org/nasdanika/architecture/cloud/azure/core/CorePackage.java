@@ -104,13 +104,13 @@ public interface CorePackage extends EPackage {
 	int AZURE_ELEMENT__UUID = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AZURE_ELEMENT__ACTION_PROTOTYPE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int AZURE_ELEMENT__LABEL_PROTOTYPE = org.nasdanika.architecture.core.CorePackage.ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -330,13 +330,13 @@ public interface CorePackage extends EPackage {
 	int MANAGEMENT_GROUP_ELEMENT__UUID = AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANAGEMENT_GROUP_ELEMENT__ACTION_PROTOTYPE = AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int MANAGEMENT_GROUP_ELEMENT__LABEL_PROTOTYPE = AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -556,13 +556,13 @@ public interface CorePackage extends EPackage {
 	int MANAGEMENT_GROUP__UUID = MANAGEMENT_GROUP_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MANAGEMENT_GROUP__ACTION_PROTOTYPE = MANAGEMENT_GROUP_ELEMENT__ACTION_PROTOTYPE;
+	int MANAGEMENT_GROUP__LABEL_PROTOTYPE = MANAGEMENT_GROUP_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -791,13 +791,13 @@ public interface CorePackage extends EPackage {
 	int SUBSCRIPTION__UUID = MANAGEMENT_GROUP_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSCRIPTION__ACTION_PROTOTYPE = MANAGEMENT_GROUP_ELEMENT__ACTION_PROTOTYPE;
+	int SUBSCRIPTION__LABEL_PROTOTYPE = MANAGEMENT_GROUP_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1027,13 +1027,13 @@ public interface CorePackage extends EPackage {
 	int RESOURCE_GROUP__UUID = AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__ACTION_PROTOTYPE = AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int RESOURCE_GROUP__LABEL_PROTOTYPE = AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1262,13 +1262,13 @@ public interface CorePackage extends EPackage {
 	int RESOURCE__UUID = AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__ACTION_PROTOTYPE = AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int RESOURCE__LABEL_PROTOTYPE = AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1506,13 +1506,13 @@ public interface CorePackage extends EPackage {
 	int GENERIC_RESOURCE__UUID = RESOURCE__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC_RESOURCE__ACTION_PROTOTYPE = RESOURCE__ACTION_PROTOTYPE;
+	int GENERIC_RESOURCE__LABEL_PROTOTYPE = RESOURCE__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1759,13 +1759,13 @@ public interface CorePackage extends EPackage {
 	int LOCATION__UUID = AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__ACTION_PROTOTYPE = AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int LOCATION__LABEL_PROTOTYPE = AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -1985,13 +1985,13 @@ public interface CorePackage extends EPackage {
 	int REGION__UUID = LOCATION__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGION__ACTION_PROTOTYPE = LOCATION__ACTION_PROTOTYPE;
+	int REGION__LABEL_PROTOTYPE = LOCATION__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2220,13 +2220,13 @@ public interface CorePackage extends EPackage {
 	int AVAILABILITY_ZONE__UUID = LOCATION__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AVAILABILITY_ZONE__ACTION_PROTOTYPE = LOCATION__ACTION_PROTOTYPE;
+	int AVAILABILITY_ZONE__LABEL_PROTOTYPE = LOCATION__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.
@@ -2446,13 +2446,13 @@ public interface CorePackage extends EPackage {
 	int REGION_PAIR__UUID = AZURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGION_PAIR__ACTION_PROTOTYPE = AZURE_ELEMENT__ACTION_PROTOTYPE;
+	int REGION_PAIR__LABEL_PROTOTYPE = AZURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

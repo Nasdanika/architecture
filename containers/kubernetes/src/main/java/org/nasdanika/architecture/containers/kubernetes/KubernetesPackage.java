@@ -132,13 +132,13 @@ public interface KubernetesPackage extends EPackage {
 	int CLUSTER__UUID = CorePackage.ARCHITECTURE_ELEMENT__UUID;
 
 	/**
-	 * The feature id for the '<em><b>Action Prototype</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label Prototype</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLUSTER__ACTION_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__ACTION_PROTOTYPE;
+	int CLUSTER__LABEL_PROTOTYPE = CorePackage.ARCHITECTURE_ELEMENT__LABEL_PROTOTYPE;
 
 	/**
 	 * The feature id for the '<em><b>Representations</b></em>' map.

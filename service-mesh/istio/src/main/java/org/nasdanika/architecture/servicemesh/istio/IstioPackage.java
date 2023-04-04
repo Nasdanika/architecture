@@ -37,7 +37,7 @@ public interface IstioPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "urn:org.nasdanika.architecture.service-mesh.istio";
+	String eNS_URI = "ecore://nasdanika.org/architecture/service-mesh/istio";
 
 	/**
 	 * The package namespace name.
