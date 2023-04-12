@@ -31,6 +31,51 @@ public interface StorageFactory extends EFactory {
 	StorageAccount createStorageAccount();
 
 	/**
+	 * Returns a new object of class '<em>Blob Storage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Blob Storage</em>'.
+	 * @generated
+	 */
+	BlobStorage createBlobStorage();
+
+	/**
+	 * Returns a new object of class '<em>Data Lake Storage Gen2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Lake Storage Gen2</em>'.
+	 * @generated
+	 */
+	DataLakeStorageGen2 createDataLakeStorageGen2();
+
+	/**
+	 * Returns a new object of class '<em>Azure Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Azure Files</em>'.
+	 * @generated
+	 */
+	AzureFiles createAzureFiles();
+
+	/**
+	 * Returns a new object of class '<em>Queue Storage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Queue Storage</em>'.
+	 * @generated
+	 */
+	QueueStorage createQueueStorage();
+
+	/**
+	 * Returns a new object of class '<em>Table Storage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Storage</em>'.
+	 * @generated
+	 */
+	TableStorage createTableStorage();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

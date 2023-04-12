@@ -3,9 +3,7 @@
 package org.nasdanika.architecture.cloud.azure.storage.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.nasdanika.architecture.cloud.azure.core.impl.ResourceImpl;
 import org.nasdanika.architecture.cloud.azure.storage.StorageAccount;
 import org.nasdanika.architecture.cloud.azure.storage.StoragePackage;
 
@@ -16,7 +14,7 @@ import org.nasdanika.architecture.cloud.azure.storage.StoragePackage;
  *
  * @generated
  */
-public class StorageAccountImpl extends MinimalEObjectImpl.Container implements StorageAccount {
+public class StorageAccountImpl extends ResourceImpl implements StorageAccount {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,16 +32,6 @@ public class StorageAccountImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass() {
 		return StoragePackage.Literals.STORAGE_ACCOUNT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount() {
-		return 0;
 	}
 
 } //StorageAccountImpl

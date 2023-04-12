@@ -19,7 +19,7 @@ import org.nasdanika.architecture.cloud.azure.core.Resource;
  * </ul>
  *
  * @see org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage#getVirtualNetwork()
- * @model
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/10061-icon-service-Virtual-Networks.svg' label='Virtual Network'"
  * @generated
  */
 public interface VirtualNetwork extends Resource {

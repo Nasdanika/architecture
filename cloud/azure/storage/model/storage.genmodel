@@ -4,11 +4,16 @@
     creationIcons="false" editorDirectory="" modelPluginID="org.nasdanika.architecture.cloud.azure.storage"
     modelName="Storage" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Dynamic" complianceLevel="11.0"
-    suppressGenModelAnnotations="false" copyrightFields="false" operationReflection="true"
-    importOrganizing="true">
+    suppressGenModelAnnotations="false" copyrightFields="false" usedGenPackages="../../org.nasdanika.architecture.cloud.azure.core/model/core.genmodel#//core ../../org.nasdanika.architecture.core/model/core.genmodel#//core ../../org.nasdanika.ncore/model/ncore.genmodel#//ncore"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>storage.ecore</foreignModel>
   <genPackages prefix="Storage" basePackage="org.nasdanika.architecture.cloud.azure"
       disposableProviderFactory="true" ecorePackage="storage.ecore#/">
     <genClasses ecoreClass="storage.ecore#//StorageAccount"/>
+    <genClasses ecoreClass="storage.ecore#//BlobStorage"/>
+    <genClasses ecoreClass="storage.ecore#//DataLakeStorageGen2"/>
+    <genClasses ecoreClass="storage.ecore#//AzureFiles"/>
+    <genClasses ecoreClass="storage.ecore#//QueueStorage"/>
+    <genClasses ecoreClass="storage.ecore#//TableStorage"/>
   </genPackages>
 </genmodel:GenModel>

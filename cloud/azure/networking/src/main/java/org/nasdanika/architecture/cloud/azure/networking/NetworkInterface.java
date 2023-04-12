@@ -9,7 +9,7 @@ package org.nasdanika.architecture.cloud.azure.networking;
  *
  *
  * @see org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage#getNetworkInterface()
- * @model
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/10080-icon-service-Network-Interfaces.svg'"
  * @generated
  */
 public interface NetworkInterface extends SubnetResource {

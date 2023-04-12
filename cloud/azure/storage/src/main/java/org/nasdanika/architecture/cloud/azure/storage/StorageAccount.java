@@ -2,7 +2,7 @@
  */
 package org.nasdanika.architecture.cloud.azure.storage;
 
-import org.eclipse.emf.ecore.EObject;
+import org.nasdanika.architecture.cloud.azure.core.Resource;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  *
  * @see org.nasdanika.architecture.cloud.azure.storage.StoragePackage#getStorageAccount()
- * @model
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/storage/10086-icon-service-Storage-Accounts.svg' label='Storage Account'"
  * @generated
  */
-public interface StorageAccount extends EObject {
+public interface StorageAccount extends Resource {
 } // StorageAccount

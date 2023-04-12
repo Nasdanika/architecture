@@ -97,6 +97,22 @@ public class NetworkingAdapterFactory extends AdapterFactoryImpl {
 				return createNetworkInterfaceAdapter();
 			}
 			@Override
+			public Adapter caseService(Service object) {
+				return createServiceAdapter();
+			}
+			@Override
+			public Adapter caseServiceEndpoint(ServiceEndpoint object) {
+				return createServiceEndpointAdapter();
+			}
+			@Override
+			public Adapter casePrivateEnpoint(PrivateEnpoint object) {
+				return createPrivateEnpointAdapter();
+			}
+			@Override
+			public Adapter casePublicEndpoint(PublicEndpoint object) {
+				return createPublicEndpointAdapter();
+			}
+			@Override
 			public Adapter caseIMarked(Marked object) {
 				return createIMarkedAdapter();
 			}
@@ -227,6 +243,62 @@ public class NetworkingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNetworkInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.Service
+	 * @generated
+	 */
+	public Adapter createServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.ServiceEndpoint <em>Service Endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.ServiceEndpoint
+	 * @generated
+	 */
+	public Adapter createServiceEndpointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.PrivateEnpoint <em>Private Enpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.PrivateEnpoint
+	 * @generated
+	 */
+	public Adapter createPrivateEnpointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.networking.PublicEndpoint <em>Public Endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.networking.PublicEndpoint
+	 * @generated
+	 */
+	public Adapter createPublicEndpointAdapter() {
 		return null;
 	}
 

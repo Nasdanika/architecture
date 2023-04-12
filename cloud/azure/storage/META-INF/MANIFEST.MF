@@ -12,5 +12,8 @@ Export-Package: org.nasdanika.architecture.cloud.azure.storage,
  org.nasdanika.architecture.cloud.azure.storage.impl,
  org.nasdanika.architecture.cloud.azure.storage.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.nasdanika.architecture.cloud.azure.core;visibility:=reexport,
+ org.nasdanika.architecture.core;visibility:=reexport,
+ org.nasdanika.ncore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

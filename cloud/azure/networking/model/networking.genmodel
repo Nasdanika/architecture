@@ -23,5 +23,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference networking.ecore#//SubnetResource/subnet"/>
     </genClasses>
     <genClasses ecoreClass="networking.ecore#//NetworkInterface"/>
+    <genClasses ecoreClass="networking.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference networking.ecore#//Service/endpoints"/>
+    </genClasses>
+    <genClasses ecoreClass="networking.ecore#//ServiceEndpoint"/>
+    <genClasses ecoreClass="networking.ecore#//PrivateEnpoint"/>
+    <genClasses ecoreClass="networking.ecore#//PublicEndpoint"/>
   </genPackages>
 </genmodel:GenModel>

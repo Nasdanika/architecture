@@ -7,9 +7,16 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.nasdanika.architecture.cloud.azure.core.CorePackage;
+import org.nasdanika.architecture.cloud.azure.storage.AzureFiles;
+import org.nasdanika.architecture.cloud.azure.storage.BlobStorage;
+import org.nasdanika.architecture.cloud.azure.storage.DataLakeStorageGen2;
+import org.nasdanika.architecture.cloud.azure.storage.QueueStorage;
 import org.nasdanika.architecture.cloud.azure.storage.StorageAccount;
 import org.nasdanika.architecture.cloud.azure.storage.StorageFactory;
 import org.nasdanika.architecture.cloud.azure.storage.StoragePackage;
+import org.nasdanika.architecture.cloud.azure.storage.TableStorage;
+import org.nasdanika.ncore.NcorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +31,37 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 	 * @generated
 	 */
 	private EClass storageAccountEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass blobStorageEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataLakeStorageGen2EClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass azureFilesEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass queueStorageEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableStorageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -71,6 +109,11 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		CorePackage.eINSTANCE.eClass();
+		org.nasdanika.architecture.core.CorePackage.eINSTANCE.eClass();
+		NcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theStoragePackage.createPackageContents();
 
@@ -93,6 +136,56 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 	@Override
 	public EClass getStorageAccount() {
 		return storageAccountEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBlobStorage() {
+		return blobStorageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDataLakeStorageGen2() {
+		return dataLakeStorageGen2EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getAzureFiles() {
+		return azureFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getQueueStorage() {
+		return queueStorageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTableStorage() {
+		return tableStorageEClass;
 	}
 
 	/**
@@ -125,6 +218,16 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 
 		// Create classes and their features
 		storageAccountEClass = createEClass(STORAGE_ACCOUNT);
+
+		blobStorageEClass = createEClass(BLOB_STORAGE);
+
+		dataLakeStorageGen2EClass = createEClass(DATA_LAKE_STORAGE_GEN2);
+
+		azureFilesEClass = createEClass(AZURE_FILES);
+
+		queueStorageEClass = createEClass(QUEUE_STORAGE);
+
+		tableStorageEClass = createEClass(TABLE_STORAGE);
 	}
 
 	/**
@@ -150,14 +253,33 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		CorePackage theCorePackage = (CorePackage)EPackage.Registry.INSTANCE.getEPackage(CorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		storageAccountEClass.getESuperTypes().add(theCorePackage.getResource());
+		blobStorageEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		dataLakeStorageGen2EClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		azureFilesEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		queueStorageEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		tableStorageEClass.getESuperTypes().add(theCorePackage.getAzureElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(storageAccountEClass, StorageAccount.class, "StorageAccount", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(blobStorageEClass, BlobStorage.class, "BlobStorage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dataLakeStorageGen2EClass, DataLakeStorageGen2.class, "DataLakeStorageGen2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(azureFilesEClass, AzureFiles.class, "AzureFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(queueStorageEClass, QueueStorage.class, "QueueStorage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableStorageEClass, TableStorage.class, "TableStorage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -182,6 +304,13 @@ public class StoragePackageImpl extends EPackageImpl implements StoragePackage {
 			   "documentation-reference", "doc/package-summary.md",
 			   "load-key", "azure-storage",
 			   "exports", "StorageAccount: azure-storage-account"
+		   });
+		addAnnotation
+		  (storageAccountEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/storage/10086-icon-service-Storage-Accounts.svg",
+			   "label", "Storage Account"
 		   });
 	}
 

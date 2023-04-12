@@ -5,6 +5,11 @@
   <eAnnotations source="urn:org.nasdanika">
     <details key="documentation-reference" value="doc/package-summary.md"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Workload"/>
   <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="../../org.nasdanika.architecture.core/model/core.ecore#//ArchitectureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pod"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Workload">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="https://kubernetes.io/docs/concepts/workloads/"/>
+    </eAnnotations>
+  </eClassifiers>
 </ecore:EPackage>

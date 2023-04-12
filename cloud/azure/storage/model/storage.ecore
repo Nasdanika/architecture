@@ -7,5 +7,15 @@
     <details key="load-key" value="azure-storage"/>
     <details key="exports" value="StorageAccount: azure-storage-account"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="StorageAccount"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageAccount" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Resource">
+    <eAnnotations source="urn:org.nasdanika">
+      <details key="icon" value="https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/storage/10086-icon-service-Storage-Accounts.svg"/>
+      <details key="label" value="Storage Account"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BlobStorage" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLakeStorageGen2" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AzureFiles" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QueueStorage" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TableStorage" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//AzureElement"/>
 </ecore:EPackage>

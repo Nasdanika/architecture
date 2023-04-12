@@ -49,6 +49,42 @@ public interface NetworkingFactory extends EFactory {
 	NetworkInterface createNetworkInterface();
 
 	/**
+	 * Returns a new object of class '<em>Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service</em>'.
+	 * @generated
+	 */
+	Service createService();
+
+	/**
+	 * Returns a new object of class '<em>Service Endpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Endpoint</em>'.
+	 * @generated
+	 */
+	ServiceEndpoint createServiceEndpoint();
+
+	/**
+	 * Returns a new object of class '<em>Private Enpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Private Enpoint</em>'.
+	 * @generated
+	 */
+	PrivateEnpoint createPrivateEnpoint();
+
+	/**
+	 * Returns a new object of class '<em>Public Endpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Public Endpoint</em>'.
+	 * @generated
+	 */
+	PublicEndpoint createPublicEndpoint();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ai" nsURI="ecore://nasdanika.org/architecture/cloud/azure/ai"
+    nsPrefix="org.nasdanika.architecture.cloud.azure.ai">
+  <eAnnotations source="urn:org.nasdanika">
+    <details key="documentation-reference" value="doc/package-summary.md"/>
+    <details key="load-key" value="azure-storage"/>
+    <details key="exports" value="StorageAccount: azure-storage-account"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="MachineLearningModel">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A program that can be used to recognize a pattern in data"/>
+    </eAnnotations>
+    <eOperations name="predict"/>
+    <eOperations name="categorize"/>
+    <eOperations name="recognize"/>
+    <eOperations name="understand"/>
+    <eOperations name="train">
+      <eParameters name="trainingData" eType="#//Data"/>
+    </eOperations>
+    <eOperations name="evaluate">
+      <eParameters name="testData" eType="#//Data"/>
+    </eOperations>
+    <eOperations name="deploy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AIWorkload" eSuperTypes="../../org.nasdanika.architecture.cloud.azure.core/model/core.ecore#//Workload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PredictiveAIWorkload" eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AnomalyDetectionAIWorkload" eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputerVisionAIWorkload" eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NaturalLanguageProcessingAIWorkload"
+      eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CognitiveSearchAIWorkload" eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConversationalAIWorkload" eSuperTypes="#//AIWorkload"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MachineLearning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SupervisedLearning" eSuperTypes="#//MachineLearning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnsupervisedLearning" eSuperTypes="#//MachineLearning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Regression" eSuperTypes="#//SupervisedLearning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Classification" eSuperTypes="#//SupervisedLearning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Clustering" eSuperTypes="#//UnsupervisedLearning"/>
+</ecore:EPackage>

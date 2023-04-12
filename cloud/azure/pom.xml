@@ -18,10 +18,12 @@
 		<module>compute</module>
 		<module>networking</module>
 		<module>storage</module>
+		<module>ai</module>
 
 		<module>core.gen</module>
 		<module>compute.gen</module>
 		<module>networking.gen</module>
 		<module>storage.gen</module>
+		<module>ai.gen</module>
 	</modules>	
 </project>

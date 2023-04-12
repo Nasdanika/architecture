@@ -10,11 +10,12 @@ app-action:
 #        content-resource: readme.md
   children:
     - app-label:
-        text: Core
-        uris: core
+        text: AI + ML
+        uris: ai
+        icon: https://img.icons8.com/dusk/16/null/artificial-intelligence.svg
         children:
-          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.core.core.genmodel.xml#/"
-          - core.gen/actions.yml
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.ai.ai.genmodel.xml#/"
+          - ai.gen/actions.yml
     - app-label:
         text: Compute
         uris: compute
@@ -22,6 +23,12 @@ app-action:
         children:
           - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.compute.compute.genmodel.xml#/"
           - compute.gen/actions.yml
+    - app-label:
+        text: Core
+        uris: core
+        children:
+          - "../../../nasdanika.github.io/target/model-doc/actions/org.nasdanika.architecture.cloud.azure.core.core.genmodel.xml#/"
+          - core.gen/actions.yml
     - app-label:
         text: Networking
         uris: networking

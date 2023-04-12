@@ -12,6 +12,10 @@ import org.nasdanika.architecture.cloud.azure.core.CorePackage;
 import org.nasdanika.architecture.cloud.azure.networking.NetworkInterface;
 import org.nasdanika.architecture.cloud.azure.networking.NetworkingFactory;
 import org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage;
+import org.nasdanika.architecture.cloud.azure.networking.PrivateEnpoint;
+import org.nasdanika.architecture.cloud.azure.networking.PublicEndpoint;
+import org.nasdanika.architecture.cloud.azure.networking.Service;
+import org.nasdanika.architecture.cloud.azure.networking.ServiceEndpoint;
 import org.nasdanika.architecture.cloud.azure.networking.Subnet;
 import org.nasdanika.architecture.cloud.azure.networking.SubnetResource;
 import org.nasdanika.architecture.cloud.azure.networking.VirtualNetwork;
@@ -58,6 +62,34 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 	 * @generated
 	 */
 	private EClass networkInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceEndpointEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass privateEnpointEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass publicEndpointEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -230,6 +262,56 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 	 * @generated
 	 */
 	@Override
+	public EClass getService() {
+		return serviceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getService_Endpoints() {
+		return (EReference)serviceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getServiceEndpoint() {
+		return serviceEndpointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPrivateEnpoint() {
+		return privateEnpointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getPublicEndpoint() {
+		return publicEndpointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NetworkingFactory getNetworkingFactory() {
 		return (NetworkingFactory)getEFactoryInstance();
 	}
@@ -267,6 +349,15 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 		createEReference(subnetResourceEClass, SUBNET_RESOURCE__SUBNET);
 
 		networkInterfaceEClass = createEClass(NETWORK_INTERFACE);
+
+		serviceEClass = createEClass(SERVICE);
+		createEReference(serviceEClass, SERVICE__ENDPOINTS);
+
+		serviceEndpointEClass = createEClass(SERVICE_ENDPOINT);
+
+		privateEnpointEClass = createEClass(PRIVATE_ENPOINT);
+
+		publicEndpointEClass = createEClass(PUBLIC_ENDPOINT);
 	}
 
 	/**
@@ -306,6 +397,11 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 		subnetEClass.getESuperTypes().add(theCorePackage.getResource());
 		subnetResourceEClass.getESuperTypes().add(theCorePackage.getResource());
 		networkInterfaceEClass.getESuperTypes().add(this.getSubnetResource());
+		serviceEClass.getESuperTypes().add(theCorePackage.getResource());
+		privateEnpointEClass.getESuperTypes().add(this.getSubnetResource());
+		privateEnpointEClass.getESuperTypes().add(this.getServiceEndpoint());
+		publicEndpointEClass.getESuperTypes().add(theCorePackage.getAzureElement());
+		publicEndpointEClass.getESuperTypes().add(this.getServiceEndpoint());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(virtualNetworkEClass, VirtualNetwork.class, "VirtualNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -323,6 +419,15 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 		initEReference(getSubnetResource_Subnet(), this.getSubnet(), null, "subnet", null, 0, 1, SubnetResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(networkInterfaceEClass, NetworkInterface.class, "NetworkInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getService_Endpoints(), this.getServiceEndpoint(), null, "endpoints", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(serviceEndpointEClass, ServiceEndpoint.class, "ServiceEndpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(privateEnpointEClass, PrivateEnpoint.class, "PrivateEnpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(publicEndpointEClass, PublicEndpoint.class, "PublicEndpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -350,16 +455,35 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 			   "load-key", "azure-networking"
 		   });
 		addAnnotation
+		  (virtualNetworkEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+			   "label", "Virtual Network"
+		   });
+		addAnnotation
 		  (getVirtualNetworkResource_VirtualNetwork(),
 		   source,
 		   new String[] {
 			   "opposite", "resources"
 		   });
 		addAnnotation
+		  (subnetEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/02742-icon-service-Subnet.svg"
+		   });
+		addAnnotation
 		  (getSubnetResource_Subnet(),
 		   source,
 		   new String[] {
 			   "opposite", "resources"
+		   });
+		addAnnotation
+		  (networkInterfaceEClass,
+		   source,
+		   new String[] {
+			   "icon", "https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/10080-icon-service-Network-Interfaces.svg"
 		   });
 	}
 
@@ -394,6 +518,12 @@ public class NetworkingPackageImpl extends EPackageImpl implements NetworkingPac
 		   source,
 		   new String[] {
 			   "documentation", "Base class for resources connected to a Subnet"
+		   });
+		addAnnotation
+		  (privateEnpointEClass,
+		   source,
+		   new String[] {
+			   "documentation", "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview"
 		   });
 	}
 

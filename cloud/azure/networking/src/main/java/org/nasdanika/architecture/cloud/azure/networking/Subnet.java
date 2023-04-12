@@ -18,7 +18,7 @@ import org.nasdanika.architecture.cloud.azure.core.Resource;
  * </ul>
  *
  * @see org.nasdanika.architecture.cloud.azure.networking.NetworkingPackage#getSubnet()
- * @model
+ * @model annotation="urn:org.nasdanika icon='https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/networking/02742-icon-service-Subnet.svg'"
  * @generated
  */
 public interface Subnet extends Resource {

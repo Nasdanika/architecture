@@ -161,6 +161,65 @@ public class NetworkingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case NetworkingPackage.SERVICE: {
+				Service service = (Service)theEObject;
+				T result = caseService(service);
+				if (result == null) result = caseResource(service);
+				if (result == null) result = caseAzureElement(service);
+				if (result == null) result = caseArchitectureElement(service);
+				if (result == null) result = casePeriod(service);
+				if (result == null) result = caseCore_ModelElement(service);
+				if (result == null) result = caseNamedElement(service);
+				if (result == null) result = caseDocumented(service);
+				if (result == null) result = caseModelElement(service);
+				if (result == null) result = caseMarked(service);
+				if (result == null) result = caseAdaptable(service);
+				if (result == null) result = caseIMarked(service);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NetworkingPackage.SERVICE_ENDPOINT: {
+				ServiceEndpoint serviceEndpoint = (ServiceEndpoint)theEObject;
+				T result = caseServiceEndpoint(serviceEndpoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NetworkingPackage.PRIVATE_ENPOINT: {
+				PrivateEnpoint privateEnpoint = (PrivateEnpoint)theEObject;
+				T result = casePrivateEnpoint(privateEnpoint);
+				if (result == null) result = caseSubnetResource(privateEnpoint);
+				if (result == null) result = caseServiceEndpoint(privateEnpoint);
+				if (result == null) result = caseResource(privateEnpoint);
+				if (result == null) result = caseAzureElement(privateEnpoint);
+				if (result == null) result = caseArchitectureElement(privateEnpoint);
+				if (result == null) result = casePeriod(privateEnpoint);
+				if (result == null) result = caseCore_ModelElement(privateEnpoint);
+				if (result == null) result = caseNamedElement(privateEnpoint);
+				if (result == null) result = caseDocumented(privateEnpoint);
+				if (result == null) result = caseModelElement(privateEnpoint);
+				if (result == null) result = caseMarked(privateEnpoint);
+				if (result == null) result = caseAdaptable(privateEnpoint);
+				if (result == null) result = caseIMarked(privateEnpoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case NetworkingPackage.PUBLIC_ENDPOINT: {
+				PublicEndpoint publicEndpoint = (PublicEndpoint)theEObject;
+				T result = casePublicEndpoint(publicEndpoint);
+				if (result == null) result = caseAzureElement(publicEndpoint);
+				if (result == null) result = caseServiceEndpoint(publicEndpoint);
+				if (result == null) result = caseArchitectureElement(publicEndpoint);
+				if (result == null) result = casePeriod(publicEndpoint);
+				if (result == null) result = caseCore_ModelElement(publicEndpoint);
+				if (result == null) result = caseNamedElement(publicEndpoint);
+				if (result == null) result = caseDocumented(publicEndpoint);
+				if (result == null) result = caseModelElement(publicEndpoint);
+				if (result == null) result = caseMarked(publicEndpoint);
+				if (result == null) result = caseAdaptable(publicEndpoint);
+				if (result == null) result = caseIMarked(publicEndpoint);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -237,6 +296,66 @@ public class NetworkingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNetworkInterface(NetworkInterface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseService(Service object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service Endpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service Endpoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServiceEndpoint(ServiceEndpoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Private Enpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Private Enpoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrivateEnpoint(PrivateEnpoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Public Endpoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Public Endpoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePublicEndpoint(PublicEndpoint object) {
 		return null;
 	}
 

@@ -59,6 +59,10 @@ public class NetworkingFactoryImpl extends EFactoryImpl implements NetworkingFac
 			case NetworkingPackage.VIRTUAL_NETWORK: return createVirtualNetwork();
 			case NetworkingPackage.SUBNET: return createSubnet();
 			case NetworkingPackage.NETWORK_INTERFACE: return createNetworkInterface();
+			case NetworkingPackage.SERVICE: return createService();
+			case NetworkingPackage.SERVICE_ENDPOINT: return createServiceEndpoint();
+			case NetworkingPackage.PRIVATE_ENPOINT: return createPrivateEnpoint();
+			case NetworkingPackage.PUBLIC_ENDPOINT: return createPublicEndpoint();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +99,50 @@ public class NetworkingFactoryImpl extends EFactoryImpl implements NetworkingFac
 	public NetworkInterface createNetworkInterface() {
 		NetworkInterfaceImpl networkInterface = new NetworkInterfaceImpl();
 		return networkInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Service createService() {
+		ServiceImpl service = new ServiceImpl();
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ServiceEndpoint createServiceEndpoint() {
+		ServiceEndpointImpl serviceEndpoint = new ServiceEndpointImpl();
+		return serviceEndpoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PrivateEnpoint createPrivateEnpoint() {
+		PrivateEnpointImpl privateEnpoint = new PrivateEnpointImpl();
+		return privateEnpoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PublicEndpoint createPublicEndpoint() {
+		PublicEndpointImpl publicEndpoint = new PublicEndpointImpl();
+		return publicEndpoint;
 	}
 
 	/**
