@@ -29,3 +29,12 @@ Terms - by using these icons you are agreeing these [terms](svg/icons/Microsoft_
 ## Font use
 
 See ``demo.html``
+
+## More icons
+
+### Drawio:
+
+
+GitHub: https://github.com/jgraph/drawio/tree/v21.1.6/src/main/webapp/img/lib/azure2/ 
+
+Use https://www.jsdelivr.com/github to migrate URL's or use jsDelivr: ``https://cdn.jsdelivr.net/gh/jgraph/drawio@v21.1.6/src/main/webapp/img/lib/azure2/`` as image URL prefix.
