@@ -15,12 +15,14 @@
 	
 	<modules>
 		<module>core</module>
+		<module>core.doc</module>
+		<module>core.gen</module>
+
 		<module>compute</module>
 		<module>networking</module>
 		<module>storage</module>
 		<module>ai</module>
 
-		<module>core.gen</module>
 		<module>compute.gen</module>
 		<module>networking.gen</module>
 		<module>storage.gen</module>
