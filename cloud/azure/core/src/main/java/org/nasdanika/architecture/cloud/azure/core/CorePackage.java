@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.nasdanika.architecture.cloud.azure.core.CoreFactory
  * @model kind="package"
- *        annotation="urn:org.nasdanika documentation-reference='doc/package-summary.md' load-key='azure-core' exports='Subscription: azure-subscription\nResourceGroup: azure-resource-group'"
+ *        annotation="urn:org.nasdanika load-key='azure-core' exports='Subscription: azure-subscription\nResourceGroup: azure-resource-group'"
  * @generated
  */
 public interface CorePackage extends EPackage {
@@ -2627,6 +2627,35 @@ public interface CorePackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.nasdanika.architecture.cloud.azure.core.impl.WorkloadImpl <em>Workload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.nasdanika.architecture.cloud.azure.core.impl.WorkloadImpl
+	 * @see org.nasdanika.architecture.cloud.azure.core.impl.CorePackageImpl#getWorkload()
+	 * @generated
+	 */
+	int WORKLOAD = 11;
+
+	/**
+	 * The number of structural features of the '<em>Workload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Workload</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKLOAD_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.core.AzureElement <em>Azure Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2814,6 +2843,16 @@ public interface CorePackage extends EPackage {
 	EClass getRegionPair();
 
 	/**
+	 * Returns the meta object for class '{@link org.nasdanika.architecture.cloud.azure.core.Workload <em>Workload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Workload</em>'.
+	 * @see org.nasdanika.architecture.cloud.azure.core.Workload
+	 * @generated
+	 */
+	EClass getWorkload();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2984,6 +3023,15 @@ public interface CorePackage extends EPackage {
 		 * @generated
 		 */
 		EClass REGION_PAIR = eINSTANCE.getRegionPair();
+		/**
+		 * The meta object literal for the '{@link org.nasdanika.architecture.cloud.azure.core.impl.WorkloadImpl <em>Workload</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.nasdanika.architecture.cloud.azure.core.impl.WorkloadImpl
+		 * @see org.nasdanika.architecture.cloud.azure.core.impl.CorePackageImpl#getWorkload()
+		 * @generated
+		 */
+		EClass WORKLOAD = eINSTANCE.getWorkload();
 
 	}
 

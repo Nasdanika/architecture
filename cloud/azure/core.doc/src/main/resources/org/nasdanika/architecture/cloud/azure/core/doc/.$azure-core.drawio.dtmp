@@ -1,0 +1,101 @@
+<mxfile host="Electron" modified="2023-04-30T16:09:42.387Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="7chQflXqcy-Wu6WJJzuX" version="21.1.2" type="device">
+  <diagram name="Azure Core Concepts" id="IjNcI85C3gLsdETeuoGh">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KeGkRvASPCBoTwocBSiw-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-2" target="KeGkRvASPCBoTwocBSiw-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="112" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-2" target="KeGkRvASPCBoTwocBSiw-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Management Group" link="ManagementGroup.html" tooltip="Management groups are containers that help manage access, policy, and compliance across multiple subscriptions" id="KeGkRvASPCBoTwocBSiw-2">
+          <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Management_Groups.svg;" parent="1" vertex="1">
+            <mxGeometry x="174" y="186.5" width="66" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-3" target="KeGkRvASPCBoTwocBSiw-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-3" target="KeGkRvASPCBoTwocBSiw-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Subscrption" link="Subscription.html" tooltip="A logical container used to provision related resources" id="KeGkRvASPCBoTwocBSiw-3">
+          <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Subscriptions.svg;" parent="1" vertex="1">
+            <mxGeometry x="360" y="186.5" width="44" height="71" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-4" target="KeGkRvASPCBoTwocBSiw-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Resource Group" tooltip="A resource group is a container that holds related resources for an Azure solution" target-uri="eClassifiers/ResourceGroup" id="KeGkRvASPCBoTwocBSiw-4">
+          <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Resource_Groups.svg;" parent="1" vertex="1">
+            <mxGeometry x="460" y="190" width="68" height="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Management Group&lt;br&gt;Element" link="ManagementGroupElement.html" id="KeGkRvASPCBoTwocBSiw-5">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="240" y="82" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-11" target="KeGkRvASPCBoTwocBSiw-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Resource" link="Resource.html" tooltip="A resource is an entity managed by Azure" id="KeGkRvASPCBoTwocBSiw-11">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="590" y="192" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Generic Resource" link="GenericResource.html" tooltip="A resource which does not have a model class.&#xa;Generic resources have &quot;kind&quot; (type)." id="KeGkRvASPCBoTwocBSiw-13">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="590" y="310" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-13" target="KeGkRvASPCBoTwocBSiw-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="392" y="196.5" as="sourcePoint" />
+            <mxPoint x="310" y="152" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Location" link="Location.html" tooltip="A base class for Region and Availability Zone to associate with resource.&#xa;Some resources may be deployed to multiple locations." id="KeGkRvASPCBoTwocBSiw-15">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="870" y="192" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Region" link="Region.html" tooltip="A set of datacenters, deployed within a latency-defined perimeter and connected through a dedicated regional low-latency network" id="KeGkRvASPCBoTwocBSiw-16">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="750" y="310" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Availability&lt;br&gt;Zone" link="AvailabilityZone.html" tooltip="One or more physically and logically separated datacenters with their own independent power source, network, and cooling." id="KeGkRvASPCBoTwocBSiw-17">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+            <mxGeometry x="990" y="310" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-16" target="KeGkRvASPCBoTwocBSiw-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="922" y="514.5" as="sourcePoint" />
+            <mxPoint x="840" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-17" target="KeGkRvASPCBoTwocBSiw-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="932" y="524.5" as="sourcePoint" />
+            <mxPoint x="850" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KeGkRvASPCBoTwocBSiw-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-16" target="KeGkRvASPCBoTwocBSiw-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="538" y="232" as="sourcePoint" />
+            <mxPoint x="600" y="232" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

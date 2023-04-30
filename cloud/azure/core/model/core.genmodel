@@ -33,5 +33,6 @@
     </genClasses>
     <genClasses ecoreClass="core.ecore#//AvailabilityZone"/>
     <genClasses ecoreClass="core.ecore#//RegionPair"/>
+    <genClasses ecoreClass="core.ecore#//Workload"/>
   </genPackages>
 </genmodel:GenModel>

@@ -62,6 +62,7 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 			case CorePackage.REGION: return createRegion();
 			case CorePackage.AVAILABILITY_ZONE: return createAvailabilityZone();
 			case CorePackage.REGION_PAIR: return createRegionPair();
+			case CorePackage.WORKLOAD: return createWorkload();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -131,6 +132,17 @@ public class CoreFactoryImpl extends EFactoryImpl implements CoreFactory {
 	public RegionPair createRegionPair() {
 		RegionPairImpl regionPair = new RegionPairImpl();
 		return regionPair;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Workload createWorkload() {
+		WorkloadImpl workload = new WorkloadImpl();
+		return workload;
 	}
 
 	/**

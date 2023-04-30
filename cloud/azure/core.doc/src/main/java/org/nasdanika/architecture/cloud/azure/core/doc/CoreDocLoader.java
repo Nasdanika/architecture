@@ -28,10 +28,15 @@ public class CoreDocLoader {
 			Consumer<org.nasdanika.common.Diagnostic> diagnosticConsumer,
 			Context context,
 			ProgressMonitor progressMonitor) {		
+
+		prototypes.put(URI.createURI(
+				"ecore://nasdanika.org/architecture/cloud/azure/core"), 
+				(Action) AppObjectLoaderSupplier.loadObject(URI.createURI("classpath://org/nasdanika/architecture/cloud/azure/core/doc/package-summary.yml"), diagnosticConsumer, context, progressMonitor));
 		
 		prototypes.put(URI.createURI(
 				"ecore://nasdanika.org/architecture/cloud/azure/core/eClassifiers/ResourceGroup"), 
 				(Action) AppObjectLoaderSupplier.loadObject(URI.createURI("classpath://org/nasdanika/architecture/cloud/azure/core/doc/ResourceGroup.yml"), diagnosticConsumer, context, progressMonitor));
+		
 	}
 	
 	public Action getPrototype(URI uri) {

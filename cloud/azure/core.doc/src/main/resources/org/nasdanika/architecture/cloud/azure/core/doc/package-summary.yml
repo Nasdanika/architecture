@@ -1,0 +1,12 @@
+app-action:
+  text: Core
+  description: Azure core concepts
+  representations:
+    core: azure-core.drawio
+  content:
+    content-markdown:
+      source:
+        content-resource:
+          location: package-summary.md
+          interpolate: true
+  

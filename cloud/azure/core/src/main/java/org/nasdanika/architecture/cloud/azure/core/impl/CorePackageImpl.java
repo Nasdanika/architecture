@@ -22,6 +22,7 @@ import org.nasdanika.architecture.cloud.azure.core.RegionPair;
 import org.nasdanika.architecture.cloud.azure.core.Resource;
 import org.nasdanika.architecture.cloud.azure.core.ResourceGroup;
 import org.nasdanika.architecture.cloud.azure.core.Subscription;
+import org.nasdanika.architecture.cloud.azure.core.Workload;
 import org.nasdanika.ncore.NcorePackage;
 
 /**
@@ -98,6 +99,13 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	private EClass regionPairEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass workloadEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -349,6 +357,16 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getWorkload() {
+		return workloadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public CoreFactory getCoreFactory() {
 		return (CoreFactory)getEFactoryInstance();
 	}
@@ -400,6 +418,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		availabilityZoneEClass = createEClass(AVAILABILITY_ZONE);
 
 		regionPairEClass = createEClass(REGION_PAIR);
+
+		workloadEClass = createEClass(WORKLOAD);
 	}
 
 	/**
@@ -481,6 +501,8 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 
 		initEClass(regionPairEClass, RegionPair.class, "RegionPair", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(workloadEClass, Workload.class, "Workload", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -503,7 +525,6 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		  (this,
 		   source,
 		   new String[] {
-			   "documentation-reference", "doc/package-summary.md",
 			   "load-key", "azure-core",
 			   "exports", "Subscription: azure-subscription\nResourceGroup: azure-resource-group"
 		   });
@@ -606,6 +627,12 @@ public class CorePackageImpl extends EPackageImpl implements CorePackage {
 		   source,
 		   new String[] {
 			   "documentation", "A base class for Region and Availability Zone to associate with resource. Some resources may be deployed to multiple locations."
+		   });
+		addAnnotation
+		  (workloadEClass,
+		   source,
+		   new String[] {
+			   "documentation", "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/plan/workloads#what-is-a-workload"
 		   });
 	}
 

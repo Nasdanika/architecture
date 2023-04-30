@@ -119,6 +119,10 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 				return createRegionPairAdapter();
 			}
 			@Override
+			public Adapter caseWorkload(Workload object) {
+				return createWorkloadAdapter();
+			}
+			@Override
 			public Adapter caseIMarked(Marked object) {
 				return createIMarkedAdapter();
 			}
@@ -325,6 +329,20 @@ public class CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRegionPairAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.nasdanika.architecture.cloud.azure.core.Workload <em>Workload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.nasdanika.architecture.cloud.azure.core.Workload
+	 * @generated
+	 */
+	public Adapter createWorkloadAdapter() {
 		return null;
 	}
 

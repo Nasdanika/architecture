@@ -76,6 +76,15 @@ public interface CoreFactory extends EFactory {
 	RegionPair createRegionPair();
 
 	/**
+	 * Returns a new object of class '<em>Workload</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Workload</em>'.
+	 * @generated
+	 */
+	Workload createWorkload();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
