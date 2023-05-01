@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-04-30T16:09:38.803Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="7kpDV6i9h5KLhLWJg1Rn" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-04-30T17:44:56.230Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="tXlBnAxeZP8OA4jwirI7" version="21.1.2" type="device">
   <diagram name="Azure Core Concepts" id="IjNcI85C3gLsdETeuoGh">
     <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -14,7 +14,7 @@
         <mxCell id="KeGkRvASPCBoTwocBSiw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=0;" parent="1" source="KeGkRvASPCBoTwocBSiw-2" target="KeGkRvASPCBoTwocBSiw-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="Management Group" link="ManagementGroup.html" tooltip="Management groups are containers that help manage access, policy, and compliance across multiple subscriptions" id="KeGkRvASPCBoTwocBSiw-2">
+        <UserObject label="Management Group" target-uri="eClassifiers/ManagementGroup" id="KeGkRvASPCBoTwocBSiw-2">
           <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Management_Groups.svg;" parent="1" vertex="1">
             <mxGeometry x="174" y="186.5" width="66" height="64" as="geometry" />
           </mxCell>
@@ -25,7 +25,7 @@
         <mxCell id="KeGkRvASPCBoTwocBSiw-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-3" target="KeGkRvASPCBoTwocBSiw-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="Subscrption" link="Subscription.html" tooltip="A logical container used to provision related resources" id="KeGkRvASPCBoTwocBSiw-3">
+        <UserObject label="Subscrption" target-uri="eClassifiers/Subscription" id="KeGkRvASPCBoTwocBSiw-3">
           <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Subscriptions.svg;" parent="1" vertex="1">
             <mxGeometry x="360" y="186.5" width="44" height="71" as="geometry" />
           </mxCell>
@@ -33,7 +33,7 @@
         <mxCell id="KeGkRvASPCBoTwocBSiw-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=1;endArrow=classic;endFill=1;" parent="1" source="KeGkRvASPCBoTwocBSiw-4" target="KeGkRvASPCBoTwocBSiw-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="Resource Group" tooltip="A resource group is a container that holds related resources for an Azure solution" target-uri="eClassifiers/ResourceGroup" id="KeGkRvASPCBoTwocBSiw-4">
+        <UserObject label="Resource Group" target-uri="eClassifiers/ResourceGroup" id="KeGkRvASPCBoTwocBSiw-4">
           <mxCell style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Resource_Groups.svg;" parent="1" vertex="1">
             <mxGeometry x="460" y="190" width="68" height="64" as="geometry" />
           </mxCell>

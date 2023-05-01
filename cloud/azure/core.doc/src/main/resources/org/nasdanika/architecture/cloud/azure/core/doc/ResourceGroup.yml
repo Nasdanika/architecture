@@ -1,3 +1,4 @@
 app-action:
   text: Resource Group
   icon: https://cdn.jsdelivr.net/gh/Nasdanika/architecture@main/cloud/azure/icons/svg/Icons/general/10007-icon-service-Resource-Groups.svg
+  tooltip: purum
