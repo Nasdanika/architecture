@@ -3,6 +3,7 @@ package org.nasdanika.architecture.cloud.azure.core.doc;
 import java.util.function.Consumer;
 
 import org.eclipse.emf.common.util.URI;
+import org.nasdanika.architecture.cloud.azure.core.CorePackage;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.html.model.app.Action;
@@ -21,13 +22,11 @@ public class CoreDocLoader extends DocLoader {
 			Context context,
 			ProgressMonitor progressMonitor) {		
 
-		prototypes.put(URI.createURI(
-				"ecore://nasdanika.org/architecture/cloud/azure/core"), 
-				(Action) AppObjectLoaderSupplier.loadObject(URI.createURI("classpath://org/nasdanika/architecture/cloud/azure/core/doc/package-summary.yml"), diagnosticConsumer, context, progressMonitor));
+		URI nsURI = URI.createURI(CorePackage.eNS_URI);
+		URI resourceBase = URI.createURI("classpath://" + CoreDocLoader.class.getName().replace('.', '/'));
 		
-		prototypes.put(URI.createURI(
-				"ecore://nasdanika.org/architecture/cloud/azure/core/eClassifiers/ResourceGroup"), 
-				(Action) AppObjectLoaderSupplier.loadObject(URI.createURI("classpath://org/nasdanika/architecture/cloud/azure/core/doc/ResourceGroup.yml"), diagnosticConsumer, context, progressMonitor));
+		prototypes.put(nsURI, (Action) AppObjectLoaderSupplier.loadObject(URI.createURI("package-summary.yml").resolve(resourceBase), diagnosticConsumer, context, progressMonitor));		
+		prototypes.put(URI.createURI("eClassifiers/ResourceGroup").resolve(nsURI), (Action) AppObjectLoaderSupplier.loadObject(URI.createURI("ResourceGroup.yml").resolve(resourceBase), diagnosticConsumer, context, progressMonitor));
 		
 	}
 
